@@ -20,20 +20,23 @@ We use [many labels](https://github.com/flutter/flutter/labels).
 
 The `severe:` prefix indicates labels regarding a level of severity (e.g. regressions, new features, crashes). Severity in and of itself does not say how fast we will fix the bug; rather it provides clues as to the nature of the defect, just as other labels do. A bug may have the `severe: crash` label, but e.g. if it relates to the `flutter` tool crashing when run with the system date set to 1998, we are not likely to consider it a high priority.
 
-The `P0` label indicates a high-priority issue such as a build break, regression, or failure in existing features that keeps us from shipping the current build. We look at issues with this label frequently. If you find yourself assigning a `P0` label to an issue, please be sure that there's a positive handoff between filing and a prospective owner for the issue.
+### Priorities
 
-The `P1` label indicates that the issue is blocking a top-tier customer.
+_See also: [[What should I work on?]]_
 
-The `P2` label indicates that the issue is a high-priority issue from a top-tier customer.
+The [`P0`](https://github.com/flutter/flutter/labels/P0) label indicates a high-priority issue such as a build break, regression, or failure in existing features that keeps us from shipping the current build. We look at issues with this label frequently. If you find yourself assigning a `P0` label to an issue, please be sure that there's a positive handoff between filing and a prospective owner for the issue. P0 bugs should be rare. Normally there should be zero open P0 bugs.
 
-The `P3` label indicates an issue not driven by an immediate top-tier customer request, nor targeted to a specific release. Most issues will bear this label.
+The [`P1`](https://github.com/flutter/flutter/labels/P1) label indicates that the issue is actively blocking a top-tier customer who is trying to ship. (See below.) There are generally less than half a dozen P1 bugs.
 
-The `P4` label indicates issues that we agree are important to work on, but not at the top of the work list. This is the default level for bugs.
+The [`P2`](https://github.com/flutter/flutter/labels/P2) label indicates that the issue is a high-priority issue from a top-tier customer. There are generally less than twenty-five P2 bugs (one GitHub search results page).
 
-The `P5` label indicates issues we think are valid but not important. This is the default level for new feature requests.
+The [`P3`](https://github.com/flutter/flutter/labels/P3) label indicates high-priority issues that are at the top of the work list.
 
-The `P6` label indicates valid issues that are unlikely to ever be worked on.
+The [`P4`](https://github.com/flutter/flutter/labels/P4) label indicates issues that we agree are important to work on, but not at the top of the work list. This is the default level for bugs.
 
+The [`P5`](https://github.com/flutter/flutter/labels/P5) label indicates issues we think are valid but not important. This is the default level for new feature requests.
+
+The [`P6`](https://github.com/flutter/flutter/labels/P6) label indicates valid issues that are unlikely to ever be worked on. We use "thumbs-up" on these issues to promote them to `P5` or higher based on demand.
 
 _See also: [[Triage]], which describes how we go through bugs and make sure they are sorted accordingly._
 
@@ -44,10 +47,6 @@ Labels are more or less free, so we can add them pretty easily. Please mention i
 
 Labels should be used for adding information to a bug. If you plan to use a label to find all instances of a particular topic (e.g. finding all PRs where someone wrote a design doc), be aware that there's no way to force people to label issues or PRs. You can, however, rely on automation to do it, for example you could write a script that labels all PRs that affect the framework.
 
-## Prioritization
-
-_See also: [[What should I work on?]]_
-
 ### Customers
 
 Some teams using Flutter have a special relationship with the Flutter team
@@ -55,26 +54,7 @@ Some teams using Flutter have a special relationship with the Flutter team
 with us on a product demo for an upcoming event). This is usually a fairly
 short-term arrangement for a specific business purpose.
 
-We provide such customers with a label in our GitHub issue tracker, and
-encourage them to mark bugs as `P1` (for the most serious bugs)
-or `P2` (for still important but not quite as serious bugs)
-if they are very important and deserve immediate attention.
-
-(Bugs marked `P1` or `P2` must have the corresponding
-customer label as well, so that we know who is actually asking for the issue.)
-
-Each week, we look at all the bugs marked with the `P1` and `P2`
-labels, and see if we can address them ahead of other bugs (though there is no guarantee
-that we will; it mostly depends on how close a relationship we have with the relevant customer).
-This process is described in the "critical triage" section of the page on [[Triage]].
-
-Be wary in marking bugs as `P1`. We have finite resources,
-and several customers. If you have one `P1` bug, then we have a clear
-sign of what to look at. If you have twenty, it will be difficult for us
-to know where to start.
-
-_See also: [Current P1 issues](https://github.com/flutter/flutter/labels/P1),
-[Current P2 issues](https://github.com/flutter/flutter/labels/P2)._
+We provide such customers with a label (`customer: ...`) in our GitHub issue tracker.
 
 #### Coordinating between bug systems
 
@@ -85,9 +65,6 @@ system, and we have been granted access, we will follow that link and may
 communicate in that separate bug system when attempting to track down the issue.
 
 #### Special customer labels
-
-We have two special customer labels which are used exclusively with the `P1`
-and `P2` labels.
 
 The `customer: product` label is used to bring issues that product management
 and senior leads want resolved to the attention of the appropriate engineering
@@ -167,7 +144,6 @@ this means not for 6+ months).
 Each week, we check any bug with the `P0`, `P1`, and `P2` labels.
 If we can find an owner for such a bug right away, it will be assigned a bucket milestone
 and given an explicit assignee. If we cannot, then it will be put into either the
-
 "Unassigned customer work" milestone or the "Declined customer request" milestone.
 
 If you are a customer and your bug is placed in the "Declined customer request"
@@ -235,16 +211,13 @@ click the "subscribe" button in the right hand column of the GitHub UI.
 
 To determine when a bug will be fixed, look at the priority and milestone.
 
-If it has no milestone and no priority, it may not yet have been triaged.
+If it has a milestone, that is roughly when we hope to have it fixed by.
 
-If it has no priority, it may not yet have been triaged."
+If it has no priority, it may not yet have been triaged.
+
 If the priority is labeled as a `P3`, we are likely to address in the near term; we just need to find time.
 
 If the issue is labeled as a `P4`, we are not planning to work on it anytime soon, but we agree it's something we should work on in the coming years. Consider escalating the issue to raise its priority further.
-
-Otherwise, the milestone should be a precise description of when we expect
-the work to be done by. It may not be accurate; we often end up slipping
-a fix into the next release. Engineering is not always an easily scheduled art.
 
 ### Escalating an issue
 
