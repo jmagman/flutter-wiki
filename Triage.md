@@ -167,7 +167,7 @@ Within each meeting, the links below provide the order in which issues should be
 
 Teams can use a variety of tools to prioritize bugs.
 
-* One tool is the milestone field, in particular the "Goals", "Near-term goals", "Stretch goals", "Future", and "Unassigned customer work" milestones for work that doesn't yet have a committed target date and assigned engineer, and the dated milestones for bugs that have an assigned engineer and will definitely not slip beyond a particular month (be conservative when picking milestones!).
+* Teams should use the priority labels `P0`...`P6`.
 * Another tool is the [Projects](https://github.com/flutter/flutter/projects) page on GitHub. Feel free to create new projects as desired, and use it as you see fit.
 * In some circumstances, we can create new milestones that parallel the dated milestones. Contact @Hixie before going down this route.
 
