@@ -10,7 +10,7 @@ The process of triaging bugs is to first go through these bug lists and make sur
 <!--ALL-LABELS-->
 2. [older bugs with none of the classification labels](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+-label%3Aframework+-label%3Aengine+-label%3Atool+-label%3Aplugin+-label%3Apackage+-label%3A%22will+need+additional+triage%22+-label%3A"platform-web"+-label%3A%22a%3A+desktop%22+-label%3A%22team%3A+infra%22+-label%3A%22a%3A+existing-apps%22+sort%3Aupdated-asc+-label%3A%22waiting+for+customer+response%22+-label%3A"platform-ios"+-label%3A"platform-android").
 
-3. [bugs with no milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+no%3Amilestone).
+3. [bugs with no priority](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+-label%3A%22P0%22+-label%3A%22P1%22+-label%3A%22P2%22+-label%3A%22P3%22+-label%3A%22P4%22+-label%3A%22P5%22+-label%3A%22P6%22).
 
 Provide an initial priority for the issue. In general, the priorities you should consider are:
   * `P4` for bona fide bugs in current functionality (including regressions)
