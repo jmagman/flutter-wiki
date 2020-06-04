@@ -20,7 +20,7 @@ This page attempts to be a one-stop shop for figuring out what the most importan
 
 Bugs in other bug systems should be tracked with bugs in GitHub. OKRs should be reflected in the items listed above. For example, OKRs should reflect what the roadmap covers, expected customer blockers, and so forth. Work that is unique to a particular quarter would be represented by a filed bug with a milestone and assignee.
 
-During [triage], bugs should be prioritized according to the [P0-P6 labels](https://github.com/flutter/flutter/wiki/Issue-hygiene#priorities) so as to fit the order described above.
+During [[triage]], bugs should be prioritized according to the [P0-P6 labels](https://github.com/flutter/flutter/wiki/Issue-hygiene#priorities) so as to fit the order described above.
 
 Sometimes, items in the list above escalate. For example, a performance regression might get filed as a P0 bug and thus start trumping a P1 issue.
 
