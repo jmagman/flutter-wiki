@@ -9,7 +9,7 @@ See also [[Bad Builds]], which lists dev releases that are known to have major b
 
 ### v1.18.X
 * [#55414](https://github.com/flutter/flutter/pull/55414) Optimizes `LayoutBuilder` and `SliverLayoutBuilder` to call the `builder` function less often, which can break apps that forget to call `setState` (see the [design doc](https://flutter.dev/go/layout-builder-optimization)).
-* [#55336](https://github.com/flutter/flutter/pull/55336) Provides Localized semantics information to the CupertinoTabBar widget, requiring Localizations to be present. See the [migration guide](https://flutter.dev/docs/release/breaking-changes/cupertino-tab-bar-localizations).
+* [#55336](https://github.com/flutter/flutter/pull/55336) Provides localized semantics information to the `CupertinoTabBar` widget, requiring `Localizations` to be present. See the [migration guide](https://flutter.dev/docs/release/breaking-changes/cupertino-tab-bar-localizations).
 
 ### v1.17.X
 * [#50180](https://github.com/flutter/flutter/pull/50180) Renames `CupertinoFullscreenDialogTransition`'s `animation` to `primaryRouteAnimation`.
