@@ -12,6 +12,11 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.17 Changes
+### [1.17.3](https://github.com/flutter/flutter/pull/58646) (June 4, 2020)
+
+This fixes the following issues:
+ - https://github.com/flutter/flutter/issues/54420  - Exhausted heap space can cause machine to freeze
+
 ### [1.17.2](https://github.com/flutter/flutter/pull/58050) (May 28, 2020)
 
 This fixes the following issues:
