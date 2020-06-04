@@ -274,26 +274,26 @@ If you come across a bug that is unrelated to the Web backend, remove the `platf
 * [Android P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+label%3A%22P1%22)
 * [Android P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+label%3A%22P2%22+-label%3A%22a%3A+platform-views%22+)
 * [Android overdue](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+-label%3A%22a%3A+platform-views%22+milestone%3AOverdue)
-* [Android next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22%E2%96%A3+platform-android%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22April+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22May+2020%22)
+* [Android next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22%E2%96%A3+platform-android%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22June+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22July+2020%22)
 
 
 * [iOS P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22P0%22+label%3A%22platform-ios%22)
 * [iOS P1s](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-ios%22+label%3A%22P1%22)
 * [iOS P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-ios%22+label%3A%22P2%22+-label%3A%22a%3A+platform-views%22+)
 * [iOS overdue](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-ios%22+-label%3A%22a%3A+platform-views%22+milestone%3AOverdue)
-* [iOS next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+llabel%3A%22platform-ios%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22April+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22%E2%8C%BA%E2%80%AC+platform-ios%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22May+2020%22)
+* [iOS next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+llabel%3A%22platform-ios%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22June+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22%E2%8C%BA%E2%80%AC+platform-ios%22+-label%3A%22a%3A+platform-views%22+milestone%3A%22July+2020%22)
 
 * [Add-to-app P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22P0%22+label%3A"a%3A+existing-apps")
 * [Add-to-app P1s](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+label%3A%22P1%22)
 * [Add-to-app P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+label%3A%22P2%22+-label%3A%22a%3A+platform-views%22+)
 * [Add-to-app overdue](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+-label%3A%22a%3A+platform-views%22+milestone%3AOverdue)
-* [Add-to-app next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+-label%3A%22a%3A+platform-views%22+milestone%3A%22April+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+-label%3A%22a%3A+platform-views%22+milestone%3A%22May+2020%22)
+* [Add-to-app next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+-label%3A%22a%3A+platform-views%22+milestone%3A%22June+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"a%3A+existing-apps"+-label%3A%22a%3A+platform-views%22+milestone%3A%22July+2020%22)
 
 * [Cupertino P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22P0%22+label%3A"f%3A+cupertino")
 * [Cupertino P1s](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+label%3A%22P1%22)
 * [Cupertino P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+label%3A%22P2%22+-label%3A%22a%3A+platform-views%22+)
 * [Cupertino overdue](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+-label%3A%22a%3A+platform-views%22+milestone%3AOverdue)
-* [Cupertino next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+-label%3A%22a%3A+platform-views%22+milestone%3A%22April+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+-label%3A%22a%3A+platform-views%22+milestone%3A%22May+2020%22)
+* [Cupertino next](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+-label%3A%22a%3A+platform-views%22+milestone%3A%22June+2020%22) [milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+-label%3A%22a%3A+platform-views%22+milestone%3A%22July+2020%22)
 
 ## Plugins, Packages, and Ecosystem
 
