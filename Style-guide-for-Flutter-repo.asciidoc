@@ -860,6 +860,12 @@ For trivial classes, override `toString` as follows, to aid in debugging:
 ...but even then, consider using `Diagnosticable` instead.  Avoid using `$runtimeType`, since it adds a non-trivial cost even in release and profile mode. The `objectRuntimeType` method handles this for you, falling back to a supplied constant string when asserts are disabled.
 
 
+### Be explicit about `dispose()`
+
+`dispose()` method is essential to clean up references and behavior that would otherwise prevent some objects from getting garbage collected. One example is having a subscription on some global broadcast stream (that might have other listeners) - that stream won't get garbage collected if a widget is no longer getting displayed since it has other listeners, and the widget won't get garbage collected if it's still being referenced as a listener on the stream. 
+
+However, even when implicit `dispose()` with garbage collection works, we still recommend to make it explicit to respect an ownership model when it helps, which clarifies when things will actually get freed. Basically, it's best to pretend we don't have garbage collection, it leads to better code.
+
 Naming
 ------
 
