@@ -572,23 +572,8 @@ image::https://user-images.githubusercontent.com/348942/28338544-2c3681b8-6bbe-1
 
 ### Clearly mark deprecated APIs
 
-According to Flutter's https://flutter.io/design-principles/#handling-breaking-changes[Design Principles],
-use `@deprecated` with a clear
-recommendation of what to use instead.
+We have conventions around deprecation. See the https://github.com/flutter/flutter/wiki/Tree-hygiene#deprecation[Tree Hygiene] page for more details.
 
-In some cases, using `@deprecated` will turn the tree red for longer than the Flutter team
-can accommodate. In those cases, and when we want to give developers enough time to
-move to the new API, you should use this format:
-
-```dart
-// GOOD
-
-/// (Deprecated, use [lib.class] instead) Original one-line statement.
-///
-/// A longer, one-liner that explains the context for the deprecation.
-///
-/// The rest of the comments
-```
 
 ### Use `///` for public-quality private documentation
 
@@ -860,11 +845,14 @@ For trivial classes, override `toString` as follows, to aid in debugging:
 ...but even then, consider using `Diagnosticable` instead.  Avoid using `$runtimeType`, since it adds a non-trivial cost even in release and profile mode. The `objectRuntimeType` method handles this for you, falling back to a supplied constant string when asserts are disabled.
 
 
-### Be explicit about `dispose()`
+### Be explicit about `dispose()` and the object lifecycle
 
-`dispose()` method is essential to clean up references and behavior that would otherwise prevent some objects from getting garbage collected. One example is having a subscription on some global broadcast stream (that might have other listeners) - that stream won't get garbage collected if a widget is no longer getting displayed since it has other listeners, and the widget won't get garbage collected if it's still being referenced as a listener on the stream. 
+Even though Dart is garbage collected, having a defined object lifecycle and explicit ownership model (describing in the API documentation who is allowed to mutate the object, for instance) is important to avoid subtle bugs and confusing designs.
 
-However, even when implicit `dispose()` with garbage collection works, we still recommend to make it explicit to respect an ownership model when it helps, which clarifies when things will actually get freed. Basically, it's best to pretend we don't have garbage collection, it leads to better code.
+If your class has a clear "end of life", for example, provide a `dispose()` method to clean up references such as listeners that would otherwise prevent some objects from getting garbage collected. For example, consider a widget that has a subscription on a global broadcast stream (that might have other listeners). That subscription will keep the widget from getting garbage collected until the stream itself goes away (which, for a global stream, might never happen).
+
+In general, pretending that Dart does not have garbage collection is likely to lead to less confusing and buggy code, because it forces you to think about the implications of object ownership and lifecycles.
+
 
 Naming
 ------
