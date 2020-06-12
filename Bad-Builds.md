@@ -1,6 +1,8 @@
 This is a list of all the [dev branch commits](https://github.com/flutter/flutter/releases) that are considered "bad" and should not be released to a more stable channel. See [[Bad Build Identification]] for details on how to identify builds that should be listed here. See also the [[Changelog]].
 
 **If you add a build to this list and master has not yet been fixed, please file a TODAY bug and link to it from here as well.**
+## 1.19.0-2.0.pre - present
+  * Windows users without git installed cannot use any flutter commands that require it [#57802](https://github.com/flutter/flutter/issues/57802) will be fixed in [#59369](https://github.com/flutter/flutter/pull/59369).
 
 ## 1.18.0-8.0.pre
   * --start-paused broken due to in-progress VM service migration. Bug has since been fixed.
