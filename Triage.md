@@ -17,10 +17,11 @@ Provide an initial priority for the issue. In general, the priorities you should
   * `P5` for feature requests.
   * `P6` for feature requests we're unlikely to work on in the immediate future, according to our [Roadmap](https://github.com/flutter/flutter/wiki/Roadmap).
 
-If it looks like it's critical --- as in something that stops further builds or is otherwise a major regression in functionality, consider the `P0` label. If you assign the P0 label to a bug, you _must_ reach out to a prospective owner to pass the baton for investigation. Try the `hackers` channel on the Discord if you don't know someone who can help, or reach out to @kf6gpe, @pcsosinski, or @hixie. 
+If it looks like it's critical --- as in something that stops further builds or is a major regression in core functionality affecting all users, consider the `P0` label. If you assign the `P0` label to a bug, you _must_ reach out to a prospective owner to pass the baton for investigation. Try the `hackers` channel on the Discord if you don't know someone who can help, or reach out to @kf6gpe, @pcsosinski, or @hixie. The `P0` bug is reserved for things that "stop the presses", as they also block further rolls to customers.
 
-We reserve `P1` and `P2` labels for things that affect specific customers. In general, `P1` issues are bugs blocking top-tier customers from shipping immediately, and `P2` issues are bugs that block top-tier customers from shipping soon. `P3` issues are issues that have been triaged up from `P4` by team triage.
+Like `P0`, we reserve `P1` and `P2` labels for things that should surface in our weekly triage meeting. In general, `P1` issues are bugs blocking top-tier customers from shipping immediately or breaks in core functionality affecting all users, and `P2` issues are bugs that block top-tier customers from shipping soon, or breaks in core functionality affecting most users. 
 
+`P3` issues are issues that have been triaged up from `P4` by team triage.
 
 Finally, one should look at [the least recently updated bugs of any kind](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-asc) and see if they are still relevant, applying new labels, updating the subject line if necessary, providing an update if necessary, etc.
 
