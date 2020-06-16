@@ -14,19 +14,16 @@ information.
 
 ### Windows
 
-The Windows shell is an early technical preview. It is Win32-based, but we plan to explore UWP support in
-the future.
+The Windows shell is an early technical preview. It is Win32-based, but are exploring UWP support in
+addition.
 
 The APIs for the final embedding may be significantly different from the current API surface.
 
 ### Linux
 
-The current Linux shell is a GLFW placeholder, to allow early experimentation, and will be replaced with
-a different implementation in the future. We would like to create a library 
-that lets you embed Flutter regardless of whether you're using GTK+, Qt, wxWidgets, Motif, or another arbitrary
-toolkit for other parts of your application, but have not yet determined a good way to do that. Our current plan is to support GTK+ out of the box, in a way where adding support for other toolkits is straightforward.
+The Linux shell is a technical preview. It is GTK-based.
 
-Expect the APIs for the final shell to be radically different from the current implementation.
+Ideally we would like to create a library that allows embedding Flutter regardless of whether you're using GTK+, Qt, wxWidgets, Motif, or another arbitrary toolkit for other parts of your application, but have not yet determined a good way to do that. Support for other toolkits may be added in the future.
 
 ### Plugins
 
