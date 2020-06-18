@@ -23,7 +23,7 @@ The APIs for the final embedding may be significantly different from the current
 
 The Linux shell is a technical preview. It is GTK-based.
 
-Ideally we would like to create a library that allows embedding Flutter regardless of whether you're using GTK+, Qt, wxWidgets, Motif, or another arbitrary toolkit for other parts of your application, but have not yet determined a good way to do that. Support for other toolkits may be added in the future.
+Ideally we would like to create a library that allows embedding Flutter regardless of whether you're using GTK, Qt, wxWidgets, Motif, or another arbitrary toolkit for other parts of your application, but have not yet determined a good way to do that. Support for other toolkits may be added in the future.
 
 ### Plugins
 
