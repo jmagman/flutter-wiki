@@ -12,6 +12,10 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.17 Changes
+### [1.17.4](https://github.com/flutter/flutter/pull/59695) (June 18, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/56826  - xcdevice polling may use all free hard drive space
+
 ### [1.17.3](https://github.com/flutter/flutter/pull/58646) (June 4, 2020)
 
 This fixes the following issues:
