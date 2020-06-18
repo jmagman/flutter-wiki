@@ -105,13 +105,13 @@ a host build rather than a device build).
 
 If you do this, you can omit `--local-engine-src-path` and not bother to set `$FLUTTER_ENGINE`, as
 the `flutter` tool will use these paths to determine the engine also! The tool tries really hard to
-figure out where your local build of the engine is if you specify `--locale-engine`.
+figure out where your local build of the engine is if you specify `--local-engine`.
 
 ## Adding dependencies to the Flutter Tool
 
 Each dependency we add to Flutter and the Flutter Tool makes the repo more difficult to update and requires additional work from our clients to update.
 
-Only packages which are developed by the Dart and/or Flutter teams should be permitted into the Flutter Tool. Any third party package that is currently in use is grandfathered in, but their versions must be pinned in [update_packages.dart](https://github.com/flutter/flutter/blob/master/packages/flutter_tools/lib/src/commands/update_packages.dart#L23) . These packages should only be updated after a human review of the new version. If a Dart and/or Flutter team package depends transitively on an un-maintained or unknown package, we should work with the owners to remove or replace that transitive dependency.
+Only packages which are developed by the Dart and/or Flutter teams should be permitted into the Flutter Tool. Any third party packages that are currently in use are exempt for historical reasons, but their versions must be pinned in [update_packages.dart](https://github.com/flutter/flutter/blob/master/packages/flutter_tools/lib/src/commands/update_packages.dart#L23) . These packages should only be updated after a human review of the new version. If a Dart and/or Flutter team package depends transitively on an un-maintained or unknown package, we should work with the owners to remove or replace that transitive dependency.
 
 Instead of adding a new package, ask yourself the following questions:
 
