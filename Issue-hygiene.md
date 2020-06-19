@@ -26,9 +26,9 @@ _See also: [[What should I work on?]]_
 
 The [`P0`](https://github.com/flutter/flutter/labels/P0) label indicates a high-priority issue such as a build break, regression, or failure in existing features that keeps us from shipping the current build. We look at issues with this label frequently. If you find yourself assigning a `P0` label to an issue, please be sure that there's a positive handoff between filing and a prospective owner for the issue. P0 bugs should be rare. Normally there should be zero open P0 bugs.
 
-The [`P1`](https://github.com/flutter/flutter/labels/P1) label indicates that the issue is actively blocking a top-tier customer who is trying to ship. (See below.) There are generally less than half a dozen P1 bugs.
+The [`P1`](https://github.com/flutter/flutter/labels/P1) label indicates that the issue deserves immediate attention, such as one actively blocking a top-tier customer who is trying to ship. (See below.) There are generally less than half a dozen P1 bugs.
 
-The [`P2`](https://github.com/flutter/flutter/labels/P2) label indicates that the issue is a high-priority issue from a top-tier customer. There are generally less than twenty-five P2 bugs (one GitHub search results page).
+The [`P2`](https://github.com/flutter/flutter/labels/P2) label indicates that the issue is a high-priority issue requiring attention soon, such as an issue about to block a top-tier customer. There are generally less than twenty-five P2 bugs (one GitHub search results page).
 
 The [`P3`](https://github.com/flutter/flutter/labels/P3) label indicates high-priority issues that are at the top of the work list.
 
