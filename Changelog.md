@@ -7,7 +7,7 @@ See also [[Bad Builds]], which lists dev releases that are known to have major b
 ### v1.20.X
 * NEXT AUTHOR: Put your breaking change notification here and insert headings as appropriate to identify which version is affected.
 * [#58831](https://github.com/flutter/flutter/pull/58831) Instances of `TextField` must have a `MaterialLocalizations` present in the widget tree.
-* [#58829](https://github.com/flutter/flutter/pull/58829) Instances of Dialog, as well as SimpleDialog, AlertDialog, and showTimePicker, now have a default shape of a RoundedRectangleBorder with a BorderRadius of 4.0 pixels.
+* [#58829](https://github.com/flutter/flutter/pull/58829) Instances of `Dialog`, as well as `SimpleDialog`, `AlertDialog`, and `showTimePicker`, now have a default shape of a `RoundedRectangleBorder` with a `BorderRadius` of 4.0 pixels, matching the Material Spec.
 
 ### v1.19.X
 
