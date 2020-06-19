@@ -427,7 +427,7 @@ If you are having trouble coming up with useful documentation, here are some pro
 It's easy to use more words than necessary. Avoid doing so
 where possible, even if the result is somewhat terse.
 
-```
+```dart
 // BAD:
 
 /// Note: It is important to be aware of the fact that in the
@@ -479,7 +479,7 @@ abstract class Picture ...
 
 You can also use "See also" links, is in:
 
-```
+```dart
 /// See also:
 ///
 /// * [FooBar], which is another way to peel oranges.
@@ -882,7 +882,7 @@ when selecting a name for an identifier. In general, avoid one-character names u
 Provide full type information and names even for parameters that are otherwise unused. This makes it easier for
 people reading the code to tell what is actually going on (e.g. what is being ignored). For example:
 
-```
+```dart
   onTapDown: (TapDownDetails details) { print('hello!'); }, // GOOD
   onTapUp: (_) { print('good bye'); }, // BAD
 ```
@@ -966,7 +966,7 @@ a TODO to clean it up when the bug is fixed.
 
 Example:
 
-```
+```dart
 // BAD:
 
 // What should this be?
@@ -1005,13 +1005,13 @@ directive should be on the same line as the analyzer warning.
 
 If the ignore is temporary (e.g. a workaround for a bug in the compiler or analyzer, or a workaround for some known problem in Flutter that you cannot fix), then add a link to the relevant bug, as follows:
 
-```
+```dart
   foo(); // ignore: lint_code, https://link.to.bug/goes/here
 ```
 
 If the ignore directive is permanent, e.g. because one of our lints has some unavoidable false positives and in this case violating the lint is definitely better than all other options, then add a comment explaining why:
 
-```
+```dart
   foo(); // ignore: lint_code, sadly there is no choice but to do
   // this because we need to twiddle the quux and the bar is zorgle.
 ```
@@ -1020,7 +1020,7 @@ If the ignore directive is permanent, e.g. because one of our lints has some una
 
 Generally the closure passed to `setState` should include all the code that changes the state. Sometimes this is not possible because the state changed elsewhere and the `setState` is called in response. In those cases, include a comment in the `setState` closure that explains what the state is that changed.
 
-```
+```dart
   setState(() { /* The animation ticked. We use the animation's value in the build method. */ });
 ```
 
