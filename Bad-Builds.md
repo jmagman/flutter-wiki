@@ -8,7 +8,7 @@ This is a list of all the [dev branch commits](https://github.com/flutter/flutte
   * --start-paused broken due to in-progress VM service migration. Bug has since been fixed.
 
 ## 1.18.0-7.0.pre - present
-  * Web benchmark regression bench_picture_recording [#55597](https://github.com/flutter/flutter/issues/55597)
+  * Web benchmark regression bench_picture_recording [#55597](https://github.com/flutter/flutter/issues/55597) [#55389](https://github.com/flutter/flutter/issues/55389)
 
 ## 1.17.0-dev.0.0 - 1.18.0-5.0.pre
   * New version format not reported correctly to `flutter doctor` and `FlutterUsage` [#54160](https://github.com/flutter/flutter/issues/54160) fixed in [19c894](https://github.com/flutter/flutter/commit/19c8948e61cd6b6d523cd5167ec98b223c447a22) but not yet published.
