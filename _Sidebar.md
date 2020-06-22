@@ -67,6 +67,9 @@ Flutter Wiki
 - [Flutter's Build Infrastructure](https://github.com/flutter/flutter/blob/master/dev/bots/README.md)
 - [[Flutter Installation Bundles]]
 
+## Performance
+- [[How to write a render speed test for Flutter]]
+
 ## Release Information
 - [Hotfixes to the stable channel](https://github.com/flutter/flutter/wiki/Hotfixes-to-the-Stable-Channel)
 
