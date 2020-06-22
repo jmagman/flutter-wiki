@@ -63,6 +63,8 @@ When using `flutter create .` in an existing plugin to add desktop support, be s
 
 `flutter run` and `flutter build` are supported on all desktop platforms once you have added the necessary platform directory to your project (see `create` above). Breaking changes are still common on Windows and Linux however, so as noted above you should expect to need to re-create after any Flutter update to avoid build failures.
 
+Cross-compilation is not supported for desktop. You must be on Windows to build for Windows, or Linux to build for Linux.
+
 ### IDEs ###
 
 If you have enabled desktop support in the tool and added desktop support to your project as described above, your machine should appear as an available device in Android Studio or VS Code for that project. The standard Flutter build and run workflows should then automatically work for desktop as well.
