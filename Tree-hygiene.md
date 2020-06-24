@@ -380,15 +380,18 @@ The process for making breaking changes is as follows:
 
 ### 1. Determine if your change is a breaking change
 
-The first step in making a breaking change is to implement the change you wish to see and run the existing tests against your new code (without having changed the tests first). Changes will fall into the following categories:
+The first step in making a breaking change is to implement the change you wish to see and run the existing tests against your new code (without having changed the tests first). Changes that break (i.e. require changes to) one or more of the contributed tests are considered "breaking changes".
 
-* Changes that break (i.e. require changes to) one or more of the contributed tests (such as those in the [`customer_testing`](https://github.com/flutter/tests) shard on `flutter/flutter` PRs). These are considered "breaking changes". (Some contributors have also provided additional test suites that we can run that are not public, notably Google allows us to run several tens of thousands of proprietary tests on each commit. If you have a significant test suite that you would like to have be considered part of the breaking change definition, please contact Hixie at ian@hixie.ch.)
+The "contributed tests" are:
 
-* Changes that break the widgets or devicelab tests. Eventually once we have lots of contributed tests we will ignore this, but for now, we need to consider these changes carefully because they could be a sign that we will affect lots of people. Tests that break because code needs to be updated to match a new API should be considered breaking. Tests that break because they are verifying the text of an error message should not be considered breaking. If you are not sure, please ask Hixie.
+* Those in the [`customer_testing`](https://github.com/flutter/tests) shard on `flutter/flutter` PRs.
+* Additional test suites that we have been allowed to run but that are not public. (Notably, Google allows us to run several tens of thousands of proprietary tests on each commit.)
 
-* Changes that do not break any tests. We will pretend that such changes are not breaking changes and make them without any effort to prevent breakages. In cases where we can imagine reasonable scenarios where developers would be affected negatively, by courtesy, once the change has landed, engineers are encouraged to announce the changes by sending an e-mail to flutter-announce and listing it on our [[Changelog]] wiki page (such that they will be included in our release notes). However, we do not consider these breaking changes.
+You can contribute tests to the flutter/tests repo by following [the instructions](https://github.com/flutter/tests/blob/master/README.md) on that repo. If you have a significant test suite that you would like to have be considered part of the breaking change definition (one too big to land in the flutter/tests repo), please contact Hixie at ian@hixie.ch.
 
-These definitions are binding. If you think you need an exemption to this policy, please contact Hixie on the #hackers [[Chat]] channel. If a breaking change lands without following this policy and without an explicit exemption from @Hixie, it must be reverted.
+In cases where we can imagine reasonable scenarios where developers would be affected negatively, by courtesy, once the change has landed, engineers are encouraged to announce the changes by sending an e-mail to flutter-announce and listing it on our [[Changelog]] wiki page (such that they will be included in our release notes). However, we do not consider these breaking changes. (One reason to do this would be if we see our own tests being significantly affected, even if no contributed test actually fails.)
+
+This definitions is binding. If you think you need an exemption to this policy, please contact Hixie on the #hackers [[Chat]] channel. If a breaking change lands without following this policy and without an explicit exemption from @Hixie, it must be reverted.
 
 ### 2. Evaluate the breaking change proposal
 
