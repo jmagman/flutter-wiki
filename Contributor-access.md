@@ -54,3 +54,21 @@ The actual process (as followed by Flutter repo admins) is as follows:
 1. Type their name in the text field, select them, then click the "Invite" button.
 1. If they are on Discord, add them to the "team" group there too. Be sure to verify that you are promoting the right person; multiple people can have the same nickname on Discord!
 1. *For new Googlers joining the team*, you need to ask someone in the team to add you to get added. It's not an automatic process after you join the flutter Google group.
+
+
+# Access to logs on the Flutter dashboard
+
+The [Flutter dashboard](https://flutter-dashboard.appspot.com/) shows what recently landed and what tests passed or failed with those commits. To see the logs, you need to be added to a whitelist. Anyone with commit access is eligible to be added to that whitelist, but only certain team members have the permissions required to update the backend database where the permissions are stored. To get access, ask on #hackers-infra to be added to the whitelist.
+
+## Process
+
+(Documentation should be added here for how to update the Cocoon whitelist.)
+
+
+# Access to LUCI recipes and configuration repositories
+
+If you need access to the LUCI recipes, you need to be added to the relevant ACLs. Ask in #hackers-infra to be added to the LUCI ACLs.
+
+## Process
+
+A Googler has to be the one to grant permission. Documentation on how to use the relevant tools is available at: https://goto.google.com/gob-ctl#add-or-remove-users-in-host-acl
