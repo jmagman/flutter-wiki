@@ -98,7 +98,7 @@ To keep Flutter performant, running a test locally once in a while and check the
 		  return PerfTest(
 		    '${flutterDirectory.path}/dev/benchmarks/macrobenchmarks',
 		    'test_driver/super_important_case_perf.dart',
-		    'picture_cache_perf',
+		    'super_important_case_perf',
 		  ).run;
 		}
 
