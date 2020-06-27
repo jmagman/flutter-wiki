@@ -108,6 +108,10 @@ To keep Flutter performant, running a test locally once in a while and check the
 
 6. Finally, remove `flaky: true` once the test is proven to be reliable for a few days. Since this may take a while, creating a reminder calendar event could be a good idea.
 
+## 4. Set benchmark baseline
+
+Tasks will be run automatically in the [devicelab], and the result is shown in [flutter-dashboard]. Set the baseline in [flutter-dashboard] once the new test gets enough data. 
+
 ## Acknowledgement
 
 Big congratulations if you've successfully finished all steps above! You just made a big contribution to Flutter's performance. Please also feel encouraged to improve this doc to help future contributors (which probably include a future yourself that would forget something above in a few months)!
@@ -140,3 +144,5 @@ Big congratulations if you've successfully finished all steps above! You just ma
 [dev/devicelab/bin/tasks]: https://github.com/flutter/flutter/tree/master/dev/devicelab/bin/tasks
 
 [dev/devicelab/lib/tasks/perf_tests.dart]: https://github.com/flutter/flutter/tree/master/dev/devicelab/lib/tasks/perf_tests.dart
+
+[flutter-dashboard]: https://flutter-dashboard.appspot.com/benchmarks.html
