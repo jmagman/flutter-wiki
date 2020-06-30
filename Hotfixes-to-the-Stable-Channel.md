@@ -12,6 +12,10 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.17 Changes
+### [1.17.5](https://github.com/flutter/flutter/pull/60611) (June 30, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter-intellij/issues/4642  - Intellij/Android Studio plugins fail to show connected Android devices.
+
 ### [1.17.4](https://github.com/flutter/flutter/pull/59695) (June 18, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/56826  - xcdevice polling may use all free hard drive space
