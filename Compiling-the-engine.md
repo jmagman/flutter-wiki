@@ -1,3 +1,5 @@
+_If you've never built the engine before, first see [Setting up the Engine development environment](https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment)._
+
 # Contents
 
 Depending on the platform you are making changes for, you may be interested in all or only some of the sections below:
