@@ -1,5 +1,3 @@
-# Reduce shader compilation jank using SkSL warm-up
-
 **TLDR** If a Flutter app has janky animations during the first run, SkSL shader warm-up can speed them up by more than 2x as the screenshot illustrated below without much manual work.
 
 ![SkSL warm-up comparison](https://lh3.googleusercontent.com/pw/ACtC-3cL8kTXciBfFQa1dLvgkBjjL06Gp2IOEsEz0BLrbJBOtnskKnXSJMDbEfqPwGBYUmpXFda_Onal7fY7iYUtm707D7nhXIQTE3kPHbECi4vhYqEW2tjmfUJ_9Ehj-bFycv4dSENPfJIC2FB5asKyzv9V0A=w480-h426-no?authuser=0)
