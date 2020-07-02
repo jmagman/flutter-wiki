@@ -69,6 +69,7 @@ Flutter Wiki
 
 ## Performance
 - [[How to write a render speed test for Flutter]]
+- [[Reduce shader compilation jank using SkSL warm up]]
 
 ## Release Information
 - [Hotfixes to the stable channel](https://github.com/flutter/flutter/wiki/Hotfixes-to-the-Stable-Channel)
