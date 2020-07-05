@@ -14,8 +14,8 @@ information.
 
 ### Windows
 
-The Windows shell is an early technical preview. It is Win32-based, but are exploring UWP support in
-addition.
+The Windows shell is an early technical preview. It is Win32-based, but we are exploring adding a UWP
+version as well.
 
 The APIs for the final embedding may be significantly different from the current API surface.
 
