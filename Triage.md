@@ -78,6 +78,7 @@ Finally, label the issue based on what area of the project the bug relates to:
 - If it's specific to writing desktop Windows, macOS, Linux, or Web apps with Flutter, add the `a: desktop` label.
 - If it's related to a specific platform, add one of the "platform" labels. In particular, issues involving the Web backend should have the `platform-web` label.
 - If it's related to our testing infrastructure (LUCI, Cocoon, devicelab, Cirrus, etc), add the `team: infra` label.
+- If it's related to the developer tools -- that is, if it has or is going to receive `t: devtools`, or Android Studio, move it to the [flutter/devtools](https://github.com/flutter/devtools) repository for further triage, unless it looks like the first step is a change to the core parts of Flutter (engine or framework).
 
 Bugs relating to the website should be moved to the `flutter/website` repo.
 
