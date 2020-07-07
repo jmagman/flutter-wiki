@@ -1,3 +1,4 @@
+
 **TLDR** If a Flutter app has janky animations during the first run, SkSL shader warm-up can speed them up by more than 2x as the screenshot illustrated below without much manual work.
 
 ![SkSL warm-up comparison](https://lh3.googleusercontent.com/pw/ACtC-3cL8kTXciBfFQa1dLvgkBjjL06Gp2IOEsEz0BLrbJBOtnskKnXSJMDbEfqPwGBYUmpXFda_Onal7fY7iYUtm707D7nhXIQTE3kPHbECi4vhYqEW2tjmfUJ_9Ehj-bFycv4dSENPfJIC2FB5asKyzv9V0A=w480-h426-no?authuser=0)
@@ -17,7 +18,9 @@ Flutter now provides command line tools for app developers to collect shaders th
 1. Run the app with `--cache-sksl` turned on (e.g., `flutter run --profile --cache-sksl`) to capture shaders in SkSL.
 2. Play with the app to trigger as many animations (especially those with compilation jank) as needed.
 3. Press `M` in the command line of `flutter run` to write the captured SkSL shaders into a file named like `flutter_01.sksl.json`.
-4.  Build the app with SkSL warm-up using `flutter build apk --bundle-sksl-path flutter_01.sksl.json` (use `flutter build ios ...` for iOS).
+4. Build the app with SkSL warm-up using 
+	- `flutter build apk --bundle-sksl-path flutter_01.sksl.json` for Android
+	- `flutter build ios --bundle-sksl-path flutter_01.sksl.json` for iOS.
 5. Test the newly built app and release it.
 
 Alternatively, one can write some [integration tests] to automate the step 1 to 3 above using a single command like `flutter drive --profile --cache-sksl --write-sksl-on-exit flutter_01.sksl.json -t test_driver/app.dart`.
