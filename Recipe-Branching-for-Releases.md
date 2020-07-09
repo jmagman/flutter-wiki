@@ -53,7 +53,7 @@ Base LUCI recipe revision: $RECIPE_FRAMEWORK_REVISION
 ```
 7. Set `RELEASE_FRAMEWORK_REF` (e.g. "refs/heads/flutter-1.17-candidate.3") for what you want to test and trigger a test run of the recipe fork with LED:
 ```
-led get-builder 'luci.flutter.prod:Linux' | led edit -pa git_ref="$RELEASE_FRAMEWORK_REF" | led edit -pa git_url='https://github.com/flutter/flutter' | led edit -pa recipe_name='flutter_v1_17_0.py' | led edit-recipe-bundle | led launch
+led get-builder 'luci.flutter.prod:Linux' | led edit -pa git_ref="$RELEASE_FRAMEWORK_REF" | led edit -pa git_url='https://github.com/flutter/flutter' | led edit -pa recipe_name="flutter_$VERSION.py" | led edit-recipe-bundle | led launch
 ```
 8. If the LED run fails, possible reasons include:
   - Something changed in the builder config, see flutter/infra repo. (e.g. Xcode version in builder changed, requiring a recipe cherry pick from upstream version)
