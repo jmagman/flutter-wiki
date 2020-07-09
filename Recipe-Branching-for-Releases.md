@@ -41,7 +41,16 @@ RECIPE_FRAMEWORK_REVISION=$(git log --before="$FRAMEWORK_DATE" -n 1 --format=%H)
 cd $RECIPES_REPO/recipes
 git show $RECIPE_FRAMEWORK_REVISION:./flutter.py > "./flutter_$VERSION.py"
 ```
-6. Edit `flutter_beta.py` with comments describing the release version this recipe is for, `$FRAMEWORK_REVISION`, `$FRAMEWORK_DATE`, and `$LUCI_FRAMEWORK_REVISION`.
+6. Edit the new file with a comment using this template (filling in the env variables):
+```
+'''
+This recipe was forked from flutter.py for Flutter release version $VERSION.
+
+Base framework revision: $FRAMEWORK_REVISION
+Framework commit date: $FRAMEWORK_DATE
+Base LUCI recipe revision: $RECIPE_FRAMEWORK_REVISION
+'''
+```
 7. Set `RELEASE_FRAMEWORK_REF` (e.g. "refs/heads/flutter-1.17-candidate.3") for what you want to test and trigger a test run of the recipe fork with LED:
 ```
 led get-builder 'luci.flutter.prod:Linux' | led edit -pa git_ref="$RELEASE_FRAMEWORK_REF" | led edit -pa git_url='https://github.com/flutter/flutter' | led edit -pa recipe_name='flutter_v1_17_0.py' | led edit-recipe-bundle | led launch
