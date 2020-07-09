@@ -59,7 +59,7 @@ led get-builder 'luci.flutter.prod:Linux' | led edit -pa git_ref="$RELEASE_FRAME
   - Something changed in the builder config, see flutter/infra repo. (e.g. Xcode version in builder changed, requiring a recipe cherry pick from upstream version)
   - The recipe depends on other files in the repo, which haven't been forked. Repeat steps 4-6 for these additional dependencies.
 9. Get the engine repo revision from your framework revision. In the framework repo, the engine revision is checked in as [//bin/internal/engine.version](https://github.com/flutter/flutter/blob/master/bin/internal/engine.version).
-10. Repeat steps 3 to 7 for the engine recipe. As of release 1.17.0, `engine_builder.py` and `engine_builder.proto` also had to be forked. The LED command for testing engine should be:
+10. Repeat steps 3 to 7 for the engine recipe. As of release 1.20.0, `engine_builder.py`, `web_engine.py` and `engine_builder.proto` also had to be forked. The LED command for testing engine should be:
 ```
 led get-builder 'luci.flutter.prod:Linux Host Engine' | led edit -pa git_ref="$RELEASE_ENGINE_REF" | led edit -pa git_url='https://github.com/flutter/engine' | led edit -pa recipe_name=engine_v1_17_0.py | led edit-recipe-bundle | led launch
 ```
