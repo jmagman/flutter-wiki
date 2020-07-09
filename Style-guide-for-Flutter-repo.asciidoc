@@ -734,6 +734,18 @@ really is, and tends to encourage "spaghetti" code (where distant components ref
 than "lasagna" code (where each section of the code is cleanly layered and separable).
 
 
+### Avoid using `extension`.
+
+Extension methods are confusing to document and discover. To an end developer,
+they appear no different than the built in API of the class, and discovering
+the documentation and implementation of an extension is more challenging than
+for class memebers.
+
+Prefer instead adding methods directly to relevant classes. If that is not
+possible, create a method that clearly identifies what object(s) it works with
+and is part of.
+
+
 ### Never check if a port is available before using it, never add timeouts, and other race conditions.
 
 If you look for an available port, then try to open it, it's extremely likely that several times a week some other code will open that port between your check and when you open the port, and that will cause a failure.
