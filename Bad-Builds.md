@@ -1,6 +1,9 @@
 This is a list of all the [dev branch commits](https://github.com/flutter/flutter/releases) that are considered "bad" and should not be released to a more stable channel. See [[Bad Build Identification]] for details on how to identify builds that should be listed here. See also the [[Changelog]].
 
 **If you add a build to this list and master has not yet been fixed, please file a TODAY bug and link to it from here as well.**
+## 1.20.0-7.0.pre
+  * Motion events are not getting dispatched to the virtual display [#61169](https://github.com/flutter/flutter/issues/61169)
+
 ## 1.19.0-2.0.pre - 1.20.0-1.0.pre
   * Windows users without git installed cannot use any flutter commands that require it [#57802](https://github.com/flutter/flutter/issues/57802) and was fixed in [#59369](https://github.com/flutter/flutter/pull/59369).
 
