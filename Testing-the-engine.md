@@ -222,6 +222,11 @@ See [[Setting-up-the-Engine-development-environment#editor-autocomplete-support]
 for tips on setting up C/C++/Objective-C code completion and syntax highlighting
 when working on the engine and tests.
 
+To debug the XCTests, you can open the Xcode project at `testing/ios/IosUnitTests/IosUnitTests.xcodeproj`
+and run the tests (such as via ⌘U). Note you cannot modify the test source and 
+build the tests in Xcode for reasons mentioned above. If you modify the test, 
+you need to run `testing/ios/run_tests.py` again.
+
 XCTests are executed during pre-submit on our CI system when submitting PRs to
 the `flutter/engine` repository.
 
