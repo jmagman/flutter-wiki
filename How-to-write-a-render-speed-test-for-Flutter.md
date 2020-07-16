@@ -73,7 +73,11 @@ Some useful metrics in that json file include
 - `worst_frame_build_time_millis`
 - `worst_frame_rasterization_time_millis`
 
-## 3. Add a task to devicelab
+## 3. Update README
+
+Add a new section in `flutter/dev/benchmarks/macrobenchmarks/README.md` to explain the test case. 
+
+## 4. Add a task to devicelab
 
 To keep Flutter performant, running a test locally once in a while and check the metrics manually is insufficient. The following steps let the [devicelab][] run the test automatically for every Flutter commit so performance regressions or speedups for the `super_important_case` can be detected quickly.
 
@@ -108,7 +112,7 @@ To keep Flutter performant, running a test locally once in a while and check the
 
 6. Finally, remove `flaky: true` once the test is proven to be reliable for a few days. Since this may take a while, creating a reminder calendar event could be a good idea.
 
-## 4. Set benchmark baseline
+## 5. Set benchmark baseline
 
 Tasks will be run automatically in the [devicelab], and the result is shown in [flutter-dashboard]. Set the baseline in [flutter-dashboard] once the new test gets enough data. 
 
