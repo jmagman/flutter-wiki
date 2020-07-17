@@ -19,51 +19,46 @@ To add a new test scenario `super_important_case`, do the following:
 3. Open [macrobenchmarks/lib/main.dart][] and add the `kSuperImportantCaseRouteName: (BuildContext conttext) => SuperImportantCasePage(),` to the routes of [`MacrobenchmarksApp`][].
 4. Scroll down to [`HomePage`'s `ListView`][] and add the following `RaisedButton` so manual testers and the Flutter driver can tap it to navigate to the `super_important_case`.
 
-			 RaisedButton(
-			   key: const Key(kSuperImportantCaseRouteName),
-			   child: const Text('Super Important Case'),
-			   onPressed: () {
-			     Navigator.pushNamed(context, kSuperImportantCaseRouteName);
-			   },
-			 ),
+   ```Dart
+       RaisedButton(
+         key: const Key(kSuperImportantCaseRouteName),
+         child: const Text('Super Important Case'),
+         onPressed: () {
+           Navigator.pushNamed(context, kSuperImportantCaseRouteName);
+         },
+       ),
+   ```
 
 ## 2. Add a driver test
 
 When the `super_important_case` page above is finished and manually tested, one can then add an automatic driver test to get some performance metrics as follows.
 
-1. Add `super_important_case_perf.dart` to [macrobenchmarks/test_driver][] with the following content. It includes mostly boilerplate code. The essential line is `enableFlutterDriverExtension` which allows the use of Flutter driver.
-
-		import 'package:flutter_driver/driver_extension.dart';
-		import 'package:macrobenchmarks/main.dart' as app;
-
-		void main() {
-		  enableFlutterDriverExtension();
-		  app.main();
-		}
+1. We use [macrobenchmarks/test_driver/run_app.dart] as the device side app. All other tests depends on this file, so discuss with other Flutter members first if you want to change it. 
 
 2. Add `super_important_case_perf_test.dart` to [macrobenchmarks/test_driver][] with the following content. The `macroPerfTest` function will navigate the macrobenchmarks app to the `super_important_case` page, and starts collecting performance metrics. The `driverOps` provides custom ways of driving that page during the benchmark such as scrolling through lists. The `setupOps` provides the operation needed to setup before benchmark starts. 
 
-		import 'package:flutter_driver/flutter_driver.dart';
-		import 'package:macrobenchmarks/common.dart';
+   ```Dart
+   import 'package:flutter_driver/flutter_driver.dart';
+   import 'package:macrobenchmarks/common.dart';
 
-		import 'util.dart';
+   import 'util.dart';
 
-		void main() {
-		  macroPerfTest(
-		    'super_important_case',
-		    kSuperImportantCaseRouteName,
-		    pageDelay: const Duration(seconds: 1),
-		    /* optional */ driverOps: (FlutterDriver driver) async {
-				...
-		    }, 
-		    /* optional */ setupOps: (FlutterDriver driver) async {
-				...
-		    }, 
-		  );
-		}
+   void main() {
+     macroPerfTest(
+       'super_important_case',
+       kSuperImportantCaseRouteName,
+       pageDelay: const Duration(seconds: 1),
+       /* optional */ driverOps: (FlutterDriver driver) async {
+           ...
+       }, 
+       /* optional */ setupOps: (FlutterDriver driver) async {
+           ...
+       }, 
+     );
+   }
+   ```
 
-
-Once all steps above are done, one should be able to run `flutter drive -t super_important_case_perf.dart` inside the [macrobenchmarks][] directory. After the driver test finished, the metrics should be written into a json file named `super_important_case_perf__timeline_summary.json` inside a temporary `build` directory under the current [macrobenchmarks][] directory.
+Once all steps above are done, one should be able to run `flutter drive -t test_driver/run_app.dart --driver test_driver/super_important_case_perf.dart` inside the [macrobenchmarks][] directory. After the driver test finished, the metrics should be written into a json file named `super_important_case_perf__timeline_summary.json` inside a temporary `build` directory under the current [macrobenchmarks][] directory.
 
 
 <!--- TODO explain what these metrics mean in the future -->
@@ -75,7 +70,7 @@ Some useful metrics in that json file include
 
 ## 3. Update README
 
-Add a new section in `flutter/dev/benchmarks/macrobenchmarks/README.md` to explain the test case. 
+Add the new test to the list in [macrobenchmarks/README.md]. 
 
 ## 4. Add a task to devicelab
 
@@ -85,26 +80,31 @@ To keep Flutter performant, running a test locally once in a while and check the
 
 2. Add `super_important_case_perf__timeline_summary.dart` to [dev/devicelab/bin/tasks][] with a content like
 
-		import 'dart:async';
+   ```Dart
+   import 'dart:async';
 
-		import 'package:flutter_devicelab/tasks/perf_tests.dart';
-		import 'package:flutter_devicelab/framework/adb.dart';
-		import 'package:flutter_devicelab/framework/framework.dart';
+   import 'package:flutter_devicelab/tasks/perf_tests.dart';
+   import 'package:flutter_devicelab/framework/adb.dart';
+   import 'package:flutter_devicelab/framework/framework.dart';
 
-		Future<void> main() async {
-		  deviceOperatingSystem = DeviceOperatingSystem.android;  // or ios
-		  await task(createSuperImportantCasePerfTest());
-		}
+   Future<void> main() async {
+     deviceOperatingSystem = DeviceOperatingSystem.android;  // or ios
+     await task(createSuperImportantCasePerfTest());
+   }
+   ```
 
 3. Add the following `createSuperImportantCasePerfTest` function to [dev/devicelab/lib/tasks/perf_tests.dart][]
 
-		TaskFunction createSuperImportantCasePerfTest() {
-		  return PerfTest(
-		    '${flutterDirectory.path}/dev/benchmarks/macrobenchmarks',
-		    'test_driver/super_important_case_perf.dart',
-		    'super_important_case_perf',
-		  ).run;
-		}
+   ```Dart
+   TaskFunction createSuperImportantCasePerfTest() {
+     return PerfTest(
+       '${flutterDirectory.path}/dev/benchmarks/macrobenchmarks',
+       'test_driver/run_app.dart',
+       'super_important_case_perf',
+       testDriver: 'test_driver/super_important_case_perf_test.dart',
+     ).run;
+   }
+   ```
 
 4. Locally test the devicelab task by running `../../bin/cache/dart-sdk/bin/dart bin/run.dart -t super_important_case_perf__timeline_summary` inside the [dev/devicelab][devicelab] directory with an Android or iOS device connected. You should see a success and a summary of metrics being printed out.
 
@@ -144,6 +144,10 @@ Big congratulations if you've successfully finished all steps above! You just ma
 [`HomePage`'s `ListView`]: https://github.com/flutter/flutter/blob/94b7ff241e6e5445b7f30215a777eb4971311797/dev/benchmarks/macrobenchmarks/lib/main.dart#L58
 
 [macrobenchmarks/test_driver]: https://github.com/flutter/flutter/tree/master/dev/benchmarks/macrobenchmarks/test_driver
+
+[macrobenchmarks/test_driver/run_app.dart]: https://github.com/flutter/flutter/tree/master/dev/benchmarks/macrobenchmarks/test_driver/run_app.dart
+
+[macrobenchmarks/README.md]: https://github.com/flutter/flutter/blob/master/dev/benchmarks/macrobenchmarks/README.md
 
 [dev/devicelab/bin/tasks]: https://github.com/flutter/flutter/tree/master/dev/devicelab/bin/tasks
 
