@@ -61,6 +61,7 @@ Flutter Wiki
 - [[Crashes]]
 - [[Supporting legacy platforms]]
 - [[Metal on iOS FAQ]]
+- [[Engine Clang Tidy Linter]]
 
 ## Infrastructure
 - [[Autorollers]]
