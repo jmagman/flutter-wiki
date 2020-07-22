@@ -2,13 +2,13 @@
 
 ## Description
 
-In May 2020, [`clang-tidy`](https://clang.llvm.org/extra/clang-tidy/) was added as a CI step to the Flutter Engine.  Previously the only lint checks that were happening in the engine were formatting, there were no semantic checks.  Now there are, but that means there is work to be done migrating all the code to conform to all the semantic checks.  As part of working on the engine we've decided progressively fix the issues as they arise, thus sharing the work.
+In May 2020, [`clang-tidy`](https://clang.llvm.org/extra/clang-tidy/) was added as a CI step to the Flutter Engine.  Previously the only lint checks that were happening in the engine were formatting, there were no semantic checks.  Now there are, but that means there is work to be done migrating all the code to conform to all the lint checks.
+
+If a file has `// FLUTTER_NOLINT` at the top, it has issues with the lint that haven't been addressed and the linter will ignore it.  As the issues are fixed the comments should be removed.
+
+You can run the linter locally by running `flutter/ci/lint.sh`.
 
 ## FAQs
-
-### Hey, why am I getting this lint error in code I didn't write?
-
-We decided that cleaning up the code should be a responsibility shared across all the developers.  If you see a lint error in a file you've edited please address the problem in your PR or in a separate PR.
 
 ### I don't understand this lint error, where do I get help?
 
