@@ -1,6 +1,6 @@
 ## Treemaps
 
-For each commit to [flutter/engine](https://github.com/flutter/engine) the Chromebots generate treemaps illustrating the sizes of the individual components within release builds of `libflutter.so`. The treemap is uploaded to Google Cloud Storage and linked from our [Waterfall](https://build.chromium.org/p/client.flutter/waterfall) (look for the "Open Treemap" links).
+For each commit to [flutter/engine](https://github.com/flutter/engine) the Chromebots generate treemaps illustrating the sizes of the individual components within release builds of `libflutter.so`. The treemap is uploaded to Google Cloud Storage and linked from the [LUCI](https://ci.chromium.org/p/flutter/g/engine/console) console: Select a "Linux aot" build and search for "Open Treemap".
 
 Alternatively, a link to a treemap can be constructed as follows:
 
