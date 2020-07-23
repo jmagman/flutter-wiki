@@ -114,7 +114,7 @@ To keep Flutter performant, running a test locally once in a while and check the
 
 ## 5. Set benchmark baseline
 
-Tasks will be run automatically in the [devicelab], and the result is shown in [flutter-dashboard]. Set the baseline in [flutter-dashboard] once the new test gets enough data. 
+Tasks will be run automatically in the [devicelab], and the result is shown in [flutter-dashboard]. Set the baseline in [flutter-dashboard] once the new test gets enough data. Also for metrics like "vsync_transitions_missed", change the unit from default ms to frames or other suitable units.
 
 ## Acknowledgement
 
