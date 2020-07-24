@@ -1,6 +1,10 @@
 This is a list of all the [dev branch commits](https://github.com/flutter/flutter/releases) that are considered "bad" and should not be released to a more stable channel. See [[Bad Build Identification]] for details on how to identify builds that should be listed here. See also the [[Changelog]].
 
 **If you add a build to this list and master has not yet been fixed, please file a TODAY bug and link to it from here as well.**
+
+## 1.21.0-5.0.pre
+  * Dart SDK reports wrong version, violating `flutter_tools` version constraint [#62174](https://github.com/flutter/flutter/issues/62174)
+
 ## 1.20.0-7.0.pre
   * Motion events are not getting dispatched to the virtual display [#61169](https://github.com/flutter/flutter/issues/61169)
 
