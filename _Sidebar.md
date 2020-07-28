@@ -80,10 +80,10 @@ Flutter Wiki
   - [Upgrade pre-1.8.4 iOS projects](https://github.com/flutter/flutter/wiki/Upgrading-Flutter-added-to-existing-iOS-Xcode-project)
   - [Upgrade pre-1.12 Android projects](https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects)
 - [Binding to native code using dart:ffi](https://flutter.dev/docs/development/platform-integration/c-interop)
-- [Building a web application with Flutter](https://flutter.dev/docs/get-started/web)
 - [[Code generation in Flutter]]
 - [Creating responsive apps](https://flutter.dev/docs/development/ui/layout/responsive)
-- [[Desktop shells]] - building a Mac app with Flutter
+- [[Desktop shells]]
+- [[Experimental flags for web support]]
 - [[IntelliJ + Flutter Setup Tips and Tricks]]
 - [[Linting Flutter apps for Chrome OS]]
 - [[Making animated GIFs of Flutter apps]]
