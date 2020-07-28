@@ -19,5 +19,5 @@ We recently started experimenting with using a canvas API for measuring text whi
 You can enable these canvas text improvements with the `FLUTTER_WEB_USE_EXPERIMENTAL_CANVAS_TEXT` flag, as follows:
 
 ```
-flutter run -d chrome --release --dart-define=FLUTTER_WEB_USE_EXPERIMENTAL_CANVAS_TEXT=true’
+flutter run -d chrome --release --dart-define=FLUTTER_WEB_USE_EXPERIMENTAL_CANVAS_TEXT=true
 ```
