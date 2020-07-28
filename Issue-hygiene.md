@@ -198,6 +198,15 @@ Do _not_ file bugs that meet the following criteria:
   issue or add a comment that provides new details that are not already
   captured or (best of all) assign it to yourself and start working on it!
 
+### How to propose a specific change
+
+If you have an idea that you would like to land, the recommended process is:
+
+1. File a bug describing the problem.
+2. Write a [design doc](https://flutter.dev/go/template) that references this problem and describes your solution.
+3. Socialize your design on the bug you filed and on [[Chat]]. Collect feedback from various people.
+4. Once you have received feedback, if it is mostly positive, implement your idea and submit it. See the [[Tree Hygiene]] wiki page for details on submitting PRs.
+
 ## Do not add "me too" or "same" comments to bugs
 
 The Flutter team prioritizes issues in part based on the number of +1 (thumbs
