@@ -202,7 +202,7 @@ Do _not_ file bugs that meet the following criteria:
 
 If you have an idea that you would like to land, the recommended process is:
 
-1. File a bug describing the problem.
+1. [File a bug](https://github.com/flutter/flutter/issues/new/choose) describing the problem.
 2. Write a [design doc](https://flutter.dev/go/template) that references this problem and describes your solution.
 3. Socialize your design on the bug you filed and on [[Chat]]. Collect feedback from various people.
 4. Once you have received feedback, if it is mostly positive, implement your idea and submit it. See the [[Tree Hygiene]] wiki page for details on submitting PRs.
