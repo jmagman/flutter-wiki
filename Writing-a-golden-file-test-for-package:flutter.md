@@ -20,7 +20,7 @@ Add an expectation along the following lines:
 ```dart
   await expectLater(
     find.byType(RepaintBoundary),
-    matchesGoldenFile( 'test_name.subtest.subfile.png'),
+    matchesGoldenFile('test_name.subtest.subfile.png'),
   );
 ```
 
