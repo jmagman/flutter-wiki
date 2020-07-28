@@ -1,5 +1,7 @@
 This page describes some experimental options that can be used with Flutter web support. These are not enabled by default because we haven't yet completed sufficient testing to promote this code into the default web experience. While they may offer performance improvements in your application, we advise caution in enabling them without careful testing in your specific scenario.
 
+Support for the web as a target is currently available in the `beta` channel for Flutter. More information about the web target can be found at https://flutter.dev/web. 
+
 ## CanvasKit backend
 By default, Flutter targets the DOM when building for web targets. This provides a high degree of compatibility across browsers, and requires the smallest amount of code download.
 
