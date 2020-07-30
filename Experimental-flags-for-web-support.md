@@ -21,3 +21,5 @@ You can enable these canvas text improvements with the `FLUTTER_WEB_USE_EXPERIME
 ```
 flutter run -d chrome --release --dart-define=FLUTTER_WEB_USE_EXPERIMENTAL_CANVAS_TEXT=true
 ```
+
+Update 7/30: this is now on by default in the `master` channel and will gradually roll out to other channels: https://github.com/flutter/engine/pull/19924
