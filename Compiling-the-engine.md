@@ -35,7 +35,7 @@ Run the following steps, from the `src` directory created in [Setting up the Eng
     * `ninja -C out/host_debug_unopt` for host-side executables.
     * These commands can be combined. Ex: `ninja -C out/android_debug_unopt && ninja -C out/host_debug_unopt`
     * For MacOS, you will need older version of XCode(9.4 or below) to compile android_debug_unopt and android_debug_unopt_x86. If you only care about x64, you can ignore this
-    * For Googlers, consider also using the option `-j 100` to parallelize the build using Goma.
+    * For Googlers, consider also using the option `-j 100` to parallelize the build using Goma. Before that, you may need to set up `GOMA_DIR` environmental variable, which, depending on where you install Goma, may be in `~/goma` or `depot_tools/.cipd_bin`.
 
 This builds a debug-enabled ("unoptimized") binary configured to run Dart in
 checked mode ("debug"). There are other versions, see [[Flutter's modes]].
