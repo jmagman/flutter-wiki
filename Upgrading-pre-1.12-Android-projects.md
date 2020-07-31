@@ -20,7 +20,7 @@ _This guide assumes you haven't manually modified your Android host project for 
 
 If you opt to migrate your standard `flutter create`d project, follow the following steps:
 
-1. Remove the body of your `android/app/src/main/java/[your/package/name]/MainActivity.java` and change the `FlutterActivity` import. The new `FlutterActivity` no longer requires manually registering your plugins. It will now perform the registration automatically when the underlaying `FlutterEngine` is created. 
+1a. If you don't have any of your own added code to `android/app/src/main/java/[your/package/name]/MainActivity.java`  - remove the body of your `MainActivity.java` and change the `FlutterActivity` import. The new `FlutterActivity` no longer requires manually registering your plugins. It will now perform the registration automatically when the underlaying `FlutterEngine` is created. 
 
   ```diff
   // MainActivity.java
@@ -54,6 +54,52 @@ If you opt to migrate your standard `flutter create`d project, follow the follow
   ```
 
   Since the body of the `MainActivity` is now empty, you can also optionally delete the `MainActivity.java/kt` file if you'd like. If you do, you need to change your `AndroidManifest.xml`'s reference to `.MainActivity` to `io.flutter.embedding.android.FlutterActivity`.
+
+1b. If you had existing custom platform channel handling code in your `MainActivity.java`, below is an example of the change you can make to adopt the new embedding API:
+
+  ```diff
+  -import io.flutter.app.FlutterActivity;
+  -import io.flutter.plugin.common.MethodCall;
+  +import androidx.annotation.NonNull;
+  +import io.flutter.embedding.android.FlutterActivity;
+  +import io.flutter.embedding.engine.FlutterEngine;
+   import io.flutter.plugin.common.MethodChannel;
+  -import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
+  -import io.flutter.plugin.common.MethodChannel.Result;
+  +import io.flutter.plugins.GeneratedPluginRegistrant;
+ 
+   public class MainActivity extends FlutterActivity {
+       private static final String CHANNEL = "samples.flutter.dev/battery";
+  -
+  -    @Override
+  -    public void onCreate(Bundle savedInstanceState) {
+  -
+  -        super.onCreate(savedInstanceState);
+  -        GeneratedPluginRegistrant.registerWith(this);
+  -
+  -        new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(
+  -                new MethodCallHandler() {
+  -                    @Override
+  -                    public void onMethodCall(MethodCall call, Result result) {
+  -                        // Your existing code
+  -                    }
+  -                });
+  -    }
+  +
+  +    @Override
+  +    public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
+  +        GeneratedPluginRegistrant.registerWith(flutterEngine);
+  +        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL)
+  +                .setMethodCallHandler(
+  +                    (call, result) -> {
+  +                        // Your existing code
+  +                }
+  +        );
+  +    }
+   }
+  ```
+
+  In other words, move the channel registration part of the code in your `onCreate` into the `configureFlutterEngine` override of the FlutterActivity subclass and use `flutterEngine.getDartExecutor().getBinaryMessenger()` as the binary messenger rather than `getFlutterView()`.
 
 2. Open `android/app/src/main/AndroidManifest.xml`.
 3. Remove the reference to `FlutterApplication` from the application tag.
