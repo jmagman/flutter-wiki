@@ -52,8 +52,6 @@ When you are happy with your golden change, you are ready to submit your PR for 
 
 The updated tests can be triaged from these tryjobs, which will cause the pending `flutter-gold` check to pass. Review the tryjob and the images that were generated, making sure they look as expected. Currently, we generate images for Linux, Mac, Windows and Web platforms. It is common for there to be slight differences between them. Click the checkmark to approve the change, completing triage.
 
-Changes such as these constitute a **breaking change**, and should follow [Handling Breaking Changes](https://github.com/flutter/flutter/wiki/Tree-hygiene#handling-breaking-changes). This includes marking your PR with the `severe: API break` and `will affect goldens` labels, as well as updating the [Changelog](https://github.com/flutter/flutter/wiki/Changelog). Exceptions to this include new golden file tests and upstream changes, e.g. from a skia dependency.
-
 And that’s it! Your new golden file(s) will be checked in as the baseline(s) for your new test(s), and your PR will be ready to merge. :tada:
 
 *Triage permission is currently restricted to googlers, with plans to extend to members of flutter-hackers. For more information, see [Contributor Access](https://github.com/flutter/flutter/wiki/Contributor-access).* 
