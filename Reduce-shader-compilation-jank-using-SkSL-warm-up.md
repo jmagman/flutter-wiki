@@ -21,6 +21,7 @@ Flutter now provides command line tools for app developers to collect shaders th
 4. Build the app with SkSL warm-up using 
 	- `flutter build apk --bundle-sksl-path flutter_01.sksl.json` for Android
 	- `flutter build ios --bundle-sksl-path flutter_01.sksl.json` for iOS.
+	- If it's built for a driver test like `test_driver/app.dart`, make sure to also specify `--target=test_driver/app.dart` (e.g., `flutter build ios --bundle-sksl-path flutter_01.sksl.json --target=test_driver/app.dart`).
 5. Test the newly built app and release it.
 
 Alternatively, one can write some [integration tests] to automate steps 1 to 3 above using a single command like `flutter drive --profile --cache-sksl --write-sksl-on-exit flutter_01.sksl.json -t test_driver/app.dart`.
