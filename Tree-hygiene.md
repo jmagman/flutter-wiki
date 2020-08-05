@@ -1,3 +1,12 @@
+## tl;dr
+
+Submit PRs. You must add tests. Tests must pass. A team member must say LGTM. Watch the dashboards for regressions.
+Revert and ask questions later if a test fails or performance regresses on master.
+A breaking change is one that breaks the tests in the flutter/tests repo, those need a migration guide.
+
+
+## Introduction
+
 This page covers how to land a PR and other aspects of writing code for
 Flutter other than the actual writing of the code. For guidance on
 designing APIs, documenting, and formatting your code, see the
@@ -26,14 +35,14 @@ The general process for submitting code to a Flutter repository is as follows:
    You can put the label "proposal" on your issue to indicate that you have a design
    up for discussion in the issue.
 
-4.  If the work you are doing affects our privacy surface --- such as modifying how 
+4.  If the work you are doing affects our privacy surface, such as modifying how 
     we collect analytics, crash logs, or the like, then please reach out to a Googler
     to discuss your changes (you'll want to start a Google Doc to
     solicit feedback (use the template at [flutter.dev/go/template](https://flutter.dev/go/template)),
     who will be happy to loop in one of our engineers who explicitly focus on privacy issues
-    so that they're able to give feedback on the work you plan to do. 
+    so that they're able to give feedback on the work you plan to do.
 
-5. Create a branch off of master on your GitHub fork of the repository, and implement
+5. Create a branch off master on your GitHub fork of the repository, and implement
    your change. Make sure it is tested. Consider using the code coverage tools to check
    that all your new code is covered by tests (see [[Test coverage for package:flutter]]).
 
@@ -122,6 +131,10 @@ contributor (someone with commit access) has written a comment saying
 "LGTM" on your PR, and you have addressed all their feedback. ("LGTM"
 means "Looks Good To Me".)
 
+If nobody reviews your PR within a few days, you can ask for a review
+via our [Chat] channels (start by asking in #hackers, saying what your
+patch does and providing a link).
+
 Code review serves many critical purposes. There's the obvious
 purpose: catching errors. Even the most experienced engineers
 frequently make errors that are caught by code review. But there are
@@ -155,22 +168,6 @@ fully reviewed the code, they admit to this by saying "RSLGTM" rather
 than just "LGTM". If you feel your code needs a real review, please
 find someone to actually review it. ("RSLGTM" means "Rubber Stamp
 Looks Good To Me".)
-
-
-### Who to have review your code
-
-If you aren't sure who to ask to review your code, you generally just need to wait,
-and eventually (hopefully less than a week) someone will get to it. If that isn't working,
-please reach out to one of the following people:
-
-* iOS widgets (cupertino) - @xster
-* Material widgets - @HansMuller
-* Flutter Framework - @goderbauer
-* Engine - @cbracken
-* `flutter` Tool - @zanderso
-* Plugins - @amirh
-* Performance - @liyuqian
-* Anything else - @Hixie
 
 
 ## How to review code
