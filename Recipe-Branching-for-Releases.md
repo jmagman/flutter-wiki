@@ -84,8 +84,8 @@ cd $RECIPES_REPO
 Updating recipes for a stable release is much simpler than that for a beta release, as the requisite recipe should have already been forked when the release was promoted to beta.
 
 1. In flutter/infra, update BRANCHES dictionary in [main.star](https://github.com/flutter/infra/blob/master/config/main.star#L29):
-   - `BRANCHES['stable']['ref']`, a regex to the branch name of the current stable
-   - `BRANCHES['stable']['version']`, the version element of the recipe filename, e.g. `v1_17_0`
+   - `BRANCHES['stable']['testing-ref']`, a regex to the branch name of the current stable development branch
+   - `BRANCHES['stable']['version']`, the version element of the recipe filename, e.g. `1_20_0`
 2. Execute the main.star file to generate the rest of the config files (and validate your changes for mistakes): `$ ./main.star`
 3. Commit your changes, push to github and get it reviewed. Merge it. Note, this updated configuration won't take effect until it has propagated to LUCI infra. The current version of the config can be seen [here](https://luci-config.appspot.com/#/projects/flutter).
 4. In the recipes repo, any recipe forks older than the current stable can be safely deleted. `git rm /path/to/recipe` will both delete the file and stage the change with git.
