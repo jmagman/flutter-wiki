@@ -2,6 +2,15 @@
 :toc-title:
 :toclevels: 99
 
+tl;dr
+-----
+
+<!-- wiki pages should have a 100 word summary -->
+
+Optimize for readability. Write detailed documentation. Test everything.
+Avoid `is`, `print`, `part of`, `extension` and `_`.
+No timeouts or timers.
+
 Introduction
 ------------
 
@@ -1027,6 +1036,13 @@ If the ignore directive is permanent, e.g. because one of our lints has some una
   foo(); // ignore: lint_code, sadly there is no choice but to do
   // this because we need to twiddle the quux and the bar is zorgle.
 ```
+
+### Comment all test skips
+
+On very rare occasions it may be necessary to skip a test. To do that, use the `skip` argument.
+Any time you use the `skip` argument, mfile an issue describing why it is skipped and
+include a link to that issue in the code.
+
 
 ### Comment empty closures to `setState`
 
