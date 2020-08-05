@@ -1,3 +1,11 @@
+## tl;dr
+
+Assigned bugs must have target milestones. Bugs with target milestones must be assigned.
+Use thumbs-up on the issue description to help prioritise.
+P0-P2 bugs are critical and get examined for progress every week.
+
+## Introduction
+
 This page describes how Flutter uses GitHub issues to track work on the project.
 
 ## Overview
