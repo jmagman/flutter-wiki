@@ -5,8 +5,6 @@
 tl;dr
 -----
 
-<!-- wiki pages should have a 100 word summary -->
-
 Optimize for readability. Write detailed documentation. Test everything.
 Avoid `is`, `print`, `part of`, `extension` and `_`.
 No timeouts or timers.
