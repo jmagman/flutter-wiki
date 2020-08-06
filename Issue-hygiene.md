@@ -184,8 +184,8 @@ You may hear team members refer to "licking the cookie". Assigning a
 bug to yourself, or otherwise indicating that you will work on it,
 tells others on the team to not fix it. If you then don't work on it,
 you are acting like someone who has taken a cookie,
-licked it to be unappetizing to other people, and then not eaten it right
-away. By extension, "unlicking the cookie" means indicating to the
+licked it to be unappetizing to other people, and then not eaten it.
+By extension, "unlicking the cookie" means indicating to the
 rest of the team that you are not actually going to work on the bug
 after all, e.g. by unassigning the bug from yourself.
 
