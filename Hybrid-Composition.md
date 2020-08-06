@@ -3,7 +3,7 @@ Hybrid composition refers to the ability of composing native views alongside Flu
 # Android
 *Requires API level 19*
 
-Starting from Flutter 1.20.0, hybrid composition can be used on Android. This new feature fixes most of the issues with the existing platform view approach. In particular, accessibility and keyboard related issues.
+Starting from Flutter 1.20.0, hybrid composition can be used on Android. This new feature fixes [most of the issues](https://github.com/flutter/flutter/wiki/Android-Platform-Views#associated-problems-and-workarounds) with the existing platform view approach. In particular, accessibility and keyboard related issues.
 
 ## Dart side
 
