@@ -58,16 +58,17 @@ import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import io.flutter.plugin.platform.PlatformView;
 
 class NativeView implements PlatformView {
    @NonNull private final TextView textView;
 
-    NativeView(final Context context, int id) {
+    NativeView(@NonNull Context context, int id, @Nullable Map<String, Object> creationParams) {
         textView = new TextView(context);
         textView.setTextSize(72);
         textView.setBackgroundColor(Color.rgb(255, 255, 255));
-        textView.setText("Rendered on a native Android view!");
+        textView.setText("Rendered on a native Android view (id: " + id + ")");
     }
 
     @NonNull
@@ -87,6 +88,7 @@ package dev.flutter.example;
 
 import android.content.Context;
 import android.view.View;
+import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.StandardMessageCodec;
@@ -104,12 +106,11 @@ class NativeViewFactory extends PlatformViewFactory {
     this.containerView = containerView;
   }
 
-  @SuppressWarnings("unchecked")
   @NonNull
   @Override
-  public PlatformView create(Context context, int id, Object args) {
-    Map<String, Object> params = (Map<String, Object>) args;
-    return new NativeView(context, messenger, id, params, containerView);
+  public PlatformView create(@NonNull Context context, int id, @Nullable Object args) {
+    final Map<String, Object> creationParams = (Map<String, Object>) args;
+    return new NativeView(context, id, creationParams);
   }
 }
 ```
