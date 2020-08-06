@@ -167,25 +167,27 @@ milestone, please escalate with your team contact.
 Issues are typically self-assigned. Only assign a bug to someone else if
 they have explicitly volunteered to do the task.
 
-Only assign a bug to yourself when you are actively working on it. If
-you're not working on it, leave it unassigned. Don't assign bugs to
+Only assign a bug to yourself when you are actively working on it
+or scheduled to work on it. If
+you don't know when you'll be working on it, leave it unassigned. Similarly, don't assign bugs to
 people unless you know they are going to work on it. If you find
-yourself with bugs assigned that you are not going to be working on in
-the very near future, unassign the bug so that other people feel
+yourself with bugs assigned that you have not scheduled specific time
+to work on, unassign the bug so that other people feel
 empowered to work on them.
 
-_Do_ assign a bug to yourself if you are working on it! This is how
+_Do_ assign a bug to yourself if you are working on it, or if you have
+scheduled time to work on them and are confident you will do so! This is how
 people can figure out what is happening. It also prevents duplicate
 work where two people try to fix the same issue at once.
 
 You may hear team members refer to "licking the cookie". Assigning a
 bug to yourself, or otherwise indicating that you will work on it,
-tells others on the team to not fix it. If you then don't work on it
-straight away, you are acting like someone who has taken a cookie,
+tells others on the team to not fix it. If you then don't work on it,
+you are acting like someone who has taken a cookie,
 licked it to be unappetizing to other people, and then not eaten it right
 away. By extension, "unlicking the cookie" means indicating to the
 rest of the team that you are not actually going to work on the bug
-right away after all, e.g. by unassigning the bug from yourself.
+after all, e.g. by unassigning the bug from yourself.
 
 When a bug is assigned, it should also have a specific release milestone (one of the
 milestones that refers to a specific month), or the "No specific schedule"
