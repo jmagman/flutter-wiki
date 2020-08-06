@@ -131,7 +131,12 @@ See the [[Release process]] page for more details about our release schedule.
 Any bug assigned to a month should have a specific dedicated assignee as well.
 
 Contributors working to address an issue should self-assign the issue to a relevant 
-bucket to indicate to others when you anticipate completing the issue. Release milestones are a
+milestone to indicate to others when they anticipate completing the issue. If the
+work's completion date is not knowable, e.g. because the scope of the work is unclear,
+or because the work is being done when the opportunity arises and not at a high
+priority, then the "No specific schedule" milestone can be used.
+
+Release milestones are a
 statement of what we anticipate doing and when, and thus concrete; they are not
 aspirational, in that simply assigning an issue to a bucket without the commitment of
 its assignee will not further work on the issue on its own. (See “Assigning Issues”, 
@@ -183,8 +188,9 @@ rest of the team that you are not actually going to work on the bug
 right away after all, e.g. by unassigning the bug from yourself.
 
 When a bug is assigned, it should also have a specific release milestone (one of the
-milestones that refers to a specific month). Be conservative in assigning the
-milestone. It is infinitely preferable for a bug to be fixed earlier than expected
+milestones that refers to a specific month), or the "No specific schedule"
+milestone (if it's not yet clear when the work will be complete). Be conservative in assigning release
+milestones. It is infinitely preferable for a bug to be fixed earlier than expected
 than it is for it to slip from release to release.
 
 
