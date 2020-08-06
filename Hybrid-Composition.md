@@ -136,8 +136,8 @@ public class MainActivity extends FlutterActivity {
 
 For more documentation, see [PlatformViewRegistry](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformViewRegistry.html), [PlatformViewFactory](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformViewFactory.html), and [PlatformView](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformView.html).
 
-## Android Manifest
-To turn on this feature, you must opt in by adding the following <meta-data> to AndroidManifest.xml
+## AndroidManifest.xml
+To turn on this feature, you must opt in by adding the following `<meta-data>` to AndroidManifest.xml:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
