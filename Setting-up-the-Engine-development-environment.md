@@ -10,9 +10,9 @@ Make sure you have the following dependencies available:
  * git (used for source version control).
  * An IDE. See also the section at the bottom of this page for advice on setting up syntax highlighting while editing the engine.
  * An ssh client (used to authenticate with GitHub).
- * Chromium's
+ * **Chromium's
    [depot_tools](http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up)
-   (make sure it's in your path). We use the `gclient` tool from depot_tools.
+   (make sure it's in your path). We use the `gclient` tool from depot_tools.**
  * Python (used by many of our tools, including `gclient`).
  * On macOS and Linux: curl and unzip (used by `gclient sync`).
  * On Windows:
