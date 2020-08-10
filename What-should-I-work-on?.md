@@ -4,7 +4,7 @@ This page attempts to be a one-stop shop for figuring out what the most importan
 1. [P0 issues](https://github.com/flutter/flutter/labels/P0) (e.g. serious regressions).
 1. [P1 issues](https://github.com/flutter/flutter/labels/P1) (e.g. customer blockers).
 1. Mentoring promising new contributors.
-1. [Fixing flaky tests](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+flakes%22+sort%3Acomments-desc).
+1. [Flaky tests](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+flakes%22+sort%3Aupdated-asc).
 1. Performance regressions. Check the [dashboard](https://flutter-dashboard.appspot.com/benchmarks.html) for new unreported regressions and see GitHub for the list of [reported performance regressions](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+label%3A%22severe%3A+performance%22+label%3A%22severe%3A+regression%22+).
 1. [Other regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22severe%3A+regression%22).
 1. [Code review of open PRs](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+).
