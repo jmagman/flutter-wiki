@@ -9,7 +9,7 @@ Starting from Flutter 1.20.0, hybrid composition can be used on Android. This ne
 
 To start using this feature, you would need to create a `Widget`, and add the following `build` implementation:
 
-**native_view_example.dart**
+### native_view_example.dart
 ```dart
 Widget build(BuildContext context) {
   // This is used in the platform side to register the view.
@@ -46,9 +46,9 @@ For more documentation see: [PlatformViewLink](https://api.flutter.dev/flutter/w
 
 ## Platform side
 
-Finally, on the native side, you use the standard `io.flutter.plugin.platform` package in Java or Kotlin:
+Finally, on the platform side, you use the standard `io.flutter.plugin.platform` package in Java or Kotlin:
 
-**NativeView.java**
+### NativeView.java
 
 ```java
 package dev.flutter.example;
@@ -82,7 +82,7 @@ class NativeView implements PlatformView {
 }
 ```
 
-**NativeViewFactory.java**
+### NativeViewFactory.java
 ```java
 package dev.flutter.example;
 
@@ -115,7 +115,7 @@ class NativeViewFactory extends PlatformViewFactory {
 }
 ```
 
-**MainActivity.java**
+### MainActivity.java
 ```java
 package dev.flutter.example;
 
@@ -137,7 +137,8 @@ public class MainActivity extends FlutterActivity {
 
 For more documentation, see [PlatformViewRegistry](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformViewRegistry.html), [PlatformViewFactory](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformViewFactory.html), and [PlatformView](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformView.html).
 
-## AndroidManifest.xml
+### AndroidManifest.xml
+
 To turn on this feature, you must opt in by adding the following `<meta-data>` to AndroidManifest.xml:
 
 ```xml
@@ -156,6 +157,18 @@ To turn on this feature, you must opt in by adding the following `<meta-data>` t
 </manifest>
 ```
 *Note*: this won't be required in the near feature as hybrid composition will be turn on by default. 
+
+### build.gradle
+
+Indicate the minimum API Level required for the application to run.
+
+```groovy
+android {
+    defaultConfig {
+        minSdkVersion 19
+    }
+}
+```
 
 ## Performance
 
