@@ -10,6 +10,16 @@ Starting from Flutter 1.20.0, hybrid composition can be used on Android. This ne
 To start using this feature, you would need to create a `Widget`, and add the following `build` implementation:
 
 ### native_view_example.dart
+
+1. Add imports:
+```dart
+import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
+```
+
+2. Implement `build` method:
 ```dart
 Widget build(BuildContext context) {
   // This is used in the platform side to register the view.
