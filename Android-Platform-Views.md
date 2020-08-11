@@ -49,30 +49,7 @@ output on Android.
 
 # Are there any alternatives?
 
-Embedded iOS platform views don't use this `VirtualDisplay` type approach at
-all, and instead accomplish interleaving by splitting the Flutter UI into two
-transparent textures: one below and one above the iOS platform view. Flutter UI
-elements that need to render "below" the iOS platform view are drawn to the
-texture beneath it, and Flutter UI elements that need to render "above" it are
-drawn to the texture above it. We'd generally prefer this approach since it
-would mean we could add the embedded Android View as a child of the Flutter View
-(or at least, in its View hierarchy) and that on its own would help avoid all
-the bugs mentioned here.
-
-However we're missing a critical API on Android needed to make this completely
-work. On iOS we're able to get a callback from the system after it's rendered a
-frame. So when the iOS view moves 2px down, we can render every other Flutter
-widget in its list 2px lower too. But on Android there's no information from the
-system on when it's actually done rendering a frame, so there's no way to
-synchronize the rendering of our output. So an Android approach styled in this
-way would have a lot of obvious visual jank as the Android View would move out
-of sync with the Flutter widgets, either lagging or racing around them, taking
-too long to pop out on page transitions or popping in to soon, and more.
-
-This may still be desirable in some cases despite the rendering artifacts just
-based on the more sound functionality overall. See
-[flutter.dev/go/nshc](http://flutter.dev/go/nshc) for a detailed discussion of this
-alternative approach.
+Yes! See [Hybrid Composition](https://github.com/flutter/flutter/wiki/Hybrid-Composition).
 
 # Associated problems and workarounds
 
