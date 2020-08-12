@@ -75,7 +75,6 @@ Run the following steps to set up your environment:
     - `sudo ./flutter/build/install-build-deps-linux-desktop.sh`
 1. If you're on Mac:
     - install Oracle's Java JDK, version 1.8 or later
-    - install `ant`: `brew install ant`
 1. If you're planning on working on the
     [buildroot](https://github.com/flutter/buildroot) repository as
     well, and have a local checkout of that repository, run the
