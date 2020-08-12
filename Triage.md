@@ -353,10 +353,7 @@ If you come across a bug that is unrelated to desktop app development, remove th
 
 ## Infrastructure
 
-* [Infrastructure PRs](https://github.com/flutter/flutter/pulls?q=is%3Aopen+is%3Apr+label%3A%22team%3A+infra%22+sort%3Aupdated-asc)
-* [Cocoon PRs](https://github.com/flutter/cocoon/pulls)
-* [Infra config PRs](https://github.com/flutter/infra/pulls)
-* [P0 bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Aupdated-asc+-label%3A%22passed+secondary+triage%22+label%3A%22P0%22)
+* [P0 issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Aupdated-asc+-label%3A%22passed+secondary+triage%22+label%3A%22P0%22)
 * [P1 issues](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Aupdated-asc+label%3A%22P1%22+-label%3A%22passed+secondary+triage%22)
 * [P2 issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Aupdated-asc+label%3A%22P2%22+-label%3A%22passed+secondary+triage%22)
 * [Flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Aupdated-asc+label%3A%22team%3A+flakes%22+-label%3A%22passed+secondary+triage%22)
@@ -364,9 +361,8 @@ If you come across a bug that is unrelated to desktop app development, remove th
 * [Crash bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Aupdated-asc+label%3A%22severe%3A+crash%22+-label%3A%22passed+secondary+triage%22)
 * [Popular issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Areactions-%2B1-desc+-label%3A%22severe%3A+new+feature%22+-label%3A%22passed+secondary+triage%22) (look at the top 10ish)
 * [Popular feature requests](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Areactions-%2B1-desc+label%3A%22severe%3A+new+feature%22+-label%3A%22passed+secondary+triage%22) (look at the top 10ish)
-* Glance at the [Recent issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+sort%3Acreated-desc+-label%3A%22passed+secondary+triage%22) (to see if any unexpected trends show up)
-* Consider issues with the [annoyance](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+label%3A%22a%3A+annoyance%22+sort%3Aupdated-asc) and [quality](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+label%3A%22a%3A+quality%22+-label%3A%22passed+secondary+triage%22+sort%3Aupdated-asc) labels
 * If you get this far, triage [all the other infrastructure issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+-label%3A%22passed+secondary+triage%22+sort%3Aupdated-asc)
+* Assign a priority to [the unprioritized issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+infra%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+sort%3Aupdated+)
 
 If you come across a bug that is unrelated to the testing infrastructure, remove the `team: infra` label and leave a comment explaining why. That will send it back to triage.
 
