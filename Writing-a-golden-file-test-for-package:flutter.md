@@ -10,6 +10,7 @@ Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.
 )
 - [Flutter Gold Login](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#flutter-gold-login
 )
+- [`flutter-gold` Check](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#flutter-gold-check)
 
 
 ## Creating a New Golden File Test
