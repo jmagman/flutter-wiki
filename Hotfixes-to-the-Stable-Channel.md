@@ -11,6 +11,18 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
+## Flutter 1.20 Changes
+### [1.20.2](https://github.com/flutter/flutter/pull/63591) (August 13, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/63038 - Crash due to serialization of generic DartType (UnknownType)
+  - https://github.com/flutter/flutter/issues/46167 - iOS platform view cancels gesture while a new clip layer is added during the gesture
+  - https://github.com/flutter/flutter/issues/62198 - SliverList throws Exception when first item is SizedBox.shrink()
+  - https://github.com/flutter/flutter/issues/59029 - build ios --release can crash with ArgumentError: Invalid argument(s)
+  - https://github.com/flutter/flutter/issues/62775 - TimePicker is not correct in RTL (right-to-left) languages
+  - https://github.com/flutter/flutter/issues/55535 - New DatePicker widget is not fully  localized
+  - https://github.com/flutter/flutter/issues/63373 - Double date separators appearing in DatePicker, preventing date selection
+  - https://github.com/flutter/flutter/issues/63176 -  App.framework path in Podfile incorrect
+
 ## Flutter 1.17 Changes
 ### [1.17.5](https://github.com/flutter/flutter/pull/60611) (June 30, 2020)
 This fixes the following issues:
