@@ -72,3 +72,13 @@ If you need access to the LUCI recipes, you need to be added to the relevant ACL
 ## Process
 
 A Googler has to be the one to grant permission. Documentation on how to use the relevant tools is available at: https://goto.google.com/gob-ctl#add-or-remove-users-in-host-acl
+
+# Access to Flutter Gold
+
+If you need access to triage images in [Flutter Gold](https://flutter-gold.skia.org/), you need to be added as an authorized user.
+Users in the `@google.com` domain are already authorized to use Flutter Gold, but `@gmail.com` addresses can also be added to the allow list.
+
+## Process
+The list of authorized users is maintained in the [skia build-bot repository](https://skia.googlesource.com/buildbot), in [this file](https://skia.googlesource.com/buildbot/+/refs/heads/master/golden/k8s-instances/flutter/flutter-skiacorrectness.json5). Googlers can submit a change to add to the authorized users.
+
+This repository is also [mirrored on GitHub.](https://github.com/google/skia-buildbot)
