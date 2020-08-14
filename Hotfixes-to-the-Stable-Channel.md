@@ -23,6 +23,10 @@ This fixes the following issues:
   - https://github.com/flutter/flutter/issues/63373 - Double date separators appearing in DatePicker, preventing date selection
   - https://github.com/flutter/flutter/issues/63176 -  App.framework path in Podfile incorrect
 
+### [1.20.1](https://github.com/flutter/flutter/pull/62990) (August 6, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/60215 - Creating an Android-only plug-in creates a no-op iOS folder.
+
 ## Flutter 1.17 Changes
 ### [1.17.5](https://github.com/flutter/flutter/pull/60611) (June 30, 2020)
 This fixes the following issues:
