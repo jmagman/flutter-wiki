@@ -181,3 +181,23 @@ Response:
   }
 }
 ```
+
+## Estimate raster cache memory usage: `_flutter.estimateRasterCacheMemory`
+
+Estimate the memory usage of both picture and layer raster cache. For each picture or layer cached, there is a rasterized `SkImage` of that picture or layer to speed up future draws. Only `SkImage`'s memory usage is counted as other objects in the cache system are often much smaller compared to `SkImage`. Function `SkImageInfo::computeMinByteSize` is used to estimate the `SkImage` memory usage.
+
+One argument
+
+ ```
+viewId = _flutterView/0x15bf057f8
+```
+
+Response:
+
+```json
+{
+    "type": "EstimateRasterCacheMemory",
+    "layerBytes": 40000,
+    "pictureBytes": 400
+}
+```
