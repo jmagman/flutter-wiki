@@ -18,6 +18,8 @@ You must have read/write access to and local clones of the following repositorie
 * [Flutter Recipes](https://flutter.googlesource.com/recipes)
 * You should have Chromium's depot_tools [installed](https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up) (necessary for making LUCI updates)
 
+You should fetch upstream of all of these before proceeding.
+
 ## Beta Release Procedure
 
 1. Find the Flutter framework **master commit** that your release has branched off of, and set it as `$FRAMEWORK_REVISION`.
