@@ -38,7 +38,7 @@ FRAMEWORK_DATE=$(git show -s --format=%ci $FRAMEWORK_REVISION)
 cd $RECIPES_REPO
 RECIPE_FRAMEWORK_REVISION=$(git log --before="$FRAMEWORK_DATE" -n 1 --format=%H)
 ```
-5. Copy the framework recipe at the time of `$FRAMEWORK_DATE` as `flutter_beta.py` (for the engine, `engine_$VERSION.py`):
+5. Copy the framework recipe at the time of `$FRAMEWORK_DATE` as `flutter_$VERSION.py` (for the engine, `engine_$VERSION.py`):
 ```
 cd $RECIPES_REPO/recipes
 git show $RECIPE_FRAMEWORK_REVISION:./flutter.py > "./flutter_$VERSION.py"
