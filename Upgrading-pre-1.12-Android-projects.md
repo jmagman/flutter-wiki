@@ -102,6 +102,7 @@ If you opt to migrate your standard `flutter create`d project, follow the follow
   In other words, move the channel registration part of the code in your `onCreate` into the `configureFlutterEngine` override of the FlutterActivity subclass and use `flutterEngine.getDartExecutor().getBinaryMessenger()` as the binary messenger rather than `getFlutterView()`.
 
 **2.** Open `android/app/src/main/AndroidManifest.xml`.
+
 **3.** Remove the reference to `FlutterApplication` from the application tag.
 
 Previous configuration:
