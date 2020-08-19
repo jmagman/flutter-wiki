@@ -4,6 +4,9 @@ _Flutter contributors: please feel empowered to edit this wiki page to include a
 
 See also [[Bad Builds]], which lists dev releases that are known to have major bugs or regressions.
 
+### v1.21.X
+* NEXT AUTHOR: Put your breaking change notification here and insert headings as appropriate to identify which version is affected.
+
 ### v1.20.X
 * NEXT AUTHOR: Put your breaking change notification here and insert headings as appropriate to identify which version is affected.
 * [#60320](https://github.com/flutter/flutter/pull/60320) Change `PlatformViewController` abstract methods to return `Future<void>` and not `void`.
