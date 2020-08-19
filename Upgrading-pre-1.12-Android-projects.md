@@ -22,38 +22,38 @@ If you opt to migrate your standard `flutter create`d project, follow the follow
 
 1a. If you don't have any of your own added code to `android/app/src/main/java/[your/package/name]/MainActivity.java`  - remove the body of your `MainActivity.java` and change the `FlutterActivity` import. The new `FlutterActivity` no longer requires manually registering your plugins. It will now perform the registration automatically when the underlaying `FlutterEngine` is created. 
 
-  ```diff
-  // MainActivity.java
-  -import android.os.Bundle;
-  -import io.flutter.app.FlutterActivity;
-  +import io.flutter.embedding.android.FlutterActivity;
-  -import io.flutter.plugins.GeneratedPluginRegistrant;
+    ```diff
+    // MainActivity.java
+    -import android.os.Bundle;
+    -import io.flutter.app.FlutterActivity;
+    +import io.flutter.embedding.android.FlutterActivity;
+    -import io.flutter.plugins.GeneratedPluginRegistrant;
  
-  public class MainActivity extends FlutterActivity {
-  -  @Override
-  -  protected void onCreate(Bundle savedInstanceState) {
-  -    super.onCreate(savedInstanceState);
-  -    GeneratedPluginRegistrant.registerWith(this);
-  -  }
-   }
-  ```
+    public class MainActivity extends FlutterActivity {
+    -  @Override
+    -  protected void onCreate(Bundle savedInstanceState) {
+    -    super.onCreate(savedInstanceState);
+    -    GeneratedPluginRegistrant.registerWith(this);
+    -  }
+     }
+    ```
 
-  ```diff
-  // MainActivity.kt
-  -import android.os.Bundle
-  -import io.flutter.app.FlutterActivity
-  +import io.flutter.embedding.android.FlutterActivity
-  -import io.flutter.plugins.GeneratedPluginRegistrant
+    ```diff
+    // MainActivity.kt
+    -import android.os.Bundle
+    -import io.flutter.app.FlutterActivity
+    +import io.flutter.embedding.android.FlutterActivity
+    -import io.flutter.plugins.GeneratedPluginRegistrant
  
-  class MainActivity: FlutterActivity() {
-  -  override fun onCreate(savedInstanceState: Bundle?) {
-  -    super.onCreate(savedInstanceState)
-  -    GeneratedPluginRegistrant.registerWith(this)
-  -  }
-  }
-  ```
+    class MainActivity: FlutterActivity() {
+    -  override fun onCreate(savedInstanceState: Bundle?) {
+    -    super.onCreate(savedInstanceState)
+    -    GeneratedPluginRegistrant.registerWith(this)
+    -  }
+    }
+    ```
 
-  Since the body of the `MainActivity` is now empty, you can also optionally delete the `MainActivity.java/kt` file if you'd like. If you do, you need to change your `AndroidManifest.xml`'s reference to `.MainActivity` to `io.flutter.embedding.android.FlutterActivity`.
+    Since the body of the `MainActivity` is now empty, you can also optionally delete the `MainActivity.java/kt` file if you'd like. If you do, you need to change your `AndroidManifest.xml`'s reference to `.MainActivity` to `io.flutter.embedding.android.FlutterActivity`.
 
 1b. If you had existing custom platform channel handling code in your `MainActivity.java`, below is an example of the change you can make to adopt the new embedding API:
 
