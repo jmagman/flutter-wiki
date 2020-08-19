@@ -20,7 +20,7 @@ _This guide assumes you haven't manually modified your Android host project for 
 
 If you opt to migrate your standard `flutter create`d project, follow the following steps:
 
-1a. If you don't have any of your own added code to `android/app/src/main/java/[your/package/name]/MainActivity.java`  - remove the body of your `MainActivity.java` and change the `FlutterActivity` import. The new `FlutterActivity` no longer requires manually registering your plugins. It will now perform the registration automatically when the underlaying `FlutterEngine` is created. 
+**1a.** If you don't have any of your own added code to `android/app/src/main/java/[your/package/name]/MainActivity.java`  - remove the body of your `MainActivity.java` and change the `FlutterActivity` import. The new `FlutterActivity` no longer requires manually registering your plugins. It will now perform the registration automatically when the underlaying `FlutterEngine` is created. 
 
   ```diff
   // MainActivity.java
@@ -55,7 +55,7 @@ If you opt to migrate your standard `flutter create`d project, follow the follow
 
   Since the body of the `MainActivity` is now empty, you can also optionally delete the `MainActivity.java/kt` file if you'd like. If you do, you need to change your `AndroidManifest.xml`'s reference to `.MainActivity` to `io.flutter.embedding.android.FlutterActivity`.
 
-1b. If you had existing custom platform channel handling code in your `MainActivity.java`, below is an example of the change you can make to adopt the new embedding API:
+**1b.** If you had existing custom platform channel handling code in your `MainActivity.java`, below is an example of the change you can make to adopt the new embedding API:
 
   ```diff
   -import io.flutter.app.FlutterActivity;
@@ -101,8 +101,8 @@ If you opt to migrate your standard `flutter create`d project, follow the follow
 
   In other words, move the channel registration part of the code in your `onCreate` into the `configureFlutterEngine` override of the FlutterActivity subclass and use `flutterEngine.getDartExecutor().getBinaryMessenger()` as the binary messenger rather than `getFlutterView()`.
 
-2. Open `android/app/src/main/AndroidManifest.xml`.
-3. Remove the reference to `FlutterApplication` from the application tag.
+**2.** Open `android/app/src/main/AndroidManifest.xml`.
+**3.** Remove the reference to `FlutterApplication` from the application tag.
 
 Previous configuration:
 ```xml
@@ -121,7 +121,7 @@ New configuration:
 </application>
 ```
 
-4. Update splash screen behavior (if splash behavior is desired).
+**4.** Update splash screen behavior (if splash behavior is desired).
 
 Remove all `<meta-data>` tags with key `android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"`.
 
@@ -168,7 +168,7 @@ Configure `MainActivity` to start with your launch theme and then shift to your 
 ```
 
 
-6. Add a new `<meta-data>` tag under `<application>`.
+**5.** Add a new `<meta-data>` tag under `<application>`.
 ```xml
 <meta-data
     android:name="flutterEmbedding"
