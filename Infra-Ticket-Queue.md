@@ -15,7 +15,7 @@ This allows the team to separate their engineering work from ["toil" work](https
 IMPORTANT: Whenever you have a request for the infra team, please file a ticket instead of contacting team members directly, even for seemingly trivial things or even if an individual has done the same thing for you in the past. Infra oncall will be there to handle your request, and it lets non-oncall team members focus on their engineering tasks.
 
 # How to File a Ticket as an Infra Customer
-1. Open a [new infra issue](https://github.com/flutter/flutter/issues/new?assignees=&labels=team%3A+infra&template=infrastructure.md&title=). (That template summarizes the information on this page.)
+1. Open a [new infra issue](https://github.com/flutter/flutter/issues/new?assignees=&labels=team%3A+infra&template=6_infrastructure.md&title=). (That template summarizes the information on this page.)
 2. Add a descriptive **title**. A message like "Add a LUCI builder for linux web engine" or "Debug gallery startup" is much more helpful than "quick request" or "test doesn't work?".
 3. Clearly describe the issue or request in the description field. For example, if a ticket is requesting running several commands on the bots, the ticket should explain why, what commands are needed, on which bots and how to verify the results.
 4. Add the "team: infra" label and a priority label:
