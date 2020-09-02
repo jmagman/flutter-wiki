@@ -12,6 +12,17 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.20 Changes
+### [1.20.3](https://github.com/flutter/flutter/pull/64984) (September 2, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/63876 - Performance regression for Image animation.
+  - https://github.com/flutter/flutter/issues/64228 - WebView may freeze in release mode on iOS.
+  - https://github.com/flutter/flutter/issues/64414 - Task switching may freeze on some Android versions.
+  - https://github.com/flutter/flutter/issues/63560 - Building AARs may cause a stack overflow.
+  - https://github.com/flutter/flutter/issues/57210 - Certain assets may cause issues with iOS builds.
+  - https://github.com/flutter/flutter/issues/63590 - Passing null values from functions run via Isolates throws an exception.
+  - https://github.com/flutter/flutter/issues/63427 - Wrong hour/minute order in timePicker in RTL mode.
+
+
 ### [1.20.2](https://github.com/flutter/flutter/pull/63591) (August 13, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/63038 - Crash due to serialization of generic DartType (UnknownType)
