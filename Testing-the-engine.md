@@ -179,7 +179,7 @@ or to the fake Flutter framework under-test in https://github.com/flutter/engine
 As best practice, favor adding unit tests if possible since instrumented tests
 are, by nature, non-hermetic, slow and flaky.
 
-End-to-end tests on Android are currently not running on CI [#55326](https://github.com/flutter/flutter/issues/55326)
+End-to-end tests on Android are run on presubmit for flutter/engine PRs. 
 
 ## Objective-C - iOS embedding
 
