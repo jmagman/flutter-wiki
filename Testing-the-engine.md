@@ -321,3 +321,7 @@ the `dart:ui` package and underlying engine.
 
 These tests are executed during pre-submit on our CI system when
 submitting PRs to the `flutter/engine` repository.
+
+## Web engine
+
+Web tests are run via the `felt` command. More details can be found in [lib/web_ui/dev/README.md](https://github.com/flutter/engine/blob/master/lib/web_ui/dev/README.md).
