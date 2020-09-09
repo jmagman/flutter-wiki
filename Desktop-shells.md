@@ -72,7 +72,7 @@ Keep in mind that the Windows embedding is in early stages, and is missing criti
 
 There are not yet full instructions, or tooling support, for making distributable applications. However, below is some information about how to use the current build output on other machines for testing purposes.
 
-The executable will be in `build\windows\x64\<build mode>\Runner\`. In addition to that executable, you will need:
+The executable will be in `build\windows\runner\<build mode>\`. In addition to that executable, you will need:
 - From the `Runner` directory, installed next to the executable:
   - all the `.dll` files in that directory
   - the `data` directory
