@@ -73,8 +73,8 @@ Keep in mind that the Windows embedding is in early stages, and is missing criti
 There are not yet full instructions, or tooling support, for making distributable applications. However, below is some information about how to use the current build output on other machines for testing purposes.
 
 The executable will be in `build\windows\runner\<build mode>\`. In addition to that executable, you will need:
-- From the `Runner` directory, installed next to the executable:
-  - all the `.dll` files in that directory
+- From the same directory:
+  - all the `.dll` files
   - the `data` directory
 - The [Visual C++ redistributables](https://docs.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=vs-2019). You can use any of the methods shown in the [example walkthroughs here](https://docs.microsoft.com/en-us/cpp/windows/deployment-examples?view=vs-2019). If you use the application-local option, you will need to copy:
   - `msvcp140.dll`
