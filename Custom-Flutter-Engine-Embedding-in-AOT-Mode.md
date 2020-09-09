@@ -64,7 +64,7 @@ To generate the four AOT snapshot blobs directly, you will have to generate the 
 
 #### Generating the Kernel Snapshot
 
-The following invocation will generate a file called `kernel_snapshot.dill` in the build directory. Make sure you run flutter packages get in your project first to fetch all package dependencies.
+The following invocation will generate a file called `kernel_snapshot.dill` in the build directory. Make sure you run `flutter packages get` in your project first to fetch all package dependencies.
 
 ```
 $FLUTTER_ENGINE_OUT_DIR/dart                                  \
