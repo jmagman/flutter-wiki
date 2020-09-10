@@ -132,7 +132,7 @@ contributor (someone with commit access) has written a comment saying
 means "Looks Good To Me".)
 
 If nobody reviews your PR within a few days, you can ask for a review
-via our [Chat] channels (start by asking in #hackers, saying what your
+via our [[Chat]] channels (start by asking in #hackers, saying what your
 patch does and providing a link).
 
 Code review serves many critical purposes. There's the obvious
