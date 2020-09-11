@@ -29,7 +29,54 @@ To add a new test scenario `super_important_case`, do the following:
        ),
    ```
 
-## 2. Add a driver test
+## 2. Add an e2e test
+
+When the `super_important_case` page above is finished and manually tested, one can then add an automatic driver test to get some performance metrics as follows.
+
+1. We use [macrobenchmarks/test_driver/e2e_test.dart] as the host side script. All other tests depends on this file, so discuss with other Flutter members first if you want to change it. 
+
+2. Add `super_important_case_e2e.dart` to [macrobenchmarks/test][] with the following content. The `macroPerfTestE2E` function will navigate the macrobenchmarks app to the `super_important_case` page, and starts collecting performance metrics. The `body` provides custom ways of driving that page during the benchmark such as scrolling through lists. The `setup` provides the operation needed to setup before benchmark starts. 
+
+
+```Dart
+// Copyright 2014 The Flutter Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+import 'package:flutter/gestures.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:macrobenchmarks/common.dart';
+
+import 'util.dart';
+
+void main() {
+  macroPerfTestE2E(
+    'super_important_case',
+    kSuperImportantCaseRouteName,
+    pageDelay: const Duration(seconds: 1),
+    /* optional */ body: (WidgetController controller) async {
+        ...
+    }, 
+    /* optional */ setup: (WidgetController controller) async {
+        ...
+    }, 
+  );
+}
+```
+
+Once all steps above are done, one should be able to run `flutter drive -t test/super_important_case_perf.dart --driver test_driver/e2e_test.dart` inside the [macrobenchmarks][] directory. After the driver test finished, the metrics should be written into a json file named `e2e_perf_summary.json` inside a temporary `build` directory under the current [macrobenchmarks][] directory.
+
+
+<!--- TODO explain what these metrics mean in the future -->
+Some useful metrics in that json file include
+- `average_frame_build_time_millis`
+- `average_frame_rasterization_time_millis`
+- `worst_frame_build_time_millis`
+- `worst_frame_rasterization_time_millis`
+
+## 2. Add a driver test (deprecate)
 
 When the `super_important_case` page above is finished and manually tested, one can then add an automatic driver test to get some performance metrics as follows.
 
@@ -73,6 +120,44 @@ Some useful metrics in that json file include
 Add the new test to the list in [macrobenchmarks/README.md]. 
 
 ## 4. Add a task to devicelab
+
+To keep Flutter performant, running a test locally once in a while and check the metrics manually is insufficient. The following steps let the [devicelab][] run the test automatically for every Flutter commit so performance regressions or speedups for the `super_important_case` can be detected quickly.
+
+1. Add `super_important_case_perf__e2e_summary` to [dev/devicelab/manifest.yaml][] under `tasks`. Follow other tasks to properly set descriptions and choose agent such as `linux/android` (Moto G4) or `mac/ios` (iPhone 6s). Mark it `flaky: true` so that while we observe the test case behavior on devicelab, we don't block the build tree.
+
+2. Add `super_important_case_perf__e2e_summary.dart` to [dev/devicelab/bin/tasks][] with a content like
+
+   ```Dart
+   import 'dart:async';
+
+   import 'package:flutter_devicelab/tasks/perf_tests.dart';
+   import 'package:flutter_devicelab/framework/adb.dart';
+   import 'package:flutter_devicelab/framework/framework.dart';
+
+   Future<void> main() async {
+     deviceOperatingSystem = DeviceOperatingSystem.android;  // or ios
+     await task(createSuperImportantCasePerfE2ETest());
+   }
+   ```
+
+3. Add the following `createSuperImportantCasePerfTest` function to [dev/devicelab/lib/tasks/perf_tests.dart][]
+
+   ```Dart
+   TaskFunction createSuperImportantCasePerfE2ETest() {
+     return PerfTest.e2e(
+       '${flutterDirectory.path}/dev/benchmarks/macrobenchmarks',
+       'test/super_important_case_e2e.dart',
+     ).run;
+   }
+   ```
+
+4. Locally test the devicelab task by running `../../bin/cache/dart-sdk/bin/dart bin/run.dart -t super_important_case_perf__e2e_summary` inside the [dev/devicelab][devicelab] directory with an Android or iOS device connected. You should see a success and a summary of metrics being printed out.
+
+5. Submit a pull request of everything above.
+
+6. Finally, remove `flaky: true` once the test is proven to be reliable for a few days. Since this may take a while, creating a reminder calendar event could be a good idea.
+
+## 4. Add a task to devicelab for driver tests (deprecate)
 
 To keep Flutter performant, running a test locally once in a while and check the metrics manually is insufficient. The following steps let the [devicelab][] run the test automatically for every Flutter commit so performance regressions or speedups for the `super_important_case` can be detected quickly.
 
