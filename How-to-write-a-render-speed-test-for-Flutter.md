@@ -35,7 +35,12 @@ When the `super_important_case` page above is finished and manually tested, one 
 
 1. We use [macrobenchmarks/test_driver/e2e_test.dart] as the host side script. All other tests depends on this file, so discuss with other Flutter members first if you want to change it. 
 
-2. Add `super_important_case_e2e.dart` to [macrobenchmarks/test][] with the following content. The `macroPerfTestE2E` function will navigate the macrobenchmarks app to the `super_important_case` page, and starts collecting performance metrics. The `body` provides custom ways of driving that page during the benchmark such as scrolling through lists. The `setup` provides the operation needed to setup before benchmark starts. 
+2. Add `super_important_case_e2e.dart` to [macrobenchmarks/test][] with the following content. The `macroPerfTestE2E` function will navigate the macrobenchmarks app to the `super_important_case` page, and starts collecting performance metrics. The optional arguments are: 
+   - The `pageDelay` is the time delay for loading the page. By default it doesn't wait.
+   - The `duration` is the performance metric sampling time.
+   - The `timeout` specifies the backstop timeout implemented by the test package, See [testWidgets](https://api.flutter.dev/flutter/flutter_test/testWidgets.html). 
+   - The `body` provides custom ways of driving that page during the benchmark such as scrolling through lists. When this is used together with `duration`, the test will perform for which ever last longer.
+   - The `setup` provides the operation needed to setup before benchmark starts. 
 
 
     ```Dart
@@ -55,7 +60,9 @@ When the `super_important_case` page above is finished and manually tested, one 
       macroPerfTestE2E(
         'super_important_case',
         kSuperImportantCaseRouteName,
-        pageDelay: const Duration(seconds: 1),
+        /* optional */ pageDelay: const Duration(seconds: 1),
+        /* optional */ duration: const Duration(seconds: 3),
+        /* optional */ timeout: const Duration(seconds: 30),
         /* optional */ body: (WidgetController controller) async {
             ...
         }, 
