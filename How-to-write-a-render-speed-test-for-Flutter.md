@@ -38,33 +38,33 @@ When the `super_important_case` page above is finished and manually tested, one 
 2. Add `super_important_case_e2e.dart` to [macrobenchmarks/test][] with the following content. The `macroPerfTestE2E` function will navigate the macrobenchmarks app to the `super_important_case` page, and starts collecting performance metrics. The `body` provides custom ways of driving that page during the benchmark such as scrolling through lists. The `setup` provides the operation needed to setup before benchmark starts. 
 
 
-  ```Dart
-  // Copyright 2014 The Flutter Authors. All rights reserved.
-  // Use of this source code is governed by a BSD-style license that can be
-  // found in the LICENSE file.
-  
-  import 'package:flutter/gestures.dart';
-  import 'package:flutter/widgets.dart';
-  import 'package:flutter/foundation.dart';
-  import 'package:flutter_test/flutter_test.dart';
-  import 'package:macrobenchmarks/common.dart';
-  
-  import 'util.dart';
-
-  void main() {
-    macroPerfTestE2E(
-      'super_important_case',
-      kSuperImportantCaseRouteName,
-      pageDelay: const Duration(seconds: 1),
-      /* optional */ body: (WidgetController controller) async {
-          ...
-      }, 
-      /* optional */ setup: (WidgetController controller) async {
-          ...
-      }, 
-    );
-  }
-  ```
+    ```Dart
+    // Copyright 2014 The Flutter Authors. All rights reserved.
+    // Use of this source code is governed by a BSD-style license that can be
+    // found in the LICENSE file.
+    
+    import 'package:flutter/gestures.dart';
+    import 'package:flutter/widgets.dart';
+    import 'package:flutter/foundation.dart';
+    import 'package:flutter_test/flutter_test.dart';
+    import 'package:macrobenchmarks/common.dart';
+    
+    import 'util.dart';
+    
+    void main() {
+      macroPerfTestE2E(
+        'super_important_case',
+        kSuperImportantCaseRouteName,
+        pageDelay: const Duration(seconds: 1),
+        /* optional */ body: (WidgetController controller) async {
+            ...
+        }, 
+        /* optional */ setup: (WidgetController controller) async {
+            ...
+        }, 
+      );
+    }
+    ```
 
 Once all steps above are done, one should be able to run `flutter drive -t test/super_important_case_perf.dart --driver test_driver/e2e_test.dart` inside the [macrobenchmarks][] directory. After the driver test finished, the metrics should be written into a json file named `e2e_perf_summary.json` inside a temporary `build` directory under the current [macrobenchmarks][] directory.
 
