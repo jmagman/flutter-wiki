@@ -1,4 +1,4 @@
-There are many ways to write a render speed test for Flutter. In this article, we give one example that uses the [Flutter driver][flutter_driver], the [dev/benchmarks/macrobenchmarks][macrobenchmarks] app, and the [dev/devicelab][devicelab] to automatically collect metrics for every future Flutter commit and send them to [flutter/cocoon][cocoon].
+There are many ways to write a render speed test for Flutter. In this article, we give one example that uses [e2e][] (or [Flutter driver][flutter_driver]), the [dev/benchmarks/macrobenchmarks][macrobenchmarks] app, and the [dev/devicelab][devicelab] to automatically collect metrics for every future Flutter commit and send them to [flutter/cocoon][cocoon].
 
 The instructions below are for contributors who want to expose a Flutter SDK (framework or engine) performance issue, or write pull requests to fix such issues. If one only needs to test the performance of a particular Flutter app, please reference 
 - https://flutter.dev/docs/cookbook/testing/integration/introduction.
@@ -31,9 +31,9 @@ To add a new test scenario `super_important_case`, do the following:
 
 ## 2. Add an e2e test
 
-When the `super_important_case` page above is finished and manually tested, one can then add an automatic driver test to get some performance metrics as follows.
+When the `super_important_case` page above is finished and manually tested, one can then add an automated integration test to get some performance metrics as follows.
 
-1. We use [macrobenchmarks/test_driver/e2e_test.dart] as the host side script. All other tests depends on this file, so discuss with other Flutter members first if you want to change it. 
+1. We use [macrobenchmarks/test_driver/e2e_test.dart][] as the host side script. All other tests depends on this file, so discuss with other Flutter members first if you want to change it. 
 
 2. Add `super_important_case_e2e.dart` to [macrobenchmarks/test][] with the following content. The `macroPerfTestE2E` function will navigate the macrobenchmarks app to the `super_important_case` page, and starts collecting performance metrics. The optional arguments are: 
    - The `pageDelay` is the time delay for loading the page. By default it doesn't wait.
@@ -83,7 +83,9 @@ Some useful metrics in that json file include
 - `worst_frame_build_time_millis`
 - `worst_frame_rasterization_time_millis`
 
-## 2. Add a driver test (deprecate)
+## 2a. Add a driver test (deprecated)
+
+(Skip this if step 2 is sufficient for you.)
 
 When the `super_important_case` page above is finished and manually tested, one can then add an automatic driver test to get some performance metrics as follows.
 
@@ -164,7 +166,9 @@ To keep Flutter performant, running a test locally once in a while and check the
 
 6. Finally, remove `flaky: true` once the test is proven to be reliable for a few days. Since this may take a while, creating a reminder calendar event could be a good idea.
 
-## 4. Add a task to devicelab for driver tests (deprecate)
+## 4a. Add a task to devicelab for driver tests (deprecated)
+
+(Skip this if you didn't do step 2a.)
 
 To keep Flutter performant, running a test locally once in a while and check the metrics manually is insufficient. The following steps let the [devicelab][] run the test automatically for every Flutter commit so performance regressions or speedups for the `super_important_case` can be detected quickly.
 
@@ -246,3 +250,9 @@ Big congratulations if you've successfully finished all steps above! You just ma
 [dev/devicelab/lib/tasks/perf_tests.dart]: https://github.com/flutter/flutter/tree/master/dev/devicelab/lib/tasks/perf_tests.dart
 
 [flutter-dashboard]: https://flutter-dashboard.appspot.com/benchmarks.html
+
+[e2e]: https://pub.dev/packages/e2e
+
+[macrobenchmarks/test_driver/e2e_test.dart]: https://github.com/flutter/flutter/blob/master/dev/benchmarks/macrobenchmarks/test_driver/e2e_test.dart
+
+[macrobenchmarks/test]: https://github.com/flutter/flutter/blob/master/dev/benchmarks/macrobenchmarks/test
