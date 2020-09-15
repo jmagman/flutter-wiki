@@ -12,6 +12,10 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.20 Changes
+### [1.20.4](https://github.com/flutter/flutter/pull/65787) (September 15, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/64045 - Cannot deploy to physical device running iOS 14
+
 ### [1.20.3](https://github.com/flutter/flutter/pull/64984) (September 2, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/63876 - Performance regression for Image animation.
