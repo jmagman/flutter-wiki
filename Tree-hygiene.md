@@ -1,9 +1,11 @@
 ## tl;dr
 
-Submit PRs. You must add tests. Tests must pass. A team member must say LGTM. Watch the dashboards for regressions.
-Revert and ask questions later if a test fails or performance regresses on master.
-A breaking change is one that breaks the tests in the flutter/tests repo, those need a migration guide.
-
+- If you're adding a new feature, you probably will need a design doc. Talk to a team member about it first.
+- Changes need tests. The only common case that does not need a test is a doc typo fix. If you have to ask "can this be exempted from writing a test," the answer will almost certainly be no if you're changing code. A test is any piece of code or build rule that would otherwise fail without your change.
+- Tests must pass. Changing existing tests should be done with extreme caution.
+- Regressions should be reverted first and ask questions later. Bringing the tree to green is higher priority.
+- A breaking change is one that breaks the tests in the flutter/tests repo, and those need a migration guide.
+- Expect that a new patch will be reviewed within two weeks, unless it is fixing a P0 bug in which case it should be reviewed the same day. If it has not been reviewed in that timeframe, reach out on chat. Remember that reviewers are human beings with additional professional and personal responsibilities.
 
 ## Introduction
 
