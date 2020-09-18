@@ -22,7 +22,11 @@ You should fetch upstream of all of these before proceeding.
 
 ## Beta Release Procedure
 
-1. Find the Flutter framework **master commit** that your release has branched off of, and set it as `$FRAMEWORK_REVISION`.
+1. Find the Flutter framework **master commit** that your release has branched off of, and set it as `$FRAMEWORK_REVISION`:
+```
+cd $FRAMEWORK_REPO
+FRAMEWORK_REVISION=$(git merge-base master $TAG)
+```
 2. Identify the name of the stable version that this is a release candidate for, normalize dots with underscores, set as `$VERSION`:
 ```
 # for 1.18.0-12.0.pre
