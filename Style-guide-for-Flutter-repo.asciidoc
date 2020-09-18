@@ -152,7 +152,7 @@ classes and methods (e.g. `Text` uses `RichText` and `DefaultTextStyle`).
 Convenience APIs belong at the layer above the one they are simplifying.
 
 
-### Avoid complecting (braiding multiple concepts together)
+### Avoid interleaving multiple concepts together
 
 Each API should be self-contained and should not know about other features.
 Interleaving concepts leads to _complexity_.
@@ -1497,7 +1497,7 @@ In some languages/compilers postfix `++` is an antipattern because of performanc
 
 Because of the former, some people will use the prefix `++`, but this leads to statements that lead with punctuation, which is aesthetically displeasing.
 
-In general, mutating variables as part of larger expressions leads to confusion about the order of operations, and complects the increment with another calculation.
+In general, mutating variables as part of larger expressions leads to confusion about the order of operations, and entwines the increment with another calculation.
 
 Using `++` does not make it obvious that the underlying variable is actually being mutated, whereas `+=` more clearly does (it's an assignment with an `=` sign).
 
