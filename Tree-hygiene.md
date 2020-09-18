@@ -133,7 +133,7 @@ contributor (someone with commit access) has written a comment saying
 "LGTM" on your PR, and you have addressed all their feedback. ("LGTM"
 means "Looks Good To Me".)
 
-If nobody reviews your PR within a few days, you can ask for a review
+If nobody reviews your PR within a week, you can ask for a review
 via our [[Chat]] channels (start by asking in #hackers, saying what your
 patch does and providing a link).
 
