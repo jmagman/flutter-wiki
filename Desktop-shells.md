@@ -30,11 +30,7 @@ The APIs for the final embedding may be significantly different from the current
 ### Plugins
 
 Writing plugins is supported on all platforms, however many plugins do not yet have
-desktop support. The [flutter-desktop-embedding project's plugins](https://github.com/google/flutter-desktop-embedding/tree/master/plugins) are one source for desktop plugins, including early Windows versions of some [flutter.dev plugins](https://github.com/flutter/plugins/tree/master/packages).
-
-Since the plugin APIs and tooling for Windows are not yet stable, publishing
-Windows plugins to pub.dev is strongly discouraged, but they can be referenced manually. See
-the link above for an example.
+desktop support.
 
 ## Tooling
 
@@ -48,17 +44,14 @@ Once you've enabled Windows support, running `flutter doctor` will check for the
 
 ### `create`
 
-`create` is supported (`app` and `plugin` templates only), but is not yet stabilized. After Flutter updates, you may need to delete and re-create the `windows` directory.
-
-You can add Windows support to an existing app by running `flutter create .` in the project. (You will likely want to revert changes to the `ios` and `android` directories after re-running `create`.) You can add Windows support to an existing plugin by running `flutter create --platforms=windows .` in the project.
-
-**Note**: Windows plugin APIs and tooling are not yet stable, so any plugin written now will need frequent updates for breaking changes. Because of this, publishing Windows plugins to pub.dev at this stage is **strongly discouraged**.
-
-When using `create` to add Windows support to an existing plugin, be sure to update [the `platforms` map in `pubspec.yaml`](https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms) as instructed in the output.
+`create` is supported (`app` and `plugin` templates only):
+* You can add Windows support to an existing app by running `flutter create .` in the project. (You will likely want to revert changes to the `ios` and `android` directories after re-running `create`.)
+* You can add Windows support to an existing plugin by running `flutter create --platforms=windows .` in the project.
+  * When adding Windows support to an existing plugin, be sure to update [the `platforms` map in `pubspec.yaml`](https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms) as instructed in the output.
 
 ### `run` and `build`
 
-`flutter run` and `flutter build` are supported once you have added the necessary platform directory to your project (see `create` above). Breaking changes are still common on Windows however, so as noted above you should expect to need to re-create after Flutter updates. `build`/`run` will give a clear error message when this is necessary.
+`flutter run` and `flutter build` are supported once you have added the necessary platform directory to your project (see `create` above).
 
 Cross-compilation is not supported for desktop. You must be on Windows to build for Windows.
 
@@ -96,7 +89,7 @@ which you can build into your application to provide a higher-level API surface.
 
 ### Documentation
 
-See the headers that come with the library (or wrapper) for your platform for information on using them. More documentation will be available in the future; for now it may be helpful to look at the flutter-desktop-embedding example application to see how it uses them.
+See the headers that come with the library (or wrapper) for your platform for information on using them. It may be helpful to look at the basic application produced by `flutter create` to see how it calls the APIs.
 
 ### Building
 
