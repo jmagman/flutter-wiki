@@ -4,11 +4,28 @@ _If you've never built the engine before, first see [Setting up the Engine devel
 
 Depending on the platform you are making changes for, you may be interested in all or only some of the sections below:
 
+* [General Compilation Tips](#general-compilation-tips)
 * [Compiling for Android](#compiling-for-android-from-macos-or-linux)
 * [Compiling for iOS (from macOS)](#compiling-for-ios-from-macos)
 * [Compiling for macOS or Linux](#compiling-for-macos-or-linux)
 * [Compiling for Windows](#compiling-for-windows)
 * [Compiling for the Web](#compiling-for-the-web)
+
+## General Compilation Tips
+
+- For local development and testing, it's generally preferable to use `--unopt` builds. 
+  These builds will have additional logging and checks enabled, and generally use build
+  and link flags that lead to faster compilation and better debugging symbols.
+  If you are trying to do performance testing with a local build, do not use the `--unopt`
+  flag.
+- Android and iOS expect both a `host` and `android` (or `ios`) build. It is critical to
+  recompile the host build after upgrading the Dart SDK (e.g. via a `gclient sync` after
+  merging up to head), since artifacts from the host build need to be version matched to
+  artifacts in the Android/iOS build.
+- Web, Desktop, and Fuchsia builds have only one build target (i.e. `host` or `fuchsia`).
+- Make sure to exclude the `out` directory from any backup scripts, as many large binary
+  artifacts are generated. This is also generally true for all of the directories outside
+  of the `engine/src/flutter` directory.
 
 ## Compiling for Android (from macOS or Linux)
 
