@@ -18,6 +18,9 @@ Depending on the platform you are making changes for, you may be interested in a
   and link flags that lead to faster compilation and better debugging symbols.
   If you are trying to do performance testing with a local build, do not use the `--unopt`
   flag.
+- Link Time Optimization: Optimized builds also perform Link Time Optimization of all
+  binaries. This makes the linker take a lot of time and memory to produce binaries. If
+  you need optimized binaries but don't want to perform LTO, add the `--no-lto` flag.
 - Android and iOS expect both a `host` and `android` (or `ios`) build. It is critical to
   recompile the host build after upgrading the Dart SDK (e.g. via a `gclient sync` after
   merging up to head), since artifacts from the host build need to be version matched to
