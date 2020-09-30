@@ -110,7 +110,7 @@ class NativeViewFactory extends PlatformViewFactory {
   @NonNull private final BinaryMessenger messenger;
   @NonNull private final View containerView;
 
-  WebViewFactory(@NonNull BinaryMessenger messenger, @NonNull View containerView) {
+  NativeViewFactory(@NonNull BinaryMessenger messenger, @NonNull View containerView) {
     super(StandardMessageCodec.INSTANCE);
     this.messenger = messenger;
     this.containerView = containerView;
@@ -146,27 +146,6 @@ public class MainActivity extends FlutterActivity {
 *Note*: this code snippets assume that you are using the Android embedding v2. Otherwise, you would need to migrate your project to the v2 embedding by following [this guideline](https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects).
 
 For more documentation, see [PlatformViewRegistry](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformViewRegistry.html), [PlatformViewFactory](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformViewFactory.html), and [PlatformView](https://api.flutter.dev/javadoc/io/flutter/plugin/platform/PlatformView.html).
-
-### AndroidManifest.xml
-
-To turn on this feature, you must opt in by adding the following `<meta-data>` to AndroidManifest.xml:
-
-```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.flutter.example">
-    <application
-        android:name="io.flutter.app.FlutterApplication"
-        android:label="hybrid"
-        android:icon="@mipmap/ic_launcher">
-        <!-- ... -->
-        <!-- Hybrid composition -->
-        <meta-data
-            android:name="io.flutter.embedded_views_preview"
-            android:value="true" />
-    </application>
-</manifest>
-```
-*Note*: this won't be required in the near feature as hybrid composition will be turn on by default. 
 
 ### build.gradle
 
