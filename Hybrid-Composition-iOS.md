@@ -20,14 +20,20 @@ When no EmbeddedViews are included, all of the Flow nodes can be painted on one 
 The left is the Flow layer tree, the right is the Quartz layer tree.
 
 ![Flow Layer Tree](https://user-images.githubusercontent.com/25163644/94746860-a88a5280-034b-11eb-8d50-26a600ba76dd.png)
+*Flow Layer Tree*
+
 ![Quartz Layer Tree](https://user-images.githubusercontent.com/25163644/94746837-9d372700-034b-11eb-8abe-52de2217cce8.png)
+*Quartz Layer Tree*
 
 ### Example 2: EmbeddedViews
 Similar to the previous example, however an EmbeddedView is painted after all the pure Flutter layers.
 In this case, the pure Flutter nodes are still combined into a single Quartz node and the UIView is overlayed on-top of the single node.
 
 ![Flow Layer Tree](https://user-images.githubusercontent.com/25163644/94747151-3b2af180-034c-11eb-9a8f-fe09c1eb0903.png)
+*Flow Layer Tree*
+
 ![Quartz Layer Tree](https://user-images.githubusercontent.com/25163644/94747026-04ed7200-034c-11eb-8860-f8757bd6dcc1.png)
+*Quartz Layer Tree*
 
 ### Example 3: Practical Example
 For this example we will cover the layer trees for the following app.
@@ -37,7 +43,10 @@ For this example we will cover the layer trees for the following app.
 In this case, the pure Flutter button layer is drawn after the EmbeddedView (Webview) and cannot be combined into a single Quartz node with the rest of the pure Flutter layers, button is drawn after the Webview on it's own CALayer.
 
 ![Embedded Views Flow WebView](https://user-images.githubusercontent.com/25163644/94747304-804f2380-034c-11eb-888e-8d39d1f0c53a.png)
+*Flow Layer Tree*
+
 ![Embedded Views Quartz Webview](https://user-images.githubusercontent.com/25163644/94747302-804f2380-034c-11eb-98ee-eaa36c5dea1e.png)
+*Quartz Layer Tree*
 
 ## Compositing Unobstructed Platform Views
 
