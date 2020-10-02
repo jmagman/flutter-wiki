@@ -446,7 +446,7 @@ The syntax for deprecations must match the following pattern:
 ```dart
 @Deprecated(
   'Call prepareFrame followed by owner.requestVisualUpdate() instead. '
-  'This feature was deprecated after v1.7.3.'
+  'This feature was deprecated after v1.23.0-7.0.pre.'
 )
 ```
 
@@ -458,6 +458,8 @@ In other words:
   'This feature was deprecated after [dev version at time of deprecation].'
 )
 ```
+
+To determine the latest dev version, see <https://flutter.dev/docs/development/tools/sdk/releases>.
 
 Using this standard form ensures that we can write a script to detect all deprecated APIs and remove them. We have a test that verifies that this syntax is followed.
 
