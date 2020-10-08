@@ -8,8 +8,6 @@ Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.
 - [Creating a New Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#creating-a-new-golden-file-test)
 - [Updating a Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#updating-a-golden-file-test
 )
-- [First Time Contributors](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#first-time-contributors
-)
 - [Flutter Gold Login](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#flutter-gold-login
 )
 - [`flutter-gold` Check](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#flutter-gold-check)
@@ -57,21 +55,6 @@ When you are happy with your golden change, you are ready to submit your PR for 
 The updated tests can be triaged from these tryjobs, which will cause the pending `flutter-gold` check to pass. Review the tryjob and the images that were generated, making sure they look as expected. Currently, we generate images for Linux, Mac, Windows and Web platforms. It is common for there to be slight differences between them. Click the checkmark to approve the change, completing triage.
 
 And that’s it! Your new golden file(s) will be checked in as the baseline(s) for your new test(s), and your PR will be ready to merge. :tada:
-
-## First-Time Contributors
-
-If you are a first-time contributor making a golden file change, first of all welcome!
-
-By following the preceding guide to golden file testing, you may have found that pre-submit testing does not generate a tryjob on the [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter) dashboard. In order for Gold to authenticate during pre-submit testing, contributor permissions are also authenticated. As a first-time contributor, the necessary permissions will not be granted until you land your first change.
-
-You can still make changes to golden files though! In this special case, cc **@Piinks** on your pull request for assistance. An `ignore` can be put in place on the [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter) dashboard that is associated with the affected test(s) and pull request, making it possible to land your change. Currently, checking in golden files this way requires the assistance of an authorized Flutter Gold user, who will also need to triage the image after it lands.
-
-To put an ignore in place for such a change, visit the [ignores page on Flutter Gold](https://flutter-gold.skia.org/ignores). Click `Create new ignore rule`. Every ignore requires these fields to be completed:
-- an **expiration** date, this will only apply to the pull request in question, so be generous to allow time for the change to land.
-- a **note**, this must contain only the pull request number.
-- the tests to ignore, click **`name`** to see a listing of all Flutter golden file tests. Select all affected tests.
-
-Once in place, pre-submit checks for a first-time contributor making a golden file change will pass and the change can land. Once the change has landed, visit the Flutter Gold homepage to see the image results and approve them. Remove the ignore rule once completed.
 
 
 ## Flutter Gold Login
