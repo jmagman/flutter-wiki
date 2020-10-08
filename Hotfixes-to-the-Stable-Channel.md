@@ -11,6 +11,14 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
+## Flutter 1.22 Changes
+### [1.22.1](https://github.com/flutter/flutter/pull/67552) (October 8, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/66940 - autovalidate property inadvertently removed.
+  - https://github.com/flutter/flutter/issues/66962 - The new --analyze-size flag crashes when used with --split-debug-info
+  - https://github.com/flutter/flutter/issues/66908 - Flutter Activity causing exceptions in some Android versions.
+  - https://github.com/flutter/flutter/issues/66647 - Layout modifications performed by background threads causes exceptions on IOS14.
+
 ## Flutter 1.20 Changes
 ### [1.20.4](https://github.com/flutter/flutter/pull/65787) (September 15, 2020)
 This fixes the following issues:
