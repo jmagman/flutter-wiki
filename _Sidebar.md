@@ -1,4 +1,4 @@
-[[[https://github.com/flutter/identity-assets/blob/master/assets/flutter-logo-180x120.png|alt="Flutter Logo"|height=120px|width=180px]]](https://flutter.dev)
+[[[https://raw.githubusercontent.com/flutter/website/master/src/_assets/image/flutter-logomark-320px.png|alt="Flutter Logo"|height=120px|width=180px]]](https://flutter.dev)
 
 Flutter Wiki
 ============
