@@ -47,43 +47,34 @@ RECIPE_FRAMEWORK_REVISION=$(git log --before="$FRAMEWORK_DATE" -n 1 --format=%H)
 cd $RECIPES_REPO/recipes
 git show $RECIPE_FRAMEWORK_REVISION:./flutter.py > "./flutter_$VERSION.py"
 ```
-6. Edit the new file with a comment using this template (filling in the env variables):
-```
-'''
-This recipe was forked from flutter.py for Flutter release version $VERSION.
-
-Base framework revision: $FRAMEWORK_REVISION
-Framework commit date: $FRAMEWORK_DATE
-Base LUCI recipe revision: $RECIPE_FRAMEWORK_REVISION
-'''
-```
-7. Set `RELEASE_FRAMEWORK_REF` (e.g. "refs/heads/flutter-1.17-candidate.3") for what you want to test and trigger a test run of the recipe fork with LED:
+Repeat for `//recipes/flutter/flutter.py` and `//recipes/flutter/flutter_drone.py`.
+6. Set `RELEASE_FRAMEWORK_REF` (e.g. "refs/heads/flutter-1.17-candidate.3") for what you want to test and trigger a test run of the recipe fork with LED:
 ```
 led get-builder 'luci.flutter.prod:Linux' | led edit -pa git_ref="$RELEASE_FRAMEWORK_REF" | led edit -pa git_url='https://github.com/flutter/flutter' | led edit -pa recipe_name="flutter_$VERSION.py" | led edit-recipe-bundle | led launch
 ```
-8. If the LED run fails, possible reasons include:
+7. If the LED run fails, possible reasons include:
   - Something changed in the builder config, see flutter/infra repo. (e.g. Xcode version in builder changed, requiring a recipe cherry pick from upstream version)
   - The recipe depends on other files in the repo, which haven't been forked. Repeat steps 4-6 for these additional dependencies.
-9. Get the engine repo revision from your framework revision. In the framework repo, the engine revision is checked in as [//bin/internal/engine.version](https://github.com/flutter/flutter/blob/master/bin/internal/engine.version).
-10. Repeat steps 3 to 7 for the engine recipe. As of release 1.20.0, `engine_builder.py`, `web_engine.py` and `engine_builder.proto` also had to be forked. The LED command for testing engine should be:
+8. Get the engine repo revision from your framework revision. In the framework repo, the engine revision is checked in as [//bin/internal/engine.version](https://github.com/flutter/flutter/blob/master/bin/internal/engine.version).
+9. Repeat steps 3 to 7 for the engine recipe. As of release 1.20.0, `engine_builder.py`, `web_engine.py` and `engine_builder.proto` also had to be forked. The LED command for testing engine should be:
 ```
 led get-builder 'luci.flutter.prod:Linux Host Engine' | led edit -pa git_ref="$RELEASE_ENGINE_REF" | led edit -pa git_url='https://github.com/flutter/engine' | led edit -pa recipe_name="engine_$VERSION.py" | led edit-recipe-bundle | led launch
 ```
-11. Update tests:
+10. Update tests:
 ```
 cd $RECIPES_REPO
 ./recipes.py test train
 ```
-12. Commit the two new recipes and all updated test expectations to git. Create a new CL with `git cl upload` and get a reviewer from `build/scripts/slave/recipes/flutter/OWNERS`. Upon approval, merge the CL.
-13. In flutter/infra, update BRANCHES dictionary in [main.star](https://github.com/flutter/infra/blob/master/config/main.star#L31):
+11. Commit the two new recipes and all updated test expectations to git. Create a new CL with `git cl upload` and get a reviewer from `build/scripts/slave/recipes/flutter/OWNERS`. Upon approval, merge the CL.
+12. In flutter/infra, update BRANCHES dictionary in [main.star](https://github.com/flutter/infra/blob/master/config/main.star#L31):
    - `BRANCHES['stable']['testing-ref']`, a regex to the branch name of the current stable
    - `BRANCHES['stable']['version']`, the version element of the recipe filename, e.g. `v1_17_0`
    - `BRANCHES['beta']['testing-ref']`, a regex to the branch name of the current beta candidate
    - `BRANCHES['beta']'version']`
    - `BRANCHES['dev']['testing-ref']`, a regex to the branch names of dev releases after incrementing y
-14. Execute the main.star file to generate the rest of the config files (and validate your changes for mistakes): `$ ./main.star`
-15. Commit your changes, push to github and get it reviewed. This PR should be landed after any LUCI recipe changes.
-16. After your PR has landed, wait for it to be mirrored to [the chromium tree](https://chromium.googlesource.com/external/github.com/flutter/infra/). LUCI post-submit builds should now work for your candidate branch.
+13. Execute the main.star file to generate the rest of the config files (and validate your changes for mistakes): `$ ./main.star`
+14. Commit your changes, push to github and get it reviewed. This PR should be landed after any LUCI recipe changes.
+15. After your PR has landed, wait for it to be mirrored to [the chromium tree](https://chromium.googlesource.com/external/github.com/flutter/infra/). LUCI post-submit builds should now work for your candidate branch.
 
 ## Stable Release Procedure
 
