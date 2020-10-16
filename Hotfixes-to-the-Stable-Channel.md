@@ -12,6 +12,14 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.22 Changes
+### [1.22.2](https://github.com/flutter/flutter/pull/68135)  (October 16, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/67869 - Stylus tap gesture is improperly registered.
+  - https://github.com/flutter/flutter/issues/67986 - Android Studio 4.1 not properly supported.
+  - https://github.com/flutter/flutter/issues/67213 - Webviews in hybrid composition can cause a crash.
+  - https://github.com/flutter/flutter/issues/67345 - VoiceOver accessibility issue with some pages.
+  - https://github.com/flutter/flutter/issues/66764 - Native webviews may not be properly disposed of in hybrid composition.
+
 ### [1.22.1](https://github.com/flutter/flutter/pull/67552) (October 8, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/66940 - autovalidate property inadvertently removed.
