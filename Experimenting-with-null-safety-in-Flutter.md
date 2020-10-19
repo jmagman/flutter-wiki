@@ -10,7 +10,7 @@ In current releases, null safety requires the following:
 2. Increasing the SDK constraints to a version that supports null safety
 3. Enabling language analysis for null safety in the `analysis_options.yaml` file
 
-A good example of all this is the null safe sample [link TBD]
+A good example of all this is the [null safe sample](https://github.com/mit-mit/samples/tree/null-safety/null_safety) [link needs updating when this merges into flutter/samples]
 
 ## Setting SDK constraints
 
@@ -52,6 +52,14 @@ dependencies:
 The [feature specification can be found in the Dart language repo](https://github.com/dart-lang/language/blob/master/accepted/future-releases/abstract-external-fields/feature-specification.md).
 
 A good example of using this can be found in the [following code sample, which maps the Win32 WNDCLASS struct to its corresponding Dart representation](https://github.com/timsneath/win32/blob/5f00efbe88bfa010c7afb006df0fe0dea749b06c/lib/src/structs.dart#L35).
+
+## How to file bugs
+
+TBD: section on best practices and links to templates for filing bugs around:
+
+- Dart null safety language and runtime features
+- Dart migration tooling
+- Flutter-related null-safety issues
 
 ## Other useful links
 
