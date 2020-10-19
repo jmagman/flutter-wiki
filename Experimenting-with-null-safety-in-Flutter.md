@@ -14,9 +14,9 @@ A good example of all this is the null safe sample [link TBD]
 
 ## Setting SDK constraints
 
-- Note that the lower bound for the SDK does not actually have to match the current SDK version - it needs to match the experimental release version which is a separate concept, and defaults to the current sdk version. 
-- This only applies in the presence of the explicit --enable-experiment=non-nullable flag or the package existing in the allow list. 
-- Once the feature is released the packages will have to be republished/updated to have a new min SDK constraint which equals the actual release version for the feature (hence the restriction for the max SDK constraint as well).
+- Note that the lower bound for the SDK does not actually have to match the current SDK version - it needs to match the experimental release version, which is set in [this file](https://github.com/dart-lang/sdk/blob/master/tools/experimental_features.yaml). 
+- This only applies in the presence of the explicit `--enable-experiment=non-nullable` flag or the package existing in the allow list. 
+- Once the feature is released the packages will have to be republished / updated to have a new min SDK constraint which equals the actual release version for the feature (hence the restriction for the max SDK constraint as well).
 
 ## Publishing null-safe packages
 
