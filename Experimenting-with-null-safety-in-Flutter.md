@@ -1,5 +1,7 @@
 A loose collection of notes about null safety in Flutter during the Technical Preview 2 (TP2) phase.
 
+** NOTE: TP2 is not published yet. This document is a work-in-progress. **
+
 ## Enabling null safety in TP2
 
 In current releases, null safety requires the following:
