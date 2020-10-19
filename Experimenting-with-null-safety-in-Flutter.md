@@ -20,8 +20,12 @@ A good example of all this is the null safe sample [link TBD]
 
 ## Porting FFI code w/ null safety
 
-- When creating structs to use with FFI, there is a challenge. Null safety requires fields to be initialized, but you can't initialize class members that extend from `Struct` because they are allocated differently. Instead, you can use the `external` keyword to indicate to Dart that a variable is managed outside of Dart. [Improve this text w/ sample]
+- When using native structs with FFI, null safety imposes a new obstacle. Today users write Dart classes to represent a native memory layout, with metadata to specify the "native" C representation. However, this creates a compile-time error when null safety is enabled, since the variable is uninitialized in the typical pattern. Dart therefore introduces the ability to express external instance variables, which are syntactic sugar for an external getter and setter property that resolves this.
 
-## Useful Links
+The [feature specification can be found in the Dart language repo](https://github.com/dart-lang/language/blob/master/accepted/future-releases/abstract-external-fields/feature-specification.md).
+
+A good example of using this can be found in the [following code sample, which maps the Win32 WNDCLASS struct to its corresponding Dart representation](https://github.com/timsneath/win32/blob/5f00efbe88bfa010c7afb006df0fe0dea749b06c/lib/src/structs.dart#L35).
+
+## Other useful links
 
  - https://dart.dev/null-safety
