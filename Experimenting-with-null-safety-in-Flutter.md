@@ -18,6 +18,33 @@ A good example of all this is the null safe sample [link TBD]
 - This only applies in the presence of the explicit --enable-experiment=non-nullable flag or the package existing in the allow list. 
 - Once the feature is released the packages will have to be republished/updated to have a new min SDK constraint which equals the actual release version for the feature (hence the restriction for the max SDK constraint as well).
 
+## Publishing null-safe packages
+
+Please *don't* publish null-safe packages yet, since they will not work without the experiment flag enabled. 
+
+If you're working on test migrations of packages, we recommend instead that you create a null-safe development branch for your code (ideally named `null_safety` for consistency with other packages). In your `pubspec.yaml` file, you should update the version number as follows:
+
+```yaml
+# increment the last digit as necessary if you make changes
+version: 2.0.0-nullsafety.1
+```
+
+and set the `publish_to` flag in this branch to avoid accidental publishing of your package to pub.dev:
+
+```yaml
+publish_to: none
+```
+
+If you need to take a dependency on other null-safe packages **for development only**, you can do so temporarily by referencing the null-safe branch, for example:
+
+```yaml
+dependencies:
+  ffi:
+    git:
+      url: git@github.com/dart-lang/ffi.git
+      ref: null_safety
+```
+
 ## Porting FFI code w/ null safety
 
 - When using native structs with FFI, null safety imposes a new obstacle. Today users write Dart classes to represent a native memory layout, with metadata to specify the "native" C representation. However, this creates a compile-time error when null safety is enabled, since the variable is uninitialized in the typical pattern. Dart therefore introduces the ability to express external instance variables, which are syntactic sugar for an external getter and setter property that resolves this.
