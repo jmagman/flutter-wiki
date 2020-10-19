@@ -519,6 +519,32 @@ Prefer the term "member variable" to the term "instance variable" when talking a
 Typedef dartdocs should usually start with the phrase "Signature for...".
 
 
+### Use correct grammar
+
+Avoid starting a sentence with a lowercase letter.
+
+```dart
+// BAD
+
+/// [foo] must not be null.
+
+// GOOD
+
+/// The [foo] argument must not be null.
+```
+
+Similarly, end all sentences with a period.
+
+
+### Use the passive voice; recommend, do not require
+
+Never use "you" or "we". Avoid the imperative voice. Avoid value judgements.
+
+Rather than telling someone to do something, use "Consider", as in "`To obtain the foo, consider using [bar].`".
+
+In general, you don't know who is reading the documentation or why. Someone could have inherited a terrible codebase and be reading our documentation to find out how to fix it; by saying "you should not do X" or "avoid Y" or "if you want Z", you will put the reader in a defensive state of mind when they find code that contradicts the documentation (after all, they inherited this codebase, who are we to say that they're doing it wrong, it's not their fault).
+
+
 ### Provide sample code
 
 Sample code helps developers learn your API quickly. Writing sample code also helps you think through how your API is going to be used by app developers.
@@ -595,23 +621,6 @@ and we will know to examine them more carefully.
 Feel free to be conservative in what you consider "sufficient quality". It's ok to use `//` even if
 you have multiple paragraphs of documentation; that's a sign that we should carefully rereview the
 documentation when making the code public.
-
-
-### Use correct grammar
-
-Avoid starting a sentence with a lowercase letter.
-
-```dart
-// BAD
-
-/// [foo] must not be null.
-
-// GOOD
-
-/// The [foo] argument must not be null.
-```
-
-Similarly, end all sentences with a period.
 
 
 ### Dartdoc-specific requirements
