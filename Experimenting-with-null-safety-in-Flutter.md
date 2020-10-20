@@ -22,7 +22,7 @@ A good example of all this is the [null safe sample](https://github.com/mit-mit/
 
 If you need to take a dependency on other null-safe packages **for development only**, first check to see if the package you depend on has a null-safe version published.
 In some *limited cases*, we have published null-safe pre-release versions of core packages to aid null-safe migration.
-You can see if a prerelease is available by visiting the package page on https://pub.dev
+You can see if a prerelease is available by visiting the package page on [pub.dev](https://pub.dev).
 
 You must explicitly opt-in to uses the prerelease versions like so:
 
@@ -39,7 +39,8 @@ dev_dependencies:
   test: ^1.16.0-nullsafety
 ```
 
-you can do so temporarily by referencing the null-safe branch, for example:
+In some cases a package may have been updated to null safety in its source repository, but the package has not been published yet.
+You can use a [git dependency](https://dart.dev/tools/pub/dependencies#git-packages) to reference these packages.
 
 ```yaml
 dependencies:
