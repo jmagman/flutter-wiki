@@ -18,6 +18,37 @@ A good example of all this is the [null safe sample](https://github.com/mit-mit/
 - This only applies in the presence of the explicit `--enable-experiment=non-nullable` flag or the package existing in the allow list. 
 - Once the feature is released the packages will have to be republished / updated to have a new min SDK constraint which equals the actual release version for the feature (hence the restriction for the max SDK constraint as well).
 
+## Use null-safe dependencies
+
+If you need to take a dependency on other null-safe packages **for development only**, first check to see if the package you depend on has a null-safe version published.
+In some *limited cases*, we have published null-safe pre-release versions of core packages to aid null-safe migration.
+You can see if a prerelease is available by visiting the package page on https://pub.dev
+
+You must explicitly opt-in to uses the prerelease versions like so:
+
+```yaml
+dependencies:
+  charcode: ^1.2.0-nullsafety
+  collection: ^1.15.0-nullsafety
+  source_span: ^1.8.0-nullsafety
+  string_scanner: ^1.1.0-nullsafety
+  typed_data: ^1.3.0-nullsafety
+
+dev_dependencies:
+  pedantic: ^1.10.0-nullsafety
+  test: ^1.16.0-nullsafety
+```
+
+you can do so temporarily by referencing the null-safe branch, for example:
+
+```yaml
+dependencies:
+  ffi:
+    git:
+      url: git@github.com/dart-lang/ffi.git
+      ref: null_safety
+```
+
 ## Publishing null-safe packages
 
 Please *don't* publish null-safe packages yet, since they will not work without the experiment flag enabled. 
@@ -33,16 +64,6 @@ and set the `publish_to` flag in this branch to avoid accidental publishing of y
 
 ```yaml
 publish_to: none
-```
-
-If you need to take a dependency on other null-safe packages **for development only**, you can do so temporarily by referencing the null-safe branch, for example:
-
-```yaml
-dependencies:
-  ffi:
-    git:
-      url: git@github.com/dart-lang/ffi.git
-      ref: null_safety
 ```
 
 ## Porting FFI code w/ null safety
