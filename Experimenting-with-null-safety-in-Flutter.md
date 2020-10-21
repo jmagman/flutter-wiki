@@ -40,7 +40,7 @@ analyzer:
 
 ### More information
 
-A good example of all this is the [null safe sample](https://github.com/mit-mit/samples/tree/null-safety/null_safety) [link needs updating when this merges into flutter/samples]
+A good example of all this is the [Flutter null safety sample](https://github.com/flutter/samples/tree/master/experimental/null_safety).
 
 ## Use null-safe dependencies
 
