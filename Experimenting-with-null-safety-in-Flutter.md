@@ -7,8 +7,31 @@ A loose collection of notes about null safety in Flutter during the Technical Pr
 In current releases, null safety requires the following:
 
 1. Turning on the feature itself through the `--enable-experiment=non-nullable` flag
-2. Increasing the SDK constraints to a version that supports null safety
-3. Enabling language analysis for null safety in the `analysis_options.yaml` file
+
+   `>flutter run --enable-experiment=non-nullable`
+
+   _[More information on using the experiment flag](https://dart.dev/null-safety#pass-the-experiment-flag)_
+
+2. Increasing the SDK constraints in `pubspec.yaml` to a version that supports
+  null safety
+
+    ```yaml
+    environment:
+      sdk: ">=2.11.0-213.0.dev <2.12.0"
+    ```
+
+    _[More information on configuring your SDK constraint](https://dart.dev/null-safety#configure-the-sdk-version)_
+
+3. Enabling language analysis for null safety in the `analysis_options.yaml`
+   file
+
+   ```yaml
+   analyzer:
+     enable-experiment:
+     - non-nullable
+    ```
+
+    [//]: # (More info link pending https://github.com/dart-lang/site-www/issues/2661)
 
 A good example of all this is the [null safe sample](https://github.com/mit-mit/samples/tree/null-safety/null_safety) [link needs updating when this merges into flutter/samples]
 
