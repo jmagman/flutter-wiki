@@ -6,13 +6,7 @@ A loose collection of notes about null safety in Flutter during the Technical Pr
 
 In current releases, null safety requires the following:
 
-### 1. Use the `--enable-experiment=non-nullable` flag
-
-`>flutter run --enable-experiment=non-nullable`
-
-_[More information on using the experiment flag](https://dart.dev/null-safety#pass-the-experiment-flag)_
-
-### 2. Update the SDK constraint
+### 1. Update the SDK constraint
 
 You must increase the SDK constraints in `pubspec.yaml` to a version that
 supports null safety.
@@ -27,6 +21,12 @@ environment:
 - Once the feature is released the packages will have to be republished / updated to have a new min SDK constraint which equals the actual release version for the feature (hence the restriction for the max SDK constraint as well).
 
 _[More information on configuring your SDK constraint](https://dart.dev/null-safety#configure-the-sdk-version)_
+
+### 2. Use the `--enable-experiment=non-nullable` flag
+
+`>flutter run --enable-experiment=non-nullable`
+
+_[More information on using the experiment flag](https://dart.dev/null-safety#pass-the-experiment-flag)_
 
 ### 3. Enabling language analysis for null safety in the `analysis_options.yaml` file
 
