@@ -8,7 +8,7 @@ Flutter [dev channel](https://github.com/flutter/flutter/wiki/Flutter-build-rele
 You can change to the dev channel with `flutter channel dev` followed by `flutter upgrade`
 (don't forget to change back to `flutter channel stable` for production use.
 
-## Enabling null safety in TP2
+## Enabling null safety in TP2 for existing apps and packages
 
 In current releases, null safety requires the following:
 
@@ -56,7 +56,16 @@ _[More information on using the experiment flag](https://dart.dev/null-safety#pa
 
 A good example of all this is the [Flutter null safety sample](https://github.com/flutter/samples/tree/master/experimental/null_safety).
 
-## Use null-safe dependencies
+## Enabling null safety in a new Flutter project
+
+If you are creating a new Flutter app or package to experiment with null safety, you can use these steps
+as a replacement for steps 1. (updating `pubspec.yaml`) and 2. (adding `analysis_options.yaml`) above:
+
+  - `flutter create testapp`
+  - `cd testapp`
+  - `dart migrate`
+
+## Using null-safe dependencies
 
 If you need to take a dependency on other null-safe packages **for development only**, first check to see if the package you depend on has a null-safe version published.
 In some *limited cases*, we have published null-safe pre-release versions of core packages to aid null-safe migration.
