@@ -56,7 +56,7 @@ _[More information on using the experiment flag](https://dart.dev/null-safety#pa
 
 A good example of all this is the [Flutter null safety sample](https://github.com/flutter/samples/tree/master/experimental/null_safety).
 
-## Enabling null safety in a new Flutter project
+## Enabling null safety in a new Flutter project with the migration tool
 
 If you are creating a new Flutter app or package to experiment with null safety, you can use these steps
 as a replacement for steps 1. (updating `pubspec.yaml`) and 2. (adding `analysis_options.yaml`) above:
