@@ -1,6 +1,12 @@
 A loose collection of notes about null safety in Flutter during the Technical Preview 2 (TP2) phase.
 
-**NOTE: TP2 is not published yet. This document is a work-in-progress.**
+## Flutter TP2 tech preview build
+
+The Flutter TP2 tech preview build is `1.24.0-3.0.pre` from the
+Flutter [dev channel](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels).
+
+You can change to the dev channel with `flutter channel dev` followed by `flutter upgrade`
+(don't forget to change back to `flutter channel stable` for production use.
 
 ## Enabling null safety in TP2
 
