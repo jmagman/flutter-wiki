@@ -97,6 +97,68 @@ dependencies:
       ref: null_safety
 ```
 
+## Mixed mode
+
+A single project may have code that has migrated to null safety along with code that has not.
+This includes code within the project and the project dependencies.
+We call this _mixed mode_.
+
+### Per-library language version selection
+
+If you don't want to migrate all of the code in a package to null safety, you can opt-out individual files by annotating them with a language version comment. Dart 2.9 was the last version before we introduced null safety, so we recommend you use that version.
+
+Example:
+
+```dart
+// @dart = 2.9
+// TODO: migrate this to null safety
+import 'dart:math';
+...
+```
+
+_[More information on per-library language version selection](https://dart.dev/guides/language/evolution#per-library-language-version-selection)_
+
+### Dealing with build and run errors with mixed mode
+
+If you have used the language comment syntax to opt-out of null safety for a library within your package, you may see the following error:
+
+```
+lib/widget.dart:1:1: Error: A library can't opt out of null safety by default, when using sound null safety.
+// @dart=2.9
+^^^^^^^^^^^^
+```
+
+If you have not updated all of your runtime dependencies to versions that support null safety, you may see the following error:
+
+```
+Error: Cannot run with sound null safety as one or more dependencies do not
+support null safety:
+
+ - package:dependency1
+ - package:dependency2
+```
+
+In both cases, the errors are caused because the compiler trying to _enforce_ null safety across all of the code. This is the default when using the `--enable-experiment=non-nullable` flag.
+
+There are two ways to disable this enforcement.
+
+#### 1. Disable _sound_ null safety via a flag
+
+```
+> flutter run --enable-experiment=non-nullable --no-sound-null-safety
+```
+
+#### 2. Set the language version in the entry point
+
+Add a language version comment to your main application file – most likely `lib/main.dart`.
+
+```dart
+// @dart=2.9
+import 'package:flutter/widgets.dart';
+import 'src/my_app.dart';
+void main() => runApp(MyApp());
+```
+
 ## Publishing null-safe packages
 
 Please *don't* publish null-safe packages yet, since they will not work without the experiment flag enabled. 
