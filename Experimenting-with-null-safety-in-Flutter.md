@@ -99,13 +99,11 @@ The [feature specification can be found in the Dart language repo](https://githu
 
 A good example of using this can be found in the [following code sample, which maps the Win32 WNDCLASS struct to its corresponding Dart representation](https://github.com/timsneath/win32/blob/5f00efbe88bfa010c7afb006df0fe0dea749b06c/lib/src/structs.dart#L35).
 
-## How to file bugs
+## How to file bugs or request changes
 
-TBD: section on best practices and links to templates for filing bugs around:
+If you find bugs or have suggestions in the core Dart null safety language feature or tooling, please [file an issue here](https://github.com/dart-lang/sdk/issues/new?title=Null%20safety%20feedback:%20[issue%20summary]&labels=NNBD&body=Describe%20the%20issue%20or%20potential%20improvement%20in%20detail%20here).
 
-- Dart null safety language and runtime features
-- Dart migration tooling
-- Flutter-related null-safety issues
+If you find bugs or have suggestions in the Flutter null safe APIs or tools, please [file an issue here](https://github.com/flutter/flutter/issues/new?title=Null%20safety%20feedback:%20[issue%20summary]&labels=a%3A%20null-safety&body=Describe%20the%20issue%20or%20potential%20improvement%20in%20detail%20here).
 
 ## Other useful links
 
