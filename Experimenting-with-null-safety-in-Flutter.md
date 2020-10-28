@@ -110,7 +110,7 @@ If you don't want to migrate all of the code in a package to null safety, you ca
 Example:
 
 ```dart
-// @dart = 2.9
+// @dart=2.9
 // TODO: migrate this to null safety
 import 'dart:math';
 ...
