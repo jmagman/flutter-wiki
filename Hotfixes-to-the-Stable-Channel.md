@@ -11,12 +11,12 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
-## Flutter 1.23 Changes
+## Flutter 1.22 Changes
+### [1.22.3](https://github.com/flutter/flutter/pull/69234) (October 30, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/67828 - Multiple taps required to delete text in some input fields.
   - https://github.com/flutter/flutter/issues/66108 - Reading Android clipboard may throw a security exception if it contains media
 
-## Flutter 1.22 Changes
 ### [1.22.2](https://github.com/flutter/flutter/pull/68135)  (October 16, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/67869 - Stylus tap gesture is improperly registered.
