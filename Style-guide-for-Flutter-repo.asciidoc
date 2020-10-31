@@ -639,7 +639,7 @@ and used via:
 /// {@macro <id>}
 ```
 
-The `<id>` should be an identifier that is of the form `flutter.library.Class.member[.optionalDescription]`.
+The `<id>` should be a unique identifier that is of the form `flutter.library.Class.member[.optionalDescription]`.
 
 For example:
 
