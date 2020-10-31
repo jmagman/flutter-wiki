@@ -622,6 +622,42 @@ Feel free to be conservative in what you consider "sufficient quality". It's ok 
 you have multiple paragraphs of documentation; that's a sign that we should carefully rereview the
 documentation when making the code public.
 
+### Dartdoc templates and macros
+
+Dartdoc supports creating templates that can be reused in other parts of the code. They are defined
+like so:
+
+```dart
+/// {@template <id>}
+/// ...
+/// {@endtemplate}
+```
+
+and used via:
+
+```dart
+/// {@macro <id>}
+```
+
+The `<id>` should be an identifier that is of the form `flutter.library.Class.member[.optionalDescription]`.
+
+For example:
+
+```
+// GOOD:
+/// {@template flutter.rendering.Layer.findAnnotations.aboutAnnotations}
+/// Annotations are great!
+/// {@endtemplate
+
+// BAD:
+/// {@template the_stuff!}
+/// This is some great stuff!
+/// {@endtemplate}
+```
+
+The `optionalDescription` component of the identifier is only necessary if there is more than one
+template defined in one Dartdoc block. If a symbol is not part of a library, or not part of a class, then
+just omit those parts from the ID.
 
 ### Dartdoc-specific requirements
 
