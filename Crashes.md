@@ -1,5 +1,7 @@
 ## Symbolicating stack traces for engine crashes
 
+The easiest way to symbolicate stack traces for Android and iOS is using [@flutter-symbolizer-bot](https://github.com/flutter-symbolizer-bot). If that is not an option, the steps below explain how to do it manually.
+
 ### Android
 
 #### Get the symbols
