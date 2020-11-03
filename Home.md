@@ -18,5 +18,6 @@ If you intend to contribute to Flutter, welcome! You are encouraged to start wit
 * [Reviewing code](https://github.com/flutter/flutter/wiki/Tree-hygiene#how-to-review-code)
 * [RFC process](https://github.com/flutter/flutter/wiki/Issue-hygiene#how-to-propose-a-specific-change)
 * [Submitting code, process for](https://github.com/flutter/flutter/wiki/Tree-hygiene#overview)
+* [Symbolicating stack traces](https://github.com/flutter/flutter/wiki/Crashes)
 * [Threading in the Engine](https://github.com/flutter/flutter/wiki/The-Engine-architecture#threading)
 * [When will my bug be fixed?](https://github.com/flutter/flutter/wiki/Issue-hygiene#when-will-my-bug-be-fixed)
