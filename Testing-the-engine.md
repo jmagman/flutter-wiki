@@ -322,6 +322,12 @@ the `dart:ui` package and underlying engine.
 These tests are executed during pre-submit on our CI system when
 submitting PRs to the `flutter/engine` repository.
 
+Assuming your `flutter` and `engine` working directories are siblings, you can run the framework tests locally using the following command from the root of your `flutter` repository:
+
+```bash
+(cd packages/flutter; ../../bin/flutter test --local-engine=host_debug_unopt)
+```
+
 ## Web engine
 
 Web tests are run via the `felt` command. More details can be found in [lib/web_ui/dev/README.md](https://github.com/flutter/engine/blob/master/lib/web_ui/dev/README.md).
