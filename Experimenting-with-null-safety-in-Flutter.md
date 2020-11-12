@@ -97,11 +97,14 @@ dependencies:
       ref: null_safety
 ```
 
-## Mixed mode
+## [Unsound null safety](#unsound-null-safety) 
 
 A single project may have code that has migrated to null safety along with code that has not.
 This includes code within the project and the project dependencies.
-We call this _mixed mode_.
+We call such a project a **mixed-version program**.
+
+Projects that use mixed-version code cannot run with sound null safety,
+and is restricted to run with **unsound null safety**.
 
 ### Per-library language version selection
 
@@ -131,8 +134,8 @@ lib/widget.dart:1:1: Error: A library can't opt out of null safety by default, w
 If you have not updated all of your runtime dependencies to versions that support null safety, you may see the following error:
 
 ```
-Error: Cannot run with sound null safety as one or more dependencies do not
-support null safety:
+Error: Cannot run with sound null safety, because the following dependencies
+don't support null safety:
 
  - package:dependency1
  - package:dependency2
@@ -140,7 +143,7 @@ support null safety:
 
 In both cases, the errors are caused because the compiler trying to _enforce_ null safety across all of the code. This is the default when using the `--enable-experiment=non-nullable` flag.
 
-There are two ways to disable this enforcement.
+There are two ways to disable this enforcement, and run with unsound null safety.
 
 #### 1. Disable _sound_ null safety via a flag
 
