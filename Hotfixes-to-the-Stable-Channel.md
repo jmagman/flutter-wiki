@@ -12,6 +12,15 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.22 Changes
+### [1.22.4](https://github.com/flutter/flutter/pull/70327) (Nov 13, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/43620 - Dart analyzer terminates during development
+  - https://github.com/flutter/flutter/issues/58200 - Apple AppStore submission fails with error: “The bundle Runner.app/Frameworks/App.framework does not support the minimum OS Version specified in the Info.plist”
+  - https://github.com/flutter/flutter/issues/69722 - Setting a custom observatory port for debugging does not take effect
+  - https://github.com/flutter/flutter/issues/66144 - Setting autoFillHint to text form field may cause focus issues
+  - https://github.com/flutter/flutter/issues/69449 - Potential race condition in FlutterPlatformViewsController
+  - https://github.com/flutter/flutter/issues/65133 - Support targeting physical iOS devices on Apple Silicon
+
 ### [1.22.3](https://github.com/flutter/flutter/pull/69234) (October 30, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/67828 - Multiple taps required to delete text in some input fields.
