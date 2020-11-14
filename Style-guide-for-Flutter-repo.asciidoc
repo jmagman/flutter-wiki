@@ -918,6 +918,16 @@ If your class has a clear "end of life", for example, provide a `dispose()` meth
 In general, pretending that Dart does not have garbage collection is likely to lead to less confusing and buggy code, because it forces you to think about the implications of object ownership and lifecycles.
 
 
+### Test APIs belong in the test frameworks
+
+Mechanisms that exist for test purposes do not belong in the core libraries, they belong in test harnesses. This keeps the cost of the main library down in production and avoids the risk that people might abuse test APIs.
+
+
+### Immutable classes should not have hidden state
+
+Immutable classes (those with `const` constructors) should not have hidden state. For example, they should not use private statics or Expandos. If they are stateful, then they should not be `const`.
+
+
 Naming
 ------
 
