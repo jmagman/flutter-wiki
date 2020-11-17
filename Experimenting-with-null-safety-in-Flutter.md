@@ -121,7 +121,7 @@ import 'dart:math';
 
 _[More information on per-library language version selection](https://dart.dev/guides/language/evolution#per-library-language-version-selection)_
 
-### Dealing with build and run errors with mixed mode
+### Dealing with build and run errors with unsound null safety
 
 If you have used the language comment syntax to opt-out of null safety for a library within your package, you may see the following error:
 
