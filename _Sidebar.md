@@ -80,7 +80,6 @@ Flutter Wiki
 ## Experimental features
 - [Android Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
-- [[Code generation in Flutter]]
 - [[Desktop shells]]
 - [[Experimental flags for web support]]
 - [[IntelliJ + Flutter Setup Tips and Tricks]]
