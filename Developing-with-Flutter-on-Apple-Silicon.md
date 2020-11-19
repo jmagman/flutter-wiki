@@ -6,9 +6,11 @@ You can use Apple Silicon-based Mac devices as a developer workstation (host) fo
 
 [Issue 60118](https://github.com/flutter/flutter/issues/60118) tracks the full set of work to support this feature. 
 
-Notes:
+Notes and caveats:
 
-- We recommend at least Flutter 1.22.4, which contains required hotfixes to support compilation on Apple Silicon.
+- We recommend at least Flutter 1.22.4, which contains required hotfixes to support this hardware.
+- Deployment to physical iOS and Android devices attached to the host is supported, but we do not yet support deployment to the iOS simulator ([issue 64502](https://github.com/flutter/flutter/issues/64502)).
+- The Android Emulator is not yet supported on Apple Silicon, [as noted here](https://developer.android.com/studio/releases/emulator#emulator_for_arm64_hosts).
 - Running CocoaPods to embed plugins fails in the current release. As [documented here](https://github.com/flutter/flutter/issues/70796), the workaround is to run the following command line to install support for FFI from the x86_64 environment:
 
 ```
