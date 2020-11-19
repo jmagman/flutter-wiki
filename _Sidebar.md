@@ -78,7 +78,6 @@ Flutter Wiki
 - [Hotfixes to the stable channel](https://github.com/flutter/flutter/wiki/Hotfixes-to-the-Stable-Channel)
 
 ## Experimental features
-- [[Add Flutter to existing apps]]
 - [Android Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
 - [[Code generation in Flutter]]
