@@ -79,19 +79,15 @@ Flutter Wiki
 
 ## Experimental features
 - [[Add Flutter to existing apps]]
-  - [Upgrade pre-1.8.4 iOS projects](https://github.com/flutter/flutter/wiki/Upgrading-Flutter-added-to-existing-iOS-Xcode-project)
-  - [Upgrade pre-1.12 Android projects](https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects)
-- [Binding to native code using dart:ffi](https://flutter.dev/docs/development/platform-integration/c-interop)
+- [Android Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
+- [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
 - [[Code generation in Flutter]]
-- [Creating responsive apps](https://flutter.dev/docs/development/ui/layout/responsive)
 - [[Desktop shells]]
 - [[Experimental flags for web support]]
 - [[IntelliJ + Flutter Setup Tips and Tricks]]
+- [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
 - [[Linting Flutter apps for Chrome OS]]
 - [[Making animated GIFs of Flutter apps]]
-- [[Obfuscating Dart Code]]
-- [Using Flutter in China](https://flutter.dev/community/china)
-- [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
 - [Multi-device debugging in VS Code](https://github.com/flutter/flutter/wiki/Multi-device-debugging-in-VS-Code)
+- [[Obfuscating Dart Code]]
 - [Running Flutter Driver tests with Web](https://github.com/flutter/flutter/wiki/Running-Flutter-Driver-tests-with-Web)
-- [Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
