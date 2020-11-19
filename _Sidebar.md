@@ -80,8 +80,8 @@ Flutter Wiki
 ## Experimental features
 - [Android Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
+- [[CanvasKit web support]]
 - [[Desktop shells]]
-- [[Experimental flags for web support]]
 - [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
 - [[Linting Flutter apps for Chrome OS]]
 - [[Making animated GIFs of Flutter apps]]
