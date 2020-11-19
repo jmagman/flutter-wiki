@@ -83,7 +83,6 @@ Flutter Wiki
 - [[CanvasKit web support]]
 - [[Desktop shells]]
 - [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
-- [[Linting Flutter apps for Chrome OS]]
 - [[Making animated GIFs of Flutter apps]]
 - [Multi-device debugging in VS Code](https://github.com/flutter/flutter/wiki/Multi-device-debugging-in-VS-Code)
 - [Running Flutter Driver tests with Web](https://github.com/flutter/flutter/wiki/Running-Flutter-Driver-tests-with-Web)
