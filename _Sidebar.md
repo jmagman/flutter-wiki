@@ -82,7 +82,6 @@ Flutter Wiki
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
 - [[Desktop shells]]
 - [[Experimental flags for web support]]
-- [[IntelliJ + Flutter Setup Tips and Tricks]]
 - [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
 - [[Linting Flutter apps for Chrome OS]]
 - [[Making animated GIFs of Flutter apps]]
