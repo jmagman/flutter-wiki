@@ -55,7 +55,7 @@ Run the following steps, from the `src` directory created in [Setting up the Eng
     * `ninja -C out/host_debug_unopt` for host-side executables.
     * These commands can be combined. Ex: `ninja -C out/android_debug_unopt && ninja -C out/host_debug_unopt`
     * For MacOS, you will need older version of XCode(9.4 or below) to compile android_debug_unopt and android_debug_unopt_x86. If you only care about x64, you can ignore this
-    * For Googlers, consider also using the option `-j 100` to parallelize the build using Goma. Before that, you may need to set up `GOMA_DIR` environmental variable, which, depending on where you install Goma, may be in `~/goma` or `depot_tools/.cipd_bin`.
+    * For Googlers, consider also adding the flag `--goma` to your gn command, then using `autoninja` to parallelize the build using Goma. Before that, you may need to set up `GOMA_DIR` environmental variable, which, depending on where you install Goma, may be in `~/goma` or `depot_tools/.cipd_bin`.
 
 This builds a debug-enabled ("unoptimized") binary configured to run Dart in
 checked mode ("debug"). There are other versions, see [[Flutter's modes]].
@@ -113,7 +113,7 @@ Run the following steps, from the `src` directory created in the steps above:
 4. `./flutter/tools/gn --unoptimized` to prepare the build files for host-side executables.
 
 5. `ninja -C out/ios_debug_unopt && ninja -C out/host_debug_unopt` to build all artifacts (use `out/ios_debug_sim_unopt` for Simulator, `out/out/ios_debug_unopt_arm` for iPhone 4s or older).
-    * For Googlers, consider also using the option `-j 100` to parallelize the build using Goma.
+    * For Googlers, consider also using the `--goma` flag with gn, then building with `autoninja` to parallelize the build using Goma.
 
 See [[The flutter tool]] for instructions on how to use the `flutter` tool with a local engine.
 You will typically use the `ios_debug_unopt` build to debug the engine on a device, and
@@ -139,7 +139,7 @@ These steps build the desktop embedding, and the engine used by `flutter test` o
 
 4. `ninja -C out/host_debug_unopt` to build a desktop unoptimized binary.
     * If you skipped `--unoptimized`, use `ninja -C out/host_debug` instead.
-    * For Googlers, consider also using the option `-j 1000` to parallelize the build using Goma.
+    * For Googlers, consider also using the `--goma` flag with gn, then building with `autoninja` to parallelize the build using Goma.
 
 See [[The flutter tool]] for instructions on how to use the `flutter` tool with a local engine.
 You will typically use the `host_debug_unopt` build in this setup.
