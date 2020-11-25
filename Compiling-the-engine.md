@@ -67,7 +67,9 @@ to test the engine.
 
 See [[The flutter tool]] for instructions on how to use the `flutter` tool with a local engine.
 You will typically use the `android_debug_unopt` build to debug the engine on a device, and
-`android_debug_unopt_x64` to debug in on a simulator.
+`android_debug_unopt_x64` to debug in on a simulator. Modifying dart sources in the engine will
+require adding a `dependency_override` section in you app's `pubspec.yaml` as detailed
+[here](https://github.com/flutter/flutter/wiki/The-flutter-tool#using-a-locally-built-engine-with-the-flutter-tool).
 
 Note that if you use particular android or ios engine build, you will need to have corresponding 
 host build available next to it: if you use `android_debug_unopt`, you should have built `host_debug_unopt`,
@@ -117,7 +119,9 @@ Run the following steps, from the `src` directory created in the steps above:
 
 See [[The flutter tool]] for instructions on how to use the `flutter` tool with a local engine.
 You will typically use the `ios_debug_unopt` build to debug the engine on a device, and
-`ios_debug_sim_unopt` to debug in on a simulator.
+`ios_debug_sim_unopt` to debug in on a simulator. Modifying dart sources in the engine will
+require adding a `dependency_override` section in you app's `pubspec.yaml` as detailed
+[here](https://github.com/flutter/flutter/wiki/The-flutter-tool#using-a-locally-built-engine-with-the-flutter-tool).
 
 If you are debugging crashes in the engine, you can connect the `LLDB` debugger from `Xcode` by opening `ios/Runner.xcworkspace` and starting the application by clicking the Run button (CMD + R).
 
@@ -142,7 +146,9 @@ These steps build the desktop embedding, and the engine used by `flutter test` o
     * For Googlers, consider also using the `--goma` flag with gn, then building with `autoninja` to parallelize the build using Goma.
 
 See [[The flutter tool]] for instructions on how to use the `flutter` tool with a local engine.
-You will typically use the `host_debug_unopt` build in this setup.
+You will typically use the `host_debug_unopt` build in this setup. Modifying dart sources in the engine will
+require adding a `dependency_override` section in you app's `pubspec.yaml` as detailed
+[here](https://github.com/flutter/flutter/wiki/The-flutter-tool#using-a-locally-built-engine-with-the-flutter-tool).
 
 
 ## Compiling for Windows
