@@ -20,7 +20,7 @@ We have different channels for different purposes:
 |#hackers | Chat about anything related to Flutter. | Flutter contributors.<br>Anyone can watch.
 |#hackers-* | Chat specifically about foo, where foo is something to do with Flutter development, for example "engine", "framework", "add-to-app", etc. | Flutter contributors.<br>Anyone can watch.
 | #hackers-dart | Questions about the Dart language. | Flutter contributors.<br>Anyone can watch.
-| #hackes-devexp | For people working on tools that improve the developer experience.  | Flutter tooling contributors.<br>Anyone can watch.
+| #hackers-devexp | For people working on tools that improve the developer experience.  | Flutter tooling contributors.<br>Anyone can watch.
 | #hackers-new | New people to the team and people who want to help them. | Flutter contributors.<br>Anyone can watch.
 | #hackers-triage | For use while triaging bugs. | Flutter contributors.<br>Anyone can watch.
 | #hidden-chat | Chat about anything related to Flutter. | Flutter contributors only.<br>Not public.
