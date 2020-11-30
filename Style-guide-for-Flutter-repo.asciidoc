@@ -1634,6 +1634,12 @@ from a lower layer, it should reexport those types.
 > hand, it does not reexport, say, `RenderProxyBox`, since that is not
 > part of the widgets API.
 
+Flutter packages should not have "private" APIs other than those that are
+prefixed with underscores. Every file in a Flutter package should be exported.
+("Private" files can still be imported so they are still actually public APIs;
+by not exporting them explicitly we are tricking ourselves into thinking of
+them as private APIs which may lead to poor design.)
+
 ### Import conventions
 
 When importing the `rendering.dart` library into higher level libraries,
