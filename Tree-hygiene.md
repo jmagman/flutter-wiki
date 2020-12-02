@@ -40,7 +40,7 @@ The general process for submitting code to a Flutter repository is as follows:
 4.  If the work you are doing affects our privacy surface, such as modifying how 
     we collect analytics, crash logs, or the like, then please reach out to a Googler
     to discuss your changes (you'll want to start a Google Doc to
-    solicit feedback (use the template at [flutter.dev/go/template](https://flutter.dev/go/template)),
+    solicit feedback, use the template at [flutter.dev/go/template](https://flutter.dev/go/template)),
     who will be happy to loop in one of our engineers who explicitly focus on privacy issues
     so that they're able to give feedback on the work you plan to do.
 
