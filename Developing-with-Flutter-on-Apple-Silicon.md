@@ -10,7 +10,7 @@ Notes and caveats:
 
 - We recommend at least Flutter 1.22.4, which contains required hotfixes to support this hardware. While developing on Apple Silicon hardware, [you may prefer to use the `beta` or `dev` channel](https://flutter.dev/docs/development/tools/sdk/upgrading#switching-flutter-channels) to take advantage of improvements as they are available.
 - Deployment to physical iOS and Android devices attached to the host is supported, but we do not yet support deployment to the iOS simulator ([issue 64502](https://github.com/flutter/flutter/issues/64502)).
-- The Android Emulator is not yet supported on Apple Silicon, [as noted here](https://developer.android.com/studio/releases/emulator#emulator_for_arm64_hosts).
+- The Android Emulator has preliminary support for on Apple Silicon, [as noted here](https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html).
 - Some IDEs and editors may not be fully supported on Apple Silicon. [Visual Studio Code has experimental support for Apple Silicon](https://github.com/microsoft/vscode/labels/%3Aapple%3A%20si), including support for the Flutter and Dart plugins. [JetBrains is tracking Apple Silicon support here](https://youtrack.jetbrains.com/issue/JBR-2526).
 - Running CocoaPods to embed plugins fails in the current release. As [documented here](https://github.com/flutter/flutter/issues/70796), the workaround is to run the following command line to install support for FFI from the x86_64 environment:
 
