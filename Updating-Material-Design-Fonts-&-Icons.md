@@ -32,7 +32,8 @@ This page describes the process for updating the Material Design icons:
     1. Copy the current `Roboto_LICENSE.txt` file from `flutter/bin/cache/artifacts/material_fonts/Roboto_LICENSE.txt`.    
     1. Copy the current `RobotoCondensed_LICENSE.txt` file from `flutter/bin/cache/artifacts/material_fonts/RobotoCondensed_LICENSE.txt`.
  1. Generate the new codepoints list by following the instructions at https://goto.google.com/generate-codepoints (also Google-only, sorry).
-    1. Copy that list into a new local file called `codepoints`. If you're not working in the Flutter root directory, you'll need to copy this `codepoints` file to it as well.
+    1. Copy that list into a new local file called `codepoints`. 
+      1. If you're not working in the Flutter root directory, you'll need to copy this `codepoints` file to it as well.
   1. Use git to clone https://github.com/google/fonts
 1. Create a `fonts.zip` file to upload to Google Storage:
     ```
