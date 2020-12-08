@@ -60,13 +60,13 @@ will have the PR's original author create a new change to resolve the conflict.
 2. TPM/developer will notify the PR author on GitHub on the release PR with a link to this document and a request to create a new PR merging the change into the release branch. This message can also be replicated in an e-mail and in chat to ensure the author is reached. If the author cannot be reached, one of the PR's approvers will be selected to do the merge.
 3. The cherrypick author will fetch upstream, and then checkout the release branch that the release is targeting. For example:
 ```
-$ git fetch upstream && git checkout $RELEASE_BRANCH
+$ git fetch upstream && git checkout -b $RELEASE_BRANCH upstream/$RELEASE_BRANCH
 ```
 4. The PR author should then cherrypick the commit from `master` that maps to their approved PR:
 ```
 $ git cherry-pick $CHERRYPICK_COMMIT
 ```
 5. It is expected that the previous command will have a merge conflict. The PR author will resolve this conflict locally in their editor. They will run relevant tests and analysis to ensure the merged code is correct.
-6. The PR author will create a new PR, merging their branch back into the release branch. The PR author will add the TPM/developer conducting the release as a reviewer.
-7. Upon approving the PR and validating pre-submit CI builds, the TPM/developer will merge the PR to the release branch.
+6. The PR author will create a new PR. In the new PR UI, there is a drop-down menu for the base branch the PR will merge into: this should be set the same `RELEASE_BRANCH` that the release is based on. The PR author will add the TPM/developer conducting the release as a reviewer.
+7. The TPM/developer conducting the release will review the PR and validate pre-submit CI builds. After approval, they will merge the PR to the release branch.
 8. The TPM/developer will rebase their initial release PR against the release branch with the new cherrypick commit. If there are any conflicts rebasing, the commit with the conflict will undergo this same process.
