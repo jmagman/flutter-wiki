@@ -2,8 +2,7 @@ _(This page is referenced by comments in the Flutter codebase.)_
 
 This page describes the process for updating the Material Design icons:
 
- 1. Use git to clone https://github.com/google/fonts
- 1. Download the icon font from https://goto.google.com/flutter-material-font (Google-only, sorry).
+ 1. Download the icon font from https://goto.google.com/flutter-material-font (Google-only, sorry) to an empty directory on your machine.
     1. Rename the file to `MaterialIcons-Regular.otf`.
     1. Use FontTools to set new table values by running a python script like so (replacing the date with the date the cl was submitted and the version number with the cl number) :
     ```python
@@ -34,7 +33,8 @@ This page describes the process for updating the Material Design icons:
     1. Copy the current `RobotoCondensed_LICENSE.txt` file from `flutter/bin/cache/artifacts/material_fonts/RobotoCondensed_LICENSE.txt`.
  1. Generate the new codepoints list by following the instructions at https://goto.google.com/generate-codepoints (also Google-only, sorry).
     1. Copy that list into a new local file called `codepoints`.
- 1. Create a `fonts.zip` file to upload to Google Storage:
+  1. Use git to clone https://github.com/google/fonts
+1. Create a `fonts.zip` file to upload to Google Storage:
     ```
     STAGING=/tmp/fonts_staging
     mkdir $STAGING
