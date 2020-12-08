@@ -2,7 +2,7 @@ _(This page is referenced by comments in the Flutter codebase.)_
 
 This page describes the process for updating the Material Design icons:
 
- 1. Download the icon font from https://goto.google.com/flutter-material-font (Google-only, sorry) to an empty directory on your machine.
+ 1. Download the icon font from https://goto.google.com/flutter-material-font (Google-only, sorry) to your machine.
     1. Rename the file to `MaterialIcons-Regular.otf`.
     1. Use FontTools to set new table values by running a python script like so (replacing the date with the date the cl was submitted and the version number with the cl number) :
     ```python
