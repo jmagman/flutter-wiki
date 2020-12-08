@@ -39,7 +39,7 @@ This page describes the process for updating the Material Design icons:
     STAGING=/tmp/fonts_staging
     mkdir $STAGING
     cp codepoints $STAGING
-    cp fonts/ofl/roboto/static/*.ttf $STAGING
+    cp fonts/apache/roboto/static/*.ttf $STAGING
     cp MaterialIcons_LICENSE $STAGING
     cp MaterialIcons-Regular.otf $STAGING
     cp Roboto_LICENSE.txt $STAGING
