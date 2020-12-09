@@ -602,6 +602,8 @@ image::https://flutter.github.io/assets-for-api-docs/assets/material/app_bar.png
 
 image::https://user-images.githubusercontent.com/348942/28338544-2c3681b8-6bbe-11e7-967d-fcd7c830bf53.png[]
 
+When creating diagrams, make sure to provide alternative text https://html.spec.whatwg.org/multipage/images.html#alt[as described in the HTML specification].
+
 
 ### Clearly mark deprecated APIs
 
