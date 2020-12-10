@@ -1,6 +1,6 @@
 ## tl;dr
 
-Assigned bugs must have target milestones (could be "no specific schedule"). Bugs with target milestones must be assigned.
+Assign bugs to yourself if you're working on them. Unassign bugs you are not working on soon.
 Use thumbs-up on the issue description to help the team prioritise.
 P0-P2 bugs are critical and get examined for progress every week.
 
@@ -115,9 +115,6 @@ We ignore other emoji reactions.
 
 We use [several milestones](https://github.com/flutter/flutter/milestones).
 
-We mostly use milestones to handle broad categorization and to indicate specific intentions.
-This is separate from bug prioritization, which is described next.
-
 ### Months (aka release milestones)
 
 Bugs assigned to a specific month (e.g. "February 2021") are bugs we are intended to
@@ -126,15 +123,7 @@ in the release made in the next month. For example, if a bug has the milestone "
 2021", it means that we expect the relevant PR to land on or before February 28th 2021,
 and that the beta release made in March 2021 will include the fix.
 
-See the [[Release process]] page for more details about our release schedule.
-
-Any bug assigned to a month should have a specific dedicated assignee as well.
-
-Contributors working to address an issue should self-assign the issue to a relevant 
-milestone to indicate to others when they anticipate completing the issue. If the
-work's completion date is not knowable, e.g. because the scope of the work is unclear,
-or because the work is being done when the opportunity arises and not at a high
-priority, then the "No specific schedule" milestone can be used.
+See the [[Flutter build release channels]] page for more details about our release schedule.
 
 Release milestones are a
 statement of what we anticipate doing and when, and thus concrete; they are not
@@ -145,7 +134,7 @@ below.)
 In some cases, a month may have a feature-specific milestone in addition to the general month 
 milestone. This is for tracking burndowns in [ZenHub](https://www.zenhub.com/); some subteams
 are using burndown charts against specific completion milestones and need their own milestone
-for tracking. Other rules for release milestones still apply.
+for tracking.
 
 ### Other milestones
 
@@ -153,11 +142,6 @@ The "Unassigned customer work" milestone indicates issues that we are intending 
 soon but for which we don't yet have an owner. The "Declined customer request" milestone
 indicates an issue that we do not intend to address on the timescale requested (typically
 this means not for 6+ months).
-
-Each week, we check any bug with the `P0`, `P1`, and `P2` labels.
-If we can find an owner for such a bug right away, it will be assigned a bucket milestone
-and given an explicit assignee. If we cannot, then it will be put into either the
-"Unassigned customer work" milestone or the "Declined customer request" milestone.
 
 If you are a customer and your bug is placed in the "Declined customer request"
 milestone, please escalate with your team contact.
@@ -188,12 +172,6 @@ licked it to be unappetizing to other people, and then not eaten it.
 By extension, "unlicking the cookie" means indicating to the
 rest of the team that you are not actually going to work on the bug
 after all, e.g. by unassigning the bug from yourself.
-
-When a bug is assigned, it should also have a specific release milestone (one of the
-milestones that refers to a specific month), or the "No specific schedule"
-milestone (if it's not yet clear when the work will be complete). Be conservative in assigning release
-milestones. It is infinitely preferable for a bug to be fixed earlier than expected
-than it is for it to slip from release to release.
 
 
 ## File bugs for everything
@@ -240,20 +218,25 @@ If it has a milestone, that is roughly when we hope to have it fixed by.
 
 If it has no priority, it may not yet have been triaged.
 
-If the priority is labeled as a `P3`, we are likely to address in the near term; we just need to find time.
+If the priority is labeled as a `P0` to `P3`, we are likely to address in the near term; we just need to find time.
 
-If the issue is labeled as a `P4`, we are not planning to work on it anytime soon, but we agree it's something we should work on in the coming years. Consider escalating the issue to raise its priority further.
+If the issue is labeled as a `P4`, we are not planning to work on it anytime soon, but we agree it's something we should work on in the coming years.
 
-### Escalating an issue
+If the issue is labeled `P5` or `P6`, we are not currently expecting to ever work on it (especially `P6`).
+
+### Escalating an issue that has the wrong priority
 
 If you have a relationship with the Flutter team, raise the issue with
-your contact.
+your contact if you think the priority should be changed.
 
 If you don't, consider finding like-minded developers to either implement
 the feature as a team, or to fund hiring someone to work on the feature,
 or to mark the issue with a thumbs-up reaction. We regularly look through
 all issues sorted by the number of thumbs-up reactions to determine the
 relative priority of upcoming work, so that is one way to change our mind.
+
+Please don't comment on an issue to indicate your interest. Comments should
+be reserved for making progress on the issue.
 
 ## Locking an issue
 
