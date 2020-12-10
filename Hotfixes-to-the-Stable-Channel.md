@@ -12,6 +12,10 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.22 Changes
+### [1.22.5](https://github.com/flutter/flutter/pull/72079) (Dec 10, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/70577 - Reliability regression in the camera plugin on iOS
+
 ### [1.22.4](https://github.com/flutter/flutter/pull/70327) (Nov 13, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/43620 - Dart analyzer terminates during development
