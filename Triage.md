@@ -119,28 +119,20 @@ For PRs, each PR should match one of the following categories:
 
 # Critical triage
 
-## News
+During our weekly critical triage meeting, we check the following lists:
 
-We also want to regularly check https://developer.apple.com/news/ for updates that might affect us.
-
-## Issues
-
-When doing the critical issue triage (as opposed to the new issue triage as above), we check each bug in the following lists:
-
+* Apple's https://developer.apple.com/news/ page, for updates that might affect us.
 * [P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP0+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned, and progress should be happening actively. If no progress is happening and owner cannot work on it immediately (e.g. they're on vacation, they're busy with their day job, family reasons, etc), find a new owner.
 * [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP1+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last few days) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on a P0 or other P1 but cannot work on it immediately, find a new owner.
 * [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP2+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last couple of weeks) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on another P0-P2 but cannot work on this one immediately, find a new owner.
 * [Bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc) and [PRs](https://github.com/flutter/flutter/pulls?utf8=%E2%9C%93&q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc+) flagged for additional triage: figure out what should be done with the bug, then remove the `will need additional triage` label.
-* First triage of the month: check if the current [milestone](https://github.com/flutter/flutter/milestones) needs to be closed.
-* [Overdue milestone](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+milestone%3AOverdue+sort%3Acreated-asc): all bugs should have their milestone and assignee updated. If the issue isn't being worked on, it should be unassigned and moved to a long-term milestone; do not merely keep pushing every issue to the next milestone.
 
 In addition, a bot takes care of these, but it's good to check on them:
 * [Bugs pending feedback](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22waiting+for+customer+response%22+sort%3Aupdated-desc): close bugs with outstanding requests after 4 weeks, remove the label for bugs with answers.
 
 Occasionally, when time allows, the following are worth taking a look at also:
 * [Flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"team%3A+flakes"+sort%3Aupdated-asc): Check a few of the oldest flakes: are they still a problem (or is the test enabled and working now?). Is anyone looking at them?
-* Upcoming [milestones](https://github.com/flutter/flutter/milestones?direction=asc&sort=due_date&state=open): all bugs should be assigned to engineers who have acknowledged that this is what they'll be working on.
-* [Most requested features](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc): none of the top 20ish bugs are new, and they've all been considered before and have appropriate milestones.
+* [Most requested features](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc): none of the top 20ish bugs are new, and they've all been considered before and have appropriate priorities.
 * [Most requested bugs](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc+-label%3A%22severe%3A+new+feature%22+): nothing surprising in the list; consider adding `customer: crowd` `P2` labels.
 * [Oldest bugs](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+sort%3Aupdated-asc+); see if they can be closed or updated.
 
@@ -273,6 +265,8 @@ If you come across a bug that is unrelated to the tool, remove the `tool` label 
 If you come across a bug that is unrelated to the Web backend, remove the `platform-web` label and leave a comment explaining why. That will send it back to triage.
 
 ## Mobile Platforms
+
+_The milestone field is no longer widely used. Consider removing the milestone-based links below._
 
 * [Android P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+label%3A%22P0%22)
 * [Android P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+label%3A%22P1%22)
