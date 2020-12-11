@@ -794,7 +794,7 @@ than "lasagna" code (where each section of the code is cleanly layered and separ
 Extension methods are confusing to document and discover. To an end developer,
 they appear no different than the built in API of the class, and discovering
 the documentation and implementation of an extension is more challenging than
-for class memebers.
+for class members.
 
 Prefer instead adding methods directly to relevant classes. If that is not
 possible, create a method that clearly identifies what object(s) it works with
