@@ -1,4 +1,4 @@
-Flutter includes preliminary support for developing on macOS devices with [Apple Silicon hardware](https://www.apple.com/mac/m1/). This wiki page documents limitations and temporary workarounds as we complete work for this new architecture.
+Flutter includes preliminary support for developing on macOS devices with [Apple Silicon (M1) hardware](https://www.apple.com/mac/m1/). This wiki page documents limitations and temporary workarounds as we complete work for this new architecture.
 
 ## Using macOS on Apple Silicon to develop Flutter apps (host)
 
