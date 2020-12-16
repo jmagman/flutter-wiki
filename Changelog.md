@@ -18,7 +18,6 @@ See also [[Bad Builds]], which lists dev releases that are known to have major b
 ### 1.21.X
 
 ### 1.20.X
-* NEXT AUTHOR: Put your breaking change notification here and insert headings as appropriate to identify which version is affected.
 * [#60320](https://github.com/flutter/flutter/pull/60320) Change `PlatformViewController` abstract methods to return `Future<void>` and not `void`.
 * [#58831](https://github.com/flutter/flutter/pull/58831) Instances of `TextField` must have a `MaterialLocalizations` present in the widget tree.
 * [#58829](https://github.com/flutter/flutter/pull/58829) Instances of `Dialog`, as well as `SimpleDialog`, `AlertDialog`, and `showTimePicker`, now have a default shape of a `RoundedRectangleBorder` with a `BorderRadius` of 4.0 pixels, matching the Material Spec.
