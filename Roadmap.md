@@ -1,12 +1,64 @@
+_In the interest of transparency, we want to share high-level details of our roadmap, so that others can see our priorities and make plans based off the work we are doing._
+
+_Our plans will evolve over time based on customer feedback and new market opportunities. We use our quarterly surveys and feedback on GitHub issues to prioritize work. The list here shouldn't be viewed either as exhaustive, nor a promise that we will complete all this work. If you have feedback about what you think we should be working on, we encourage you to get in touch (e.g. by [filing an issue](https://github.com/flutter/flutter/issues/new/choose), or using the "thumbs-up" emoji reaction on an issue's first comment). Flutter is an open source project, we invite contributions both towards the themes presented below and in other areas._
+
+_If you are a contributor or team of contributors with long-term plans for [contributing to Flutter](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md), and would like your planned efforts reflected in the roadmap, please reach out to Hixie (ian@hixie.ch)._
+
+
 # 2021
 
-_The 2021 roadmap is being written. If you are a contributor or team of contributors with long-term plans for [contributing to Flutter](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md), and would like your planned efforts reflected in the roadmap, please reach out to Hixie (ian@hixie.ch)._
+## Areas of Focus
+
+### Null safety
+
+We will be introducing [Dart's sound null safety](https://dart.dev/null-safety) to Flutter, and shepherding the migration of the plugin and package ecosystem to null safety, including migrating the packages and plugins directly maintained by the Flutter team.
+
+As part of this we plan to provide a migration tool, samples, and documentation to aid migration of existing code.
+
+### Android and iOS
+
+We will work on supporting incremental downloads of assets and code from the stores (subject to each platform's limitations), allowing the initial download of applications to be much smaller than the full download, with data fetched on demand.
+
+We will also seek to improve the performance and ergonomics, and reduce the overhead, of embedding Flutter in existing applications on Android and iOS.
+
+In addition, as usual, we plan to add support for new features of the iOS and Android operating systems.
+
+### Web and Desktop
+
+Our goal for 2021 is to deliver production-quality support for Web, macOS, Windows and Linux, in addition to iOS and Android, enabling developers to create apps across six separate platforms using the same SDK.
+
+For Web specifically, our focus will be on fidelity and performance, rather than new features, as we drive to prove that Flutter can provide a high quality experience on the Web.
+
+For desktop, in addition to ensuring a quality experience, we will also be completing our work on the accessibility layer, and adding support for showing multiple independent windows.
+
+### Improving the developer experience
+
+We will continue to focus on removing friction points. One area of research will be around reducing the boilerplate needed to achieve common goals in Flutter. We will also build on our investment in migration tooling for null safety to investigate the possibility of creating tooling that enables us to make breaking changes easier for developers to manage, which would enable us to make some long-desired improvements to our APIs that we have so far avoided due to their breaking nature.
+
+### Ecosystem
+
+In 2021, we will continue to work with the community on the Flutter-team-supported plugins. The goal will be to bring the pre-release plugins up to production quality and maintain them at that level by being increasingly responsive to issues and PRs.
+We also plan specifically to make significant improvements to the WebView plugin.
+
+### Quality
+
+We will have efforts around improving Flutter’s memory usage, application download size overhead, runtime performance, battery usage, and jank, based on experiences with real Flutter-based applications. These may take the form of engine or framework fixes, as well as documentation or videos describing best practices. We also intend to improve our tooling to help debug issues around memory usage.
+
+In addition, we will continue to address bug reports. In 2020, we [resolved](https://github.com/issues?q=is%3Aissue+closed%3A2020+is%3Aclosed+user%3Aflutter) over 17,000 issues during the year, and our goal is to have at least that level of impact in 2021.
+
+### New features
+
+While in 2020 we primarily focused on fixing bugs, in 2021 we plan to also add significant new features. Some are listed above. We also intend to make improvements to our table widgets and introduce some tree widgets, with support for large numbers of columns, rows and/or tree levels, and column- or row-spanning cells.
+
+## Release Channels and Cadence
+
+Flutter will continue to offer four “channels” from which developers can receive updates: master, dev, beta and stable, with increasing levels of stability and confidence of quality but longer lead times for changes to propagate.
+
+We release builds to the dev channel every few days, based on performing some additional testing. We plan to release one beta build each month, typically near the start of the month, and about four stable releases throughout the year. We recommend that you use the stable channel for apps released to end-users. For more details on our release process, see the [Flutter build release channels](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels) wiki page.
 
 # 2020
 
-In the interest of transparency, we want to share high-level details of our roadmap, so that others can see our priorities and make plans based off the work we are doing.
-
-_Our plans will evolve over time based on customer feedback and new market opportunities. We use our quarterly surveys and feedback on GitHub issues to prioritize work. The list here shouldn't be viewed either as exhaustive, nor a promise that we will complete all this work. If you have feedback about what you think we should be working on, we encourage you to get in touch (e.g. by [filing an issue](https://github.com/flutter/flutter/issues/new/choose)). Flutter is an open source project, we invite contributions both towards the themes presented below and in other areas._
+This roadmap is provided for historical context.
 
 ## Areas of focus
 
@@ -27,15 +79,3 @@ We intend to deliver on long-anticipated features such as our router refactor, i
 In general in 2020 we intend to primarily focus on fixing bugs rather than adding new features.
 
 _We mainly use the "Thumbs-Up" emoji reactions on the first comment of an issue to determine it's importance. See the [Issue hygiene](https://github.com/flutter/flutter/wiki/Issue-hygiene) wiki page for more details on our prioritization strategy._
-
-## Release Channels and Cadence
-
-Flutter developers can select a “channel” from which to receive updates. We have four channels: master, dev, beta and stable, with increasing levels of stability and confidence of quality but longer lead time for changes to propagate. 
-
-We release builds to the dev channel every few days, based on performing some additional testing. We plan to release one beta build each month, typically near the start of the month, and about four stable releases throughout the year. We recommend that you use the stable channel for apps released to end-users. For more details on our release process, see the [Release process](https://github.com/flutter/flutter/wiki/Release-process) wiki page.
-
-## Milestones & Dates
-
-If you’re interested in observing what we’ve planned out on a monthly basis, you can look through our [milestones](https://github.com/flutter/flutter/milestones?direction=asc&sort=due_date&state=open) page on GitHub. Having said that, be aware that issues often change milestones and none of the milestones should be viewed as committed dates.
-
-We're also tracking a number of time-specific requirements imposed by platform vendors.
