@@ -29,6 +29,36 @@ Depending on the platform you are making changes for, you may be interested in a
 - Make sure to exclude the `out` directory from any backup scripts, as many large binary
   artifacts are generated. This is also generally true for all of the directories outside
   of the `engine/src/flutter` directory.
+- For Googlers: goma is a distributed compiler service that can vastly speed up build
+  times. The variables to use goma compilation are set by default if goma-related
+  environment variables are detected, and can be explicitly set via the `--goma/--no-goma`
+  flag to the `flutter/tools/gn` wrapper script.
+  - Since December 2020, Flutter uses Fuchsia RBE. The following script can be used to
+    install and log into a correctly configured GOMA client:
+```bash
+#!/bin/bash
+
+readonly GOMA_AUTH="$HOME/flutter_goma/goma_auth.py"
+readonly GOMA_CTL="$HOME/flutter_goma/goma_ctl.py"
+readonly GOMACC="$HOME/flutter_goma/gomacc"
+readonly GOMA_HTTP2_PROXY="$HOME/flutter_goma/http_proxy"
+readonly GOMA_HTTP2_PROXY_PORT="8199"
+GOMA_CACHE_DIR="$HOME/flutter_goma_cache"
+# The URL of the backend cannot be read from prebuilt. Hard-code it for now.
+BACKEND_URL="rbe-prod1.endpoints.fuchsia-infra-goma-prod.cloud.goog"
+
+# Download client. Assumes cipd from depot_tools is on path.
+echo 'fuchsia/third_party/goma/client/${platform}  release' | cipd ensure -ensure-file - -root $HOME/flutter_goma
+
+# Authenticate
+$HOME/flutter_goma/goma_auth login
+GOMA_LOCAL_OUTPUT_CACHE_DIR="$GOMA_CACHE_DIR" "$GOMA_CTL" ensure_start
+```
+  - GOMA will fail remotely if it tries to access files that reside outside of the build
+    root. When building configurations for macOS or iOS (i.e. configurations that
+    require an Xcode-vended SDK or toolchain) locally, you can have the build create and
+    use symlinks by adding the `--xcode-symlinks` argument to the `flutter/tools/gn`
+    wrapper script.
 
 ## Compiling for Android (from macOS or Linux)
 
@@ -46,6 +76,7 @@ Run the following steps, from the `src` directory created in [Setting up the Eng
     * `./flutter/tools/gn --android --android-cpu x86 --unoptimized` for x86 emulators.
     * `./flutter/tools/gn --android --android-cpu x64 --unoptimized` for x64 emulators.
     * `./flutter/tools/gn --unoptimized` for host-side executables, needed to compile the code.
+      * On macOS hosts, add the `--xcode-symlinks` argument when using goma.
 
 4. Build your executables
     * `ninja -C out/android_debug_unopt` for device-side executables.
@@ -111,8 +142,10 @@ Run the following steps, from the `src` directory created in the steps above:
 3. `./flutter/tools/gn --ios --unoptimized` to prepare build files for device-side executables (or `--ios --simulator --unoptimized` for simulator, and if working on iPhone 4s or older, `--ios --ios-cpu=arm --unoptimized`).
   * This also produces an Xcode project for working with the engine source code at `out/ios_debug_unopt`
   * For a discussion on the various flags and modes, see [[Flutter's modes]].
+  * Add the `--xcode-symlinks` argument when using goma.
 
 4. `./flutter/tools/gn --unoptimized` to prepare the build files for host-side executables.
+  * Add the `--xcode-symlinks` argument when using goma.
 
 5. `ninja -C out/ios_debug_unopt && ninja -C out/host_debug_unopt` to build all artifacts (use `out/ios_debug_sim_unopt` for Simulator, `out/out/ios_debug_unopt_arm` for iPhone 4s or older).
     * For Googlers, consider also using the `--goma` flag with gn, then building with `autoninja` to parallelize the build using Goma.
@@ -140,6 +173,7 @@ These steps build the desktop embedding, and the engine used by `flutter test` o
 
 3. `./flutter/tools/gn --unoptimized` to prepare your build files.
    * `--unoptimized` disables C++ compiler optimizations. On macOS, binaries are emitted unstripped; on Linux, unstripped binaries are emitted to an `exe.unstripped` subdirectory of the build.
+  * Add the `--xcode-symlinks` argument when using goma on macOS.
 
 4. `ninja -C out/host_debug_unopt` to build a desktop unoptimized binary.
     * If you skipped `--unoptimized`, use `ninja -C out/host_debug` instead.
