@@ -2,6 +2,9 @@ This is a list of all the [dev branch commits](https://github.com/flutter/flutte
 
 **If you add a build to this list and master has not yet been fixed, please file a TODAY bug and link to it from here as well.**
 
+## 1.25.0-8.0.pre
+  * `flutter build apk` fails [#72627](https://github.com/flutter/flutter/issues/72627)
+
 ## 1.21.0-5.0.pre
   * Dart SDK reports wrong version, violating `flutter_tools` version constraint [#62174](https://github.com/flutter/flutter/issues/62174)
 
