@@ -32,17 +32,17 @@ The `severe:` prefix indicates labels regarding a level of severity (e.g. regres
 
 _See also: [[What should I work on?]]_
 
-The [`P0`](https://github.com/flutter/flutter/labels/P0) label indicates a high-priority issue such as a build break, regression, or failure in existing features that keeps us from shipping the current build. We look at issues with this label frequently. If you find yourself assigning a `P0` label to an issue, please be sure that there's a positive handoff between filing and a prospective owner for the issue. P0 bugs should be rare. Normally there should be zero open P0 bugs.
+The [`P0`](https://github.com/flutter/flutter/labels/P0) label indicates a critically dire issue such as a build break, regression, or failure in existing features that keeps us from shipping the current build. We look at issues with this label frequently. If you find yourself assigning a `P0` label to an issue, please be sure that there's a positive handoff between filing and a prospective owner for the issue. P0 bugs should be rare. Normally there should be zero open P0 bugs. "The world is on fire."
 
-The [`P1`](https://github.com/flutter/flutter/labels/P1) label indicates that the issue deserves immediate attention, such as one actively blocking a top-tier customer who is trying to ship. (See below.) There are generally less than half a dozen P1 bugs.
+The [`P1`](https://github.com/flutter/flutter/labels/P1) label indicates that the issue deserves immediate attention, such as one actively blocking a top-tier customer who is trying to ship. (See below under "customers" for a definition of "top-tier customer".) There are generally only one or two P1 bugs at a time, and we aim for there to be none. "A customer is on fire."
 
-The [`P2`](https://github.com/flutter/flutter/labels/P2) label indicates that the issue is a high-priority issue requiring attention soon, such as an issue about to block a top-tier customer. There are generally less than twenty-five P2 bugs (one GitHub search results page).
+The [`P2`](https://github.com/flutter/flutter/labels/P2) label indicates that the issue is about to block a top-tier customer. There are generally less than twenty-five P2 bugs (one GitHub search results page). These may not be worked on immediately (sometimes some P3 issues are handled first, e.g. when they affect a lot of people, or are particularly egregious), but are top-of-mind and we explicitly consider them weekly. "A customer is about to be on fire."
 
-The [`P3`](https://github.com/flutter/flutter/labels/P3) label indicates high-priority issues that are at the top of the work list.
+The [`P3`](https://github.com/flutter/flutter/labels/P3) label indicates high-priority issues that are at the top of the work list. This is the highest priority level a bug can have if it isn't affecting a top-tier customer or breaking the build. Bugs marked P3 are generally actively being worked on unless the assignee is dealing with a P0-P2 bug (or another P3 bug).
 
-The [`P4`](https://github.com/flutter/flutter/labels/P4) label indicates issues that we agree are important to work on, but not at the top of the work list. This is the default level for bugs.
+The [`P4`](https://github.com/flutter/flutter/labels/P4) label indicates issues that we agree are important to work on, but not at the top of the work list. This is the default level for bugs. A bug at this priority level may not be fixed for a long time. Often a bug at this level will first migrate to P3 before we work on them.
 
-The [`P5`](https://github.com/flutter/flutter/labels/P5) label indicates issues we think are valid but not important. This is the default level for new feature requests.
+The [`P5`](https://github.com/flutter/flutter/labels/P5) label indicates issues we think are valid but not important. This is the default level for new feature requests. We are unlikely to work on such issues unless they form part of a long-term strategic plan (see the [[Roadmap]]).
 
 The [`P6`](https://github.com/flutter/flutter/labels/P6) label indicates valid issues that are unlikely to ever be worked on. We use "thumbs-up" on these issues to promote them to `P5` or higher based on demand.
 
