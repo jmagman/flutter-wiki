@@ -57,12 +57,11 @@ Labels should be used for adding information to a bug. If you plan to use a labe
 
 ### Customers
 
-Some teams using Flutter have a special relationship with the Flutter team
-(e.g. they're collaborating with us on a new feature, or they're working
-with us on a product demo for an upcoming event). This is usually a fairly
-short-term arrangement for a specific business purpose.
+The Flutter team is formed of engineers from many sources, including dedicated volunteers and employees of companies like Google. Each of these may have different ideas of who their customers are. For example, Google engineers consider some Google teams to be their customers, but someone who contributes on a code-for-hire basis may have their own customers.
 
-We provide such customers with a label (`customer: ...`) in our GitHub issue tracker.
+Some teams using Flutter have a special relationship with some members of the Flutter team (e.g. they're collaborating with us on a new feature, or they're working with us on a product demo for an upcoming event). This is usually a fairly short-term arrangement for a specific business purpose. We provide such customers with a label (`customer: ...`) in our GitHub issue tracker. When these customers are working closely with members of the Flutter team, we may consider them "top-tier customers" for the purposes of prioritization.
+
+Priorities `P1` and `P2` (see above) are reserved for bugs that affect these top-tier customers.
 
 #### Coordinating between bug systems
 
