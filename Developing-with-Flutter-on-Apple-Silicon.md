@@ -12,7 +12,7 @@ Baseline support for Apple Silicon is available in the current stable channel re
 
 - Deployment to physical iOS and Android devices attached to the host is supported, but we do not yet support deployment to the iOS simulator ([issue 64502](https://github.com/flutter/flutter/issues/64502)).
 - Developing for the web (`flutter run -d chrome`) is working on supported channels (`beta`, `dev` and `master`). It's recommended that you install the Apple Silicon version of Chrome. 
-- The Android Emulator has preliminary support for on Apple Silicon, [as noted here](https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html).
+- The Android Emulator [has preliminary support for Apple Silicon](https://github.com/741g/android-emulator-m1-preview/releases), [as noted here](https://androidstudio.googleblog.com/2020/12/android-emulator-apple-silicon-preview.html).
 - Some IDEs and editors may not be fully stable on Apple Silicon. 
   - Visual Studio Code offers an Apple Silicon build [in the Insiders channel](https://code.visualstudio.com/insiders/), and is [stabilizing support for the January 2021 release](https://github.com/microsoft/vscode/labels/%3Aapple%3A%20si). The [Flutter and Dart plugins](https://dartcode.org/) are supported on this release. 
   - Android Studio runs under Rosetta 2 at this time. JetBrains are working on Apple Silicon native builds of their tools, with preliminary Apple Silicon builds of IntelliJ [available for testing](https://youtrack.jetbrains.com/issue/JBR-2526).
