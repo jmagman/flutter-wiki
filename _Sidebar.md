@@ -9,7 +9,7 @@ Flutter Wiki
 - [API Reference (master)](https://master-docs.flutter.dev)
 - [[Glossary]]
 - [Contributor Guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md)
-- [[Chat]]
+- [[Chat]] on Discord
 - [Code of Conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md)
 
 ## Process
