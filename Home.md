@@ -4,7 +4,7 @@ If you are new to Flutter, then you will find more general information on the Fl
 
 If you want to know what we're likely to do in the future, our [[roadmap]] may be of interest.
 
-If you intend to contribute to Flutter, welcome! You are encouraged to start with [our contributor guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md), which helps onboard new team members. It points to the most relevant pages on this wiki.
+If you intend to contribute to Flutter, welcome! You are encouraged to start with [our contributor guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md), which helps onboard new team members. It points to the most relevant pages on this wiki. You are also invited to join our [Discord](https://github.com/flutter/flutter/wiki/Chat) server.
 
 ## Index of notable sections
 
