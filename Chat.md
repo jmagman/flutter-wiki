@@ -55,6 +55,16 @@ See the [[contributor access]] wiki page for details on becoming a member of the
 Please don't direct-message people unless they are comfortable with it (ask publicly first).
 You can disable direct messages on this server by changing your Privacy settings for the server, or on a global basis by changing your Privacy & Safety user settings.
 
+## Discord features
+
+### Threading
+
+Discord has a threadingish feature called [Replies](https://support.discord.com/hc/en-us/articles/360057382374-Replies-FAQ) that lets you tie messages to earlier messages and notify the original commenter.
+
+### Status
+
+You can [change your status](https://support.discord.com/hc/en-us/articles/360035407531-Custom-Status) (online, away, custom messages) by clicking on your avatar in Discord.
+
 
 # Design documents
 
