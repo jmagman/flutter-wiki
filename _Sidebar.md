@@ -11,6 +11,7 @@ Flutter Wiki
 - [Contributor Guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md)
 - [[Chat]] on Discord
 - [Code of Conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md)
+- [[Issue triage reports]]
 
 ## Process
 - Our [[Values]]
