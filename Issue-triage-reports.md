@@ -13,7 +13,7 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 New Flutter issues triaged 237, closed 78 (33%)
 
-| Reasons for closing  |  |
+| Reason for closing  |  |
 | -- | -- |
 | Invalid | 53.8%  |
 | Duplicate  | 33.3%  |
@@ -22,7 +22,7 @@ New Flutter issues triaged 237, closed 78 (33%)
 
 Issues closed from iterations 116
 
-| Reasons for closing  |  |
+| Reason for closing  |  |
 | -- | -- |
 | Invalid | 18.3%  |
 | Duplicate  | 5.2%  |
@@ -32,14 +32,14 @@ Issues closed from iterations 116
 
 Stale issues ([found to occur in releases 1.12 and 1.17](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22has+reproducible+steps%22+-label%3A%22found+in+release%3A+1.22%22+-label%3A%22found+in+release%3A+1.23%22+-label%3A%22found+in+release%3A+1.24%22+-label%3A%22found+in+release%3A+1.25%22+-label%3A%22passed+first+triage%22+-label%3A%22severe%3A+new+feature%22+-label%3Aproposal+-label%3A%22found+in+release%3A+1.21%22+-label%3A%22found+in+release%3A+1.20%22+-label%3A%22found+in+release%3A+1.26%22+)) checked 33, closed 8 (24%)
 
-| Reasons for closing  |  |
+| Reason for closing  |  |
 | -- | -- |
 | Duplicate | 1 |
 | Fixed | 7 |
 
 New Flutterfire issues triaged 27, closed 6 (22%)
 
-| Reasons for closing  |  |
+| Reason for closing  |  |
 | -- | -- |
 | Invalid | 4  |
 | Duplicate  | 1  |
