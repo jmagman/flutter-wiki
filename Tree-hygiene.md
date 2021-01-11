@@ -1,6 +1,6 @@
 ## tl;dr
 
-- If you're adding a new feature, you probably will need a design doc. Talk to a team member (via [[Chat]]) about it first.
+- If you're adding a new feature, you probably will need a design doc. Talk to a team member (via Discord, see [[Chat]]) about it first.
 - Changes need tests. The only common case that does not need a test is a documentation fix. If you have to ask "can this be exempted from writing a test," the answer will almost certainly be no if you're changing code. A test is a piece of code or build rule that would otherwise fail without your change.
 - Tests must pass. Changing existing tests should be done with extreme caution.
 - Regressions should be reverted first and questions asked later. Bringing the tree to green is higher priority.
