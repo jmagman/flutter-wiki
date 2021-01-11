@@ -71,6 +71,7 @@ Flutter Wiki
 - [[Flutter Installation Bundles]]
 
 ## Performance
+- [Performance dashboards](https://flutter-dashboard.appspot.com/)
 - [[How to write a render speed test for Flutter]]
 - [[How to write a memory test for Flutter]]
 - [[Reduce shader compilation jank using SkSL warm up]]
