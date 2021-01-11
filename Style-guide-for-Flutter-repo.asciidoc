@@ -801,6 +801,13 @@ possible, create a method that clearly identifies what object(s) it works with
 and is part of.
 
 
+### Avoid using `FutureOr<T>`
+
+The `FutureOr` type is a Dart-internal type used to explain certain aspects of the `Future` API. In public APIs, avoid the temptation to create APIs that are both synchronous and asynchronous using this type, as it usually only results in the API being more confusing and less type safe.
+
+In certain extreme cases where the API absolutely needs to be asynchronous but a synchronous "escape hatch" is needed for performance, consider using `SynchronousFuture` (but be aware that this still suffers from many of the same risks of making the API only subtle and complicated). This is used, for example, when loading images in the Flutter framework.
+
+
 ### Never check if a port is available before using it, never add timeouts, and other race conditions.
 
 If you look for an available port, then try to open it, it's extremely likely that several times a week some other code will open that port between your check and when you open the port, and that will cause a failure.
