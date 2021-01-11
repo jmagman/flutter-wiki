@@ -9,6 +9,7 @@ If you intend to contribute to Flutter, welcome! You are encouraged to start wit
 ## Index of notable sections
 
 * [Breaking changes](https://github.com/flutter/flutter/wiki/Tree-hygiene#handling-breaking-changes)
+* [Dashboards](https://flutter-dashboard.appspot.com/)
 * [Debugging a broken engine autoroll](https://github.com/flutter/flutter/wiki/Debugging-the-engine#bisecting-a-roll-failure)
 * [Deprecation](https://github.com/flutter/flutter/wiki/Tree-hygiene#deprecation)
 * [Design documents](https://github.com/flutter/flutter/wiki/Chat#design-documents)
