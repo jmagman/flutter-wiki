@@ -293,7 +293,7 @@ this failure mode! See [[Running and writing tests]] for more details.
 
 ## Regressions in performance
 
-After each check-in, please monitor the [performance dashboard](https://flutter-dashboard.appspot.com/benchmarks.html).
+After each check-in, please monitor the [performance dashboards](https://flutter-dashboard.appspot.com/).
 
 If you see a regression (any of the charts increasing after your commit), please
 follow these steps:
