@@ -66,10 +66,14 @@ Run the following steps to set up your environment:
    your clone, when running `git fetch` et al.)
    - `cd ..` (Return to the `src` directory that `gclient sync` created
    in your `engine` directory.)
-1. If you're on Linux, run the following. **Note:** These scripts are
+1. If you're on Linux, the following may or may not help you install
+   required dependencies. **Note:** These scripts are
     distro- and version-specific, so are not guaranteed to work on
-    every configuration. If they fail, you may need to find comparable
-    packages to the ones that weren't found.
+    any configuration. If they fail, you may need to find comparable
+    packages to the ones that weren't found. You are free to update
+    them if you wish for your distribution, but it is often easier to
+    just install the packages you need as you go, particularly for the
+    `install-build-deps.sh` script.
     - `sudo ./build/install-build-deps-android.sh`
     - `sudo ./build/install-build-deps.sh`
     - `sudo ./flutter/build/install-build-deps-linux-desktop.sh`
