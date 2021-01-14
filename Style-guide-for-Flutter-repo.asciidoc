@@ -870,6 +870,11 @@ this pattern. If for some reason you don't want to use 'value', use
 
 Start the method with any asserts you need to validate the value.
 
+Don't do anything _else_ in setters, other than marking the object as dirty and updating internal state.
+Getters and setters should not have significant side-effects. For example, setting a property whose value
+is a callback should not result in that callback being invoked. Setting a property whose value is an object
+of some sort should not result in any of that object's methods being called.
+
 
 ### Common boilerplates for `operator ==` and `hashCode`
 
