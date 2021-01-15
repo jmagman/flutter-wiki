@@ -4,8 +4,8 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 ### Notable issues
 
-* Disable analytics by default - Respect EU/ECC laws (GDPR): https://github.com/flutter/flutter/issues/73657
-* Flutter Slider Label showing strange numbers: https://github.com/flutter/flutter/issues/73787
+* Disable analytics by default - Respect EU/ECC laws (GDPR): [#73657](https://github.com/flutter/flutter/issues/73657)
+* Flutter Slider Label showing strange numbers: [#73787](https://github.com/flutter/flutter/issues/73787)
 * Flutter doctor warnings about flutter plugin not found still cause confusion among users (related to [[flutter_tools] IDE plugin validators should be deprecated](https://github.com/flutter/flutter/issues/61246))
 * There have been several issues related to Windows 7 recently
 
