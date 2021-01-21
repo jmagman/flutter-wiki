@@ -58,7 +58,7 @@ GOMA_LOCAL_OUTPUT_CACHE_DIR="$GOMA_CACHE_DIR" "$GOMA_CTL" ensure_start
     root. When building configurations for macOS or iOS (i.e. configurations that
     require an Xcode-vended SDK or toolchain) locally, you can have the build create and
     use symlinks by adding the `--xcode-symlinks` argument to the `flutter/tools/gn`
-    wrapper script.
+    wrapper script or `export FLUTTER_GOMA_CREATE_XCODE_SYMLINKS=1` to your bash/zsh/whatever rc.
 
 ## Compiling for Android (from macOS or Linux)
 
