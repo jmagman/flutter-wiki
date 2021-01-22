@@ -1,5 +1,53 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-01-22
+
+### Notable issues
+
+* Decoding image data is failing on web: [#74489](https://github.com/flutter/flutter/issues/74489)
+* [webview_flutter] Simulator keyboard isn’t showing and hardware keyboard isn’t working: [#74044](https://github.com/flutter/flutter/issues/74044)
+* Enter/return key on a TextField with InkWell doesn’t work on the Samsung keyboard: [#74041](https://github.com/flutter/flutter/issues/74041)
+* Avoid reading clipboard without authorization when using textfield on Xiaomi MIUI 12: [#74139](https://github.com/flutter/flutter/issues/74139)
+* Some users are experiencing issues with third-party packages that rely on `flutter_localizations` and `intl` on beta and above channels, they are forced to use `stable` channel to avoid package conflicts. This is caused by premature `flutter_localizations` dependency on the null-safety version of the `intl`. E.g. [#74421](https://github.com/flutter/flutter/issues/74421), [#74419](https://github.com/flutter/flutter/issues/74419), [#73861](https://github.com/flutter/flutter/issues/73861)
+
+### Issue counts
+
+New Flutter issues triaged 274, closed 85 (31%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 58.8%  |
+| Duplicate  | 35.3%  |
+| Fixed | 2.4%  |
+| Solved | 3.5%  |
+
+Issues closed from iterations 93
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 16.1%  |
+| Duplicate  | 7.5%  |
+| Fixed | 32.3%  |
+| Solved | 10.8%  |
+| Timeout | 33.3%  |
+
+Stale issues ([found to occur in releases 1.12 and 1.17](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22has+reproducible+steps%22+-label%3A%22found+in+release%3A+1.22%22+-label%3A%22found+in+release%3A+1.23%22+-label%3A%22found+in+release%3A+1.24%22+-label%3A%22found+in+release%3A+1.25%22+-label%3A%22passed+first+triage%22+-label%3A%22severe%3A+new+feature%22+-label%3Aproposal+-label%3A%22found+in+release%3A+1.21%22+-label%3A%22found+in+release%3A+1.20%22+-label%3A%22found+in+release%3A+1.26%22+)) checked 70, closed 11 (16%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 3 |
+| Duplicate | 3 |
+| Fixed | 4 |
+| Solved | 1 |
+
+New Flutterfire issues triaged 41, closed 13 (32%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 6  |
+| Duplicate  | 4  |
+| Solved  | 3  |
+
 ## 2021-01-15
 
 ### Notable issues
