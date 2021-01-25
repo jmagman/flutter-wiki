@@ -12,6 +12,11 @@ $ flutter upgrade
 ```
 
 ## Flutter 1.22 Changes
+### [1.22.6](https://github.com/flutter/flutter/pull/74355) (Jan 25, 2020)
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/70895 - Build error when switching between dev/beta and stable branches.
+
+
 ### [1.22.5](https://github.com/flutter/flutter/pull/72079) (Dec 10, 2020)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/70577 - Reliability regression in the camera plugin on iOS
