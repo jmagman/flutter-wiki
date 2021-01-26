@@ -32,7 +32,7 @@ Flutter Wiki
   - [[Recipe Branching for Releases]]
 - [[Rolling Dart]]
 - [[Manual Engine Roll with Breaking Commits]]
-- [[Updating Material Design Fonts & Icons]]
+- [[Updating Material Design Fonts \& Icons]]
 - [[Postmortems]]
 
 ## Framework repo
