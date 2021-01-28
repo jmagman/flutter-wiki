@@ -137,8 +137,8 @@ for tracking.
 
 ### Other milestones
 
-The "Unassigned customer work" milestone indicates issues that we are intending to fix
-soon but for which we don't yet have an owner. The "Declined customer request" milestone
+The ["Unassigned customer work"](https://github.com/flutter/flutter/milestone/31) milestone indicates issues that we are intending to fix
+soon but for which we don't yet have an owner. The ["Declined customer request"](https://github.com/flutter/flutter/milestone/32) milestone
 indicates an issue that we do not intend to address on the timescale requested (typically
 this means not for 6+ months).
 
