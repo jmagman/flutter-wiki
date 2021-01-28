@@ -20,7 +20,7 @@ Make sure you have the following dependencies available:
    - Windows 10 SDK (required for non-Googlers only).
      - Be sure to install the "Debugging Tools for Windows" feature.
  * On macOS: the latest Xcode.
- * Recommended for Googlers: Goma for distributed builds. To use Goma, install it and set `GOMA_DIR` environment variable.
+ * Recommended for Googlers: Goma for distributed builds. The [compiling page](https://github.com/flutter/flutter/wiki/Compiling-the-engine) has more information on how to set this up.
 
 You do not need [Dart](https://www.dartlang.org/downloads/linux.html) installed,
 as a Dart tool chain is automatically downloaded as part of the "getting the code"
