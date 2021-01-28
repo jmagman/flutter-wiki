@@ -114,21 +114,52 @@ We ignore other emoji reactions.
 
 We use [several milestones](https://github.com/flutter/flutter/milestones).
 
-### Months (aka release milestones)
+### Release milestones
 
-Bugs assigned to a specific month (e.g. "February 2021") are bugs we are intended to
-address before the end of that month. This usually means that the bug fix will be present
-in the release made in the next month. For example, if a bug has the milestone "February
-2021", it means that we expect the relevant PR to land on or before February 28th 2021,
-and that the beta release made in March 2021 will include the fix.
+Milestones map to beta releases, which we generally branch once a month, in the week that has the first Monday of the month.
+
+Milestones will be called ‘MM beta release (X.Y),’ where MM is the month that the work will be done (the month previous to the beta branch point / release.)  X.Y will reflect the major/minor version of the corresponding beta release.  Flutter & Dart will have coinciding milestones with the same name (but different X.Y) 
+
+Once a quarter (or so), this Beta milestone will map to a stable release.
 
 See the [[Flutter build release channels]] page for more details about our release schedule.
 
-Release milestones are a
-statement of what we anticipate doing and when, and thus concrete; they are not
-aspirational, in that simply assigning an issue to a bucket without the commitment of
-its assignee will not further work on the issue on its own. (See “Assigning Issues”, 
-below.)
+#### What issues go on a release milestone?
+
+**During development time (pre branch cut):**
+
+1. Features that we’re planning* to ship in that release.
+    - As we near branch cut, eng / leads / product will make decisions of readiness for feature to launch or if it will miss (and may need to be backed out or flagged off)
+
+2. Issues that need to be fixed on the next beta (or possibly stable) release
+    - 'beta blockers' or 'stable blockers'
+    - regressions
+    - bugs on new feature work
+
+3. Issues that we’re targeting* to get fixed in the next beta release.
+These are things that are not features the eng teams would like to get out in a given release.  These can be prioritized with product support as well.
+    - backlog pruning / upvoted issues
+    - partner launches / blocking issues
+    - initiative(s) grouping issues to improve a certain area of the product
+
+**During stabilization time (post branch cut):**
+
+No more feature development work, any unfinished features should have been disabled / backed out as mentioned above.
+
+1. Issues that need to be fixed on the next beta (or possibly stable) release
+    - 'beta blockers' or 'stable blockers'
+    - regressions
+    - bugs on new feature work
+      - if there are significant bugs for a new feature, it should be disabled / backed out rather than fixed on branch.  
+
+***Does having a feature / issue on a new release milestone mean it has to or is expected to ship on that release?  Do I have to put a milestone on my issues or features?**
+
+No.  
+
+However, if you’d like to put your features / issues on a release milestone, the program management team will offer a service to ensure you’re aware of dates related to the releases and what the means to the work related to those issues.  An example of this is discussing feature readiness as we near a branch cut, and whether you feel the feature is ready or if it needs more time (and then move to an appropriate milestone and ensure any work that has landed that needs to be flagged or backed out is tracked.)
+
+Quality and doneness of a feature indicates when it is ready to ship, and it should not be rushed to meet release dates
+
 
 In some cases, a month may have a feature-specific milestone in addition to the general month 
 milestone. This is for tracking burndowns in [ZenHub](https://www.zenhub.com/); some subteams
