@@ -1,5 +1,52 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-01-29
+
+### Notable issues
+
+* Camera throws TimeoutException when flash is turned ON: [#74645](https://github.com/flutter/flutter/issues/74645)
+* Null safety checks occur while running flutter test on beta: [#74898](https://github.com/flutter/flutter/issues/74898)
+* App goes black when there is a system dialog and locking/unlocking on Android: [#74801](https://github.com/flutter/flutter/issues/74801)
+* Text selection from right to left inside text fields is broken on Web: [#74504](https://github.com/flutter/flutter/issues/74504)
+* Auto scroll not working with textField when showCursor is false: [#74566](https://github.com/flutter/flutter/issues/74566)
+
+### Issue counts
+
+New Flutter issues triaged 261, closed 90 (34%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 53.9%  |
+| Duplicate  | 30.3%  |
+| Fixed | 9.0%  |
+| Solved | 6.7%  |
+
+Issues closed from iterations 81
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 13.6%  |
+| Duplicate  | 8.6%  |
+| Fixed | 16.0%  |
+| Solved | 11.1%  |
+| Timeout | 50.6%  |
+
+Stale issues ([found to occur in releases 1.12 and 1.17](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22has+reproducible+steps%22+-label%3A%22found+in+release%3A+1.22%22+-label%3A%22found+in+release%3A+1.23%22+-label%3A%22found+in+release%3A+1.24%22+-label%3A%22found+in+release%3A+1.25%22+-label%3A%22passed+first+triage%22+-label%3A%22severe%3A+new+feature%22+-label%3Aproposal+-label%3A%22found+in+release%3A+1.21%22+-label%3A%22found+in+release%3A+1.20%22+-label%3A%22found+in+release%3A+1.26%22+)) checked 55, closed 11 (20%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 2 |
+| Fixed | 6 |
+| Solved | 3 |
+
+New Flutterfire issues triaged 34, closed 15 (44%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 5  |
+| Duplicate  | 5  |
+| Solved  | 5  |
+
 ## 2021-01-22
 
 ### Notable issues
