@@ -841,7 +841,7 @@ Give the directory a unique name that starts with `flutter_` and ends with a per
 
 For consistency, name the `Directory` object that points to the temporary directory `tempDir`, and create it with `createTempSync` unless you need to do it asynchronously (e.g. to show progress while it's being created).
 
-Always clean up the directory when it is no longer needed. In tests, use the `tryToDelete` convenience function to delete the directory.
+Always clean up the directory when it is no longer needed. In tests, use the `tryToDelete` convenience function to delete the directory. (We use `tryToDelete` because on Windows it's common to get "access denied" errors when deleting temporary directories. We have no idea why; if you can figure it out then that could simplify a lot of code!)
 
 
 ### Perform dirty checks in setters
