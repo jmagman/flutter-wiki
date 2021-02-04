@@ -4,9 +4,9 @@ actually compiling the code, see [[Compiling the engine]]._
 Make sure you have the following dependencies available:
 
  * Linux, macOS, or Windows.
-     * Linux supports cross-compiling artifacts for Android, but not iOS.
+     * Linux supports cross-compiling artifacts for Android and Fuchsia, but not iOS.
      * macOS supports cross-compiling artifacts for Android and iOS.
-     * Windows doesn't support cross-compiling artifacts for either Android or iOS.
+     * Windows doesn't support cross-compiling artifacts for any of Android, Fuchsia, or iOS.
  * git (used for source version control).
  * An IDE. See also the section at the bottom of this page for advice on setting up syntax highlighting while editing the engine.
  * An ssh client (used to authenticate with GitHub).
