@@ -9,6 +9,7 @@ Depending on the platform you are making changes for, you may be interested in a
 * [Compiling for iOS (from macOS)](#compiling-for-ios-from-macos)
 * [Compiling for macOS or Linux](#compiling-for-macos-or-linux)
 * [Compiling for Windows](#compiling-for-windows)
+* [Compiling for Fuchsia](#compiling-for-fuchsia)
 * [Compiling for the Web](#compiling-for-the-web)
 
 ## General Compilation Tips
@@ -211,6 +212,60 @@ Also, be sure that Python27 is before any other python in your Path.
 7. `ninja -C .\out\<dir created by previous step>` to build.
    * If you used a non-debug configuration, use `ninja -C .\out\<dir created by previous step> gen_snapshot`.
      Release and profile are not yet supported for the desktop shell.
+
+## Compiling for Fuchsia
+
+These steps build the Fuchsia embedding (flutter_runner) and test FAR files that can be deployed to a Fuchsia device.
+
+Note these instructions assume use of `x64`, if `arm64` is needed then just substitute as appropriate.
+
+1. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
+
+2. `gclient sync` to update your dependencies.
+
+3. `./flutter/tools/gn --fuchsia --unoptimized` to prepare your build files.
+  * NOTE: `--unoptimized` is broken on Fuchsia at the moment, see: https://github.com/flutter/flutter/issues/74872 
+  * `--unoptimized` disables C++ compiler optimizations. On macOS, binaries are emitted unstripped; on Linux, unstripped binaries are emitted to an `exe.unstripped` subdirectory of the build.
+  * Add `--fuchsia-cpu=x64` or `--fuchsia-cpu=arm64` to target a particular architecture (default is x64).
+  * Add `--runtime-mode=debug` or `--runtime-mode=release` to switch between JIT and AOT builds.  These correspond to a vanilla Fuchsia build and a `--release` Fuchsia build respectively.
+  * Add `--no-lto` if you don't care about performance or binary size and want a *much* faster build.
+  * Add the `--xcode-symlinks` argument when using goma on macOS.
+
+4. `ninja -C out/fuchsia_debug_unopt` to build a Fuchsia unoptimized binary.
+    * If you skipped `--unoptimized`, use `ninja -C out/fuchsia_debug` instead.
+    * For Googlers, consider also using the `--goma` flag with gn, then building with `autoninja` to parallelize the build using Goma.
+
+To test changes, you will first want to make the prebuilts writable.  From your $FUCHSIA_DIR `chmod -R +w prebuilt/third_party/flutter` will make all of the flutter prebuilts writable.
+
+Now, to test a change perform these actions after each build:
+
+First copy the `flutter_runner` binary itself to your Fuchsia checkout:
+`cp out/fuchsia_debug_unopt/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/flutter_jit_runner.far` for standard (debug) builds
+`cp out/fuchsia_release/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/aot/release/flutter_aot_product_runner.far` for `--release` builds (you must build flutter with `--runtime-mode=release`)
+
+Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout (note that if you have a custom out/ folder in your Fuchsia checkout you will need to adjust `--destination-base` to match):
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug_unopt/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/out/default/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped` for standard (debug) builds
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/out/default/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped` for `--release` builds (you must build flutter with `--runtime-mode=release`)
+
+For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
+`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/out/default/amber-files -f out/fuchsia_debug_unopt/flow_tests.far`
+`fx test flow_tests`
+
+You can also copy test debug symbols by using the `copy_debug_symbols.py` script and substituting the test binary (such as `flow_unittests`) for the runner binary.
+
+Finally, `fx build && fx ota` to update your Fuchsia device with any changes you made.
+
+### Fuchsia Source Checkout
+
+Testing the Fuchsia embedding requires a Fuchsia source checkout.  To get one, go to https://fuchsia.dev/fuchsia-src/get-started and follow the instructions to sync and build a Fuchsia checkout.  The `workstation` (e.x. `fx set workstation.nuc`) product uses Flutter as its primary shell and is the primary way of testing Flutter on Fuchsia changes.
+
+### IMPORTANT: Dart Version synchronization
+
+The Fuchsia tree consumes the `flutter_runner` and associated Dart SDK as a set of prebuilts.  Flutter apps within the Fuchsia tree are built against the version of the Dart SDK in these prebuilts.  Because of this fact, developers must be careful to avoid any skew between the version of Dart VM built into the `flutter_runner` binary and the version of the Dart SDK & VM used by the Flutter toolchain (to compile flutter apps from Dart code).  If there is any mismatch at all between the runner and toolchain, a runtime error results and Flutter won't work at all.
+
+In practice, this means one of two workflows, depending on the nature of the change in question:
+A. The change is to the engine C++ code only, and it isn't inside of the Dart VM or SDK.
+B. The change is to the engine Dart code, or it involves changing the Dart VM or SDK.
 
 ## Compiling for the Web
 
