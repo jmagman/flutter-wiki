@@ -22,6 +22,8 @@ Flutter Wiki
 - [[Contributor access]]
 - [[What should I work on?]]
 - [[Running and writing tests]]
+  - [[How to write a render speed test for Flutter]]
+  - [[How to write a memory test for Flutter]]
 - [[Release process]]
   - [[Flutter build release channels]]
   - [[Changelog]]
@@ -65,16 +67,11 @@ Flutter Wiki
 - [[Engine Clang Tidy Linter]]
 
 ## Infrastructure
+- [[Dashboards]]
 - [[Infra Ticket Queue]]
 - [[Autorollers]]
 - [Flutter's Build Infrastructure](https://github.com/flutter/flutter/blob/master/dev/bots/README.md)
 - [[Flutter Installation Bundles]]
-
-## Performance
-- [Performance dashboards](https://flutter-dashboard.appspot.com/)
-- [[How to write a render speed test for Flutter]]
-- [[How to write a memory test for Flutter]]
-- [[Reduce shader compilation jank using SkSL warm up]]
 
 ## Release Information
 - [Hotfixes to the stable channel](https://github.com/flutter/flutter/wiki/Hotfixes-to-the-Stable-Channel)
@@ -89,3 +86,4 @@ Flutter Wiki
 - [Multi-device debugging in VS Code](https://github.com/flutter/flutter/wiki/Multi-device-debugging-in-VS-Code)
 - [Null safety package migration status](https://github.com/dart-lang/sdk/wiki/Null-safety-migration-status)
 - [Running Flutter Driver tests with Web](https://github.com/flutter/flutter/wiki/Running-Flutter-Driver-tests-with-Web)
+- [[Reduce shader compilation jank using SkSL warm up]]
