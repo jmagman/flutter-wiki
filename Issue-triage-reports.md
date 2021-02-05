@@ -1,5 +1,54 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-02-05
+
+### Notable issues
+
+* Reopened: Flutter Application freezes when Maximized or Restored from Minimized window mode [#74797](https://github.com/flutter/flutter/issues/74797)
+* [windows] Hot reload from terminal throws an exception on dev channel [#75419](https://github.com/flutter/flutter/issues/75419)
+* [web] UnimplementedError when using SliderTheme [#75495](https://github.com/flutter/flutter/issues/75495)
+* [web] Dragging the "draggable" widget causes widget to freeze in the overlay layer [#75280](https://github.com/flutter/flutter/issues/75280)
+* Scrolling using Scrollbar widget with ListView.builder is significantly slower [#75399](https://github.com/flutter/flutter/issues/75399)
+* Proposal: [integration_test] - Support tags in integration test package [#75496](https://github.com/flutter/flutter/issues/75496)
+
+### Issue counts
+
+New Flutter issues triaged 300, closed 89 (30%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 58.6%  |
+| Duplicate  | 33.3%  |
+| Fixed | 2.3%  |
+| Solved | 5.7%  |
+
+Issues closed from iterations 63
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 23.8%  |
+| Duplicate  | 9.5%  |
+| Fixed | 30.2%  |
+| Solved | 22.2%  |
+| Timeout | 14.3%  |
+
+Stale issues
+
+Finished with ([issues found to occur in releases 1.12 and 1.17](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22has+reproducible+steps%22+-label%3A%22found+in+release%3A+1.22%22+-label%3A%22found+in+release%3A+1.23%22+-label%3A%22found+in+release%3A+1.24%22+-label%3A%22found+in+release%3A+1.25%22+-label%3A%22passed+first+triage%22+-label%3A%22severe%3A+new+feature%22+-label%3Aproposal+-label%3A%22found+in+release%3A+1.21%22+-label%3A%22found+in+release%3A+1.20%22+-label%3A%22found+in+release%3A+1.26%22+)) and started with [image_picker](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+image_picker%22) issues. Total checked 40, closed 8 (20%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 7  |
+| Solved  | 1  |
+
+New Flutterfire issues triaged 51, closed 16 (31%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 7  |
+| Duplicate | 8  |
+| Solved  | 1  |
+
 ## 2021-01-29
 
 ### Notable issues
