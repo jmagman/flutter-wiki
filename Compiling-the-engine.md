@@ -262,20 +262,31 @@ After deploying any wanted changes to the Fuchsia checkout, perform `fx build &&
 #### flutter_runner
 
 First copy the `flutter_runner` binary itself to your Fuchsia checkout:
+
 `cp out/fuchsia_debug_unopt/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/flutter_jit_runner.far` for standard (debug) builds
+
 `cp out/fuchsia_release/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/aot/release/flutter_aot_product_runner.far` for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
-If you are changing the Dart SDK or VM, you'll also want to update the dart toolchain that used in your fuchsia checkout:
+If you are changing the Dart SDK or VM, you'll also want to update the dart toolchain that is used in your fuchsia checkout:
+
+`cp -ra out/fuchsia_debug_unopt/host_bundle/dart_binaries-debug-linux-x64/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/dart_binaries/`
+
+`cp -ra out/fuchsia_debug_unopt/dart_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/dart_runner_patched_sdk/`
+
+`cp -ra out/fuchsia_debug_unopt/flutter_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/flutter_runner_patched_sdk/`
 
 #### debug symbols
 
 Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout (note that if you have a custom out/ folder in your Fuchsia checkout you will need to adjust `--destination-base` to match):
+
 `./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug_unopt/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/out/default/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped` for standard (debug) builds
+
 `./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/out/default/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped` for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 #### tests
 
 For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
+
 `./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/out/default/amber-files -f out/fuchsia_debug_unopt/flow_tests.far`
 `fx test flow_tests`
 
