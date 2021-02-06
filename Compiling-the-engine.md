@@ -267,13 +267,13 @@ First copy the `flutter_runner` binary itself to your Fuchsia checkout:
 
 `cp out/fuchsia_release/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/aot/release/flutter_aot_product_runner.far` for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
-If you are changing the Dart SDK or VM, you'll also want to update the dart toolchain that is used in your fuchsia checkout:
+If you are changing the Dart SDK or VM, you'll also want to update the dart toolchain that is used in your fuchsia checkout (note the use of aot/release in the destination, that is intentional):
 
-`cp -ra out/fuchsia_debug_unopt/host_bundle/dart_binaries-debug-linux-x64/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/dart_binaries/`
+`cp -ra out/fuchsia_debug_unopt/host_bundle/dart_binaries-debug-linux-x64/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/aot/release/dart_binaries/`
 
-`cp -ra out/fuchsia_debug_unopt/dart_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/dart_runner_patched_sdk/`
+`cp -ra out/fuchsia_debug_unopt/dart_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/aot/release/dart_runner_patched_sdk/`
 
-`cp -ra out/fuchsia_debug_unopt/flutter_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/jit/debug/flutter_runner_patched_sdk/`
+`cp -ra out/fuchsia_debug_unopt/flutter_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/aot/release/flutter_runner_patched_sdk/`
 
 #### debug symbols
 
