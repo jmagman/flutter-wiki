@@ -228,10 +228,10 @@ Testing the Fuchsia embedding requires a Fuchsia source checkout.  To get one, g
 The Fuchsia tree consumes the `flutter_runner` and associated Dart SDK as a set of prebuilts.  Flutter apps within the Fuchsia tree are built against the version of the Dart SDK in these prebuilts.  Because of this fact, developers must be careful to avoid any skew between the version of Dart VM built into the `flutter_runner` binary and the version of the Dart SDK & VM used by the Flutter toolchain (to compile flutter apps from Dart code).  If there is any mismatch at all between the runner and toolchain, a runtime error results and Flutter won't work at all.
 
 In practice, this means one of two workflows, depending on the nature of the change in question:
-A. The change is to the engine C++ code only, and it isn't inside of the Dart VM or SDK.  In this case it's important to match the git hash of Dart in the Fuchsia checkout to the one in the Flutter checkout.  
 
-The easiest way to do this is:
-`git -C integration log -n 1 -- fuchsia/topaz/flutter | sed -ne  's/^.*flutter\/fuchsia .*to git_revision:\(.*\)/\1/p'` from your Fuchsia checkout's root.  Then use that git hash in step 1 under "build the engine".
+A. The change is to the engine C++ code only, and it isn't inside of the Dart VM or SDK.  In this case it's important to match the git hash of Dart in the Fuchsia checkout to the one in the Flutter checkout.  The easiest way to do this is (from your Fuchsia root):
+
+`git -C integration log -n 1 -- fuchsia/topaz/flutter | sed -ne  's/^.*flutter\/fuchsia .*to git_revision:\(.*\)/\1/p'` Then use that git hash in step 1 under "build the engine".
 
 B. The change is to the engine Dart code, or it involves changing the Dart VM or SDK.  In this case, you do not need to pin to a specific revision.  Work normally, then follow the specific instructions under "deploying flutter_runner" below.
 
