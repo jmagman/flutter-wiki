@@ -1318,6 +1318,41 @@ foo1(
 foo2(bar, baz);
 ```
 
+Whether to put things all on one line or whether to have one line per item is an aesthetic choice. We prefer whatever ends up being most readable. Typically this means that when everything would fit on one line, put it all on one line, otherwise, split it one item to a line.
+
+However, there are exceptions. For example, if there are six back-to-back lists and all but one of them need multiple lines, then one would not want to have the single case that does fit on one line use a different style than the others.
+
+```dart
+  // BAD (because the second list is unnecessarily and confusingly different than the others):
+  List<FooBarBaz> myLongList1 = <FooBarBaz>[
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+  ];
+  List<Quux> myLongList2 = <Quux>[ Quux(1), Quux(2) ];
+  List<FooBarBaz> myLongList3 = <FooBarBaz>[
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+  ];
+
+  // GOOD (code is easy to scan):
+  List<FooBarBaz> myLongList1 = <FooBarBaz>[
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+  ];
+  List<Quux> myLongList2 = <Quux>[
+    Quux(1),
+    Quux(2),
+  ];
+  List<FooBarBaz> myLongList3 = <FooBarBaz>[
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+    FooBarBaz(one: firstArgument, two: secondArgument, three: thirdArgument),
+  ];
+```
+
 ### Prefer single quotes for strings
 
 Use double quotes for nested strings or (optionally) for strings that contain single quotes.
