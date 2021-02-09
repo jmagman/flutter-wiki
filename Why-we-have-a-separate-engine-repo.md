@@ -21,3 +21,7 @@ We intentionally keep the flutter/flutter repository separate from the others be
 ## Repository size
 
 Since flutter/flutter is the main repository for new contributors, we want to keep it relatively small, to make it simpler to get involved.
+
+## Rolls
+
+The flutter/flutter repository depends on binaries built from the flutter/engine repo. If the two repositories were merged, we'd either have a confusing situation where part of the repository would depend on binaries built from an older commit of the same repository, or we'd require that developers on the repo build the binaries locally. Both are more confusing than the current setup.
