@@ -4,9 +4,11 @@ _Flutter contributors: please feel empowered to edit this wiki page to include a
 
 See also [[Bad Builds]], which lists dev releases that are known to have major bugs or regressions.
 
+### 1.27.X
+* NEXT AUTHOR: Put your breaking change notification here and insert headings as appropriate to identify which version is affected.
+
 ### 1.26.X
 * [#68086](https://github.com/flutter/flutter/pull/68086) Introduce `MaxLengthEnforcement`.
-* NEXT AUTHOR: Put your breaking change notification here and insert headings as appropriate to identify which version is affected.
 
 ### 1.25.X
 
