@@ -5,8 +5,10 @@ reduce its size by using [MLGO][MLGO]. It's different from the previous Flutter
 attempt of reducing sizes as MLGO does not require any code or dependency
 removals.
 
-Reducing engine size with MLGO needs to first train a model, and then apply that
-model to compile the Flutter engine. On Ubuntu, do the following:
+Reducing engine size with MLGO needs to 1) train a model once, 2) apply that
+model to compile the Flutter engine. Note that model training does not need to
+happen too frequently - the model should 'hold up' to code changes over
+weeks/months. On Ubuntu, do the following:
 
 - **Follow the [Setting-up-the-Engine-development-environment][engine setup]**.
   To check if this step is successful, try [compiling for Android][compile
