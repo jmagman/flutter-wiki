@@ -66,6 +66,7 @@ Flutter Wiki
 - [[Metal on iOS FAQ]]
 - [[Engine Clang Tidy Linter]]
 - [[Why we have a separate engine repo]]
+- [[Reduce Flutter engine size with MLGO]]
 
 ## Infrastructure
 - [[Dashboards]]
