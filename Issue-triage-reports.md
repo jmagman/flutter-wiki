@@ -1,5 +1,55 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-02-12
+
+### Notable issues
+
+* Specific to latest update on Samsung devices (One UI 3): screen flickers while opening and closing keyboard [#75520](https://github.com/flutter/flutter/issues/75520)
+* Text not rendering on web. Specific to Win 7 + FireFox + graphics card setup. [#75327](https://github.com/flutter/flutter/issues/75327)
+* TextInputType.phone keyboard doesn't delete typed text when the keyboard is switched to extra symbols on Android [#75616](https://github.com/flutter/flutter/issues/75616)
+* Crowd: Crashing on launch when updating Android Gradle Plugin to 4.0.0 using app bundle [#58479](https://github.com/flutter/flutter/issues/58479)
+* Reopened: [google_maps_flutter] App crashes when using maps in release mode [#69820](https://github.com/flutter/flutter/issues/69820)
+
+### Issue counts
+
+New Flutter issues triaged 253, closed 79 (31%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 53.2%  |
+| Duplicate  | 36.7%  |
+| Fixed | 7.6%  |
+| Solved | 2.5%  |
+
+Issues closed from iterations 89
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 15.9%  |
+| Duplicate  | 1.1%  |
+| Fixed | 25.0%  |
+| Solved | 10.2%  |
+| Timeout | 47.7%  |
+
+Stale issues
+
+Checking [image_picker](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+image_picker%22) issues. Total checked 64, closed 24 (38%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid| 1  |
+| Duplicate | 6  |
+| Fixed | 16  |
+| Solved  | 1  |
+
+New Flutterfire issues triaged 31, closed 14 (45%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 5  |
+| Duplicate | 6  |
+| Solved  | 3  |
+
 ## 2021-02-05
 
 ### Notable issues
