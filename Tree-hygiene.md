@@ -420,9 +420,6 @@ Stage your change and the documentation for your change. Typically this will be 
 
 Use our [breaking change migration guide template](https://github.com/flutter/website/blob/master/src/docs/release/breaking-changes/template.md) (every part in square brackets should be changed) to create the migration guide that describes the change. Do not land the migration guide at this time. You will need to update it before you land it in the last step.
 
-**You must ask @Hixie on Discord to review the migration guide before landing your PRs.** Until we have experience with writing these regularly, we need to make sure they're consistent in style. (Don't bother asking on GitHub, Hixie gets too many GitHub notifications to read them. See [[Chat]] for how to use our Discord server.)
-
-
 ### 4. Land your change.
 
 Once you are ready, have received feedback, iterated on your design and your migration guide, land your initial change and start migrating clients. *Do not yet land the migration guide.* Once all the clients are migrated, land your final change. (You may have several iterations here if you have a multiphase roll-out.)
