@@ -243,12 +243,6 @@ Every issue should have a clear description of the steps to reproduce the proble
 
 If an issue is lacking this information, request it from the commenter and close the issue if information is not forthcoming.
 
-#### Issues are not a venue for discussions
-
-It's a good idea to file bugs asking for documentation; such bugs should clearly specify the set of questions that are to be answered, and should specify where those questions should be answered (e.g. API docs, web site).
-
-The issue database itself is not a good place for discussion, because GitHub hides comments, doesn't have threading, notifications get lost in the swamp of other GitHub e-mails, etc.
-
 ## Do not add "me too" or "same" comments to bugs
 
 The Flutter team prioritizes issues in part based on the number of +1 (thumbs
@@ -265,6 +259,12 @@ any less upsetting). Out of a respect for the team, and as required by our [code
 of conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md), we
 ask that you avoid adding comments that are not actively helpful. There are other
 venues if you want to complain without being constructive.
+
+### Issues are not a venue for discussions
+
+It's a good idea to file bugs asking for documentation; such bugs should clearly specify the set of questions that are to be answered, and should specify where those questions should be answered (e.g. API docs, web site).
+
+The issue database itself is not a good place for discussion, because GitHub hides comments, doesn't have threading, notifications get lost in the swamp of other GitHub e-mails, etc.
 
 ### Comments providing workarounds
 
