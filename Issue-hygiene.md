@@ -249,15 +249,31 @@ It's a good idea to file bugs asking for documentation; such bugs should clearly
 
 The issue database itself is not a good place for discussion, because GitHub hides comments, doesn't have threading, notifications get lost in the swamp of other GitHub e-mails, etc.
 
-
 ## Do not add "me too" or "same" comments to bugs
 
 The Flutter team prioritizes issues in part based on the number of +1 (thumbs
-up) reactions on the top level comment of the bug.  Adding comments like "me
+up) reactions on the top level comment of the bug.  dding comments like "me
 too" or "same here" is generally distracting and makes it harder to find
 other more meaningful content in the bug. If you have no new details to add,
 consider just thumbs up-ing the issue.  If you wish to subscribe to the issue,
 click the "subscribe" button in the right hand column of the GitHub UI.
+
+Adding comments explaining how a bug is dire and how you will stop using Flutter
+if it is not fixed is upsetting for the engineers working on Flutter (many of
+whom are volunteers, not that being paid to work on Flutter makes such comments
+any less upsetting). Out of a respect for the team, and as required by our [code
+of conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md), we
+ask that you avoid adding comments that are not actively helpful. There are other
+venues if you want to complain without being constructive.
+
+### Comments providing workarounds
+
+Providing workarounds for issues can be helpful for developers using Flutter and finding a bug, 
+but please keep such comments to a minimum so as to avoid disrupting the engineers trying to
+fix the issue. Rather than discussing workarounds, provide a pointer to another forum
+(e.g. Stack Overflow) where workarounds and temporary solutions are more appropriate. Thanks.
+
+
 
 ## When will my bug be fixed?
 
