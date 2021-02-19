@@ -1,5 +1,52 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-02-19
+
+### Notable issues
+
+* iOS Metal jank example [#76180](https://github.com/flutter/flutter/issues/76180)
+* Camera Plugin Stream is rotated 90 degree CCW on iPhone since 0.7.0 [#76210](https://github.com/flutter/flutter/issues/76210)
+* [file_selector_web] cannot read files larger than ~500MB [#76036](https://github.com/flutter/flutter/issues/76036)
+* [web] make initial load of canvaskit faster [#76009](https://github.com/flutter/flutter/issues/76009)
+
+### Issue counts
+
+New Flutter issues triaged 251, closed 91 (36%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 52.7%  |
+| Duplicate  | 30.8%  |
+| Fixed | 3.3%  |
+| Solved | 13.2%  |
+
+Issues closed from iterations 77
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 14.3%  |
+| Duplicate  | 14.3%  |
+| Fixed | 18.2%  |
+| Solved | 16.9%  |
+| Timeout | 36.4%  |
+
+Stale issues
+
+Checking labeled issues without the `has reproducible steps` label. Total checked 34, closed 5 (15%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid| 3 |
+| Duplicate | 2  |
+
+New Flutterfire issues triaged 23, closed 10 (43%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 5  |
+| Duplicate | 4  |
+| Solved  | 1  |
+
 ## 2021-02-12
 
 ### Notable issues
