@@ -159,7 +159,9 @@ for addressing code review comments on your PR.
 If you're working on a big patch, don't hesitate to get reviews early,
 before you're ready to check code in. Also, don't hesitate to ask for
 multiple people to review your code, and don't hesitate to provide unsolicited
-comments on other people's PRs. The more reviews the better.
+comments on other people's PRs (although approvals in the GitHub UI
+should be reserved for those with contributor access). The more
+reviews the better.
 
 A reviewer may in some circumstances consider the code satisfactory
 without having fully reviewed or understood it. If a reviewer has not
@@ -170,6 +172,16 @@ Looks Good To Me".)
 
 
 ## How to review code
+
+Code review status is managed via GitHub's approval system. PRs should
+not be merged unless one or more contributors with commit access (at
+least one of which should be very familiar with the code in question)
+have approved the PR in the GitHub UI. As such, contributors without
+commit access are welcome to comment on PRs, but they should NOT be
+approving them in the GitHub UI. Approvals from contributors without
+commit access may mislead others to believe that a PR is ready to be
+merged, even though it has not gone through the official code review
+process.
 
 Reviewers should carefully read the code and make sure they understand
 it. A reviewer should check the code for both high level concerns,
