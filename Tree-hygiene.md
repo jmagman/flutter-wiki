@@ -129,13 +129,10 @@ organization's) name and contact info to the [AUTHORS](https://github.com/flutte
 
 Every PR must be code-reviewed before check-in, including things like
 rolling a dependency. Getting a review means that a regular Flutter
-contributor (someone with commit access) has written a comment saying
-"LGTM" on your PR, and you have addressed all their feedback. ("LGTM"
-means "Looks Good To Me".)
-
-If nobody reviews your PR within two weeks, you can ask for a review
-via our [[Chat]] channels (start by asking in #hackers, saying what your
-patch does and providing a link).
+contributor (someone with commit access) has "approved" the PR in the
+GitHub UI. If nobody reviews your PR within two weeks, you can ask for
+a review via our [[Chat]] channels (start by asking in #hackers,
+saying what your patch does and providing a link).
 
 Code review serves many critical purposes. There's the obvious
 purpose: catching errors. Even the most experienced engineers
@@ -197,7 +194,7 @@ don't make sense, read the style guide again. :-)
 9. Check for good grammar in API docs and comments. Check that identifiers are named according to our conventions.
 
 Once you are satisfied with the contribution, and _only_ once you are satisfied,
-write a comment that includes the phrase LGTM (or use the GitHub "Approval" mechanism).
+use the GitHub "Approval" mechanism (an "LGTM" comment is not sufficient).
 If you feel like you are being worn down, hand the review to someone else. Consider
 our [conflict resolution](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md#conflict-resolution)
 policy if you feel like you are being forced to agree to something you don't like.
