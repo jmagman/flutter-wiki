@@ -17,6 +17,8 @@ As part of this we plan to provide a migration tool, samples, and documentation 
 
 ### Android and iOS
 
+We are continuing to address [jank-on-startup performance issues](https://github.com/flutter/flutter/projects/188).
+
 We will work on supporting incremental downloads of assets and code from the stores (subject to each platform's limitations), allowing the initial download of applications to be much smaller than the full download, with data fetched on demand.
 
 We will also seek to improve the performance and ergonomics, and reduce the overhead, of embedding Flutter in existing applications on Android and iOS.
