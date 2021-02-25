@@ -28,7 +28,9 @@ Writing plugins is supported on all platforms, however many plugins do not yet h
 desktop support. See [the flutter.dev documentation](https://flutter.dev/desktop#plugin-support)
 for more details.
 
-## Add-to-App
+***
+
+### Add-to-App
 
 Currently there is no support for Add-to-App for any desktop platform. If you are familiar with doing native development on your platform(s), it is possible to integrate the desktop Flutter libraries in your own app. There is not currently much guidance, so you will be well off the beaten path, but the information below will help get you started.
 
