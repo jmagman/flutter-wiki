@@ -1,5 +1,42 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-02-26
+
+### Notable issues
+
+* RenderRepaintBoundary.toImage throws operation failed exception on Stable, but shows NoSuchMethodError on Master [#76591](https://github.com/flutter/flutter/issues/76591)
+* Clearing a textfield shows Snapshot warning log on iOS using physical device [#76798](https://github.com/flutter/flutter/issues/76798)
+* integration_test throws TickerException while trying to open modalBottomSheet [#76786](https://github.com/flutter/flutter/issues/76786)
+* [canvaskit] font renders missing glyph when text overflow is ellipsis [#76473](https://github.com/flutter/flutter/issues/76473)
+* Need better, clearer image filter quality controls [#76737](https://github.com/flutter/flutter/issues/76737)
+* [web] Debug mode is paused when launched from IntelliJ/Android Studio [#76680](https://github.com/flutter/flutter/issues/76680)
+* EXC_BAD_ACCESS KERN_INVALID_ADDRESS - CRASH [#76694](https://github.com/flutter/flutter/issues/76694)
+* Painter slowing down initially [#76859](https://github.com/flutter/flutter/issues/76859)
+
+### Issue counts
+
+New Flutter issues triaged* 251
+
+Closed 180 issues
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 36.67%  |
+| Duplicate  | 16.11%  |
+| Fixed | 7.78%  |
+| Solved | 9.44%  |
+| Timeout | 30.00%  |
+
+\* Counting issues where the first label was added by Nevercode.
+
+New Flutterfire issues triaged 32, closed 19 (59%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 11  |
+| Duplicate | 7  |
+| Solved  | 1  |
+
 ## 2021-02-19
 
 ### Notable issues
