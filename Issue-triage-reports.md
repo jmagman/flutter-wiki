@@ -15,19 +15,17 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 ### Issue counts
 
-New Flutter issues triaged* 251
+New Flutter issues triaged 231
 
-Closed 180 issues
+Closed 181 issues
 
 | Reason for closing  |  |
 | -- | -- |
-| Invalid | 36.67%  |
-| Duplicate  | 16.11%  |
-| Fixed | 7.78%  |
-| Solved | 9.44%  |
-| Timeout | 30.00%  |
-
-\* Counting issues where the first label was added by Nevercode.
+| Invalid | 37.02%  |
+| Duplicate  | 16.02%  |
+| Fixed | 7.73%  |
+| Solved | 9.39%  |
+| Timeout | 29.83%  |
 
 New Flutterfire issues triaged 32, closed 19 (59%)
 
