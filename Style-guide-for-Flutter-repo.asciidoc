@@ -1608,6 +1608,11 @@ Using `++` does not make it obvious that the underlying variable is actually bei
 
 Finally, `+=` is more convenient when changing the increment to a number other than 1.
 
+### Use double literals for double constants
+
+To make it clearer when something is a double or an integer, even if the number is a round number, include a decimal point in double literals. For example, if a function `foo` takes a double, write `foo(1.0)` rather than `foo(1)` because the latter makes it look like the function takes an integer.
+
+
 Conventions
 -----------
 
