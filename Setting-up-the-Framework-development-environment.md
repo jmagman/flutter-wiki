@@ -14,7 +14,7 @@ Make sure you have the following dependencies available:
  * The Android platform tools.
 
    You can install this using one of the following commands:
-   - Mac: `brew cask install android-platform-tools`
+   - Mac: `brew install --cask android-platform-tools`
    - Linux: `sudo apt-get install android-tools-adb`
 
    If you're
