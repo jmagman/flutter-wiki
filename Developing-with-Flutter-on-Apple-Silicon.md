@@ -10,7 +10,7 @@ We recommend using Flutter 2 on Apple Silicon machines, since it contains a numb
 
 ### Other notes
 
-- Deployment to physical iOS and Android devices attached to the host is supported, but we do not yet support deployment to the iOS simulator ([issue 64502](https://github.com/flutter/flutter/issues/64502)).
+- Deployment to physical iOS and Android devices attached to the host is supported, as well as support to the iOS simulator with `flutter run --simulator` or from Flutter IDE plugins. Deployment to the iOS simulator from Xcode is supported in the master channel ([pull request 73828](https://github.com/flutter/flutter/pull/73828)).
 - Developing for the web (`flutter run -d chrome`) is working on all channels. It's recommended that you install the Apple Silicon version of Chrome. 
 - The Android Emulator [has preliminary support for Apple Silicon](https://github.com/google/android-emulator-m1-preview).
 - Some IDEs and editors may not be fully stable on Apple Silicon. 
