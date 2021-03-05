@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-03-05
+
+### Notable issues
+
+* [image_picker] GIF doesn't work on iOS 14 when user chooses "Select Photos" [#77281](https://github.com/flutter/flutter/issues/77281)
+* Talkback doesn’t read hyperlinked text when used with SelectableText.rich widget [#77219](https://github.com/flutter/flutter/issues/77219)
+* Flutter 2.0 web can not show some Chinese characters properly using canvaskit renderer [#77212](https://github.com/flutter/flutter/issues/77212)
+* [web] wrong image filter on web app built with HTML renderer [#76966](https://github.com/flutter/flutter/issues/76966)
+* Unable to run flutter 2 in mac desktop for a completely new project [#77325](https://github.com/flutter/flutter/issues/77325)
+
+### Issue counts
+
+New Flutter issues triaged 259, closed 93 (36%)
+
+In total closed 166 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 45.18%  |
+| Duplicate  | 26.51%  |
+| Fixed | 7.83%  |
+| Solved | 9.64%  |
+| Timeout | 10.84%  |
+
+New Flutterfire issues triaged 37, closed 25 (68%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 14  |
+| Duplicate | 7  |
+| Solved  | 4  |
+
+
 ## 2021-02-26
 
 ### Notable issues
@@ -15,9 +48,9 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 ### Issue counts
 
-New Flutter issues triaged 231
+New Flutter issues triaged 231, closed 84 (36%)
 
-Closed 181 issues
+In total closed 181 issues during the week
 
 | Reason for closing  |  |
 | -- | -- |
