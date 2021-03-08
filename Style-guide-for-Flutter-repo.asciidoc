@@ -1554,6 +1554,59 @@ if (notReady) {
 }
 ```
 
+If the body is more than one line, or if there is an `else` clause, wrap the body in braces:
+
+```dart
+// BAD:
+if (foo)
+  bar(
+    'baz',
+  );
+
+// BAD:
+if (foo)
+  bar();
+else
+  baz();
+
+// GOOD:
+if (foo) {
+  bar(
+    'baz',
+  );
+}
+
+// GOOD:
+if (foo) {
+  bar();
+} else {
+  baz();
+}
+```
+
+We allow one-line `if` bodies to not have braces to avoid making brief conditionals into a verbose mess.
+
+We require bodies for anything beyond that to make it very clear where the bodies belong.
+
+You should be immediately suspicious of code where there are no braces but the indentation lasts more than one line:
+
+```dart
+// VERY BAD:
+if (foo)
+  bar();
+  baz();
+
+// GOOD:
+if (foo)
+  bar();
+baz();
+
+// ALSO GOOD:
+if (foo) {
+  bar();
+  baz();
+}
+```
 
 ### Align expressions
 
