@@ -12,6 +12,7 @@ We have different channels for different purposes (this list is not exhaustive):
 | - | - | - |
 | #welcome | Welcome message. | Only admins can post.<br>Anyone can read.
 | #announcements | Flutter announcements (e.g. breaking changes). | Only team members can post (but not frequently).<br>Anyone can read.
+| #server-support | Forum for asking for your role to be changed, for code of conduct violations to be raised, and for other administrative issues. | Anyone.
 | #general | Chat about anything related to Flutter. | Anyone.
 | #help | People asking for our help. | Anyone.
 | #dart | Questions about the Dart language. | Anyone.
@@ -23,12 +24,10 @@ We have different channels for different purposes (this list is not exhaustive):
 | #hackers-new | New people to the team and people who want to help them. | Flutter contributors.<br>Anyone can watch.
 | #hackers-triage | For use while triaging bugs. | Flutter contributors.<br>Anyone can watch.
 | #hidden-chat | Chat about anything related to Flutter. | Flutter contributors only.<br>Not public.
-| #server-support | Forum for asking for your role to be changed, for code of conduct violations to be raised, and for other administrative issues. | Anyone.
 | general (voice) | Talk (audio) about anything related to Flutter. | Anyone.
+| team (voice) | Talk (audio) that is only open to team members. | Flutter contributors.
 
-Most channels have a rate limit applied which reduces the frequency with which people who are not yet "team members" (contributors) can post.
-
-The #hidden-chat channel is not publicly-readable. For #hidden-chat you have to be a member of the "team" role to see it.
+The #hidden-chat and #team channels are not publicly-readable, you have to be a member of the "team member" role to see them.
 
 ## New channels
 
