@@ -246,7 +246,7 @@ If an issue is lacking this information, request it from the commenter and close
 ## Do not add "me too" or "same" comments to bugs
 
 The Flutter team prioritizes issues in part based on the number of +1 (thumbs
-up) reactions on the top level comment of the bug.  dding comments like "me
+up) reactions on the top level comment of the bug.  Adding comments like "me
 too" or "same here" is generally distracting and makes it harder to find
 other more meaningful content in the bug. If you have no new details to add,
 consider just thumbs up-ing the issue.  If you wish to subscribe to the issue,
