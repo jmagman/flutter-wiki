@@ -29,7 +29,33 @@ We respect our users, whoever they are.
 
 ## Openness
 
-Flutter is an open source project, in the full senses of the word: we are open to ideas, we are open to contributions, our code and our roadmap are open, our priorities are open. Transparency leads to a higher quality product. While our team is currently primarily formed of employees from Google, we aspire to grow and welcome anyone to join the team. Flutter's stewardship is managed by a team at Google.
+Flutter is an open source project, in the full senses of the word: we are open to ideas, we are open to contributions, our code and our roadmap are open, our priorities are open. Transparency leads to a higher quality product. While the most active part of our team is currently primarily formed of employees from Google, we are growing and welcome anyone to join the team; at this point, the majority of people with commit access are not part of Google's Flutter team. Flutter's stewardship is managed by a team at Google.
+
+## Support
+
+When we think about whether we claim to "support" something, e.g. whether Flutter supports Windows 7, we use the following frame of reference.
+
+There is currently no documentation that describes where different platforms fall on these axes, though we may think about providing such documentation in the future.
+
+### Areas of support
+
+We distinguish several categories along which one can describe a level of support:
+
+* Supporting for deployment (we support a platform for deployment if you can run release builds of applications on that platform).
+* Supporting for _development_ (we support a platform for development if you can run debug builds of applications on that platform, connect them to a debugger, hot reload, view logs, and so forth; we support a plugin for development if it can be stepped through in a debugger).
+* Supporting for _hosting_ development (we support a platform for hosting development if it is one on which you can compile a Flutter application; we support an IDE for hosting development if it has a Flutter plugin).
+* Supporting for Flutter development (we support a platform for Flutter development if one can contribute to Flutter itself from that platform).
+
+### Levels of support
+
+For each area, we consider the level to which we provide support:
+
+1. We will literally help you with your code if things don't work. This is very rare. (See also "[top-tier customers](https://github.com/flutter/flutter/wiki/Issue-hygiene#customers)".)
+2. We will make a best effort to ensure that well written code works (e.g. we have testing on that platform). This is a common level for target platforms that have reached a label of "stable" (e.g. Android, iOS) on devices that are widely available (e.g. 64bit ARM).
+3. We will not go out of our way to prevent code from working (e.g. bug we do no testing on that platform). This is a common level of support for less commonly-used devices. For example, we do minimal testing of 32bit iOS devices.
+4. We will pay no attention to whether code works, but we will accept patches. This is a common level of support for the many esoteric embedded platforms that we have no way to even manually test. For example, if you have your own SoC and are running Flutter, we want you to succeed but we don't have any way to ensure it keeps working. If you are willing to provide reliable CI support for your platform, we are more than happy to work with you to move that platform to level 2.
+5. We won't accept patches. This is the appropriate response for features and platforms that are wildly outside our roadmap. For example, maintaining a Rust port of the framework is not something the Flutter project would accept patches for.
+
 
 ***
 
