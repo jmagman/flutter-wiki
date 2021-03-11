@@ -80,7 +80,7 @@ Response:
 
 ## Get screenshot of view as PNG: `_flutter.screenshot`
 
-Get the screenshot as PNG of a random Flutter view on the device.
+Get the screenshot as PNG of a random Flutter view on the device. The screenshot data will be base64 encoded in the response body.
 
 No arguments.
 
@@ -95,7 +95,7 @@ Response:
 
 ## Get screenshot of view as Skia picture: `_flutter.screenshotSkp`
 
-Get the Skia SKP of a random Flutter view on the device.
+Get the Skia SKP of a random Flutter view on the device. The SKP data will be base64 encoded in the response body.
 
 No arguments.
 
