@@ -1,5 +1,41 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-03-12
+
+### Notable issues
+
+* Web app gets stuck on Performing Hot Restart on latest stable, but works on latest master [#77818](https://github.com/flutter/flutter/issues/77818)
+* PopupMenu Overlay misplaces when resizing window (web, desktop) [#77915](https://github.com/flutter/flutter/issues/77915)
+* setSystemUIOverlayStyle() documentation sample does not work on iOS [#77904](https://github.com/flutter/flutter/issues/77904)
+* Unable to run with --no-sound-null-safety on iOS [#77912](https://github.com/flutter/flutter/issues/77912)
+* [web] Flutter app on web-server doesn’t respond on iOS 13.1, doesn’t load on 13.4 on stable channel and doesn’t load on both versions on dev and master channel [#77792](https://github.com/flutter/flutter/issues/77792)
+* http request crashes on iOS 10 with Flutter 2 [#77808](https://github.com/flutter/flutter/issues/77808)
+* Proposal: Custom (non gregorian) calendar in showDatePicker [#77531](https://github.com/flutter/flutter/issues/77531)
+* TextField cursor gets stuck on web [#77929](https://github.com/flutter/flutter/issues/77929)
+
+### Issue counts
+
+New Flutter issues triaged 339, closed 124 (37%)
+
+In total closed 229 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 42.36%  |
+| Duplicate  | 20.96%  |
+| Fixed | 7.42%  |
+| Solved | 10.4%  |
+| Timeout | 19.21%  |
+
+New Flutterfire issues triaged 60, closed 39 (65%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 19  |
+| Duplicate | 15  |
+| Fixed  | 1  |
+| Solved  | 4  |
+
 ## 2021-03-05
 
 ### Notable issues
