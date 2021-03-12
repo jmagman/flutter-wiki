@@ -30,8 +30,8 @@ Depending on the platform you are making changes for, you may be interested in a
 - Make sure to exclude the `out` directory from any backup scripts, as many large binary
   artifacts are generated. This is also generally true for all of the directories outside
   of the `engine/src/flutter` directory.
-- For Googlers: goma is a distributed compiler service that can vastly speed up build
-  times. The variables to use goma compilation are set by default if goma-related
+- For Googlers: GOMA (go/ma) is a distributed compiler service that can vastly speed up build
+  times. The variables to use GOMA compilation are set by default if goma-related
   environment variables are detected, and can be explicitly set via the `--goma/--no-goma`
   flag to the `flutter/tools/gn` wrapper script.
   - Since December 2020, Flutter uses Fuchsia RBE. The following script can be used to
