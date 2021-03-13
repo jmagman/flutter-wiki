@@ -180,11 +180,13 @@ milestone, please escalate with your team contact.
 ## Assigning Issues
 
 Issues are typically self-assigned. Only assign a bug to someone else if
-they have explicitly volunteered to do the task.
+they have explicitly volunteered to do the task. If you don't have permissions
+to assign yourself an issue you want to work on, don't worry about it, just
+submit the PR (see [[Tree Hygiene]]).
 
 Only assign a bug to yourself when you are actively working on it
-or scheduled to work on it. If
-you don't know when you'll be working on it, leave it unassigned. Similarly, don't assign bugs to
+or scheduled to work on it. If you don't know when you'll be working
+on it, leave it unassigned. Similarly, don't assign bugs to
 people unless you know they are going to work on it. If you find
 yourself with bugs assigned that you have not scheduled specific time
 to work on, unassign the bug so that other people feel
