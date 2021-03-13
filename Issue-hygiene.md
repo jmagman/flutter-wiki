@@ -1,6 +1,7 @@
 ## tl;dr
 
-Assign bugs to yourself if you're working on them. Unassign bugs you are not working on soon.
+Assign bugs to yourself if you're working on them (ignore this if you don't yet have the permission to assign yourself).
+Unassign bugs you are not working on soon.
 Use thumbs-up on the issue description to help the team prioritise.
 P0-P2 bugs are critical and get examined for progress every week. P3 is the highest priority a bug can normally have.
 
