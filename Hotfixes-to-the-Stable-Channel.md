@@ -14,6 +14,7 @@ $ flutter upgrade
 ## Flutter 2.0 
 
 ### [2.0.2](https://github.com/flutter/flutter/pull/77850) (March 12, 2021)
+This fixes the following issues:
   - https://github.com/flutter/flutter/issues/77251 - Flutter may show multiple snackbars when Scaffold is nested 
   - https://github.com/flutter/flutter/issues/75473 - CanvasKit throws error when using Path.from
   - https://github.com/flutter/flutter/issues/76597 - When multiple Flutter engines are active, destroying one engine causes crash
