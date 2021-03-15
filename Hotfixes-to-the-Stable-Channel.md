@@ -15,12 +15,11 @@ $ flutter upgrade
 
 ### [2.0.2](https://github.com/flutter/flutter/pull/77850) (March 12, 2021)
   - https://github.com/flutter/flutter/issues/77251 - Flutter may show multiple snackbars when Scaffold is nested 
-  - https://github.com/flutter/flutter/issues/77234 - [web] CanvasKit issue when using dart:ui/Path.from - BindingError: Tried to invoke ctor of Path with invalid number of parameters (1) - expected (0) parameters instead!
+  - https://github.com/flutter/flutter/issues/75473 - CanvasKit throws error when using Path.from
   - https://github.com/flutter/flutter/issues/76597 - When multiple Flutter engines are active, destroying one engine causes crash
   - https://github.com/flutter/flutter/issues/75061 - '_initialButtons == kPrimaryButton': is not true
-  - https://github.com/flutter/flutter/issues/77234 - ProcessException: cannot delete old bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Resources 
   - https://github.com/flutter/flutter/pull/77419 - Fix Autovalidate enum references in fix data
-  - https://github.com/dart-lang/sdk/issues/45214 - Cherry-pick fix to secure socket connection unhandled exception #45214
+  - https://github.com/dart-lang/sdk/issues/45214 - Bad state exception can occur when HTTPS connection attempt errors or is aborted
   - https://github.com/dart-lang/sdk/issues/45140 - Uint8List reports type exception while using + operator in null safety mode
 
 ### [2.0.1](https://github.com/flutter/flutter/pull/77194) (March 5, 2021)
