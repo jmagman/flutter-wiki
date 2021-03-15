@@ -11,7 +11,7 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
-## Flutter 2.0 
+## Flutter 2.0 Changes
 
 ### [2.0.2](https://github.com/flutter/flutter/pull/77850) (March 12, 2021)
 This fixes the following issues:
