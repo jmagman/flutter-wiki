@@ -11,6 +11,27 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
+## Flutter 2.0.2 changes 
+This fixes the following issues in the framework and Dart. No fixes were applied to the engine (other than the Dart change).
+
+###  [Flutter 2.0.2 changes](https://github.com/flutter/flutter/pull/77850/commits/6c3490c8ef6881e11cacf85a478d1e64512150ae) 
+  - https://github.com/flutter/flutter/issues/77251 - Issue with ScaffoldManager and double scaffold
+  - https://github.com/flutter/flutter/issues/77234 - [web] Canvas Kit issue when using dart:ui/Path.from - BindingError: Tried to invoke ctor of Path with invalid number of parameters (1) - expected (0) parameters instead!
+  - https://github.com/flutter/flutter/issues/76597 - Multiple Flutter Engine: destroy flutter engine making live flutter stop response user interaction
+  - https://github.com/flutter/flutter/issues/75061 - '_initialButtons == kPrimaryButton': is not true
+  - https://github.com/flutter/flutter/issues/77234 - ProcessException: cannot delete old bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Resources 
+  - https://github.com/flutter/flutter/pull/77419 - Fix Autovalidate enum references in fix data
+### [Dart 1.12.1](https://github.com/dart-lang/sdk/commit/d6e7aacfe6d19c8d478dcf3e315b76720813a417)
+  - https://github.com/dart-lang/sdk/issues/45214 [cp][stable] Cherry-pick fix to secure socket connection unhandled exception #45214
+  - https://github.com/dart-lang/sdk/issues/45140 - Uint8List reports type exception while using + operator in null safety mode
+
+
+## Flutter 2.0.1 changes
+### Flutter 2.0.1 Changes
+This fixes the following issues:
+  - https://github.com/flutter/flutter/issues/77173 - Building for macOS target fails when installed from website, codesigning fails with "bundle format is ambiguous"
+
+
 ## Flutter 1.22 Changes
 ### [1.22.6](https://github.com/flutter/flutter/pull/74355) (Jan 25, 2020)
 This fixes the following issues:
