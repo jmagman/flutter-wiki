@@ -27,11 +27,13 @@ This fixes the following issues:
 This fixes the following issue:
   - https://github.com/flutter/flutter/issues/77173 - Building for macOS target fails when Flutter is installed from website
 
+### 2.0.0 (March 3, 2021)
+Initial stable release.
+
 ## Flutter 1.22 Changes
 ### [1.22.6](https://github.com/flutter/flutter/pull/74355) (Jan 25, 2021)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/70895 - Build error when switching between dev/beta and stable branches.
-
 
 ### [1.22.5](https://github.com/flutter/flutter/pull/72079) (Dec 10, 2020)
 This fixes the following issues:
@@ -66,6 +68,9 @@ This fixes the following issues:
   - https://github.com/flutter/flutter/issues/66908 - Flutter Activity causing exceptions in some Android versions.
   - https://github.com/flutter/flutter/issues/66647 - Layout modifications performed by background threads causes exceptions on IOS14.
 
+### 1.22.0 (October 1, 2020)
+Initial stable release.
+
 ## Flutter 1.20 Changes
 ### [1.20.4](https://github.com/flutter/flutter/pull/65787) (September 15, 2020)
 This fixes the following issues:
@@ -80,7 +85,6 @@ This fixes the following issues:
   - https://github.com/flutter/flutter/issues/57210 - Certain assets may cause issues with iOS builds.
   - https://github.com/flutter/flutter/issues/63590 - Passing null values from functions run via Isolates throws an exception.
   - https://github.com/flutter/flutter/issues/63427 - Wrong hour/minute order in timePicker in RTL mode.
-
 
 ### [1.20.2](https://github.com/flutter/flutter/pull/63591) (August 13, 2020)
 This fixes the following issues:
@@ -97,6 +101,9 @@ This fixes the following issues:
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/60215 - Creating an Android-only plug-in creates a no-op iOS folder.
 
+### 1.20.0 (August 5, 2020)
+Initial stable release.
+
 ## Flutter 1.17 Changes
 ### [1.17.5](https://github.com/flutter/flutter/pull/60611) (June 30, 2020)
 This fixes the following issues:
@@ -107,12 +114,10 @@ This fixes the following issues:
   - https://github.com/flutter/flutter/issues/56826  - xcdevice polling may use all free hard drive space
 
 ### [1.17.3](https://github.com/flutter/flutter/pull/58646) (June 4, 2020)
-
 This fixes the following issues:
  - https://github.com/flutter/flutter/issues/54420  - Exhausted heap space can cause machine to freeze
 
 ### [1.17.2](https://github.com/flutter/flutter/pull/58050) (May 28, 2020)
-
 This fixes the following issues:
  - https://github.com/flutter/flutter/issues/57326  - CupertinoSegmentedControl does not always respond to selections
  - https://github.com/flutter/flutter/issues/56898 - DropdownButtonFormField is not re-rendered after value is changed programmatically
