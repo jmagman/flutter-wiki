@@ -27,8 +27,8 @@ This fixes the following issues in the framework and Dart. No fixes were applied
 
 
 ## Flutter 2.0.1 changes
-### Flutter 2.0.1 Changes
-This fixes the following issues:
+### [Flutter 2.0.1 Changes](https://github.com/flutter/flutter/commit/c5a4b4029c0798f37c4a39b479d7cb75daa7b05c)
+This fixes the following issue:
   - https://github.com/flutter/flutter/issues/77173 - Building for macOS target fails when installed from website, codesigning fails with "bundle format is ambiguous"
 
 
