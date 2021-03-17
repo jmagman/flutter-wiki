@@ -820,6 +820,10 @@ If you have a timeout, then it's very likely that several times a week some othe
 
 Race conditions like this are the primary cause of flaky tests, which waste everyone's time.
 
+Similarly, avoid delays or sleeps that are intended to coincide with how long something takes. You may think that waiting two seconds is fine because it normally takes 10ms, but several times a week your 10ms task will actually take 2045ms and your test will fail because waiting two seconds wasn't long enough.
+
+> Instead, wait for a triggering event.
+
 
 ### Avoid mysterious and magical numbers that lack a clear derivation
 
