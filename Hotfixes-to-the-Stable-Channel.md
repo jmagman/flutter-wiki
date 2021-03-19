@@ -13,6 +13,13 @@ $ flutter upgrade
 
 ## Flutter 2.0 Changes
 
+### [2.0.3](https://github.com/flutter/flutter/issues/78064) (March 19, 2021)
+This fixes the following issues:
+ - https://github.com/flutter/flutter/issues/75261 - Unable to deep link into Android app
+ - https://github.com/flutter/flutter/issues/78167 - Flutter crash after going to version 2
+ - https://github.com/flutter/flutter/issues/75677 - NoSuchMethodError: The method 'cancel' was called on null at AnsiSpinner.finish
+ - https://github.com/flutter/flutter/pull/77419 - Fix Autovalidate enum references in fix data
+
 ### [2.0.2](https://github.com/flutter/flutter/pull/77850) (March 12, 2021)
 This fixes the following issues:
   - https://github.com/flutter/flutter/issues/77251 - Flutter may show multiple snackbars when Scaffold is nested 
