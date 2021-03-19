@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-03-19
+
+### Notable issues
+
+* App crashes upon launch using Xcode on simulator on dev [#78418](https://github.com/flutter/flutter/issues/78418)
+* Hot restart takes time to update in release mode after making changes to file [#78239](https://github.com/flutter/flutter/issues/78239)
+* Can't build web apps with CanvasKit without internet [#78235](https://github.com/flutter/flutter/issues/78235)
+* FlutterError.onError is not called when framework throws an error [#78503](https://github.com/flutter/flutter/issues/78503)
+* [webview_flutter] webview hides behind other widgets in a column when scrolling down on iOS [#78383](https://github.com/flutter/flutter/issues/78383)
+
+### Issue counts
+
+New Flutter issues triaged 317, closed 95 (30%)
+
+In total closed 189 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 36.5%  |
+| Duplicate  | 23.3%  |
+| Fixed | 10.6%  |
+| Solved | 12.2%  |
+| Timeout | 17.5%  |
+
+New Flutterfire issues triaged 43, closed 29 (67%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 13  |
+| Duplicate | 10  |
+| Fixed  | 1  |
+| Solved  | 5  |
+
 ## 2021-03-12
 
 ### Notable issues
