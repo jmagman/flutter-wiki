@@ -426,7 +426,7 @@ If you are having trouble coming up with useful documentation, here are some pro
 
  * What is the contract for this property/method? Can it be called at any time? Are there limits on what values are valid? If it's a `final` property set from a constructor, does the constructor have any limits on what the property can be set to? If this is a constructor, are any of the arguments not nullable?
 
- * If there are `Future`s involved, what are the guarantees around those? Consider whether they can complete with an error, whether they can never complete at all, what happens if the underlying operation is canceled, and so forth.
+ * If there are `Future` values involved, what are the guarantees around those? Consider whether they can complete with an error, whether they can never complete at all, what happens if the underlying operation is canceled, and so forth.
 
 
 ### Avoid empty prose
