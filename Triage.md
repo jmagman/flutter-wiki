@@ -167,26 +167,67 @@ Teams can use a variety of tools to prioritize bugs.
 
 ## Engine
 
-### PR triage
+### Issue Triage
+> :warning: This triage happens on Mondays. The contents here are mirrored from [go/flutter-engine-triage-playbook](http://go/flutter-engine-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
 
-* [Engine PRs](https://github.com/flutter/engine/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-asc)
-* [Buildroot PRs](https://github.com/flutter/buildroot/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-asc)
+#### Agenda
 
-### Issue triage
+*   All issues in severity classes [P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP0++-label%3A%22a%3A+desktop%22+), [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP1+-label%3A%22a%3A+desktop%22+) and [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP2+-label%3A%22a%3A+desktop%22+) need weekly review.
+*   Fix priorities of **_regressions_** found in the last three releases (currently [1.23](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+1.23%22+-label%3A%22a%3A+desktop%22+), [1.24](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+1.24%22+-label%3A%22a%3A+desktop%22+), [1.25](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+1.25%22+-label%3A%22a%3A+desktop%22+), [2.0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+2.0%22+-label%3A%22a%3A+desktop%22+), [2.1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+2.1%22+-label%3A%22a%3A+desktop%22+) and review each week).
+*   Assign priorities to unprioritized issues that have been [tagged as regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+regression%22++-label%3A%22a%3A+desktop%22+).
+*   Review user-reported presubmit flakes [that aren’t yet triaged](http://go/flutter-engine-presubmit-flakes-triage), file issues and assign priorities.
+*   Assign priorities to unprioritized issues that have been [tagged as flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22team%3A+flakes%22+-label%3A%22a%3A+desktop%22+).
+*   Assign priorities to unprioritized issues that have been [tagged as fatal crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+fatal+crash%22+-label%3A%22a%3A+desktop%22+) and [crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+crash%22+-label%3A%22a%3A+desktop%22+).
+*   Assign priorities to unprioritized issues that have been [tagged as performance issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+performance%22+-label%3A%22a%3A+desktop%22+).
+*   Catch [unprioritized issues not caught by other dragnets](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3A%22in+triage%22+-label%3A%22waiting+for+customer+response%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+-label%3Aplatform-web+sort%3Acreated-asc+-label%3A%22a%3A+desktop%22+) to assign priorities.
+*   Shed a tear for all the other issues.
+*   Pitch your favorite issues.
 
-* [P0 bugs](https://github.com/flutter/flutter/labels/P0)
-* [P1 issues](https://github.com/flutter/flutter/labels/P1)
-* [P2 issues](https://github.com/flutter/flutter/labels/P2)
-* [Flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Aupdated-asc+label%3A%22team%3A+flakes%22)
-* [Regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Aupdated-asc+label%3A%22severe%3A+regression%22)
-* [Crash bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Aupdated-asc+label%3A%22severe%3A+crash%22), especially [fatal crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Aupdated-asc+label%3A%22severe%3A+crash%22+label%3A%22severe%3A+fatal+crash%22)
-* [Popular issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Areactions-%2B1-desc+-label%3A%22severe%3A+new+feature%22) (look at the top 10ish)
-* Consider issues with the [annoyance](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+label%3A%22a%3A+annoyance%22+sort%3Aupdated-asc) and [quality](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+label%3A%22a%3A+quality%22+sort%3Aupdated-asc) labels
-* [Popular feature requests](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Areactions-%2B1-desc+label%3A%22severe%3A+new+feature%22) (look at the top 10ish)
-* Glance at the [Recent issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Acreated-desc) (to see if any unexpected trends show up)
-* If you get this far, triage [all the other engine issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+sort%3Aupdated-asc)
+#### Issue Quality Checklist
 
-If you come across a bug that is unrelated to the engine, remove the `engine` label and leave a comment explaining why. That will send it back to triage.
+*   Correct labels.
+*   If you had to remove the engine label, stop and move on to the next issue.
+*   If you had to remove a label that makes the bug no longer qualify for triage, stop and move onto the next issue.
+    *   For example, if you were looking for unprioritized regressions but the issue is not a regression, remove the label and move on.
+*   Hide low quality comments.
+*   If an assignee is not necessary or cannot be found, find someone on the team that can be CC-ed if you think it’s necessary. CC folks sparingly. If you CC folks too much they will understandably stop responding. Don’t CC the same person more than a few times per triage run.
+
+
+#### Tips
+
+*   Restrict time spent on each issue. You don’t have to to fix the issue!
+    *   30 seconds for P0, P1, P2 and 10~15 seconds for the others seems to work.
+*   If the triage process cannot be completed within the allotted time, the process has failed. Perform items that could not be completed offline. Seek help.
+
+### Pull Request Triage
+> :warning: This triage happens on Thursdays. The contents here are mirrored from [go/flutter-engine-pr-triage-playbook](http://go/flutter-engine-pr-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
+
+#### Objective
+
+Make sure Flutter Engine Pull-Requests on GitHub are getting adequate attention, especially ones from external (non-Googler) contributors.
+
+#### Agenda
+
+*   After completing each step, fill out the relevant entry [in the worksheet](http://go/flutter-engine-pull-request-triage-progress) so progress can be tracked.
+*   Take a look at (the relatively few) [buildroot pull requests](https://github.com/flutter/buildroot/pulls).
+*   Attempt landing [all pull requests that have been approved](https://github.com/flutter/engine/pulls?q=is%3Aopen+is%3Apr+draft%3Afalse+-label%3A%22Work+in+progress+%28WIP%29%22+review%3Aapproved+NOT+%22Roll+Skia%22+-label%3Aplatform-web+sort%3Acreated-asc).
+    *   Ensure all presubmits pass.
+        *   If there is a presubmit flake, [file a report](http://go/flutter-engine-presubmit-flake) and re-run presubmits.
+    *   Ensure there are no conflicts.
+        *   If there are conflicts, ask the author to rebase.
+        *   If a previous request to rebase has not been addressed, close the PR as stale.
+    *   If the author is a Googler, ping them with a request to land it.
+    *   If the author is a non-Googler, add the “waiting for tree to go green” tag for the bot to land the PR.
+*   Address [un-approved non-draft pull requests](https://github.com/flutter/engine/pulls?q=is%3Aopen+is%3Apr+draft%3Afalse+-label%3A%22Work+in+progress+%28WIP%29%22+-label%3A%22waiting+for+tree+to+go+green%22+-label%3A%22platform-web%22+-review%3Aapproved+-label%3A%22waiting+for+customer+response%22+NOT+%22Roll+Skia%22+NOT+%22Roll+Dart%22+NOT+%22Roll+Fuchsia%22+sort%3Aupdated-asc++-label%3A%22platform-web%22+) that have been least recently updated.
+    *   If the PR is related to the web engine, add the platform-web tag and move on.
+    *   If the author has indicated that the PR is a work in progress, add the “work in progress” tag and move on. Do **not** mark the PR as a draft as that will disable presubmits.
+    *   If a reviewer has requested changes that havent been addressed, ping the author for an update.
+        *   If a preview ping for an update has not been addressed, close the PR as stale.
+    *   If a reviewer has requested changes that have been addressed, ping the reviewer for an approval.
+    *   If there are no reviewers, assign a reviewer familiar with the relevant subsystem.
+*   Address [draft pull-requests that have been least recently updated](https://github.com/flutter/engine/pulls?q=is%3Aopen+is%3Apr+label%3A%22Work+in+progress+%28WIP%29%22+-label%3A%22waiting+for+tree+to+go+green%22+-label%3A%22platform-web%22+-review%3Aapproved+-label%3A%22waiting+for+customer+response%22+NOT+%22Roll+Skia%22+sort%3Aupdated-asc++-label%3A%22platform-web%22+).
+    *   If the pull request has no recent updates, ping the author if any progress is likely.
+        *   If a previous ping was unanswered, close the PR as stale.
 
 ## Design languages
 
