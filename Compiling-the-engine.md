@@ -285,7 +285,9 @@ For any test FAR files, you may publish them to your device using `pm publish` (
 
 `./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/out/default/amber-files -f out/fuchsia_debug_unopt/flow_tests.far`
 
-`fx shell run_test_component flow_tests`
+`fx shell run-test-component "fuchsia-pkg://fuchsia.com/flow_tests#meta/flow_tests.cmx"`
+
+Make sure to replace both instances of the test name in the "run-test-component" command above with your own.
 
 You can also copy test debug symbols by using the `copy_debug_symbols.py` script and substituting the test binary (such as `flow_unittests`) for the runner binary.
 
