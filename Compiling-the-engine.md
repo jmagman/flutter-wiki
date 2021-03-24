@@ -284,7 +284,8 @@ Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout 
 For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
 
 `./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/out/default/amber-files -f out/fuchsia_debug_unopt/flow_tests.far`
-`fx test flow_tests`
+
+`fx shell run_test_component flow_tests`
 
 You can also copy test debug symbols by using the `copy_debug_symbols.py` script and substituting the test binary (such as `flow_unittests`) for the runner binary.
 
