@@ -1,5 +1,40 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-03-26
+
+### Notable issues
+
+* Web app crashes after selecting text that has emojis in it [#79105](https://github.com/flutter/flutter/issues/79105)
+* Web canvaskit: App rebuilds while resizing the window [#79065](https://github.com/flutter/flutter/issues/79065)
+* [image_picker] Issue with iOS simulator: Not able to select image on Mac M1 [#78391](https://github.com/flutter/flutter/issues/78391)
+* TextField onChanged method gets invoked twice on API 26 and 27 [#78762](https://github.com/flutter/flutter/issues/78762)
+* Flutter iOS is not generating GeneratedPluginRegistrant on Flutter 2.1.0-12.2.pre [#78785](https://github.com/flutter/flutter/issues/78785)
+* MultiFlutterEngine on iOS consumes a lot of memory [#79023](https://github.com/flutter/flutter/issues/79023)
+
+### Issue counts
+
+New Flutter issues triaged 278, closed 92 (33%)
+
+In total closed 188 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 40.43%  |
+| Duplicate  | 22.34%  |
+| Fixed | 9.04%  |
+| Solved | 9.04%  |
+| Timeout | 19.15%  |
+
+New Flutterfire issues triaged 33, closed 17 (52%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 6  |
+| Duplicate | 4  |
+| Fixed  | 1  |
+| Solved  | 6  |
+
+
 ## 2021-03-19
 
 ### Notable issues
