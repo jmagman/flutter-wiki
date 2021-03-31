@@ -800,6 +800,11 @@ Prefer instead adding methods directly to relevant classes. If that is not
 possible, create a method that clearly identifies what object(s) it works with
 and is part of.
 
+(A rare exception can be made for extensions that provide temporary workarounds
+when deprecating features. In those cases, however, the extensions and all their
+members must be deprecated in the PR that adds them, and they must be removed
+in accordance with our deprecation policy.)
+
 
 ### Avoid using `FutureOr<T>`
 
