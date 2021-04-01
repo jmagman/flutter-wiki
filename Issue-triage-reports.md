@@ -1,5 +1,36 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-04-01
+
+### Notable issues
+
+* App crashes when TextField setObscure is true [#79447](https://github.com/flutter/flutter/issues/79447)
+* Up and down arrow keys miscalculate the cursor position in a TextField [#79305](https://github.com/flutter/flutter/issues/79305)
+* SelectableText background overlays the selection [#79168](https://github.com/flutter/flutter/issues/79168)
+* Some official examples do not work with null safety or without null safety, e.g [#79395](https://github.com/flutter/flutter/issues/79395), [#79376](https://github.com/flutter/flutter/issues/79376)
+
+### Issue counts
+
+New Flutter issues triaged 214, closed 65 (30%)
+
+In total closed 158 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 36.08%  |
+| Duplicate  | 21.52%  |
+| Fixed | 8.86%  |
+| Solved | 8.86%  |
+| Timeout | 24.68%  |
+
+New Flutterfire issues triaged 25, closed 7 (28%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 5  |
+| Duplicate | 1  |
+| Solved  | 1  |
+
 ## 2021-03-26
 
 ### Notable issues
