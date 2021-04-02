@@ -2,7 +2,7 @@ In general, our philosophy is to update the `stable` channel on a quarterly basi
 
 We intend to announce hotfixes to the [flutter-announce](https://groups.google.com/forum/#!forum/flutter-announce) group, and we recommend that you subscribe to that list if you publish an application using Flutter. 
 
-Note that we only hotfix the latest version --- if you see bugs on older versions of the `stable` channel, please consider moving to the latest `stable` channel version. 
+Note that we only hotfix the latest version -- if you see bugs on older versions of the `stable` channel, please consider moving to the latest `stable` channel version. 
 
 To ensure that you have the latest stable version with the hotfixes listed below, use the flutter tool at the command line as follows:
 
@@ -13,7 +13,7 @@ $ flutter upgrade
 
 ## Flutter 2.0 Changes
 ### [2.0.4](https://github.com/flutter/flutter/pull/79486) (April 2, 2021)
-This is a hotfix release that addresses the following issues:
+This fixes the following issues:
  - https://github.com/flutter/flutter/issues/78589 - Cocoapod transitive dependencies with bitcode fail to link against debug Flutter framework
  - https://github.com/flutter/flutter/issues/76122 - Adding a WidgetSpan widget causes web HTML renderer painting issue
  - https://github.com/flutter/flutter/issues/75280 - Dragging the "draggable" widget causes widget to freeze in the overlay layer on Web
