@@ -14,9 +14,9 @@ $ flutter upgrade
 ## Flutter 2.0 Changes
 ### [2.0.4](https://github.com/flutter/flutter/pull/79486) (April 2, 2021)
 This is a hotfix release that addresses the following issues:
- - #78589 - Cocoapod transitive dependencies with bitcode fail to link against debug Flutter framework
- - #76122 - Adding a WidgetSpan widget causes web HTML renderer painting issue
- - #75280 - Dragging the "draggable" widget causes widget to freeze in the overlay layer on Web
+ - https://github.com/flutter/flutter/issues/78589 - Cocoapod transitive dependencies with bitcode fail to link against debug Flutter framework
+ - https://github.com/flutter/flutter/issues/76122 - Adding a WidgetSpan widget causes web HTML renderer painting issue
+ - https://github.com/flutter/flutter/issues/75280 - Dragging the "draggable" widget causes widget to freeze in the overlay layer on Web
 
 ### [2.0.3](https://github.com/flutter/flutter/pull/78489) (March 19, 2021)
 This fixes the following issues:
