@@ -1759,10 +1759,10 @@ them as private APIs which may lead to poor design.)
 
 When developing new features in Flutter packages, one should follow the philosophy:
 
-> only expose the APIs that are necessities to the features.
+> Only expose the APIs that are necessities to the features.
 
 Since the private classes in dart language are file-bound, this may often result in
-large file size. In Flutter, this is considered to be more preferable than creating
+large file sizes. In Flutter, this is considered to be more preferable than creating
 multiple smaller files but exposing intermediate classes that are not needed to use
 the features. 
 
