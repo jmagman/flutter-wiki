@@ -49,11 +49,21 @@ The general process for submitting code to a Flutter repository is as follows:
    that all your new code is covered by tests (see [[Test coverage for package:flutter]]).
 
    Everything must be tested. If you think your PR should be exempt from requiring
-   tests, please contact Hixie for an exemption.
+   tests, please contact Hixie for an exemption. This applies to all PRs in the flutter/engine,
+   flutter/flutter, flutter/plugins, and flutter/packages repos. Do not land a PR without
+   tests unless it has an explicit exemption from Hixie!
+
+   The following kinds of PRs are automatically exempt and don't need an explicit
+   comment from Hixie: PRs adding or modifying tests (even if the bot doesn't notice them),
+   PRs only affecting the `.github` subdirectory (e.g. issue template changes).
+
+   The following kinds of PRs are *not* automatically exempt are require an explicit
+   comment from Hixie even though the answer may be obvious: refactors (e.g. null safety
+   migration), documentation changes (e.g. every line affected starts with `///`),
+   configuration changes in the aforementioned repos, PRs that only affect analysis.
 
    You must follow the guidelines described in the [[Style guide for Flutter repo]].
-   Files must not have trailing spaces and the analyzer must not report anything.
-   (See [[Using the Dart analyzer]]).
+   Files must not have trailing spaces.
    For the engine repository, C, C++, and Objective-C code should be formatted with
    `clang-format` before submission (use `buildtools/<OS>/clang/bin/clang-format
    --style=file -i`).
