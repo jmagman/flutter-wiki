@@ -215,6 +215,8 @@ These steps build the Fuchsia embedding (flutter_runner) and test FAR files that
 
 Note these instructions assume use of `x64`, if `arm64` is needed then just substitute as appropriate.
 
+Note these instructions assume the use of the $FUCHSIA_DIR and $ENGINE_DIR environment variables.  These point to the root of your Fuchsia source tree and the root of the flutter engine source tree (src/ in your flutter gclient checkout) respectively.
+
 ### Fuchsia Source Checkout
 
 Testing the Fuchsia embedding requires a Fuchsia source checkout.  To get one, go to https://fuchsia.dev/fuchsia-src/get-started and follow the instructions to sync and build a Fuchsia checkout.  The `workstation` (e.x. `fx set workstation.nuc`) product uses Flutter as its primary shell and is the primary way of testing Flutter on Fuchsia changes.
@@ -231,11 +233,11 @@ Then use that git hash in step 1 under "build the engine".
 
 ### Build the engine
 
-1. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.  `git checkout <hash>` if you want to checkout a specific git revision.
+1. `git -C flutter pull upstream master` in `$ENGINE_DIR` to update the Flutter Engine repo.  `git checkout <hash>` if you want to checkout a specific git revision.
 
 2. `gclient sync` to update your dependencies.
 
-3. `./flutter/tools/gn --fuchsia --no-lto` to prepare your build files.
+3. `./flutter/tools/gn --fuchsia --no-lto` in `$ENGINE_DIR` to prepare your build files.
   * `--unoptimized` disables C++ compiler optimizations. On macOS, binaries are emitted unstripped; on Linux, unstripped binaries are emitted 
   * NOTE: `--unoptimized` is broken on Fuchsia at the moment, see: https://github.com/flutter/flutter/issues/74872 to an `exe.unstripped` subdirectory of the build.
   * Add `--fuchsia-cpu=x64` or `--fuchsia-cpu=arm64` to target a particular architecture.  The default is x64.
