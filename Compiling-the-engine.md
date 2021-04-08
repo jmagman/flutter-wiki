@@ -224,7 +224,9 @@ Testing the Fuchsia embedding requires a Fuchsia source checkout.  To get one, g
 The Fuchsia tree consumes the `flutter_runner` and associated Dart SDK as a set of prebuilts.  Flutter apps within the Fuchsia tree are built against the version of the Dart SDK in these prebuilts.  Because of this fact, developers must be careful to avoid any skew between the version of Dart VM built into the `flutter_runner` binary and the version of the Dart SDK & VM used by the Flutter toolchain (to compile flutter apps from Dart code).  If there is any mismatch at all between the runner and toolchain, a runtime error results and Flutter won't work at all.
 
 To retrieve the version of flutter engine in your fuchsia source tree, in your `$FUCHSIA_DIR` run:
+
 `cat integration/fuchsia/jiri.lock | grep -A 1 "\"package\": \"flutter/fuchsia\""`
+
 Then use that git hash in step 1 under "build the engine".
 
 ### Build the engine
@@ -248,7 +250,9 @@ Then use that git hash in step 1 under "build the engine".
 ### Deploy to Fuchsia
 
 To test changes, you will first want to make the prebuilts writable.  From your `$FUCHSIA_DIR` run:
+
 `chmod -R +w prebuilt/third_party/flutter`
+
 This will make all of the flutter prebuilts writable.
 
 After deploying any wanted changes to the Fuchsia checkout, perform `fx build && fx ota` to update your Fuchsia device with any changes you made.
@@ -257,9 +261,13 @@ After deploying any wanted changes to the Fuchsia checkout, perform `fx build &&
 
 First copy the `flutter_runner` binary itself to your Fuchsia checkout:
 
-`cp out/fuchsia_debug/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner.far` for standard (debug) builds
+`cp out/fuchsia_debug/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner.far`
 
-`cp out/fuchsia_release/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_product_runner.far` for `--release` builds (you must build flutter with `--runtime-mode=release`)
+for standard (debug) builds
+
+`cp out/fuchsia_release/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_product_runner.far`
+
+for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 If you are changing the native hooks in dart:ui, dart:zircon, or dart:fuchsia you'll also want to update the flutter_runner_patched_sdk that is used in your fuchsia checkout (note the use of aot/release in the destination, that is intentional).  From your `$ENGINE_DIR` run:
 
@@ -272,9 +280,11 @@ NOTE: you must adjust $FUCHSIA_OUT to match your current Fuchsia out folder e.g.
 NOTE: if building for arm, `linux-x64` becomes `linux-arm64` and `x86_64-elf` becomes `aarch64-elf`
 
 `./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$FUCHSIA_OUT/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
+
 for standard (debug) builds
 
 `./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$FUCHSIA_OUT/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
+
 for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 #### deploying tests
