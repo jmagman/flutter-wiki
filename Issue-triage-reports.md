@@ -1,5 +1,37 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-04-09
+
+### Notable issues
+
+* [crowd][web][canvaskit] Scrollable emoji freezes the app and locks the scroll [#79882](https://github.com/flutter/flutter/issues/79882)
+* [null safety] “Reload not performed Analysis issues found” on IntelliJ / Android Studio [#80040](https://github.com/flutter/flutter/issues/80040)
+* [crowd] Gradient -> LinearGradient -> GradientRotation not working [#79980](https://github.com/flutter/flutter/issues/79980)
+* TextField with inputFormatters and keyboardType onChange infinite loop on iOS [#79844](https://github.com/flutter/flutter/issues/79844)
+
+### Issue counts
+
+New Flutter issues triaged 236, closed 80 (34%)
+
+In total closed 214 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 30.84%  |
+| Duplicate  | 17.29%  |
+| Fixed | 8.88%  |
+| Solved | 5.14%  |
+| Timeout | 37.85%  |
+
+New Flutterfire issues triaged 35, closed 9 (26%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 3  |
+| Duplicate | 5  |
+| Fixed | 1  |
+
+
 ## 2021-04-01
 
 ### Notable issues
