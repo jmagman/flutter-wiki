@@ -209,7 +209,7 @@ the Xcode project in https://github.com/flutter/engine/tree/master/testing/ios/I
 Instead, the engine provides the script:
 
 ```
-testing/ios/run_tests.py --type=objc
+testing/run_tests.py --type=objc
 ```
 
 to easily build and run the XCTests.
@@ -225,7 +225,7 @@ when working on the engine and tests.
 To debug the XCTests, you can open the Xcode project at `testing/ios/IosUnitTests/IosUnitTests.xcworkspace`
 and run the tests (such as via ⌘U). Note you cannot modify the test source and 
 build the tests in Xcode for reasons mentioned above. If you modify the test, 
-you need to run `testing/ios/run_tests.py` again.
+you need to run `testing/run_tests.py` again.
 
 XCTests are executed during pre-submit on our CI system when submitting PRs to
 the `flutter/engine` repository.
