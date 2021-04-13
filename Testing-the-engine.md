@@ -89,6 +89,8 @@ testing/run_tests.py --type=java
 
 to easily build and run the JUnit tests.
 
+This script only has a limited amount of smartness. If you've never built the engine before, it'll build the test and classes under test with a reasonable default configuration. If you've built the engine before, it'll re-build the engine with the same GN flags. You may want to double check your GN flags (https://github.com/flutter/flutter/wiki/Compiling-the-engine#compiling-for-android-from-macos-or-linux) if you haven't built the engine for a while. 
+
 Behind the scenes, it invokes GN and Ninja to build a single .jar file
 containing the test runner and dependencies. Then it uses the system `java`
 runtime to execute the .jar. JDK v8 must be set as your `$JAVA_HOME` to run
@@ -213,6 +215,8 @@ testing/run_tests.py --type=objc
 ```
 
 to easily build and run the XCTests.
+
+This script only has a limited amount of smartness. If you've never built the engine before, it'll build the test and classes under test with a reasonable default configuration. If you've built the engine before, it'll re-build the engine with the same GN flags. You may want to double check your GN flags (https://github.com/flutter/flutter/wiki/Compiling-the-engine#compiling-for-ios-from-macos) if you haven't built the engine for a while. 
 
 Behind the scenes, it invokes GN and Ninja to build the tests and dependencies
 into a single `.dylib`. Then it uses Xcode and the Xcode project at
