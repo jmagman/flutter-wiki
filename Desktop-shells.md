@@ -11,20 +11,20 @@ as well as [the embedding source](https://github.com/flutter/engine/tree/master/
 
 ### Windows
 
-The Windows embedding is in alpha. It is Win32-based, but we plan to support a UWP
-version in the future as well.
+The Windows embedding is in beta. It is Win32-based, a UWP
+version is in development.
 
 ### macOS
 
-The macOS embedding is in alpha.
+The macOS embedding is in beta.
 
 ### Linux
 
-The Linux embedding is in alpha. It is GTK-based; ideally we would like to create a library that allows embedding Flutter regardless of whether you're using GTK, Qt, wxWidgets, Motif, or another arbitrary toolkit for other parts of your application, but have not yet determined a good way to do that. Support for other toolkits may be added in the future.
+The Linux embedding is in beta. It is GTK-based; ideally we would like to create a library that allows embedding Flutter regardless of whether you're using GTK, Qt, wxWidgets, Motif, or another arbitrary toolkit for other parts of your application, but have not yet determined a good way to do that. Support for other toolkits may be added in the future.
 
 ### Plugins
 
-Writing plugins is supported on all platforms, however many plugins do not yet have
+Writing plugins is supported on all platforms, however not all plugins have
 desktop support. See [the flutter.dev documentation](https://flutter.dev/desktop#plugin-support)
 for more details.
 
