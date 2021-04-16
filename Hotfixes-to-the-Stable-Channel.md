@@ -12,6 +12,10 @@ $ flutter upgrade
 ```
 
 ## Flutter 2.0 Changes
+### [2.0.5](https://github.com/flutter/flutter/pull/79486) (April 2, 2021)
+This fixes the following issues:
+ - https://github.com/dart-lang/sdk/issues/45306 - Segmentation fault on specific code.
+
 ### [2.0.4](https://github.com/flutter/flutter/pull/79486) (April 2, 2021)
 This fixes the following issues:
  - https://github.com/flutter/flutter/issues/78589 - Cocoapod transitive dependencies with bitcode fail to link against debug Flutter framework
