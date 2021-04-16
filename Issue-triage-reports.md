@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-04-16
+
+### Notable issues
+
+* Janky scrolling on iOS when resuming from background/presenting an Add2App ViewController [#80367](https://github.com/flutter/flutter/issues/80367)
+* [image_picker] Image picker is incompatible with Google Play's new storage requirement [#80502](https://github.com/flutter/flutter/issues/80502)
+* MediaQuery.of(context).viewInsets.bottom has unexpected value when keyboard is opened/closed [#80253](https://github.com/flutter/flutter/issues/80253)
+* BackButton is not displayed when there is a endDrawer [#80256](https://github.com/flutter/flutter/issues/80256)
+* [image_picker] Image rotates 90 degrees on iOS 14 with "Select Photos" access [#80428](https://github.com/flutter/flutter/issues/80428)
+* [crowd, reopened] integration_test file not found [#72876](https://github.com/flutter/flutter/issues/72876)
+
+### Issue counts
+
+New Flutter issues triaged 238, closed 70 (29%)
+
+In total closed 192 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 35.42%  |
+| Duplicate  | 14.58%  |
+| Fixed | 11.46%  |
+| Solved | 9.38%  |
+| Timeout | 29.17%  |
+
+New Flutterfire issues triaged 33, closed 19 (58%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 17  |
+| Fixed | 1  |
+| Solved | 1  |
+
 ## 2021-04-09
 
 ### Notable issues
@@ -30,7 +63,6 @@ New Flutterfire issues triaged 35, closed 9 (26%)
 | Invalid | 3  |
 | Duplicate | 5  |
 | Fixed | 1  |
-
 
 ## 2021-04-01
 
