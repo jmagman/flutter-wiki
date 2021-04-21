@@ -263,7 +263,7 @@ After deploying any wanted changes to the Fuchsia checkout, perform `fx build &&
 
 First copy the `flutter_runner` binary itself to your Fuchsia checkout:
 
-`cp out/fuchsia_debug/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner.far`
+`cp out/fuchsia_debug/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner-0.far`
 
 for standard (debug) builds
 
