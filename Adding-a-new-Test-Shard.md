@@ -1,10 +1,14 @@
 ## Requirements for a Flutter/LUCI build
 
+A general outline of the requirements that a Flutter CI test shard has:
+
 1. On LUCI, test shards map to builders. Each test shard must have its own LUCI builder. For the Framework, these are defined in [flutter/infra](https://github.com/flutter/infra/blob/master/config/framework_config.star). Generally you will need to have both a pre-submit ("try" in LUCI terminology) builder and a post-submit ("prod") builder.
 1. This LUCI builder will specify a "recipe" to run. These are [starlark](https://github.com/bazelbuild/starlark) scripts that determine the actual CI steps to run, and are defined in [flutter.googlesource.com/recipes](https://flutter.googlesource.com/recipes). Most Framework tests use the [flutter/flutter_drone.py](https://flutter.googlesource.com/recipes/+/refs/heads/master/recipes/flutter/flutter_drone.py) recipe.
 1. Entries in [try_builders.json](https://github.com/flutter/flutter/blob/master/dev/try_builders.json) and [prod_builders.json](https://github.com/flutter/flutter/blob/master/dev/prod_builders.json). These files are read by [Flutter's build dashboard](https://flutter-dashboard.appspot.com/#/build), and are used for scheduling pre-submit builds.
 
 ## Steps to add a new Framework Test Shard
+
+It is important to land these changes in order to prevent any failing builds during the migration period:
 
 1. Framework tests are run by a Dart test runner called [test.dart](https://github.com/flutter/flutter/blob/master/dev/bots/test.dart) that lives in the framework repository. Any new test shards must first be added to this file. Merge this framework change.
 1. The [flutter/flutter_drone.py](https://flutter.googlesource.com/recipes/+/refs/heads/master/recipes/flutter/flutter_drone.py#78) Framework recipe will read the keys `shard` and `sub_shard` from the runtime properties passed to it in order to determine what test to run. These values are then passed to the [//flutter/dev/bots/test.dart](https://github.com/flutter/flutter/blob/master/dev/bots/test.dart) test runner. Add a new shell script(s) here, and verify that it runs via LED (see [//flutter/dev/bots/README.md](https://github.com/flutter/flutter/blob/master/dev/bots/README.md) for more information on testing LUCI builds). Merge this recipe change.
