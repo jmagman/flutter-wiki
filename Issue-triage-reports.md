@@ -1,5 +1,39 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-04-23
+
+### Notable issues
+
+* [Android] App gets stuck upon performing hot reload [#80704](https://github.com/flutter/flutter/issues/80704)
+* [Android][Samsung Keyboard] Backspace does not delete the text/characters containing spaces in TextFormField [#80938](https://github.com/flutter/flutter/issues/80938)
+* [crowd] Keyboard doesn't pop up when focusing on Android Platform view that includes text fields [#80961](https://github.com/flutter/flutter/issues/80961)
+* ScrollBar renders incorrectly [#81027](https://github.com/flutter/flutter/issues/81027)
+* Null check operator used on a null value - BottomAppBar's shape [#80878](https://github.com/flutter/flutter/issues/80878)
+* Scrollbar thumbs aren't selectable when semi-transparent [#81015](https://github.com/flutter/flutter/issues/81015)
+* TextField with TextDirection.rtl has misplaced cursor on Web [#78550](https://github.com/flutter/flutter/issues/78550) (issue is still active)
+
+### Issue counts
+
+New Flutter issues triaged 216, closed 60 (28%)
+
+In total closed 179 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 34.6%  |
+| Duplicate  | 14.5%  |
+| Fixed | 12.8%  |
+| Solved | 10.6%  |
+| Timeout | 27.4%  |
+
+New Flutterfire issues triaged 32, closed 14 (44%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 7  |
+| Duplicate | 3  |
+| Solved | 4  |
+
 ## 2021-04-16
 
 ### Notable issues
