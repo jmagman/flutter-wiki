@@ -22,6 +22,7 @@ Flutter Wiki
 - [[Contributor access]]
 - [[What should I work on?]]
 - [[Running and writing tests]]
+  - [Adding a new Test Shard](https://github.com/flutter/flutter/wiki/Adding-a-new-Test-Shard)
   - [[How to write a render speed test for Flutter]]
   - [[How to write a memory test for Flutter]]
 - [[Release process]]
