@@ -45,23 +45,7 @@ The general process for submitting code to a Flutter repository is as follows:
     so that they're able to give feedback on the work you plan to do.
 
 5. Create a branch off master on your GitHub fork of the repository, and implement
-   your change. Make sure it is tested. Consider using the code coverage tools to check
-   that all your new code is covered by tests (see [[Test coverage for package:flutter]]).
-
-   Everything must be tested. If you think your PR should be exempt from requiring
-   tests, please contact Hixie in #hackers on Discord for an exemption (see [[Chat]]).
-   This applies to all PRs in the flutter/engine, flutter/flutter, flutter/plugins, 
-   and flutter/packages repos.
-   Do not land a PR without tests unless it has an explicit exemption from Hixie!
-
-   The following kinds of PRs are automatically exempt and don't need an explicit
-   comment from Hixie: PRs adding or modifying tests (even if the bot doesn't notice them),
-   PRs only affecting the `.github` subdirectory (e.g. issue template changes).
-
-   The following kinds of PRs are *not* automatically exempt are require an explicit
-   comment from Hixie even though the answer may be obvious: refactors (e.g. null safety
-   migration), documentation changes (e.g. every line affected starts with `///`),
-   configuration changes in the aforementioned repos, PRs that only affect analysis.
+   your change. Make sure it is tested (see the next section for details).
 
    You must follow the guidelines described in the [[Style guide for Flutter repo]].
    Files must not have trailing spaces.
@@ -107,6 +91,26 @@ The general process for submitting code to a Flutter repository is as follows:
 11. Changes that break the [flutter/plugins CI](https://cirrus-ci.com/github/flutter/plugins/master) should as well be reverted while the problem is being studied.
 
 _See also: [[What should I work on?]]_
+
+## Tests
+
+Every change in the flutter/engine, flutter/flutter, flutter/plugins, and flutter/packages repos must be tested.
+
+There are very few exceptions:
+
+* A PR that only removes code (no modified or added lines) is exempt from the need to add tests.
+
+* A PR that only affects comments (including documentation) is exempt from the need to add tests.
+
+* A PR that only affect code inside the `.github` directory is exempt from the need to add tests.
+
+* A PR that only affects `.md` files is exempt from the need to add tests.
+
+A bot will comment on your PR if you need an exemption. Do not land a PR that has had such a message from the bot unless it has an explicit exemption from Hixie! The message tells you how to ask for an exemption.
+
+The following kinds of PRs are *not* automatically exempt are require an explicit comment from Hixie even though the answer may be obvious: refactors (e.g. null safety migration), configuration changes in the aforementioned repos, PRs that only affect analysis, PRs that only modify test infrastructure.
+
+Consider using the code coverage tools to check that all your new code is covered by tests (see [[Test coverage for package:flutter]]).
 
 ## Using git
 
