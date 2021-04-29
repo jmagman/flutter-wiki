@@ -56,14 +56,18 @@ The actual process (as followed by Flutter repo admins) is as follows:
 1. *For new Googlers joining the team*, you need to ask someone in the team to add you to get added. It's not an automatic process after you join the flutter Google group.
 
 
-# Access to logs on the Flutter dashboard
+# Access rights to Flutter dashboard
 
-The [Flutter dashboard](https://flutter-dashboard.appspot.com/) shows what recently landed and what tests passed or failed with those commits. To see the logs, you need to be added to a whitelist. Anyone with commit access is eligible to be added to that whitelist, but only certain team members have the permissions required to update the backend database where the permissions are stored. To get access, ask on #hackers-infra to be added to the whitelist.
+The [Flutter dashboard](https://flutter-dashboard.appspot.com/) shows what recently landed and what tests passed or failed with those commits. To see rerun tasks, you need to be added to an allowlist. Anyone with commit access is eligible to be added to that allowlist, but only certain team members have the permissions required to update the backend database where the permissions are stored. To get access, ask on #hackers-infra to be added to the allowlist.
 
-## Process
+## Adding a contributor to Flutter Dashboard
 
-(Documentation should be added here for how to update the Cocoon whitelist.)
+*This is only for team members with access to the Flutter Dashboard Datastore.*
 
+1. Open [flutter-dashboard datastore](https://console.cloud.google.com/datastore/entities;kind=AllowedAccount;ns=__$DEFAULT$__/query/kind?project=flutter-dashboard)
+2. Click `Create Entity`
+3. Click `Email: Empty` -> Edit property. Insert contributor Google account
+4. Click `Create`
 
 # Access to LUCI recipes and configuration repositories
 
