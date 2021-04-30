@@ -12,6 +12,11 @@ $ flutter upgrade
 ```
 
 ## Flutter 2.0 Changes
+### [2.0.6](https://github.com/flutter/flutter/pull/79486) (April 16, 2021)
+This is a hotfix release that addresses a single issue:
+ - Issue #81326 - macOS binaries not codesigned
+There are no code changes to this release, but binary artifacts for macOS were re-built and codesigned.
+
 ### [2.0.5](https://github.com/flutter/flutter/pull/79486) (April 16, 2021)
 This fixes the following issues:
  - https://github.com/dart-lang/sdk/issues/45306 - Segmentation fault on specific code.
