@@ -1,6 +1,5 @@
 ## tl;dr
 
-- If you're adding a new feature, you probably will need a design doc. Talk to a team member (via Discord, see [[Chat]]) about it first.
 - Changes need tests. The only common case that does not need a test is a documentation fix. If you have to ask "can this be exempted from writing a test," the answer will almost certainly be no if you're changing code. A test is a piece of code or build rule that would otherwise fail without your change.
 - Tests must pass. Changing existing tests should be done with extreme caution.
 - Regressions should be reverted first and questions asked later. Bringing the tree to green is higher priority.
@@ -66,13 +65,6 @@ The general process for submitting code to a Flutter repository is as follows:
    directory). If any tests break, especially the `customer_testing` tests, please
    see the breaking change policy section below for details on how to proceed.
 
-   Wait for Cirrus to give the green light before merging a PR. Cirrus
-   runs a bunch of pre-commit checks (e.g. see the tests for the
-   [framework](https://github.com/flutter/flutter/blob/master/dev/bots/test.dart),
-   or the [engine](https://github.com/flutter/engine/blob/master/ci/build.sh)).
-   These checks include checks on comments, so make sure you wait for the
-   green light even if your patch is _obviously_ fine!
-
    The `flutter-build` test isn't checking your PR, it's letting you know
    whether the tree itself is passing the tests right now (including post-
    commit tests). If it is red, help out the team in fixing the tree before
@@ -81,14 +73,15 @@ The general process for submitting code to a Flutter repository is as follows:
    **If the trees or dashboards are showing any regressions, only fixes
    that improve the situation are allowed to go in.**
 
-9. Once everything is green and you have an LGTM, land your patch.
+9. Once everything is green and you have an LGTM, add the "waiting for tree to go green" label.
+   A bot will land the patch when it feels like it.
 
-10. Watch the post-commit tests on the dashboard to make sure everything passes. If anything
-   goes wrong, revert your patch and study the problem. You should aim to be the one to
-   revert your patch. You will be racing everyone else on the team who will also be trying
-   to revert your patch.
+10. Watch the post-commit tests on the [dashboard](https://dashboard.flutter.dev/#/build) to make sure everything passes. If anything
+   goes wrong, revert your patch and study the problem. You should aim to be the one to revert your patch. You will be racing everyone
+   else on the team who will also be trying to revert your patch.
 
-11. Changes that break the [flutter/plugins CI](https://cirrus-ci.com/github/flutter/plugins/master) should as well be reverted while the problem is being studied.
+   Changes that break the [flutter/plugins CI](https://cirrus-ci.com/github/flutter/plugins/master) should also be reverted before the
+   problem is investigated.
 
 _See also: [[What should I work on?]]_
 
