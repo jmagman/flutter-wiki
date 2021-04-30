@@ -1,5 +1,35 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-04-30
+
+### Notable issues
+
+* [web] Password manager icon overlaps the text in TextField [#81201](https://github.com/flutter/flutter/issues/81201)
+* [Add2App] Release app doesn't display the flutter view [#81350](https://github.com/flutter/flutter/issues/81350)
+* Waiting for observatory port to be available... stuck forever [#81415](https://github.com/flutter/flutter/issues/81415)
+* Add HoverGestureRecognizer so TextSpan can detect hover events [#81159](https://github.com/flutter/flutter/issues/81159)
+
+### Issue counts
+
+New Flutter issues triaged 214, closed 58 (27%)
+
+In total closed 126 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 46.8%  |
+| Duplicate  | 14.2%  |
+| Fixed | 11.9%  |
+| Solved | 8.7%  |
+| Timeout | 18.2%  |
+
+New Flutterfire issues triaged 40, closed 21 (53%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 19  |
+| Duplicate | 2  |
+
 ## 2021-04-23
 
 ### Notable issues
