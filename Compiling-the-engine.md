@@ -293,7 +293,7 @@ for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
 
-`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$FUCHSIA_OUT/amber-files -f out/fuchsia_debug/flow_tests.far`
+`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$FUCHSIA_OUT/amber-files -f out/fuchsia_debug/flow_tests-0.far`
 
 `fx shell run-test-component "fuchsia-pkg://fuchsia.com/flow_tests#meta/flow_tests.cmx"`
 
