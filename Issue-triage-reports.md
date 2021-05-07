@@ -1,5 +1,40 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-05-07
+
+### Notable issues
+
+* Portrait images with EXIF metadata distorted on flutter web with canvasKit renderer [#81679](https://github.com/flutter/flutter/issues/81679)
+* "flutter build bundle --release" fails with IconTreeShakerException [#81954](https://github.com/flutter/flutter/issues/81954)
+* Allow inner scrollables to surrender in gesture arena [#81648](https://github.com/flutter/flutter/issues/81648)
+* Allow platform specific dependencies [#81650](https://github.com/flutter/flutter/issues/81650)
+* [crowd] Error while trying flutter doctor --android-licenses [#80273](https://github.com/flutter/flutter/issues/80273) - this is still getting lots of duplicates
+* [tool_crash] ArgumentError: Invalid argument(s): Cannot find executable [#60880](https://github.com/flutter/flutter/issues/60880) - still getting duplicates
+
+### Issue counts
+
+New Flutter issues triaged 202, closed 59 (29%)
+
+We're also reworking the [p: maps issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+maps%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22+)
+
+In total closed 168 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 36.31%  |
+| Duplicate  | 16.67%  |
+| Fixed | 6.55%  |
+| Solved | 6.55%  |
+| Timeout | 33.93%  |
+
+New Flutterfire issues triaged 33, closed 14 (42%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 5  |
+| Duplicate | 7  |
+| User issue | 3  |
+
 ## 2021-04-30
 
 ### Notable issues
