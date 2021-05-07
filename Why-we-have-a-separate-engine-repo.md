@@ -22,6 +22,8 @@ We intentionally keep the flutter/flutter repository separate from the others be
 
 Since flutter/flutter is the main repository downloaded by developers, we want to keep it relatively small. This means, for example, that it cannot contain binaries or third-party packages.
 
+A full checkout of the flutter/engine repository takes >10gb of local space. Additional artifacts for builds of various platforms and release modes can easily take 10s of gigabytes more space.
+
 ## Approachability
 
 Since flutter/flutter is the main repository for new contributors, we want to keep it approachable, which means minimizing the amount of complexity present in the repo itself.
