@@ -20,7 +20,11 @@ We intentionally keep the flutter/flutter repository separate from the others be
 
 ## Repository size
 
-Since flutter/flutter is the main repository for new contributors, we want to keep it relatively small, to make it simpler to get involved.
+Since flutter/flutter is the main repository downloaded by developers, we want to keep it relatively small. This means, for example, that it cannot contain binaries or third-party packages.
+
+## Approachability
+
+Since flutter/flutter is the main repository for new contributors, we want to keep it approachable, which means minimizing the amount of complexity present in the repo itself.
 
 ## Rolls
 
