@@ -278,14 +278,14 @@ If you are changing the native hooks in dart:ui, dart:zircon, or dart:fuchsia yo
 #### deploying debug symbols
 
 Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout:
-NOTE: you must adjust $FUCHSIA_OUT to match your current Fuchsia out folder e.g. out/default
+
 NOTE: if building for arm, `linux-x64` becomes `linux-arm64` and `x86_64-elf` becomes `aarch64-elf`
 
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$FUCHSIA_OUT/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
 
 for standard (debug) builds
 
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$FUCHSIA_OUT/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
 
 for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
@@ -293,7 +293,7 @@ for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
 
-`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$FUCHSIA_OUT/amber-files -f out/fuchsia_debug/flow_tests-0.far`
+`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/amber-files -f out/fuchsia_debug/flow_tests-0.far`
 
 `fx shell run-test-component "fuchsia-pkg://fuchsia.com/flow_tests#meta/flow_tests.cmx"`
 
