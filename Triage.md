@@ -127,9 +127,6 @@ During our weekly critical triage meeting, we check the following lists:
 * [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP2+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last couple of weeks) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on another P0-P2 but cannot work on this one immediately, find a new owner.
 * [Bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc) flagged for additional triage: figure out what should be done with the bug, then remove the `will need additional triage` label.
 
-In addition, a bot takes care of these, but it's good to check on them:
-* [Bugs pending feedback](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22waiting+for+customer+response%22+sort%3Aupdated-desc): close bugs with outstanding requests after 4 weeks, remove the label for bugs with answers.
-
 ### Long-term triage
 
 Occasionally, when time allows, the following are worth taking a look at also:
@@ -138,6 +135,9 @@ Occasionally, when time allows, the following are worth taking a look at also:
 * [Most requested features](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc): none of the top 20ish bugs are new, and they've all been considered before and have appropriate priorities.
 * [Most requested bugs](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc+-label%3A%22severe%3A+new+feature%22+): nothing surprising in the list; consider adding `customer: crowd` `P2` labels.
 * [Oldest bugs](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+sort%3Aupdated-asc+); see if they can be closed or updated.
+
+In addition, a bot takes care of these, but it's good to check on them:
+* [Bugs pending feedback](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22waiting+for+customer+response%22+sort%3Aupdated-desc): close bugs with outstanding requests after 4 weeks, remove the label for bugs with answers.
 
 ## PRs
 
