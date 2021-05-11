@@ -125,12 +125,15 @@ During our weekly critical triage meeting, we check the following lists:
 * [P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP0+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned, and progress should be happening actively. If no progress is happening and owner cannot work on it immediately (e.g. they're on vacation, they're busy with their day job, family reasons, etc), find a new owner.
 * [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP1+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last few days) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on a P0 or other P1 but cannot work on it immediately, find a new owner.
 * [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP2+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last couple of weeks) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on another P0-P2 but cannot work on this one immediately, find a new owner.
-* [Bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc) and [PRs](https://github.com/flutter/flutter/pulls?utf8=%E2%9C%93&q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc+) flagged for additional triage: figure out what should be done with the bug, then remove the `will need additional triage` label.
+* [Bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc) flagged for additional triage: figure out what should be done with the bug, then remove the `will need additional triage` label.
 
 In addition, a bot takes care of these, but it's good to check on them:
 * [Bugs pending feedback](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22waiting+for+customer+response%22+sort%3Aupdated-desc): close bugs with outstanding requests after 4 weeks, remove the label for bugs with answers.
 
+### Long-term triage
+
 Occasionally, when time allows, the following are worth taking a look at also:
+* [PRs](https://github.com/flutter/flutter/pulls?utf8=%E2%9C%93&q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc+) needing additional triage.
 * [Flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"team%3A+flakes"+sort%3Aupdated-asc): Check a few of the oldest flakes: are they still a problem (or is the test enabled and working now?). Is anyone looking at them?
 * [Most requested features](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc): none of the top 20ish bugs are new, and they've all been considered before and have appropriate priorities.
 * [Most requested bugs](https://github.com/flutter/flutter/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+sort%3Areactions-%2B1-desc+-label%3A%22severe%3A+new+feature%22+): nothing surprising in the list; consider adding `customer: crowd` `P2` labels.
