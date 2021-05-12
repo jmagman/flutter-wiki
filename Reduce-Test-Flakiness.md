@@ -4,7 +4,7 @@ Flakiness issue has caused a large portion of the [Flutter tree](https://flutter
 ## Add a new DeviceLab test
 DeviceLab tests are located under [`/dev/devicelab/bin/tasks`](https://github.com/flutter/flutter/tree/master/dev/devicelab/bin/tasks). If you plan to add a new DeviceLab test, please follow
 * Create a PR to add test files
-  * Make sure an ownership entry is created for the test in [TESTOWNERS](https://github.com/flutter/flutter/blob/master/CODEOWNERS) file
+  * Make sure an ownership entry is created for the test in [TESTOWNERS](https://github.com/flutter/flutter/blob/master/TESTOWNERS) file
 * Enable the test in the staging env. first for validation - make sure 50 consecutive successful runs without any flakiness issue
   * How: add the new test to the appropriate platform in [devicelab_staging_config.star](https://github.com/flutter/infra/blob/master/config/devicelab_staging_config.star)
   * Monitor the test execution in the [milo dashboard](https://ci.chromium.org/p/flutter/g/devicelab_staging/console)
