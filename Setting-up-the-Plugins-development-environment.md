@@ -1,8 +1,6 @@
-# Setting up the flutter/plugins development environment
-
 ## Things you will need
 
- * A working [Flutter] installation.
+ * A working [Flutter](https://flutter.dev/docs/get-started/install) installation.
  * git (used for source version control).
  * An ssh client (used to authenticate with GitHub).
 
