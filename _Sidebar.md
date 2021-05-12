@@ -70,6 +70,11 @@ Flutter Wiki
 - [[Why we have a separate engine repo]]
 - [[Reduce Flutter engine size with MLGO]]
 
+## Plugins and packages repos
+
+- [[Setting up the Plugins development environment]]
+- [[Setting up the Packages development environment]]
+
 ## Infrastructure
 - [[Dashboards]]
 - [[Infra Ticket Queue]]
