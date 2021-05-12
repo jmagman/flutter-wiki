@@ -9,7 +9,9 @@ DeviceLab tests are located under [`/dev/devicelab/bin/tasks`](https://github.co
   * How: add the new test to the appropriate platform in [devicelab_staging_config.star](https://github.com/flutter/infra/blob/master/config/devicelab_staging_config.star)
   * Monitor the test execution in the [milo dashboard](https://ci.chromium.org/p/flutter/g/devicelab_staging/console)
 * If no flakiness issue pops up, then enable the test in the prod env. and you will see the new test in the [build dashboard](https://flutter-dashboard.appspot.com/#/build).
-  * How: add the new test to the appropriate platform in [devicelab_config.star](https://github.com/flutter/infra/blob/master/config/devicelab_config.star)
+  * How
+    * Add the new test to the appropriate platform in [devicelab_config.star](https://github.com/flutter/infra/blob/master/config/devicelab_config.star)
+    * Enable the test to [build dashboard](https://flutter-dashboard.appspot.com/#/build) by adding an entry in [prod_builders.json](https://github.com/flutter/flutter/blob/master/dev/prod_builders.json)
 
 
 # Detect flaky tests
