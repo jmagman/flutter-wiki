@@ -76,6 +76,7 @@ Flutter Wiki
 - [[Setting up the Plugins development environment]]
 - [[Setting up the Packages development environment]]
 - [[Plugins and Packages repository structure]]
+- [[Plugin Tests]]
 
 ## Infrastructure
 - [[Dashboards]]
