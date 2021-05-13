@@ -30,32 +30,44 @@ Depending on the platform you are making changes for, you may be interested in a
 - Make sure to exclude the `out` directory from any backup scripts, as many large binary
   artifacts are generated. This is also generally true for all of the directories outside
   of the `engine/src/flutter` directory.
-- For Googlers: GOMA (go/ma) is a distributed compiler service that can vastly speed up build
-  times. The variables to use GOMA compilation are set by default if goma-related
+- For Googlers: Goma (go/ma) is a distributed compiler service that can vastly speed up build
+  times. The variables to use Goma compilation are set by default if goma-related
   environment variables are detected, and can be explicitly set via the `--goma/--no-goma`
   flag to the `flutter/tools/gn` wrapper script.
-  - Since December 2020, Flutter uses Fuchsia RBE. The following script can be used to
-    install and log into a correctly configured GOMA client:
-```bash
-#!/bin/bash
+  - Flutter Engine requires Fuchsia's Goma RBE (as opposed to Chromium's `goma.chromium.org`
+    RBE) for remote building. This is due to Flutter Engine building with the same versions
+    of Clang that Fuchsia uses.
 
-# Customize this to where you would like GOMA to be installed.
-GOMA_DIR="$HOME/flutter_goma"
+    The following idempotent script can be used to fetche and run a Goma client which is
+    preconfigured to use the correct RBE for building Flutter Engine:
+    ```bash
+    #!/bin/bash
 
-# Download client. Assumes cipd from depot_tools is on path.
-echo 'fuchsia/third_party/goma/client/${platform}  release' | cipd ensure -ensure-file - -root "$GOMA_DIR"
+    # Customize this to where you would like Goma to be installed.
+    export GOMA_DIR="$HOME/flutter_goma"
 
-# Authenticate
-"$GOMA_DIR/goma_auth" login --browser
+    # Download client. Assumes cipd from depot_tools is on path.
+    echo 'fuchsia/third_party/goma/client/${platform}  release' | cipd ensure -ensure-file - -root "$GOMA_DIR"
 
-# Start GOMA
-GOMA_LOCAL_OUTPUT_CACHE_DIR="$GOMA_DIR/.goma_cache" "$GOMA_DIR/goma_ctl.py" ensure_start
-```
-  - GOMA will fail remotely if it tries to access files that reside outside of the build
+    # Authenticate
+    "$GOMA_DIR/goma_auth" login --browser
+
+    # Start Goma
+    GOMA_LOCAL_OUTPUT_CACHE_DIR="$GOMA_DIR/.goma_cache" "$GOMA_DIR/goma_ctl.py" ensure_start
+    ```
+  - Goma will fail remotely if it tries to access files that reside outside of the build
     root. When building configurations for macOS or iOS (i.e. configurations that
     require an Xcode-vended SDK or toolchain) locally, you can have the build create and
     use symlinks by adding the `--xcode-symlinks` argument to the `flutter/tools/gn`
     wrapper script or `export FLUTTER_GOMA_CREATE_XCODE_SYMLINKS=1` to your bash/zsh/whatever rc.
+  - If you run into `compiler binary hash mismatch` errors and local fallback builds while
+    trying to build using Goma, then Goma is most likely using an RBE that doesn't host the
+    compiler binaries that Flutter Engine supports building with. Try setting the following
+    environment variables to use Fuchsia's RBE and then restart Goma:
+    ```bash
+    export GOMA_SERVER_HOST=rbe-prod1.endpoints.fuchsia-infra-goma-prod.cloud.goog
+    export GOMA_SERVER_PORT=443
+    ```
 
 ## Compiling for Android (from macOS or Linux)
 
@@ -73,7 +85,7 @@ Run the following steps, from the `src` directory created in [Setting up the Eng
     * `./flutter/tools/gn --android --android-cpu x86 --unoptimized` for x86 emulators.
     * `./flutter/tools/gn --android --android-cpu x64 --unoptimized` for x64 emulators.
     * `./flutter/tools/gn --unoptimized` for host-side executables, needed to compile the code.
-      * On macOS hosts, add the `--xcode-symlinks` argument when using goma.
+      * On macOS hosts, add the `--xcode-symlinks` argument when using Goma.
 
 4. Build your executables
     * `ninja -C out/android_debug_unopt` for device-side executables.
