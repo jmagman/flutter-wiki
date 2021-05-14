@@ -1,5 +1,41 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-05-14
+
+### Notable issues
+
+* [fixed] Flutter Doctor cannot find Android Studio 4.2 [#82345](https://github.com/flutter/flutter/issues/82345)
+* [crowd][web][flutter 2.0] Certain font sizes render a greyish bar on top of the text in mobile browsers when inside ExpansionTile Widgets
+[#82176](https://github.com/flutter/flutter/issues/82176) (the issue is only web when using `html` renderer)
+* Text wrapping on top of itself on iOS/macOS on stable, blank on other channels and web html [#82023](https://github.com/flutter/flutter/issues/82023) (this particular issue is causing multiple issues on iOS/Mac and Web using `html` renderer)
+* [camera] In Android take photo, unlockAutoFocus error Fatal Exception: java.lang.NullPointerException is thrown [#82031](https://github.com/flutter/flutter/issues/82031) (camera has production crash on many Android devices)
+
+### Issue counts
+
+New Flutter issues triaged 216, closed 72 (33%)
+
+We're continuing to rework the [p: maps issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+maps%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22+)
+
+In total closed 171 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 28.65%  |
+| Duplicate  | 21.64%  |
+| Fixed | 15.79%  |
+| Solved | 9.94%  |
+| Timeout | 23.98%  |
+
+New Flutterfire issues triaged 25, closed 11 (44%)
+
+In total closed 13 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 8  |
+| Duplicate | 3  |
+| User issue | 2  |
+
 ## 2021-05-07
 
 ### Notable issues
