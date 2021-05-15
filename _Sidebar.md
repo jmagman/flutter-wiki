@@ -94,6 +94,7 @@ Flutter Wiki
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
 - [[CanvasKit web support]]
 - [[Desktop shells]]
+- [Deferred Components](https://github.com/flutter/flutter/wiki/Deferred-Components)
 - [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
 - [[Making animated GIFs of Flutter apps]]
 - [Multi-device debugging in VS Code](https://github.com/flutter/flutter/wiki/Multi-device-debugging-in-VS-Code)
