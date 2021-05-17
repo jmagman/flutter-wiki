@@ -59,6 +59,27 @@ Multiple Dart libraries are compiled as a single loading unit if they import eac
 
 ![](https://raw.githubusercontent.com/flutter/engine/master/docs/dart_split_aot_compilation.svg)
 
+## Lifecycle of a `loadLibrary()` call
+
+Deferred components are primarily triggered to be downloaded, installed, and loaded via the `loadLibrary()` dart call. This call is handled differently in dart2js vs aot/native. Here, we will trace how the `loadLibrary()` call is translated into an installation of a deferred component:
+
+The `loadLibrary()` dart call's native side implementation calls a `Dart_DeferredLoadHandler` callback that is set using `Dart_SetDeferredLoadHandler` in `DartIsolate::Initialize`. Dart internally retrieves the loading unit ID assigned to the library and passes it to the callback. The callback is implemented as `DartIsolate::OnDartLoadLibrary`.
+
+The loading unit ID is then passed on through the runtime controller, engine shell and platform view until it passes into the FlutterJNI in the Android embedder. Here, the loading unit ID is passed into the `DeferredComponentsManager`'s `installDeferredComponent` where the ID is converted from an integer to a String name identifying the pubspec-defined deferred component the requested library belongs to. This conversion is handled by a AndroidManifest metadata mapping that is created and verified during the build phase.
+
+`PlayStoreDeferredComponentManager` then invokes the play store split compat APIs to download the android module. Once the Android module is installed, the manager locates the .so files and passes the paths to the engine to `dlopen`. The engine then passes the symbols to the runtime and and dart isolate, which is able to load the symbols into the dart VM. The loading must be associated with a loading unit ID or the load will not complete the Dart Future returned by `loadLibrary()`.
+
+### Installation by deferred component string name
+
+We also provide a [framework-side API](https://master-api.flutter.dev/flutter/services/DeferredComponent-class.html) that allows direct installation via deferred component name as a string.
+
+This installation path may be used for two purposes:
+
+* Installing asset-only deferred components that do not have any Dart code to call `loadLibrary()` on.
+* Pre-downloading components to use later. However, `loadLibrary()` must still be called in order to use any dart code from the pre-downloaded component. This is useful when the exact dart library needed is not known yet.
+
+The direct API uses platform channels to directly invoke the `installDeferredComponent` method on the `DynamicFeatureManager` and will not trigger any of the dart code packed in the component to load.
+
 ## Custom Implementations
 
 It is possible to write a custom implementation that bypasses the Android Play store. This is only recommended for advanced developers and is primarily aimed at apps with very unique needs such as extremely large asset components, specific download behavior, or distribution in a region that does not have access to the Play store (eg, China).
