@@ -9,7 +9,6 @@ This page attempts to be a one-stop shop for figuring out what the most importan
 1. [Other regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22severe%3A+regression%22).
 1. [Code review of open PRs](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+).
 1. Reducing technical debt. (For example, increasing [our test coverage](https://github.com/flutter/flutter/wiki/Test-coverage-for-package%3Aflutter) by [writing new tests](https://github.com/flutter/flutter/wiki/Running-and-writing-tests), or fixing TODOs.)
-1. [Assigned bugs](https://github.com/issues/assigned). We want to avoid slipping milestones, so once a bug is assigned it should also be given a named month milestone and we should ensure it's resolved by that date. See [[Issue Hygiene]].
 1. The priorities described on our [[roadmap]], which may include:
     * [P2 issues](https://github.com/flutter/flutter/labels/P2).
     * Bugs marked as [annoyances](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22a%3A+annoyance%22+sort%3Areactions-%2B1-desc).
