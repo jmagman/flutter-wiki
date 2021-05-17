@@ -44,7 +44,7 @@ The deferred Dart libraries are interpreted by gen_snapshot (Dart’s compiler) 
 
 The following diagram shows an example app structure and a “lifecycle” of how deferred dart libraries are compiled into loading units and packaged into a .aab file.
 
-
+![](https://raw.githubusercontent.com/flutter/engine/master/docs/deferred_components_architecture.svg)
 
 
 This example app has the following properties:
@@ -58,7 +58,7 @@ There will always be an implicit base loading unit that contains core flutter pa
 
 Multiple Dart libraries are compiled as a single loading unit if they import each other eagerly  (non-deferred):
 
-
+![](https://raw.githubusercontent.com/flutter/engine/master/docs/dart_split_aot_compilation.svg)
 
 ## Custom Implementations
 
