@@ -63,6 +63,8 @@ Multiple Dart libraries are compiled as a single loading unit if they import eac
 
 Deferred components are primarily triggered to be downloaded, installed, and loaded via the `loadLibrary()` dart call. This call is handled differently in dart2js vs aot/native. Here, we will trace how the `loadLibrary()` call is translated into an installation of a deferred component:
 
+![](https://raw.githubusercontent.com/flutter/engine/master/docs/deferred_components_call_lifecycle.svg)
+
 The `loadLibrary()` dart call's native side implementation calls a `Dart_DeferredLoadHandler` callback that is set using `Dart_SetDeferredLoadHandler` in `DartIsolate::Initialize`. Dart internally retrieves the loading unit ID assigned to the library and passes it to the callback. The callback is implemented as `DartIsolate::OnDartLoadLibrary`.
 
 The loading unit ID is then passed on through the runtime controller, engine shell and platform view until it passes into the FlutterJNI in the Android embedder. Here, the loading unit ID is passed into the `DeferredComponentsManager`'s `installDeferredComponent` where the ID is converted from an integer to a String name identifying the pubspec-defined deferred component the requested library belongs to. This conversion is handled by a AndroidManifest metadata mapping that is created and verified during the build phase.
