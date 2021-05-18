@@ -82,6 +82,18 @@ This installation path may be used for two purposes:
 
 The direct API uses platform channels to directly invoke the `installDeferredComponent` method on the `DynamicFeatureManager` and will not trigger any of the dart code packed in the component to load.
 
+## Tooling
+
+Deferred components must be built as Android App Bundles (`.aab`) to function. If built as debug or an apk file, dart will compile normally and produce a single `.so` file.
+
+Deferred components makes use of the existing `$ flutter build appbundle` command and checks for the existence of the  `deferred-components:` entry in the `pubspec.yaml` to decide whether to build deferred or not. When the app is opted-in to deferred components and the build mode is release, `gen_snapshot` is passed a `--loading_unit_manifest` path, which tells `gen_snapshot` to attempt to produce split AOT artifacts. This includes a base file as well as a `.so` for every deferred library in the codebase. Each of these split units is called a "loading unit" and is assigned an internal integer ID called the loading unit ID.
+
+The build process also relies on project setup to function. Each deferred component must correspond to an Android module defined in the `android` directory of your app. The base module is build as the `app` module while each additional component should have a module with the same name as the component. The base module `AndroidManifest.xml` also needs to include the mapping between loading unit IDs and deferred components.
+
+The `flutter build appbundle` command assists in setting up the project with a validator that guides developers through the changes needed to build properly. This validator is necessary since the exact loading units produced by `gen_snapshot` is not known until `gen_snapshot` finishes compiling. Thus, some project setup can only be done after the `gen_snapshot` step in the build appbundle process.
+
+Since mistakenly importing a deferred file as non-deferred can cause the file to be compiled into the base loading unit, the deferred components validator also has a mechanism for preventing accidental changes to the app's final generated loading units. This check will cause the build to fail if the generated loading units do not match the results of the previous run which is cached in the `deferred_components_loading_units.yaml` file. After throwing an error upon detecting changes, the build will automatically pass this check on next run if no additional changes are made. This means that this check is not error proof as you are still free to ignore the mismatched loading unit error if the change was intended and accounted for and continue to build.
+
 ## Custom Implementations
 
 It is possible to write a custom implementation that bypasses the Android Play store. This is only recommended for advanced developers and is primarily aimed at apps with very unique needs such as extremely large asset components, specific download behavior, or distribution in a region that does not have access to the Play store (eg, China).
