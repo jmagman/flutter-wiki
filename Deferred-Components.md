@@ -73,7 +73,7 @@ The loading unit ID is then passed on through the runtime controller, engine she
 
 ### Installation by deferred component string name
 
-We also provide a [framework-side API](https://master-api.flutter.dev/flutter/services/DeferredComponent-class.html) that allows direct installation via deferred component name as a string.
+We also provide a [framework-side DeferredComponent utility class](https://master-api.flutter.dev/flutter/services/DeferredComponent-class.html) that allows direct installation via deferred component name as a string.
 
 This installation path may be used for two purposes:
 
@@ -81,6 +81,12 @@ This installation path may be used for two purposes:
 * Pre-downloading components to use later. However, `loadLibrary()` must still be called in order to use any dart code from the pre-downloaded component. This is useful when the exact dart library needed is not known yet.
 
 The direct API uses platform channels to directly invoke the `installDeferredComponent` method on the `DynamicFeatureManager` and will not trigger any of the dart code packed in the component to load.
+
+### Uninstallation
+
+The [DeferredComponent](https://master-api.flutter.dev/flutter/services/DeferredComponent-class.html) framework utility class also provides an `uninstallDeferredComponent` method that uses platform channels to request that the OS uninstall and remove the files associated with the specified deferred component. Uninstallation is dependent on how the platform handles it and in Android's case, the removal of the files is queued and may take a long time before actually executed.
+
+Uninstallation may only be requested directly with the string name of the component to be uninstalled. Uninstallation by loading unit id or direct call on a dart import is not yet supported.
 
 ## Tooling
 
