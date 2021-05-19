@@ -2,7 +2,7 @@
 
 Deferred components is a set of features and tooling that allows developers to write dart code that can be AOT compiled into separate split dynamic libraries as well as package them together with assets into runtime downloadable modules on Android. The primary goal of deferred components is to reduce install apk size as well as reduce storage space taken up by the app by omitting features the user may not use.
 
-This feature is currently only available on Android, taking advantage of Android and Google Play Store’s dynamic feature modules to deliver the deferred components packaged as Android modules. This does not impact other platforms, which continue to build as normal with all deferred components and assets included at initial install time.
+This feature is currently an experimental/preview feature that is only available on Android. It takes advantage of Android and Google Play Store’s dynamic feature modules to deliver the deferred components packaged as Android modules. This does not impact other platforms, which continue to build as normal with all deferred components and assets included at initial install time.
 
 Though modules can be defer loaded, the entire application must be completely built and uploaded as a single Android App Bundle (`.aab`). Dispatching partial updates without re-uploading new Android App Bundles for the entire application (eg, code push) is not supported.
 
@@ -71,6 +71,8 @@ The loading unit ID is then passed on through the runtime controller, engine she
 
 `PlayStoreDeferredComponentManager` then invokes the play store split compat APIs to download the android module. Once the Android module is installed, the manager locates the .so files and passes the paths to the engine to `dlopen`. The engine then passes the symbols to the runtime and and dart isolate, which is able to load the symbols into the dart VM. The loading must be associated with a loading unit ID or the load will not complete the Dart Future returned by `loadLibrary()`.
 
+Keep in mind that multiple loading units may be contained in a deferred component, but a `loadLibrary` call will only load the dart symbols from the specific dart library the call was made from. Each loading unit must have separate `loadLibrary` calls before use. Subsequent `loadLibrary` calls on components that are already downloaded should complete much faster, however, the loading can never happen synchronously and there will be at least one frame between call and completion.
+
 ### Installation by deferred component string name
 
 We also provide a [framework-side DeferredComponent utility class](https://master-api.flutter.dev/flutter/services/DeferredComponent-class.html) that allows direct installation via deferred component name as a string.
@@ -80,7 +82,7 @@ This installation path may be used for two purposes:
 * Installing asset-only deferred components that do not have any Dart code to call `loadLibrary()` on.
 * Pre-downloading components to use later. However, `loadLibrary()` must still be called in order to use any dart code from the pre-downloaded component. This is useful when the exact dart library needed is not known yet.
 
-The direct API uses platform channels to directly invoke the `installDeferredComponent` method on the `DynamicFeatureManager` and will not trigger any of the dart code packed in the component to load.
+The direct API uses platform channels to directly invoke the `installDeferredComponent` method on the `DynamicFeatureManager` and will not trigger any of the dart code packed in the component to load due to lack of a specified loading unit. Assets will be loaded. To use any dart code, `loadLibrary()` must still be called.
 
 ### Uninstallation
 
@@ -106,7 +108,7 @@ It is possible to write a custom implementation that bypasses the Android Play s
 
 ### Overview
 
-Advanced developers and those in China may wish to bypass the use of the Play store as the distribution method for deferred components. The Flutter embedder allows custom implementations that handle customer-unique download and unpacking of deferred components while still allowing access to the core Dart callbacks that register a loading unit with the Dart runtime. This process is far more involved than the default play store version.
+The Flutter embedder allows custom implementations that handle customer-unique download and unpacking of deferred components while still allowing access to the core Dart callbacks that register a loading unit with the Dart runtime. This process is far more involved than the default play store version.
 
 To implement a custom deferred components system, the following major pieces will be required:
 
