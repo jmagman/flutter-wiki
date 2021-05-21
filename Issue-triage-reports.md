@@ -1,5 +1,41 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-05-21
+
+### Notable issues
+
+* 2.2: TextFormField's Suffix , Prefix, Icon and Label don't respond to Primary Color's Change [#83002](https://github.com/flutter/flutter/issues/83002)
+* PopupMenuButton is broken after upgrade to Flutter `2.2.0` [#82874](https://github.com/flutter/flutter/issues/82874) - fixed
+* TextOverflow not visible on the web on mobile [#82639](https://github.com/flutter/flutter/issues/82639)
+* [web] Images pixelated on the canvaskit renderer [#82919](https://github.com/flutter/flutter/issues/82919)
+
+### Issue counts
+
+New Flutter issues triaged 215, closed 61 (28%)
+
+We're continuing to rework the [p: maps issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+maps%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22+)
+
+In total closed 158 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 33.5%  |
+| Duplicate  | 14.6%  |
+| Fixed | 14.6%  |
+| Solved | 3.8%  |
+| Timeout | 33.5%  |
+
+New Flutterfire issues triaged 36, closed 12 (33%)
+
+In total closed 14 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 5  |
+| Duplicate | 2  |
+| User issue | 5  |
+| Solution provided | 2  |
+
 ## 2021-05-14
 
 ### Notable issues
