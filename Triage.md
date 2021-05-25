@@ -117,6 +117,17 @@ For PRs, each PR should match one of the following categories:
 * It can have the `will need additional triage` label. Use this if it's not clear what label it should have.
 
 
+We should (but currently do not) regularly check that the following PRs are not being neglected, and have appropriate labels:
+
+<!--ALL-LABELS-->
+* [The flutter/flutter PRs with none of the classification labels](https://github.com/flutter/flutter/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+-label%3Aframework+-label%3A%22f%3A+cupertino%22+-label%3A%22f%3A+material+design%22+-label%3A%22a%3A+desktop%22+-label%3A%22team%3A+infra%22+-label%3Atool+-label%3A"platform-web"+sort%3Aupdated-asc)
+
+* [PRs in our esoteric repos](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+sort%3Aupdated-asc+-repo%3Aflutter%2Fflutter+-repo%3Aflutter%2Fengine+-repo%3Aflutter%2Fplugin-repo%3Aflutter%2Fpackage+-repo%3Aflutter%2Fwebsite+-repo%3Aflutter%2Fflutter-intellij)
+
+* [All open PRs](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+sort%3Aupdated-asc)
+
+
+
 # Critical triage
 
 During our weekly critical triage meeting, we check the following lists:
@@ -138,17 +149,6 @@ Occasionally, when time allows, the following are worth taking a look at also:
 
 In addition, a bot takes care of these, but it's good to check on them:
 * [Bugs pending feedback](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22waiting+for+customer+response%22+sort%3Aupdated-desc): close bugs with outstanding requests after 4 weeks, remove the label for bugs with answers.
-
-## PRs
-
-We should (but currently do not) regularly check that the following PRs are not being neglected, and have appropriate labels:
-
-<!--ALL-LABELS-->
-* [The flutter/flutter PRs with none of the classification labels](https://github.com/flutter/flutter/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+-label%3Aframework+-label%3A%22f%3A+cupertino%22+-label%3A%22f%3A+material+design%22+-label%3A%22a%3A+desktop%22+-label%3A%22team%3A+infra%22+-label%3Atool+-label%3A"platform-web"+sort%3Aupdated-asc)
-
-* [PRs in our esoteric repos](https://github.com/pulls?utf8=%E2%9C%93&q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+sort%3Aupdated-asc+-repo%3Aflutter%2Fflutter+-repo%3Aflutter%2Fengine+-repo%3Aflutter%2Fplugin-repo%3Aflutter%2Fpackage+-repo%3Aflutter%2Fwebsite+-repo%3Aflutter%2Fflutter-intellij)
-
-* [All open PRs](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+sort%3Aupdated-asc)
 
 
 # Area-focused triage
