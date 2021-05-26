@@ -293,11 +293,11 @@ Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout:
 
 NOTE: if building for arm, `linux-x64` becomes `linux-arm64` and `x86_64-elf` becomes `aarch64-elf`
 
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
 
 for standard (debug) builds
 
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf $FUCHSIA_DIR/prebuilt/third_party/gcc/linux-x64/x86_64-elf/bin/readelf --unstripped`
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
 
 for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
