@@ -11,19 +11,19 @@ DeviceLab tests are located under [`/dev/devicelab/bin/tasks`](https://github.co
 * If no flakiness issue pops up, then enable the test in the prod env. and you will see the new test in the [build dashboard](https://flutter-dashboard.appspot.com/#/build).
   * How
     * Add the new test to the appropriate platform in [devicelab_config.star](https://github.com/flutter/infra/blob/master/config/devicelab_config.star)
-    * Enable the test to [build dashboard](https://flutter-dashboard.appspot.com/#/build) by adding an entry in [prod_builders.json](https://github.com/flutter/flutter/blob/master/dev/prod_builders.json)
+    * Enable the test to [build dashboard](https://flutter-dashboard.appspot.com/#/build) by adding an entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml)
 
 
 # Detecting flaky tests
 On a weekly basis, the tree gardener will scan through test execution statistics over the past 15 days and identify top flaky ones
 * If there are any test builders whose Flaky Ratio >= 2%
-  * Mark the tests as flaky by updating the entry in [prod_builders.json](https://github.com/flutter/flutter/blob/master/dev/prod_builders.json).
+  * Mark the tests as flaky by updating the entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
   * Create a tracking bug if not existing in the [bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+project%3Aflutter%2Fflutter%2F189+label%3A%22team%3A+flakes%22).
     * The sub-team TL will be assigned by default for further triage/re-assign.
     * Sub-team labels will be added as well for better tracking.
     * P1 will be labeled
 * If there is not any test builder whose Flaky Ratio >= 2%, then look for the top test builder whose Flaky Ratio < 2%
-  * Mark the test as flaky by updating the entry in [prod_builders.json](https://github.com/flutter/flutter/blob/master/dev/prod_builders.json).
+  * Mark the test as flaky by updating the entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
   * Create a tracking bug if not existing in the [bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+project%3Aflutter%2Fflutter%2F189+label%3A%22team%3A+flakes%22).
     * The sub-team TL will be assigned by default for further triage/re-assign.
     * Sub-team labels will be added as well for better tracking.
