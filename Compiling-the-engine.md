@@ -257,8 +257,8 @@ Then use that git hash in step 1 under "build the engine".
   * Add the `--xcode-symlinks` argument when using goma on macOS.
   * Remove `--no-lto` if you care about performance or binary size; unfortunately it results in a *much* slower build.
 
-4. `ninja -C out/fuchsia_debug` to build a Fuchsia binary.
-    * If you used `--unoptimized`, use `ninja -C out/fuchsia_debug_unopt` instead.
+4. `ninja -C out/fuchsia_debug_x64` to build a Fuchsia binary.
+    * If you used `--unoptimized`, use `ninja -C out/fuchsia_debug_x64_unopt` instead.
     * For Googlers, consider also using the `--goma` flag with gn, then building with `autoninja` to parallelize the build using Goma.
 
 ### Deploy to Fuchsia
@@ -275,29 +275,29 @@ After deploying any wanted changes to the Fuchsia checkout, perform `fx build &&
 
 First copy the `flutter_runner` binary itself to your Fuchsia checkout:
 
-`cp out/fuchsia_debug/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner-0.far`
+`cp out/fuchsia_debug_x64/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner-0.far`
 
 for standard (debug) builds
 
-`cp out/fuchsia_release/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_product_runner.far`
+`cp out/fuchsia_debug_x64/flutter_aot_product_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_product_runner.far`
 
 for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 If you are changing the native hooks in dart:ui, dart:zircon, or dart:fuchsia you'll also want to update the flutter_runner_patched_sdk that is used in your fuchsia checkout (note the use of aot/release in the destination, that is intentional).  From your `$ENGINE_DIR` run:
 
-`cp -ra out/fuchsia_debug/flutter_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_runner_patched_sdk/`
+`cp -ra out/fuchsia_debug_x64/flutter_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_runner_patched_sdk/`
 
 #### deploying debug symbols
 
 Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout:
 
-NOTE: if building for arm, `linux-x64` becomes `linux-arm64` and `x86_64-elf` becomes `aarch64-elf`
+NOTE: if building for arm, `linux-x64` becomes `linux-arm64`.
 
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug_x64/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
 
 for standard (debug) builds
 
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
+`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release_x64/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
 
 for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
@@ -305,7 +305,7 @@ for `--release` builds (you must build flutter with `--runtime-mode=release`)
 
 For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
 
-`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/amber-files -f out/fuchsia_debug/flow_tests-0.far`
+`./fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/amber-files -f out/fuchsia_debug_x64/flow_tests-0.far`
 
 `fx shell run-test-component "fuchsia-pkg://fuchsia.com/flow_tests#meta/flow_tests.cmx"`
 
