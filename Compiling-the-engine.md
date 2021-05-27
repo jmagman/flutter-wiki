@@ -289,17 +289,9 @@ If you are changing the native hooks in dart:ui, dart:zircon, or dart:fuchsia yo
 
 #### deploying debug symbols
 
-Now copy debug symbols for the `flutter_runner` binary to your Fuchsia checkout:
+Now register debug symbols for all engine artifacts to your Fuchsia checkout:
 
-NOTE: if building for arm, `linux-x64` becomes `linux-arm64`.
-
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_jit_runner --executable-path out/fuchsia_debug_x64/exe.unstripped/flutter_jit_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
-
-for standard (debug) builds
-
-`./flutter/tools/fuchsia/copy_debug_symbols.py --executable-name flutter_aot_product_runner --executable-path out/fuchsia_release_x64/exe.unstripped/flutter_aot_product_runner --destination-base $FUCHSIA_DIR/$(cat $FUCHSIA_DIR/.fx-build-dir)/.build-id --read-elf ./buildtools/linux-x64/clang/bin/llvm-readelf --unstripped`
-
-for `--release` builds (you must build flutter with `--runtime-mode=release`)
+`./fuchsia/sdk/linux/tools/symbol-index add out/fuchsia_debug_x64/.build-id out/fuchsia_debug_x64`
 
 #### deploying tests
 
