@@ -12,7 +12,7 @@ $ flutter upgrade
 ```
 
 ## Flutter 2.2 Changes
-### [2.2.1](https://github.com/flutter/flutter/pull/79486) (May 27, 2021)
+### [2.2.1](https://github.com/flutter/flutter/pull/83372) (May 27, 2021)
 This is a hotfix release that addresses the following issues:
 
 *   [dart-lang/sdk/issues/45907](https://github.com/dart-lang/sdk/issues/45907) ec48e8f - DDC: Fix missing nullability from recursive type hierarchies
