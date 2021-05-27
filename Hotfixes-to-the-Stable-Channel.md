@@ -11,6 +11,16 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
+## Flutter 2.2 Changes
+### [2.2.1](https://github.com/flutter/flutter/pull/79486) (May 27, 2021)
+This is a hotfix release that addresses the following issues:
+
+*   [dart-lang/sdk/issues/45907](https://github.com/dart-lang/sdk/issues/45907) ec48e8f - DDC: Fix missing nullability from recursive type hierarchies
+*   [dart-lang/sdk/issues/45990](https://github.com/dart-lang/sdk/issues/45990) [CP][stable channel] Bug-fix for bug in CastMap
+*   [flutter/flutter/issues/80978](https://github.com/flutter/flutter/issues/80978) “Command PhaseScriptExecution failed with a nonzero exit code” Failed to codesign App.framework/App: resource fork, Finder information, or similar detritus not allowed
+*   [flutter/flutter/issues/52106](https://github.com/flutter/flutter/issues/52106) [WEB]: Accessibility focus border doesn’t follow when navigating through interactive elements with tab key
+*   [flutter/flutter/issues/82768](https://github.com/flutter/flutter/issues/82768) [web] svgClip "leak" in canvaskit renderer
+
 ## Flutter 2.0 Changes
 ### [2.0.6](https://github.com/flutter/flutter/pull/79486) (April 16, 2021)
 This is a hotfix release that addresses a single issue:
