@@ -1,5 +1,39 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-05-28
+
+### Notable issues
+
+* TextFormField not responding to inputs on Android when typing on Microsoft SwiftKey [#83213](https://github.com/flutter/flutter/issues/83213)
+* [Flutter 2.2] ListTile ignores tileColor/selectedTileColor if parent Container has color [#83108](https://github.com/flutter/flutter/issues/83108)
+* Generated l10n file is missing 'intl' import with Flutter 2.2.0 [#83102](https://github.com/flutter/flutter/issues/83102)
+* ReorderableListView throws RenderFlex exception while dragging on latest stable and master [#83224](https://github.com/flutter/flutter/issues/83224)
+
+### Issue counts
+
+New Flutter issues triaged 220, closed 83 (38%)
+
+In total closed 186 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 39.7%  |
+| Duplicate  | 20.4%  |
+| Fixed | 12.9%  |
+| Solved | 5.3%  |
+| Timeout | 21.5%  |
+
+New Flutterfire issues triaged 25, closed 8 (32%)
+
+In total closed 14 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 14%  |
+| Duplicate | 14%  |
+| User issue | 35%  |
+| Solution provided | 21% |
+
 ## 2021-05-21
 
 ### Notable issues
