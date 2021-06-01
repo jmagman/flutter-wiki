@@ -31,6 +31,6 @@ On a weekly basis, the tree gardener will scan through test execution statistics
 # Fixing flaky tests
 The TL will help triage, reassign, and attempt to fix the flakiness.
 
-If fixed, the test can be re-enabled after being validated for 50 consecutive runs without flakiness issues (task without exclamation point in flutter build dashboard and task not failed due to the same flaky failure).
+If fixed, the test can be re-enabled after being validated for 50 consecutive runs without flakiness issues (task without exclamation point in flutter build dashboard and task not failed due to the same flaky failure). This can be done by updating the test entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
 
 If not fixable, the test will be removed from the flutter build dashboard or deleted from CI completely depending on specific cases.
