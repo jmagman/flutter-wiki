@@ -15,24 +15,25 @@ $ flutter upgrade
 ### [2.2.1](https://github.com/flutter/flutter/pull/83372) (May 27, 2021)
 This is a hotfix release that addresses the following issues:
 
-*   [dart-lang/sdk/issues/45907](https://github.com/dart-lang/sdk/issues/45907) ec48e8f - DDC: Fix missing nullability from recursive type hierarchies
-*   [dart-lang/sdk/issues/45990](https://github.com/dart-lang/sdk/issues/45990) [CP][stable channel] Bug-fix for bug in CastMap
-*   [flutter/flutter/issues/80978](https://github.com/flutter/flutter/issues/80978) “Command PhaseScriptExecution failed with a nonzero exit code” Failed to codesign App.framework/App: resource fork, Finder information, or similar detritus not allowed
-*   [flutter/flutter/issues/52106](https://github.com/flutter/flutter/issues/52106) [WEB]: Accessibility focus border doesn’t follow when navigating through interactive elements with tab key
-*   [flutter/flutter/issues/82768](https://github.com/flutter/flutter/issues/82768) [web] svgClip "leak" in canvaskit renderer
+ - https://github.com/flutter/flutter/issues/80978 - Error "Command PhaseScriptExecution failed with a nonzero exit code" when building on macOS
+ - https://github.com/dart-lang/sdk/issues/45990 - CastMap performs an invalid cast on 'remove', breaking shared_preferences plugin
+ - https://github.com/dart-lang/sdk/issues/45907 - DDC missing nullability information from recursive type hierarchies
+ - https://github.com/flutter/flutter/issues/52106 - [Web] Accessibility focus border doesn’t follow when navigating through interactive elements with tab key
+ - https://github.com/flutter/flutter/issues/82768 - [Web] svgClip memory leak in Canvaskit renderer
 
 ### 2.2.0 (May 18, 2021)
 Initial stable release.
 
 ## Flutter 2.0 Changes
-### [2.0.6](https://github.com/flutter/flutter/pull/79486) (April 16, 2021)
+### [2.0.6](https://github.com/flutter/flutter/pull/81508) (April 16, 2021)
 This is a hotfix release that addresses a single issue:
- - Issue #81326 - macOS binaries not codesigned
+ - https://github.com/flutter/flutter/issues/81326 - macOS binaries not codesigned
+
 There are no code changes to this release, but binary artifacts for macOS were re-built and codesigned.
 
-### [2.0.5](https://github.com/flutter/flutter/pull/79486) (April 16, 2021)
-This fixes the following issues:
- - https://github.com/dart-lang/sdk/issues/45306 - Segmentation fault on specific code.
+### [2.0.5](https://github.com/flutter/flutter/pull/80570) (April 16, 2021)
+This fixes the following issue:
+ - https://github.com/dart-lang/sdk/issues/45306 - Segmentation fault on specific code
 
 ### [2.0.4](https://github.com/flutter/flutter/pull/79486) (April 2, 2021)
 This fixes the following issues:
