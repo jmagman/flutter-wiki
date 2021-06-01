@@ -21,6 +21,9 @@ This is a hotfix release that addresses the following issues:
 *   [flutter/flutter/issues/52106](https://github.com/flutter/flutter/issues/52106) [WEB]: Accessibility focus border doesn’t follow when navigating through interactive elements with tab key
 *   [flutter/flutter/issues/82768](https://github.com/flutter/flutter/issues/82768) [web] svgClip "leak" in canvaskit renderer
 
+### 2.2.0 (May 18, 2021)
+Initial stable release.
+
 ## Flutter 2.0 Changes
 ### [2.0.6](https://github.com/flutter/flutter/pull/79486) (April 16, 2021)
 This is a hotfix release that addresses a single issue:
