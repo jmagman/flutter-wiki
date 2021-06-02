@@ -17,7 +17,7 @@ Because of the complexities of having native code, plugins have many more types 
   These should live in `example/integration_tests/`
 - **Native unit tests**. Most plugins that have native code should have unit tests for that native code. (Currently, many do not; fixing that is currently a priority for plugins work.) They are written as:
   - Android: **JUnit** - These should live in `android/src/test/`
-  - iOS: **XCTest** - These should live in `ios/Tests/`
+  - iOS: **XCTest** - These should live in `example/ios/RunnerTests/` (**Note**: These are in the example directory, not the main package directory, because they are run via the example app's project)
   - Windows, macOS, Linux: **TBD**. Currently there are no native unit tests for these platform, but they will be added in the future (see [#82445](https://github.com/flutter/flutter/issues/82445)).
 - **Native UI tests**. Some plugins show native UI that the test must interact with (e.g., `image_picker`). For these normal integration tests won't work, as there is not way to drive the native UI from Dart. They are written as:
   - Android: **Espresso**, via the [`espresso` plugin](https://pub.dev/packages/espresso) - These should live in `example/android/app/src/androidTest/`
@@ -90,10 +90,10 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
 
 ### Enabling XCTests or XCUITests
 
-1. Open <path_to_plugin>/example/ios/Runner.xcworkspace using XCode.
+1. Open <path_to_plugin>/example/ios/Runner.xcworkspace using Xcode.
 1. Create a new "Unit Testing Bundle" or "UI Testing Bundle", depending on the type of test.
 1. In the target options window, populate details as following, then click on "Finish".
-    * In the "product name" field, type "XCTests" or "RunnerUITests", depending on the type of test.
+    * In the "product name" field, type "RunnerTests" or "RunnerUITests", depending on the type of test.
     * In the "Team" field, select "None".
     * In the Organization Name field, type in "Flutter". This should usually be pre-populated.
     * In the Organization Identifier field, type in "com.google". This should usually be pre-populated.
@@ -103,10 +103,10 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
 1. Edit `example/ios/Podfile` to add the following to the `target 'Runner' do` block:
 
     ```ruby
-    target 'XCTests' do
+    target 'RunnerTests' do
       inherit! :search_paths
       pod 'OCMock', '3.5'
     end
     ```
-    (substituting `RunnerUITests` for `XCTests` for UI tests)
-1. A XCTests/RunnerUITests folder should be created and you can start hacking in the added `.m` file.
+    (substituting `RunnerUITests` for `RunnerTests` for UI tests)
+1. A RunnerTests/RunnerUITests folder should be created and you can start hacking in the added `.m` file.
