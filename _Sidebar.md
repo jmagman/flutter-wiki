@@ -25,7 +25,7 @@ Flutter Wiki
   - [Adding a new Test Shard](https://github.com/flutter/flutter/wiki/Adding-a-new-Test-Shard)
   - [[How to write a render speed test for Flutter]]
   - [[How to write a memory test for Flutter]]
-  - [[Reducing Test Flakiness]]
+  - [[Reducing test flakiness]]
   - [[Triaging a LUCI build failure]]
 - [[Release process]]
   - [[Flutter build release channels]]
