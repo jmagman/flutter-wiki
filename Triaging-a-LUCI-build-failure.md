@@ -40,5 +40,6 @@ Please refer to the above example of the infra failure.
 4. Check if a flaky bug has been filed in [flaky bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+flakes%22)
 5. File a new bug if needed
 6. If a rerun is needed, please refer to step 6 in the above infra failure session.
-### Difference of Engine from framework repo
-
+## Difference of Engine from framework repo
+### Rerun a post-submit test
+Engine post submit builds are available in [milo dashboard](https://ci.chromium.org/p/flutter/g/engine/console) only, and only a limited group has privilege to rerun. Please ask help from engine team.
