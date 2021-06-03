@@ -29,10 +29,11 @@ In total closed 14 issues during the week
 
 | Reason for closing  |  |
 | -- | -- |
-| Invalid | 14%  |
-| Duplicate | 14%  |
-| User issue | 35%  |
-| Solution provided | 21% |
+| Invalid | 21.4%  |
+| Duplicate | 14.3%  |
+| User issue | 35.7%  |
+| Solution provided | 21.4% |
+| Won't fix | 7.15% |
 
 ## 2021-05-21
 
