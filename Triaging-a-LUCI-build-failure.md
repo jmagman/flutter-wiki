@@ -26,5 +26,19 @@ An example build: [Linux color_filter_and_fade_perf__e2e_summary](https://ci.chr
    *  For pre-submit test, click `Re-run` in the [check run page](https://github.com/flutter/flutter/pull/83894/checks?check_run_id=2738146673): [[/images/luci_pre_submit_rerun.png|luci_pre_submit_rerun]]
    *  For post-submit test, login to [framework build dashboard](https://flutter-dashboard.appspot.com/#/build), click the task box, and click `RERUN`: [[/images/luci_post_submit_rerun.png|luci_post_submit_rerun]]
 
+## Test Failure
+A test failure shows up as a red box in the dashboards:
+
+* Framework post-submit build dashboard: [[/images/luci_post_submit_test_failure.png|luci_post_submit_test_failure]]
+* Framework pre-submit build console: [[/images/luci_pre_submit_test_failure.png|luci_pre_submit_test_failure]]
+### Overview of a test failure build
+Please refer to the above example of the infra failure.
+### What to do
+1. Check if it happens in earlier builds/commits via (i)
+2. Debug based on the error message (ii) and detailed log (v) to see if a real test failure caused by code changes.
+3. Check if the issue already exists in the [bug pool](https://github.com/flutter/flutter/issues)
+4. Check if a flaky bug has been filed in [flaky bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+flakes%22)
+5. File a new bug if needed
+6. If a rerun is needed, please refer to step 6 in the above infra failure session.
 ### Difference of Engine from framework repo
 
