@@ -1022,7 +1022,7 @@ For examples, prefer `toolbar`, `scrollbar`, but `appBar` ('app bar' in document
 
 Similarly, prefer `offstage` rather than `offStage`.
 
-Avoid starting class names with `iOS` since that would have to capitalize as `Ios` which is not how that is spelled. (Use "Cupertino" or "UiKit" instead.)
+Avoid starting class names with `iOS` since that would have to capitalize as `Ios` which is not how that is spelled. (Use "Cupertino" or "UiKit" instead. Avoid "IOS" if you can, that's jarring.) Apple being Apple, they also have an operating system called `macOS`. Generally Dart identifier naming rules would turn that into `macOs`, but that looks really weird, so we prefer `macOS` or `MacOS` if it needs to be capitalized.
 
 
 ### Avoid double negatives in APIs
