@@ -1,9 +1,11 @@
+Further documentation on Flutter's build infrastructure can be found in <https://github.com/flutter/flutter/blob/master/dev/bots/README.md>.
+
 ## Requirements for a Flutter/LUCI build
 
 A general outline of the requirements that a Flutter CI test shard has:
 
 1. On LUCI, test shards map to builders. Each test shard must have its own LUCI builder. For the Framework, these are defined in [flutter/infra](https://github.com/flutter/infra/blob/master/config/framework_config.star). Generally you will need to have both a pre-submit ("try" in LUCI terminology) builder and a post-submit ("prod") builder.
-1. This LUCI builder will specify a "recipe" to run. These are [starlark](https://github.com/bazelbuild/starlark) scripts that determine the actual CI steps to run, and are defined in [flutter.googlesource.com/recipes](https://flutter.googlesource.com/recipes). Most Framework tests use the [flutter/flutter_drone.py](https://flutter.googlesource.com/recipes/+/refs/heads/master/recipes/flutter/flutter_drone.py) recipe.
+1. This LUCI builder will specify a "recipe" to run. These are [starlark](https://github.com/bazelbuild/starlark) scripts that determine the actual CI steps to run, and are defined in [flutter.googlesource.com/recipes](https://flutter.googlesource.com/recipes). Most Framework tests use the [flutter/flutter_drone.py](https://flutter.googlesource.com/recipes/+/refs/heads/master/recipes/flutter/flutter_drone.py) recipe. To learn how to edit these, see <https://github.com/flutter/flutter/blob/master/dev/bots/README.md#editing-a-recipe>.
 1. Builders are then added to [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml). These files are read by [Flutter's build dashboard](https://flutter-dashboard.appspot.com/#/build), and are used for scheduling builds.
 
 ## Steps to add a new Framework Test Shard
