@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-06-04
+
+### Notable issues
+
+* [web, html] If a row has image followed by text, then ellipsis is not rendered. Works well using canvaskit [#83957](https://github.com/flutter/flutter/issues/83957)
+* [web] hot restart throws assertion failure if using nested MaterialApp [#83864](https://github.com/flutter/flutter/issues/83864)
+* [crowd] Text and SelectableText align differently [#83784](https://github.com/flutter/flutter/issues/83784)
+
+### Issue counts
+
+New Flutter issues triaged 233, closed 87 (37%)
+
+In total closed 162 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 35%  |
+| Duplicate  | 23%  |
+| Fixed | 13%  |
+| Solved | 6%  |
+| Timeout | 23%  |
+
+New Flutterfire issues triaged 22, closed 11 (50%)
+
+In total closed 17 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 47%  |
+| Duplicate | 18%  |
+| User issue | 29%  |
+| Fixed | 6% |
+
 ## 2021-05-28
 
 ### Notable issues
