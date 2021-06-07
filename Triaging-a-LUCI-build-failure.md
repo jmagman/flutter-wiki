@@ -47,4 +47,4 @@ Please refer to the above example of the infra failure.
 6. If a rerun is needed, please refer to step 6 in the above infra failure session.
 ## Difference of Engine from framework repo
 ### Rerun a post-submit test
-Engine post submit builds are available in [milo dashboard](https://ci.chromium.org/p/flutter/g/engine/console) only, and only a limited group has privilege to rerun. Please ask help from engine or infra team.
+Engine post submit builds are available in [milo dashboard](https://ci.chromium.org/p/flutter/g/engine/console) only, and only googlers can rerun. Please ask help from engine or infra team.
