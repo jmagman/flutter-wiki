@@ -27,7 +27,9 @@ An example build: [Linux color_filter_and_fade_perf__e2e_summary](https://ci.chr
 5. If you want to get an immediate help, please ask in the discord `hackers-infra` channel
 6. If this is an infra flake, and a retry is needed
    *  For pre-submit test, click `Re-run` in the [check run page](https://github.com/flutter/flutter/pull/83894/checks?check_run_id=2738146673): [[/images/luci_pre_submit_rerun.png|luci_pre_submit_rerun]]
+      * No access limit.
    *  For post-submit test, login to [framework build dashboard](https://flutter-dashboard.appspot.com/#/build), click the task box, and click `RERUN`: [[/images/luci_post_submit_rerun.png|luci_post_submit_rerun]]
+      * Ask to re-run in discord `hackers-infra` if not allowed.
 
 ## Test Failure
 A test failure shows up as a red box in the dashboards:
