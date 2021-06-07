@@ -4,7 +4,7 @@ Most tests have been running in LUCI for multiple flutter repositories, includin
 * [Flutter build dashboard](https://flutter-dashboard.appspot.com/#/build)
 * [LUCI Milo dashboard](https://ci.chromium.org/p/flutter)
 ## Infra Failure
-An infra failure shows up as a purple box in the dashboards:
+An infra failure comes with network connection issues, hardware outage, recipe breakage, cipd dependency issues, etc. It shows up as a purple box in the dashboards:
 
 * Framework post-submit build dashboard: [[/images/luci_post_submit_infra_failure.png|luci_post_submit_infra_failure]]
 * Framework pre-submit build console: [[/images/luci_pre_submit_infra_failure.png|luci_pre_submit_infra_failure]]
