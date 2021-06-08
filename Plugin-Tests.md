@@ -119,16 +119,25 @@ flutter pub run build_runner build
 
 ## Adding tests
 
-A PR changing a plugin [should add tests](https://github.com/flutter/flutter/wiki/Tree-hygiene#tests). Hopefully the scaffolding to run the necessary kinds of tests are already in place for that plugin, in which case you just add tests to the existing files in the locations referenced above. If not you have several options:
+A PR changing a plugin [should add tests](https://github.com/flutter/flutter/wiki/Tree-hygiene#tests). Which type(s) of tests you should add will depend on what exactly you are changing. If you're not sure, please ask in your PR or in `#hackers-ecosystem` [on Discord](https://github.com/flutter/flutter/wiki/Chat). 
+Hopefully the scaffolding to run the necessary kinds of tests are already in place for that plugin, in which case you just add tests to the existing files in the locations referenced above. If not, see below for more information about adding test scaffolding.
+
+### FAQ: Do I need to add tests even if the part of the code I'm changing isn't already tested?
+
+**Yes.** Much of the plugin code predates the current strict policy about testing, and as a result the coverage is not as complete as it should be. The goal of having a strict policy going forward is to ensure that the situation improves.
+
+### Adding test scaffolding
+
+If a plugin is missing test scaffolding for the type of tests you want to add, you have several options:
 - If it's simple to enable them, and you are comfortable making the changes, you can enable them as part of your PR.
 - If it's non-trivial to enable them, but you are comfortable doing it, you can make a new PR that enables them with some minimal test, and ask for that to be reviewed and landed before continuing with your PR.
-- If you aren't comfortable making the change, reach out [via Discord](https://github.com/flutter/flutter/wiki/Chat) and ask in #hackers-ecosystem.
+- If you aren't comfortable making the change, reach out [via Discord](https://github.com/flutter/flutter/wiki/Chat) and ask in `#hackers-ecosystem`.
 
 Regardless of the approach you use, please reach out on Discord if a PR that sets up a new kind of test doesn't get reviewed within two weeks. Filling in the gaps in test scaffolding is a priority for the team, so we want to review such PRs quickly whenever possible.
 
 See below for instructions on bringing up test scaffolding in a plugin (*does not yet cover all types of tests*):
 
-### Enabling XCTests or XCUITests
+#### Enabling XCTests or XCUITests
 
 1. Open <path_to_plugin>/example/ios/Runner.xcworkspace using Xcode.
 1. Create a new "Unit Testing Bundle" or "UI Testing Bundle", depending on the type of test.
