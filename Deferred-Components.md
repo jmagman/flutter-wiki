@@ -102,7 +102,123 @@ The `flutter build appbundle` command assists in setting up the project with a v
 
 Since mistakenly importing a deferred file as non-deferred can cause the file to be compiled into the base loading unit, the deferred components validator also has a mechanism for preventing accidental changes to the app's final generated loading units. This check will cause the build to fail if the generated loading units do not match the results of the previous run which is cached in the `deferred_components_loading_units.yaml` file. After throwing an error upon detecting changes, the build will automatically pass this check on next run if no additional changes are made. This means that this check is not error proof as you are still free to ignore the mismatched loading unit error if the change was intended and accounted for and continue to build.
 
-## Custom Implementations
+# Fully deferring add2app Flutter
+
+If android dynamic feature modules are being used in an add2app case, it can be possible to convert the Flutter module into a dynamic feature module to install at runtime. Since the structure of add2app scenarios are highly variable, we do not provide direct tooling to automate/validate full Flutter deferring. Instead, we provide this guide for the necessary components to get this functionality working. The architecture described here is one of many ways this can work, and is up to you to determine how best to integrate this into your apps.
+
+Full Flutter deferral requires an implementation of `SplitInstallManager` in the base app module, as well as adding the dependencies on `com.google.android.play:core` in `build.gradle` dependencies as an implementation. The dynamic feature module containing Flutter must depend on the base module and the base module can no longer include any references to Flutter code and the `:flutter` in `build.gradle` dependency should be removed. The process described below is for the direct dependency way of add2app. The aar method is not described here (yet).
+
+## SplitInstallManager base module "bootstrapper"
+
+The base module must use `SplitInstallManager` to install the Flutter dynamic feature. For example, here is a barebones simple implementation that downloads a dynamic feature module named `flutter`:
+
+```
+import android.annotation.SuppressLint;
+import android.content.Context;
+import androidx.annotation.NonNull;
+import com.google.android.play.core.splitinstall.SplitInstallException;
+import com.google.android.play.core.splitinstall.SplitInstallManager;
+import com.google.android.play.core.splitinstall.SplitInstallManagerFactory;
+import com.google.android.play.core.splitinstall.SplitInstallRequest;
+import com.google.android.play.core.splitinstall.SplitInstallSessionState;
+import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListener;
+import com.google.android.play.core.splitinstall.model.SplitInstallErrorCode;
+import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus;
+
+
+class SplitUtility {
+  private @NonNull SplitInstallManager splitInstallManager;
+  private FeatureInstallStateUpdatedListener listener;
+
+  private class FeatureInstallStateUpdatedListener implements SplitInstallStateUpdatedListener {
+    @SuppressLint("DefaultLocale")
+    public void onStateUpdate(SplitInstallSessionState state) {
+      int sessionId = state.sessionId();
+      switch (state.status()) {
+        case SplitInstallSessionStatus.FAILED:
+          break;
+        case SplitInstallSessionStatus.INSTALLED:
+          break;
+        case SplitInstallSessionStatus.CANCELED:
+          break;
+        default:
+      }
+    }
+  }
+
+  SplitUtility(Context context) {
+    splitInstallManager = SplitInstallManagerFactory.create(context);
+    listener = new FeatureInstallStateUpdatedListener();
+    splitInstallManager.registerListener(listener);
+  }
+
+  void installFlutterModule() {
+    SplitInstallRequest request =
+    SplitInstallRequest.newBuilder().addModule("flutter").build();
+
+    splitInstallManager
+      // Submits the request to install the module through the
+      // asynchronous startInstall() task. Your app needs to be
+      // in the foreground to submit the request.
+      .startInstall(request)
+      // Called when the install request is sent successfully. This is different than a successful
+      // install which is handled in FeatureInstallStateUpdatedListener.
+      .addOnSuccessListener(
+          sessionId -> {
+            // store sessionId somewhere
+          })
+      .addOnFailureListener(
+          exception -> {
+            switch (((SplitInstallException) exception).getErrorCode()) {
+              case SplitInstallErrorCode.NETWORK_ERROR:
+                break;
+              case SplitInstallErrorCode.MODULE_UNAVAILABLE:
+                break;
+              default:
+                break;
+            }
+          });
+  }
+
+  public void destroy() {
+    splitInstallManager.unregisterListener(listener);
+  }
+}
+```
+
+The base module should install the flutter module when appropriate. `PlayStoreDeferredComponentsManager` provides much of the same functionality, but it lives inside the Flutter android embedder, and thus cannot be referenced from the base module.
+
+# `build.gradle` configuration
+
+`build.gradle` of the base module as well as the flutter module should be modified to convert it into a dynamic feature module.
+
+* Add `dynamicFeatures = [':flutter']` to the `android` section of the base module `build.gradle`.
+* Remove `implementation project(':flutter')` from the dependencies section of the base module `build.gradle`.
+* Add `implementation "com.google.android.play:core:1.8.0"` to the dependencies section of the base module `build.gradle`.
+
+* Replace `apply plugin: 'com.android.library'` with `apply plugin: 'com.android.dynamic-feature'` in the Flutter module `build.gradle`
+* Add a dependencies section to the Flutter module `build.gradle`:
+```
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(":app")
+    api 'androidx.test:core:1.2.0'
+}
+```
+* Add `xmlns:dist="http://schemas.android.com/apk/distribution"` to the Flutter module `AndroidManifest.xml` manifest section
+* Add the dynamic feature module section:
+```
+<dist:module
+  dist:instant="false"
+  dist:title="@string/title_fluttermodule">
+  <dist:delivery>
+     <dist:on-demand />
+  </dist:delivery>
+  <dist:fusing dist:include="true" />
+</dist:module>
+``
+
+# Custom Implementations
 
 It is possible to write a custom implementation that bypasses the Android Play store. This is only recommended for advanced developers and is primarily aimed at apps with very unique needs such as extremely large asset components, specific download behavior, or distribution in a region that does not have access to the Play store (eg, China).
 
