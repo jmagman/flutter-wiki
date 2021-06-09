@@ -188,7 +188,7 @@ class SplitUtility {
 
 The base module should install the flutter module when appropriate. `PlayStoreDeferredComponentsManager` provides much of the same functionality, but it lives inside the Flutter android embedder, and thus cannot be referenced from the base module.
 
-# `build.gradle` configuration
+## `build.gradle` configuration
 
 `build.gradle` of the base module as well as the flutter module should be modified to convert it into a dynamic feature module.
 
