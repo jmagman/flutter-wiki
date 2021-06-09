@@ -437,6 +437,8 @@ If possible, avoid four-phase deprecations (adding a new API with a temporary na
 
 Stage your change and the documentation for your change. Typically this will be two or more PRs, plus PRs to fix the tests that were broken (see step 1), as well as writing a migration guide as a PR to the Website repository.
 
+If possible, include flutter fixes to aid users in migration. Whether or not the change is supported by flutter fix should be included in the migration guide. To learn about authoring fixes, see [Data driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes).
+
 Use our [breaking change migration guide template](https://github.com/flutter/website/blob/master/src/docs/release/breaking-changes/template.md) (every part in square brackets should be changed) to create the migration guide that describes the change. Do not land the migration guide at this time. You will need to update it before you land it in the last step.
 
 ### 4. Land your change.
@@ -477,8 +479,10 @@ In other words:
 
 To determine the latest dev version, see <https://flutter.dev/docs/development/tools/sdk/releases>.
 
+When adding a deprecation notice to the framework, a flutter fix should be included with your change. This helps users migrate to the new API as easily as possible. To learn more about authoring fixes, see [Data driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes). If a fix cannot be written for the new API, please file an issue in https://github.com/dart-lang/sdk and link to it in your change.
+
 Using this standard form ensures that we can write a script to detect all deprecated APIs and remove them. We have a test that verifies that this syntax is followed.
 
 When deprecating features, be aware that you will not by default be informed when the Flutter code itself uses the deprecated feature (there is a `deprecated_member_use_from_same_package: ignore` line in the root `analysis_options.yaml` file). To find places where the old feature is used, rename its declaration and see where the compiler complains. (You can't just comment out the "ignore" in the `analysis_options.yaml` file because it's hiding hundreds of other warnings...)
 
-Deprecation are removed in a consistent "first-in-first-out" fashion. The lifetime for a Flutter deprecation is 1 year after reaching the stable channel, or after 4 stable releases, whichever is longer. Deprecations are still subject to the policy described on the [breaking changes page](https://flutter.dev/docs/release/breaking-changes) of the website. Where possible, prepare the dart fix tools and write appropriate migrations guides.
+Deprecations are removed in a consistent "first-in-first-out" fashion. The lifetime for a Flutter deprecation is 1 year after reaching the stable channel, or after 4 stable releases, whichever is longer. Deprecations are still subject to the policy described on the [breaking changes page](https://flutter.dev/docs/release/breaking-changes) of the website. Where possible, prepare the dart fix tools and write appropriate migrations guides.
