@@ -102,6 +102,8 @@ The `flutter build appbundle` command assists in setting up the project with a v
 
 Since mistakenly importing a deferred file as non-deferred can cause the file to be compiled into the base loading unit, the deferred components validator also has a mechanism for preventing accidental changes to the app's final generated loading units. This check will cause the build to fail if the generated loading units do not match the results of the previous run which is cached in the `deferred_components_loading_units.yaml` file. After throwing an error upon detecting changes, the build will automatically pass this check on next run if no additional changes are made. This means that this check is not error proof as you are still free to ignore the mismatched loading unit error if the change was intended and accounted for and continue to build.
 
+***
+
 # Fully deferring add2app Flutter
 
 If android dynamic feature modules are being used in an add2app case, it can be possible to convert the Flutter module into a dynamic feature module to install at runtime. Since the structure of add2app scenarios are highly variable, we do not provide direct tooling to automate/validate full Flutter deferring. Instead, we provide this guide for the necessary components to get this functionality working. The architecture described here is one of many ways this can work, and is up to you to determine how best to integrate this into your apps.
@@ -217,6 +219,8 @@ dependencies {
   <dist:fusing dist:include="true" />
 </dist:module>
 ```
+
+***
 
 # Custom Implementations
 
