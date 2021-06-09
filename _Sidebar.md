@@ -26,7 +26,7 @@ Flutter Wiki
   - [[How to write a render speed test for Flutter]]
   - [[How to write a memory test for Flutter]]
   - [[Reducing test flakiness]]
-  - [[Triaging a LUCI build failure]]
+  - [[Understanding a LUCI build failure]]
 - [[Release process]]
   - [[Flutter build release channels]]
   - [[Changelog]]
