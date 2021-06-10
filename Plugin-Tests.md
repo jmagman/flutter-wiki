@@ -144,8 +144,8 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
 1. In the target options window, populate details as following, then click on "Finish".
     * In the "product name" field, type "RunnerTests" or "RunnerUITests", depending on the type of test.
     * In the "Team" field, select "None".
-    * In the Organization Name field, type in "Flutter". This should usually be pre-populated.
-    * In the Organization Identifier field, type in "com.google". This should usually be pre-populated.
+    * Set the Organization Name to "Flutter".
+    * Set the Organization Identifier to "dev.flutter".
     * In the Language field, select "Objective-C".
     * In the Project field, select the xcodeproj "Runner" (blue color).
     * In the Target to be Tested, select xcworkspace "Runner" (white color).
