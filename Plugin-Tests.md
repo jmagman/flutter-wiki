@@ -161,5 +161,5 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
       pod 'OCMock', '3.5'
     end
     ```
-    (substituting `RunnerUITests` for `RunnerTests` for UI tests)
+    (substituting `RunnerUITests` for `RunnerTests` for UI tests). The `OCMock` line is only necessary if your tests use OCMock.
 1. A RunnerTests/RunnerUITests folder should be created and you can start hacking in the added `.m`/`.swift` file.
