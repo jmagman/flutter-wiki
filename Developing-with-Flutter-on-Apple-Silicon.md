@@ -11,6 +11,7 @@ We recommend using Flutter 2 or later on Apple Silicon machines. Depending on yo
 ### Other notes
 
 - Deployment to physical iOS and Android devices attached to the host is supported, as well as support to the iOS simulator with `flutter run` or from Flutter IDE plugins. Deployment to the iOS simulator from Xcode is supported on version 2.1.0-12.0.pre and later as of [pull request 73828](https://github.com/flutter/flutter/pull/73828).  Simulator apps will be x86_64 (non-ARM64) until [issue 69334](https://github.com/flutter/flutter/issues/69334) is resolved.
+- There are several known Apple bugs for x86_64 (non-ARM64) apps running on the Simulator, including pasteboard and image picker failures, described in [issue 74970](https://github.com/flutter/flutter/issues/74970#issuecomment-858170914).
 - Developing for the web (`flutter run -d chrome`) is working on all channels. It's recommended that you install the Apple Silicon version of Chrome. 
 - The Android SDK Manager now offers an Android emulator that runs on Apple Silicon. The ARM64 images are also available in AVD Manager from the Other Images tab.
 - CocoaPods crashes on ARM Macs if the x86 version of the ffi gem isn't installed. As of Flutter 2, we warn you of this and prompt you to install the `ffi` gem with the following line:
