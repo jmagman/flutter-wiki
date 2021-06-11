@@ -12,6 +12,20 @@ $ flutter upgrade
 ```
 
 ## Flutter 2.2 Changes
+
+### [2.2.2](https://github.com/flutter/flutter/pull/84364) (June 11, 2021)
+This is a hotfix release that addresses the following issues:
+
+  *  [#46249](https://github.com/dart-lang/sdk/issues/46249) [CP][stable channel] Ensure start/stop file watching requests are run on the dart thread.
+  *  [#46210](https://github.com/dart-lang/sdk/issues/46210) [CP][stable channel] Fix an analyze crash when analyzing against package:meta v1.4.0
+  *  [#46173](https://github.com/dart-lang/sdk/issues/46173) [CP][stable channel] Merge a3767f7db86a85fcd6201e9357ad47b884002b66 to stable channel (2.13)
+  *  [#46300](https://github.com/dart-lang/sdk/issues/46300) [CP][stable channel] Fix OOM VM test (transferable\_throws\_oom\_test crashing after upgrade from Ubuntu 16 -> 18)
+  *  [#46298](https://github.com/dart-lang/sdk/issues/46298) [CP][stable channel] Ensure start/stop file watching requests are run on the dart thread (Additional Change)
+  *  [#83799](https://github.com/flutter/flutter/issues/83799) Tool may crash if pub is missing from the artifact cache
+  *  [#83102](https://github.com/flutter/flutter/issues/83102) Generated l10n file is missing ‘intl’ import with Flutter 2.2.0
+  *  [#83094](https://github.com/flutter/flutter/issues/83094) Flutter AOT precompiler crash
+  *  [#82874](https://github.com/flutter/flutter/issues/82874) PopupMenuButton is broken after upgrade to Flutter 2.2.
+
 ### [2.2.1](https://github.com/flutter/flutter/pull/83372) (May 27, 2021)
 This is a hotfix release that addresses the following issues:
 
