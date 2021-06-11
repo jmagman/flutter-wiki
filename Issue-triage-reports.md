@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-06-11
+
+### Notable issues
+
+* [web] CanvasKit crash after many TextPainter.layout() calls [#84320](https://github.com/flutter/flutter/issues/84320)
+* ListView layout error when using ListView and ExpansionTile widget [#84201](https://github.com/flutter/flutter/issues/84201)
+
+### Issue counts
+
+New Flutter issues triaged 192, closed 67 (35%)
+
+In total closed 180 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 37.2%  |
+| Duplicate  | 21.6%  |
+| Fixed | 15%  |
+| Solved | 5.5%  |
+| Timeout | 20.5%  |
+
+New Flutterfire issues triaged 32, closed 19 (59%)
+
+In total closed 21 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 42.8%  |
+| Duplicate | 9.5%  |
+| User issue | 33.3% |
+| Solution provided | 9.5% |
+| Needs reproduction | 4.7% |
+
 ## 2021-06-04
 
 ### Notable issues
