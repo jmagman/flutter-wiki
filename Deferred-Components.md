@@ -108,6 +108,8 @@ Since mistakenly importing a deferred file as non-deferred can cause the file to
 
 When using add-to-app, it can be possible to convert the entire Flutter module into an android dynamic feature module to install at runtime. Since the structures of add-to-app scenarios are highly variable, we do not provide direct tooling to automate/validate full Flutter deferring. Instead, we provide this guide for implementing the necessary components to get this functionality working. The architecture described here is one of many ways this can work, and is up to you to determine how best to integrate this into your apps.
 
+Integrating full flutter deferring is experimental and will require a lot of custom implementations and setup that is not fully tested due to variability in different apps. Therefore, this is considered a very advanced feature and Flutter may not be able to provide guarantees or technical support for specific use cases.
+
 Full Flutter deferral requires an implementation of `SplitInstallManager` in the base app module, as well as adding the dependencies on `com.google.android.play:core` in `build.gradle` dependencies as an implementation. The dynamic feature module containing Flutter must depend on the base module and the base module can no longer include any references to Flutter code. The `:flutter` dependency in `build.gradle` should be removed. The process described below is for the direct dependency way of add-to-app. The aar method is not described here (yet).
 
 ## SplitInstallManager base module "bootstrapper"
