@@ -110,7 +110,7 @@ When using add-to-app, it can be possible to convert the entire Flutter module i
 
 Integrating full flutter deferring is experimental and will require a lot of custom implementations and setup that is not fully tested due to variability in different apps. Therefore, this is considered a very advanced feature and Flutter may not be able to provide guarantees or technical support for specific use cases.
 
-Full Flutter deferral requires an implementation of `SplitInstallManager` in the base app module, as well as adding the dependencies on `com.google.android.play:core` in `build.gradle` dependencies as an implementation. The dynamic feature module containing Flutter must depend on the base module and the base module can no longer include any references to Flutter code. The `:flutter` dependency in `build.gradle` should be removed. The process described below is for the direct dependency way of add-to-app. The aar method is not described here (yet).
+Full Flutter deferral requires an implementation of `SplitInstallManager` in the base app module, as well as adding the dependencies on `com.google.android.play:core` in `build.gradle` dependencies as an implementation. The dynamic feature module containing Flutter must depend on the base module and the base module can no longer include any references to Flutter code. The `:flutter` dependency in `build.gradle` should be removed. The process described below is for the direct dependency way of add-to-app for the `fullscreen` sample app (https://github.com/flutter/samples/tree/master/add_to_app/fullscreen). The aar method is not described here (yet).
 
 ## SplitInstallManager base module "bootstrapper"
 
