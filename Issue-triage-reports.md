@@ -1,5 +1,36 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-06-18
+
+### Notable issues
+
+* Bug in TextFormField introduced in V2.2.0 causes input to freeze and needs an app restart [#84620](https://github.com/flutter/flutter/issues/84620)
+* [web] Cannot type in the TextField with `autofillHints` on `dev` and `master` channels on iOS [#84817](https://github.com/flutter/flutter/issues/84817)
+
+### Issue counts
+
+New Flutter issues triaged 204, closed 71 (35%)
+
+In total closed 143 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 41.9%  |
+| Duplicate  | 16.0%  |
+| Fixed | 13.2%  |
+| Solved | 6.2%  |
+| Timeout | 22.3%  |
+
+New Flutterfire issues triaged 28, closed 17 (61%)
+
+In total closed 18 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 50.0%  |
+| Duplicate | 22.3%  |
+| User issue | 27.8% |
+
 ## 2021-06-11
 
 ### Notable issues
