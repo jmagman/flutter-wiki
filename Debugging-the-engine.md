@@ -5,9 +5,9 @@ See also [[Crashes]] for advice on handling engine crashes (specifically around 
 ## Running a Flutter app with a local engine
 
 Once the appropriate version of the engine is built (see [[Compiling the engine]]), run your Flutter app with:
-
-`flutter run --local-engine=XXXX`
-
+```
+$ flutter run --local-engine=XXXX`
+```
 to run an app with the local engine where `XXXX` should be replaced with the version you wish to use. For example, use `--local-engine=android_debug_unopt` to run a debug android engine or `--local-engine=ios_debug_sim_unopt` to run a debug iOS simulator engine.
 
 It is important to always have a `host_XXXX` version of the engine built when using a local engine since Flutter uses the host build's version of Dart.
@@ -26,7 +26,20 @@ Also, make sure to run your application with the `--trace-skia` flag.
 
 ## Debugging iOS builds with Xcode
 
-If you open your iOS .xcodeproject or .xcworkspace in Xcode, you can set breakpoints e.g. in `main.m`.  From there, you can use `lldb` to set a breakpoint on the relevant engine source, e.g. `(lldb) br set -f FlutterViewController.mm -l 123`.
+Building with `flutter --local-engine` will set a `LOCAL_ENGINE` Xcode build setting in your Flutter application `Generated.xcconfig` file. This will be set until you run `flutter run` again with either a different `--local-engine` option, or with none at all (which will unset it).
+
+You can speed up your workflow by adding the `--config-only` flag to set up the Xcode build settings and plugins, but not compile the app. For example:
+```
+$ flutter build ios --local-engine ios_debug_unopt --config-only
+```
+
+To start debugging, open your Flutter app `ios/Runner.xcworkspace` file in Xcode. Ensure **Product > Scheme > Edit Scheme > Run > Build Configuration** matches your engine runtime mode (defaults to `Debug`).
+
+<img src="https://user-images.githubusercontent.com/682784/76341195-ee050680-62b9-11ea-956d-c27d65e5eec9.png" alt="Product > Scheme > Edit Scheme > Run > Build Configuration" width="900"/>
+
+Add an engine symbol breakpoint via **Debug > Breakpoints > Create Symbolic Breakpoint...**. The **Symbol** field should be the engine symbol you're interested in, like `-[FlutterEngine runWithEntrypoint:]` (note the `-[` suffix has no space).
+
+You can also set a breakpoint directly with [lldb](https://lldb.llvm.org/tutorial.html) by expanding **Flutter > Runner > Supporting Files > main.m** in the Runner Project Navigator. Put a breakpoint in `main()` and start the application by clicking the Run button (CMD + R). Then, set your desired breakpoint in the engine in `lldb` via `breakpoint set -...`.
 
 ## Debugging Android builds with gdb
 
