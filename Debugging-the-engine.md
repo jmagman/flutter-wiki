@@ -37,7 +37,7 @@ To start debugging, open your Flutter app `ios/Runner.xcworkspace` file in Xcode
 
 <img src="https://user-images.githubusercontent.com/682784/76341195-ee050680-62b9-11ea-956d-c27d65e5eec9.png" alt="Product > Scheme > Edit Scheme > Run > Build Configuration" width="900"/>
 
-Add an engine symbol breakpoint via **Debug > Breakpoints > Create Symbolic Breakpoint...**. The **Symbol** field should be the engine symbol you're interested in, like `-[FlutterEngine runWithEntrypoint:]` (note the `-[` suffix has no space).
+Add an engine symbol breakpoint via **Debug > Breakpoints > Create Symbolic Breakpoint...**. The **Symbol** field should be the engine symbol you're interested in, like `-[FlutterEngine runWithEntrypoint:]` (note the `-[` prefix has no space).
 
 You can also set a breakpoint directly with [lldb](https://lldb.llvm.org/tutorial.html) by expanding **Flutter > Runner > Supporting Files > main.m** in the Runner Project Navigator. Put a breakpoint in `main()` and start the application by clicking the Run button (CMD + R). Then, set your desired breakpoint in the engine in `lldb` via `breakpoint set -...`.
 
