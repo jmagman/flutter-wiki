@@ -78,6 +78,7 @@ Flutter Wiki
 - [[Setting up the Packages development environment]]
 - [[Plugins and Packages repository structure]]
 - [[Plugin Tests]]
+- [[Contributing to Plugins and Packages]]
 - [[Releasing a Plugin or Package]]
 
 ## Infrastructure
