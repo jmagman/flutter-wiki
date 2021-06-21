@@ -288,6 +288,8 @@ Now register debug symbols for all engine artifacts to your Fuchsia checkout:
 
 `./fuchsia/sdk/linux/tools/symbol-index add out/fuchsia_debug_x64/.build-id out/fuchsia_debug_x64`
 
+**Note:** Because of [fxbug.dev/45484](https://fxbug.dev/45484), `fx log` may have issues symbolize logs on other machines. It is recommended to run `fx log` from the same machine that you build from.
+
 #### deploying tests
 
 For any test FAR files, you may publish them to your device using `pm publish` (flow_tests.far used as an example; same note as above about the custom out/ folder applies):
