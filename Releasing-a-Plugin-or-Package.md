@@ -1,5 +1,24 @@
 Any PR that changes a package's version (which should be most PRs) should be published
-to pub.dev. Currently, releases are manual (auto-publishing is under development).
+to pub.dev. Currently, auto-publishing is enabled for flutter/plugins only. The manual release process is still required for flutter/packages.
+
+### Automatic release beta (flutter/plugins only)
+
+The packages in flutter/plugins are automatically released with a Github Action workflow named [“release”](https://github.com/flutter/plugins/blob/master/.github/workflows/pull_request_label.yml). If a commit on master branch contains version updates to one ore more packages, the “release” CI will publish the new versions to pub.dev and push the release tag to GitHub. The “release” CI passes if
+1. the release process is successful, or
+2. there are no version updates in the commit, or
+3. the new versions have already been published.  
+
+If you are a Flutter team member and you want to know more about the publisher account, please see b/191674407.
+
+The “release” CI only runs on post-submit, and waits until all the other CI jobs have passed before starting. Like any other CI job, The “release” CI blocks future PRs if failed. 
+
+_Note: the “release” CI does not automatically publish the `flutter_plugin_tools` package._
+
+#### What if the “release” CI failed?
+
+If it is a flake (for example, network issue), a Flutter team member can simply run the CI again. For more complicated cases, a Flutter team member can also manually release the packages, then re-run the CI to pass.
+
+### Manual release (flutter/plugins and flutter/packages)
 
 The Flutter team member most involved with the PR should be the person responsible
 for publishing. In cases where the PR is authored by a Flutter team member, the
