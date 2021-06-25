@@ -1,5 +1,37 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-06-25
+
+### Notable issues
+
+* A StackOverFlowError thrown on iOS simulator specifically, otherwise a white screen on physical device [#85026](https://github.com/flutter/flutter/issues/85026)
+* Running web in profile/release mode throws NoSuchMethod error, while same code works in debug mode [#85136](https://github.com/flutter/flutter/issues/85136)
+
+### Issue counts
+
+New Flutter issues triaged 166, closed 61 (37%)
+
+In total closed 90 issues during the week 
+
+Finished checking the [p: maps](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+maps%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22+) issues and started reworking the [p: video_player](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+video_player%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22++-label%3A%22severe%3A+new+feature%22+-label%3A%22proposal%22+-label%3A%22passed+first+triage%22) issues.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 46.67%  |
+| Duplicate  | 25.56%  |
+| Fixed | 7.78%  |
+| Solved | 7.78%  |
+| Timeout | 12.22%  |
+
+New Flutterfire issues triaged 28, closed 6 (21%)
+
+In total closed 6 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 66.7%  |
+| User issue | 33.3%  |
+
 ## 2021-06-18
 
 ### Notable issues
