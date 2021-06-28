@@ -34,7 +34,6 @@ Flutter Wiki
   - [[Where's my Commit?]]
   - [[Flutter Cherrypick Process]]
   - [[Recipe Branching for Releases]]
-  - [Release notes](https://flutter.dev/docs/development/tools/sdk/release-notes)
 - [[Rolling Dart]]
 - [[Manual Engine Roll with Breaking Commits]]
 - [Updating Material Design Fonts & Icons](https://github.com/flutter/flutter/wiki/Updating-Material-Design-Fonts-&-Icons)
@@ -89,6 +88,7 @@ Flutter Wiki
 - [[Flutter Installation Bundles]]
 
 ## Release Information
+- [Release notes](https://flutter.dev/docs/development/tools/sdk/release-notes)
 - [Hotfixes to the stable channel](https://github.com/flutter/flutter/wiki/Hotfixes-to-the-Stable-Channel)
 
 ## Experimental features
