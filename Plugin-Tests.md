@@ -41,7 +41,7 @@ cd example
 flutter drive --driver test_driver/integration_test.dart --target integration_test/<name_of_test_file>.dart
 ```
 
-or use the [plugin tools `drive-examples` command](https://github.com/flutter/plugins/tree/master/script/tool#readme)
+(optionally including a `-d <device>` flag to select the target device), or use the [plugin tools `drive-examples` command](https://github.com/flutter/plugins/tree/master/script/tool#readme)
 from the root of the repository:
 
 ```sh
