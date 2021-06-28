@@ -29,12 +29,12 @@ Flutter Wiki
   - [[Understanding a LUCI build failure]]
 - [[Release process]]
   - [[Flutter build release channels]]
-  - [[Changelog]]
   - [[Bad Builds]]
   - [[Bad Build Identification]]
   - [[Where's my Commit?]]
   - [[Flutter Cherrypick Process]]
   - [[Recipe Branching for Releases]]
+  - [Release notes](https://flutter.dev/docs/development/tools/sdk/release-notes)
 - [[Rolling Dart]]
 - [[Manual Engine Roll with Breaking Commits]]
 - [Updating Material Design Fonts & Icons](https://github.com/flutter/flutter/wiki/Updating-Material-Design-Fonts-&-Icons)
