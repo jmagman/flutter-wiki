@@ -409,7 +409,7 @@ The "contributed tests" are:
 
 You can contribute tests to the flutter/tests repo by following [the instructions](https://github.com/flutter/tests/blob/master/README.md) on that repo. If you have a significant test suite that you would like to have be considered part of the breaking change definition (one too big to land in the flutter/tests repo), please contact Hixie at ian@hixie.ch.
 
-In cases where we can imagine reasonable scenarios where developers would be affected negatively, by courtesy, once the change has landed, engineers are encouraged to announce the changes by sending an e-mail to flutter-announce and listing it on our [[Changelog]] wiki page (such that they will be included in our release notes). However, we do not consider these breaking changes. (One reason to do this would be if we see our own tests being significantly affected, even if no contributed test actually fails.)
+In cases where we can imagine reasonable scenarios where developers would be affected negatively, by courtesy, once the change has landed, engineers are encouraged to announce the changes by sending an e-mail to [flutter-announce@](https://groups.google.com/g/flutter-announce), a message to the `#announcements` channel on our [[Chat]], and tagging the relevant issues with the [**severe: API break** label](https://github.com/flutter/flutter/labels/severe%3A%20API%20break) (such that they will be included in our release notes). However, we do not consider these breaking changes. (One reason to do this would be if we see our own tests being significantly affected, even if no contributed test actually fails.)
 
 This definitions is binding. If you think you need an exemption to this policy, please contact Hixie on the #hackers [[Chat]] channel. If a breaking change lands without following this policy and without an explicit exemption from @Hixie, it must be reverted.
 
@@ -452,12 +452,15 @@ During this process, each individual PR does not break any tests, so it should n
 
 ### 5. Document the change, including clear documentation for migrating code, with samples, and clear rationales for each change
 
-Once everything has landed, update your migration guide based on your experience migrating everyone, update the timeline on the guide, and push it to [the flutter.dev Web site](https://flutter.dev/docs/release/breaking-changes) (don't forget to update the [index](https://github.com/flutter/website/blob/master/src/docs/release/breaking-changes/index.md) of that directory as well), e-mail a copy to flutter-announce, and update the [[Changelog]] wiki page.
+Once everything has landed:
 
-When updating the [[Changelog]] and the timeline section of the migration guide, to figure out the correct version heading for the changelog run `git fetch upstream && flutter --version`. For example, if it says "Flutter 1.2.23-pre.10" in the output your changelog entry should be under heading "Changes since 1.2.22".
+* update your migration guide based on your experience migrating everyone, 
+* update the timeline on the guide, and push it to [the flutter.dev Web site](https://flutter.dev/docs/release/breaking-changes) (don't forget to update the [index](https://github.com/flutter/website/blob/master/src/docs/release/breaking-changes/index.md) of that directory as well),
+* e-mail a copy to [flutter-announce@](https://groups.google.com/g/flutter-announce),
+* notify the `#announcements` channel on our [[Chat]], and 
+* add the [**severe: API break** label](https://github.com/flutter/flutter/labels/severe%3A%20API%20break) to the relevant issues, so they get listed in the upcoming Release notes.
 
-
-#### Deprecation
+### Deprecations
 
 Old APIs can be marked as deprecated as part of this process. Deprecation is not a way to avoid making a breaking change; you should consider deprecating an API to be equivalent to removing it, as some of our customers (and we ourselves) consider using a deprecated API to be anathema (triggering a build failure).
 
