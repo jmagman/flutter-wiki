@@ -1,5 +1,3 @@
-# Upgrading Android API
-
 When new Android versions become available, the following steps should be taken in order to fully support the new API version in the Flutter Engine. These steps only change the Engine to build against and target the new API and does not guarantee everything works with the changes in the new android API.
 
 ## Buildroot:
