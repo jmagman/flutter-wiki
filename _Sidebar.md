@@ -71,6 +71,10 @@ Flutter Wiki
 - [[Why we have a separate engine repo]]
 - [[Reduce Flutter engine size with MLGO]]
 
+### Android
+
+- [Upgrading Android API](https://github.com/flutter/flutter/wiki/Upgrading-Engine's-Android-API-version)
+
 ## Plugins and packages repos
 
 - [[Setting up the Plugins development environment]]
