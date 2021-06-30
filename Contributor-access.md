@@ -48,12 +48,14 @@ Being in the Discord "team" group gives you the following:
 
 The actual process (as followed by Flutter repo admins) is as follows:
 
-1. Verify the identity of the person making the request.
-1. Verify that they qualify under all the terms described above. If you know them, you can be their sponsor, otherwise, make sure they have one.
+1. Verify that they qualify under all the terms described above. Make sure they have a sponsor who isn't you.
+1. Verify the identity of the person making the request. Ask them to confirm, on Discord, that they have read the style guide, issue or tree hygiene wiki page, code of conduct, and other documents relevant to them.
+1. Add them to our private spreadsheet (go/flutter-organization-members).
 1. Click the "Add a member" button on [the flutter-hackers team page](https://github.com/orgs/flutter/teams/flutter-hackers/members) on GitHub.
 1. Type their name in the text field, select them, then click the "Invite" button.
-1. If they are on Discord, add them to the "team" group there too. Be sure to verify that you are promoting the right person; multiple people can have the same nickname on Discord!
-1. *For new Googlers joining the team*, you need to ask someone in the team to add you to get added. It's not an automatic process after you join the flutter Google group.
+1. Add them to the "team" group on Discord. Be sure to verify that you are promoting the right person; multiple people can have the same nickname on Discord!
+
+*For new Googlers joining the team*: You need to ask someone in the team to add you to get added. It's not an automatic process after you join the flutter Google group.
 
 
 # Access rights to Flutter dashboard
@@ -86,3 +88,16 @@ Users in the `@google.com` domain are already authorized to use Flutter Gold, bu
 The list of authorized users is maintained in the [skia build-bot repository](https://skia.googlesource.com/buildbot), in [this file](https://skia.googlesource.com/buildbot/+/refs/heads/master/golden/k8s-instances/flutter/flutter-skiacorrectness.json5). Googlers can submit a change to add to the authorized users.
 
 This repository is also [mirrored on GitHub.](https://github.com/google/skia-buildbot)
+
+# fcontrib.org accounts
+
+If you are a team member who wants to share design docs (see [Chat]) but you don't want to use your own personal account, you can ask a Flutter admin for an fcontrib.org account. Ping @Hixie or another admin in the #server-support channel on Discord.
+
+## Process
+
+To add a fcontrib.org participant:
+1. You’ll need the user’s email account somewhere else, first and last name, and desired fcontrib.org account login before you begin.
+2. Navigate to https://admin.google.com/fcontrib.org/AdminHome.
+3. You’ll be prompted for your fcontrib.org login and password. Log in.
+4. Under “Users” in the upper left, click “Add a User” and follow the prompts.
+5. For a password, choose “Generate Password” and email the password to the new account holder using their non-fcontrib account -- they’ll be able to log in with that and then choose a new password.
