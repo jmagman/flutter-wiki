@@ -52,6 +52,14 @@ If you are confident our official documentation (on flutter.dev or api.flutter.d
 
 **General rule: The more labels an issue has, the better!** _See also: [List of labels](https://github.com/flutter/flutter/labels)_
 
+Some labels are used to track the flow of issues from the time they're filed until they're assigned to a specific team for execution. You should use these to track the state of an issue through your first-level triage process. These are:
+
+  * `in triage`: You are presently looking at an issue and trying to determine what other labels you should give it.
+  * `assigned for triage`: The issue is assigned to a domain expert for further triage.
+  * `passed first triage`: The issue has a reproducible case or test, Flutter doctor output, and usable stack traces if appropriate. It is actionable in the sense that it can be routed to a domain team for action.
+  * `passed secondary triage`: The issue has been examined by at least one of the triage teams and has been given an appropriate team label for further action.
+  * `will need additional triage`: Assign this if you don't know how to route it to a team.
+
 If any of the labels prefixed with "a:" apply to the issue, add those labels. If the bug is specific to a particular platform, consider adding one of the "platform-*" labels. If it's specific to running on a desktop platform, include "a: desktop" as well. If it's an issue involving integrating Flutter as a library into an existing mobile application, add `a: existing-apps`.
 
 Add any of the applicable "severe: *" labels; typically only one will apply but sometimes `severe: regression` will apply in conjunction with one of the others.
