@@ -18,6 +18,8 @@ _Note: the “release” CI does not automatically publish the `flutter_plugin_t
 
 If it is a flake (for example, network issue), a Flutter team member can simply run the CI again. For more complicated cases, a Flutter team member can also manually release the packages, then re-run the CI to pass.
 
+The most common source of failure of the `release` task is that another test failed; if that is due to flake, you will need to first re-run the failing test task, then once it's green re-run `release`.
+
 ### Manual release [Deprecated]
 
 The Flutter team member most involved with the PR should be the person responsible
