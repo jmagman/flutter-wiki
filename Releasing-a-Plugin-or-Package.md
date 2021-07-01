@@ -1,9 +1,9 @@
 Any PR that changes a package's version (which should be most PRs) should be published
-to pub.dev. Currently, auto-publishing is enabled for flutter/plugins only. The manual release process is still required for flutter/packages.
+to pub.dev.
 
-### Automatic release beta (flutter/plugins only)
+### Automatic release
 
-The packages in flutter/plugins are automatically released with a Github Action workflow named [“release”](https://github.com/flutter/plugins/blob/master/.github/workflows/pull_request_label.yml). If a commit on master branch contains version updates to one ore more packages, the “release” CI will publish the new versions to pub.dev and push the release tag to GitHub. The “release” CI passes if
+The packages in flutter/plugins and flutter/packages are automatically released with a Github Action workflow named [“release”](https://github.com/flutter/plugins/blob/master/.github/workflows/release.yml). If a commit on master branch contains version updates to one ore more packages, the “release” CI will publish the new versions to pub.dev and push the release tag to GitHub. The “release” CI passes if
 1. the release process is successful, or
 2. there are no version updates in the commit, or
 3. the new versions have already been published.  
@@ -18,19 +18,12 @@ _Note: the “release” CI does not automatically publish the `flutter_plugin_t
 
 If it is a flake (for example, network issue), a Flutter team member can simply run the CI again. For more complicated cases, a Flutter team member can also manually release the packages, then re-run the CI to pass.
 
-### Manual release (flutter/plugins and flutter/packages)
+### Manual release [Deprecated]
 
 The Flutter team member most involved with the PR should be the person responsible
 for publishing. In cases where the PR is authored by a Flutter team member, the
 publisher should probably be the author. In other cases, the reviewing Flutter team
 member should publish.
-
-As a backup measure to avoid accidentally having unpublished versions of packages,
-PRs that change `pubspec.yaml` will be auto-tagged with the `needs-publishing`
-label on submit. The ecosystem team sweeps flutter/plugins and flutter/packages
-at least once a week for PRs with those labels, and publishes them. **If for
-some reason you do not want a release published via that process, you must
-remove the label after submitting**.
 
 Some things to keep in mind before publishing the release:
 
@@ -59,9 +52,9 @@ To release a package:
   This command checks that you've done the step above, publishes the new version to pub.dev,
   and tags the commit in the format of `<package_name>-v<package_version>` then pushes
   it to the upstream repository.
-1. Remove the `needs-publishing` label from the PR.
 
-### Manual backup option
+#### Fully manual backup option
+
 If for some reason you can't use `flutter_plugin_tools` in step 3, you can publish manually:
   1. Push the package update to [pub.dev](https://pub.dev) using `dart pub publish`.
   2. Tag the commit with `git tag` in the format of `<package_name>-v<package_version>`
