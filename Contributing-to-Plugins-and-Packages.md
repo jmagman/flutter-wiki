@@ -13,6 +13,17 @@ Any change that needs to be published in order to take effect—almost any PR ex
 
 **What do I do if I there are conflicts to those changes before or during review?** This is common. You can leave the conflicts until you're at the end of the review process to avoid needing to resolve frequently. Including the version changes at the beginning despite the likelihood of conflicts makes it much harder to forget that step, and also means that a reviewer can easily fix it from the GitHub UI just before landing.
 
+**What if I want to list a change in the change log, but don't want to update the version?** This should be rare, but can be done by making a special `NEXT` entry at the top of CHANGELOG.md:
+```
+## NEXT
+
+* Description of the change
+
+## [...]
+```
+
+The next release will change `NEXT` to the new version.
+
 ## Changing federated plugins
 
 Many of the plugins in flutter/plugins are [federated](https://flutter.dev/docs/development/packages-and-plugins/developing-packages#federated-plugins). Because a logical plugin consists of multiple packages, and our CI tests using published package dependencies—in order to ensure that every PR can be published without breaking the ecosystem—changes that span multiple packages will need to be done in multiple PRs. This is common when adding new features.
