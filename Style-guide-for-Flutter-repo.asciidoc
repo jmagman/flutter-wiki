@@ -92,7 +92,7 @@ everything quickly but in a way that will require cleaning up later.
 
 You may hear team members say "embrace the http://www.catb.org/jargon/html/Y/yak-shaving.html[yak
 shave]!". This is
-an encouragement to take on the larger effort necessary to perform a
+an encouragement to https://www.youtube.com/watch?v=AbSehcT19u0[take on the larger effort necessary] to perform a
 proper fix for a problem rather than just applying a band-aid.
 
 
