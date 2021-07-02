@@ -1,5 +1,40 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-07-02
+
+### Notable issues
+
+* [crowd][google_sign_in] version 5 and later crashes and terminate on iOS with 'NSInvalidArgumentException', reason: 'You must specify |clientID| for |GIDSignIn| [#85738](https://github.com/flutter/flutter/issues/85738)
+* [web] IFrame is choppy when resizing window horizontally [#85522](https://github.com/flutter/flutter/issues/85522)
+* [web] autofillHints on TextFormField causes soft keyboard in iOS browsers to re-appear unexpectedly [#85759](https://github.com/flutter/flutter/issues/85759)
+* Check failed: gl_version_string. The GL proc resolver's glGetString(GL_VERSION) failed on Linux with Nvidia Graphics Card [#85460](https://github.com/flutter/flutter/issues/85460)
+
+### Issue counts
+
+New Flutter issues triaged 203, closed 70 (34%)
+
+In total closed 137 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 43.07%  |
+| Duplicate  | 24.82%  |
+| Fixed | 21.17%  |
+| Solved | 8.76%  |
+| Timeout | 2.19%  |
+
+New Flutterfire issues triaged 29, closed 13 (45%)
+
+In total closed 15 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 20.0%  |
+| User issue | 20.0%  |
+| Duplicate | 33.3%  |
+| Solution provided | 20.0%  |
+| Won't fix | 6.67%  |
+
 ## 2021-06-25
 
 ### Notable issues
