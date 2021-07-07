@@ -20,6 +20,8 @@ If it is a flake (for example, network issue), a Flutter team member can simply 
 
 The most common source of failure of the `release` task is that another test failed; if that is due to flake, you will need to first re-run the failing test task, then once it's green re-run `release`.
 
+**Note:** Loading a flutter/plugins `release` run's output in the GitHub UI currently [hangs the page](https://github.com/flutter/flutter/issues/85127), so to re-run a `release` task use [the Actions UI](https://github.com/flutter/plugins/actions?query=workflow%3Arelease) rather than the commit's task page.
+
 ### Manual release [Deprecated]
 
 The Flutter team member most involved with the PR should be the person responsible
