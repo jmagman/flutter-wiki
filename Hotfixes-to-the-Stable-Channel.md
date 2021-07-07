@@ -13,6 +13,13 @@ $ flutter upgrade
 
 ## Flutter 2.2 Changes
 
+### [2.2.3](https://github.com/flutter/flutter/pull/85719) (July 2, 2021)
+This is a hotfix release that addresses the following issues:
+  * [#84212](https://github.com/flutter/flutter/issues/84212) Upgrading to 2.2.1 cause main.dart to crash
+  * [#83213](https://github.com/flutter/flutter/issues/83213) TextFormField not responding to inputs on Android when typing on Microsoft SwiftKey
+  * [#82838](https://github.com/flutter/flutter/issues/82838)Flutter Web failing to compile with "Undetermined Nullability"
+  * [#82874](https://github.com/flutter/flutter/issues/82874)PopupMenuButton is broken after upgrade to Flutter 2.2.
+
 ### [2.2.2](https://github.com/flutter/flutter/pull/84364) (June 11, 2021)
 This is a hotfix release that addresses the following issues:
 
