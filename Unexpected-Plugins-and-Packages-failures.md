@@ -42,7 +42,7 @@ LUCI tasks are run on Flutter-infrastructure-managed VMs, using an [out-of-repo 
 - File an [infrastructure ticket](https://github.com/flutter/flutter/wiki/Infra-Ticket-Queue).
 - Check the recipe file for recent changes.
 
-### Flutter
+## Flutter
 
 Repository tests are run against the latest version of the `master` and/or `stable` channels, so can be unexpectedly broken by updates there ([#30446](https://github.com/flutter/flutter/issues/30446)). Potential failure sources include:
 - Breaking changes to framework features used by plugins.
@@ -59,7 +59,7 @@ Repository tests are run against the latest version of the `master` and/or `stab
   - This can be landed as a temporary mitigation, but it is *very important* that it be used that way only for very short periods of time to avoid hiding new issues.
 - Regressions due to changes on master can be either rolled back or fixed forward, depending on the ease of rollback.
 
-### Publishing
+## Publishing
 
 There are some interdependencies between packages in the plugin repository (notably federated plugins, but a few other cases as well, such as examples of one plugin that depend on another plugin). Inter-package dependencies are only tested with published versions ([#52115](https://github.com/flutter/flutter/issues/52115)), so publishing a package can potentially break other packages.
 
