@@ -71,3 +71,19 @@ There are some interdependencies between packages in the plugin repository (nota
 #### Investigation & resolution tips
 - Pinning a specific dependency version can confirm or eliminate this as a source of errors.
   - This should generally **not** be used as a mitigation; this category of error is often a failure that will affect clients of the package as well.
+
+## External build dependencies
+
+On platforms where the plugin system includes a dependency management system, there are build-time dependencies on external servers (e.g., Maven for Android, Cocoapods for iOS and macOS). Potential failure sources include:
+- Temporary server outages.
+- Removal of a package.
+
+#### Distinguishing features
+- The logs will be very clear that fetching a dependency failed.
+  - The only challenge in identifying them quickly is that they look the same as transient server or network issue flakes, which are much more common.
+
+#### Investigation & resolution tips
+- Check for reports of outages on the relevant servers.
+- Check whether the entire server is failing, or only fetching a specific package is failing.
+- Server-level outages are usually short-lived and just have to be waited out; i.e., they are persistent for a matter of hours before the server issue is resolved.
+- Package issues may require repository changes. E.g., for Maven, switching to another server that has the package, or to another version of the package that is still available.
