@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-07-09
+
+### Notable issues
+
+* [crowd][image_picker][iOS] Exception is thrown when picking image on simulator [#70436](https://github.com/flutter/flutter/issues/70436)
+* [crowd][web/desktop] TextField vertical alignment is broken with isDense: true [#86093](https://github.com/flutter/flutter/issues/86093)
+* [desktop/web] TextField loses focus when calling _controller.clear [#86154](https://github.com/flutter/flutter/issues/86154)
+
+### Issue counts
+
+New Flutter issues triaged 199, closed 70 (35%)
+
+In total closed 242 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 29.34%  |
+| Duplicate  | 12.81%  |
+| Fixed | 11.57%  |
+| Solved | 6.61%  |
+| Timeout | 39.67%  |
+
+New Flutterfire issues triaged 17, closed 8 (47%)
+
+In total closed 12 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 58.33%  |
+| User issue | 16.67%  |
+| Duplicate | 16.67%  |
+| Solution provided | 8.33%  |
+
 ## 2021-07-02
 
 ### Notable issues
