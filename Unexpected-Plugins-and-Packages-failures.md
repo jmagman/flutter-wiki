@@ -48,7 +48,7 @@ Repository tests are run against the latest version of the `master` and/or `stab
 - Breaking changes to framework features used by plugins.
 - Engine changes.
 - Changes to the `flutter` tool.
-- Dart tool changes, such as new analyzer behaviors.
+- Dart tool changes, such as new analyzer behaviors or formatter changes.
 
 #### Distinguishing features
 - Will almost always affect only one of `master` or `stable` (usually `master`).
