@@ -83,6 +83,7 @@ Flutter Wiki
 - [[Plugin Tests]]
 - [[Contributing to Plugins and Packages]]
 - [[Releasing a Plugin or Package]]
+- [[https://github.com/flutter/flutter/wiki/Unexpected-Plugins-and-Packages-failures]]
 
 ## Infrastructure
 - [[Dashboards]]
