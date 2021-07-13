@@ -35,7 +35,7 @@ VERSION='1_18_0'
 3. Get the date/time this commit landed in the tree (since we use GitHub squash and merge, this will presumably be the commit date). The following command will retrieve the commit date of a given revision:
 ```
 cd $FRAMEWORK_REPO
-FRAMEWORK_DATE=$(git show -s --format=%ci $FRAMEWORK_REVISION)
+FRAMEWORK_DATE=$(git show --no-patch --format=%ci $FRAMEWORK_REVISION)
 ```
 4. Get the last LUCI recipe commit before the framework date:
 ```
