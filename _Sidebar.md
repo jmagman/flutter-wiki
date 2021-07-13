@@ -108,3 +108,4 @@ Flutter Wiki
 - [Null safety package migration status](https://github.com/dart-lang/sdk/wiki/Null-safety-migration-status)
 - [Running Flutter Driver tests with Web](https://github.com/flutter/flutter/wiki/Running-Flutter-Driver-tests-with-Web)
 - [Data-driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes)
+- [Flutter CLI custom embedder support](https://github.com/flutter/flutter/wiki/Using-custom-embedders-with-the-Flutter-CLI)
