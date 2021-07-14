@@ -15,19 +15,17 @@ DeviceLab tests are located under [`/dev/devicelab/bin/tasks`](https://github.co
 
 
 # Detecting flaky tests
-On a weekly basis, the tree gardener will scan through test execution statistics over the past 15 days and identify top flaky ones
+On a weekly basis, [an automation script](https://github.com/flutter/cocoon/blob/master/app_dart/lib/src/request_handlers/check_flaky_tests_and_update_github.dart) will scan through test execution statistics over the past 15 days and identify top flaky ones
 * If there are any test builders whose Flaky Ratio >= 2%
   * Create a tracking bug if not existing in the [bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+project%3Aflutter%2Fflutter%2F189+label%3A%22team%3A+flakes%22).
     * The sub-team TL will be assigned by default for further triage/re-assign.
-    * Sub-team labels will be added as well for better tracking.
     * P1 will be labeled
-  * Mark the tests as flaky by updating the entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
+  * If it is not a shard test, the script marks the tests as flaky by updating the entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
     * Add a `# TODO(username): github issue url` above the `bringup: true` line
 * If there is not any test builder whose Flaky Ratio >= 2%, then look for the top test builder whose Flaky Ratio < 2%
-  * Mark the test as flaky by updating the entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
+  * If it is not a shard test, the script marks the test as flaky by updating the entry in [.ci.yaml](https://github.com/flutter/flutter/blob/master/.ci.yaml).
   * Create a tracking bug if not existing in the [bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+project%3Aflutter%2Fflutter%2F189+label%3A%22team%3A+flakes%22).
     * The sub-team TL will be assigned by default for further triage/re-assign.
-    * Sub-team labels will be added as well for better tracking.
     * P2 will be labeled
 # Fixing flaky tests
 The TL will help triage, reassign, and attempt to fix the flakiness.
