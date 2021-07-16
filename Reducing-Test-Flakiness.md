@@ -27,6 +27,8 @@ On a weekly basis, [an automation script](https://github.com/flutter/cocoon/blob
   * Create a tracking bug if not existing in the [bug pool](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+project%3Aflutter%2Fflutter%2F189+label%3A%22team%3A+flakes%22).
     * The sub-team TL will be assigned by default for further triage/re-assign.
     * P2 will be labeled
+
+If an issue is closed, there will be a grace period of 15 days before the automation script refile the issue if the same flakiness persists.
 # Fixing flaky tests
 The TL will help triage, reassign, and attempt to fix the flakiness.
 
