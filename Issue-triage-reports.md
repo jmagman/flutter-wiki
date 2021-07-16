@@ -1,5 +1,38 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-07-16
+
+### Notable issues
+
+* [web][regression] text autofill doesn't work [#86497](https://github.com/flutter/flutter/issues/86497)
+* [Crowd][Android] Native EditText with TYPE_CLASS_NUMBER has focus issues [#86480](https://github.com/flutter/flutter/issues/86480)
+
+### Issue counts
+
+New Flutter issues triaged 179, closed 66 (37%)
+
+In total closed 155 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 40.00%  |
+| Duplicate  | 14.84%  |
+| Fixed | 13.55%  |
+| Solved | 8.39%  |
+| Timeout | 23.23%  |
+
+New Flutterfire issues triaged 26, closed 18 (69%)
+
+In total closed 19 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 57.89%  |
+| User issue | 5.26%  |
+| Duplicate | 15.79%  |
+| Solution provided | 15.79%  |
+| Fixed | 5.26%  |
+
 ## 2021-07-09
 
 ### Notable issues
