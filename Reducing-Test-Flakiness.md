@@ -1,7 +1,7 @@
 Flakiness issue has caused a large portion of the [Flutter tree](https://flutter-dashboard.appspot.com/#/build) redness, and below workflow will be enforced to reduce flaky issues. The framework post-submit DeviceLab tests will be focused on in the beginning, and the logic will be extended to other host only tests in the future.
 
 From [Flutter tree dashboard](https://flutter-dashboard.appspot.com/#/build), a flake is identified as a box with an exclamation icon. There are two types that will result in same flaky box.
-* Multiple reruns on the same commit and same task (earlier run fails, but with the last run succeeds). For this case, check logs by clicking differnt build runs.
+* Multiple reruns on the same commit and same task (earlier run fails, but the last run succeeds). For this case, check logs by clicking differnt build runs.
 
 [[/images/task_flake_multiple_builds.png|width=300px]]
 
