@@ -18,7 +18,8 @@ Because of the complexities of having native code, plugins have many more types 
 - **Native unit tests**. Most plugins that have native code should have unit tests for that native code. (Currently, many do not; fixing that is currently a priority for plugins work.) They are written as:
   - Android: **JUnit** - These should live in `android/src/test/`
   - iOS: **XCTest** - These should live in `example/ios/RunnerTests/` (**Note**: These are in the example directory, not the main package directory, because they are run via the example app's project)
-  - Windows, macOS, Linux: **TBD**. Currently there are no native unit tests for these platform, but they will be added in the future (see [#82445](https://github.com/flutter/flutter/issues/82445)).
+  - macOS: **XCTest** - These should live in `example/macos/RunnerTests/` (**Note**: These are in the example directory, not the main package directory, because they are run via the example app's project)
+  - Windows, Linux: **TBD**. Currently there are no native unit tests for these platform, but they will be added in the future (see [#82445](https://github.com/flutter/flutter/issues/82445)).
 - **Native UI tests**. Some plugins show native UI that the test must interact with (e.g., `image_picker`). For these normal integration tests won't work, as there is not way to drive the native UI from Dart. They are written as:
   - Android: **Espresso**, via the [`espresso` plugin](https://pub.dev/packages/espresso) - These should live in `example/android/app/src/androidTest/`
   - iOS: **XCUITest** - These should live in `example/ios/RunnerUITests/`
@@ -45,7 +46,7 @@ flutter drive --driver test_driver/integration_test.dart --target integration_te
 from the root of the repository:
 
 ```sh
-dart run ./script/tool/lib/src/main.dart drive-examples --plugins=<name_of_plugin> --<platform>
+dart run ./script/tool/bin/flutter_plugin_tools.dart drive-examples --plugins=<name_of_plugin> --<platform>
 ```
 
 To run integration tests as instrumentation tests on a local Android device:
@@ -56,28 +57,29 @@ flutter build apk
 cd android && ./gradlew -Ptarget=$(pwd)/../test_driver/<name_of_plugin>_test.dart app:connectedAndroidTest
 ```
 
-### JUnit
+### Native tests
 
-These can be run from Android Studio once the example app is opened as an Android project.
-
-From a terminal (while in a plugin directory):
+From a terminal (while at the repository root), use the [plugin tools `native-test` command](https://github.com/flutter/plugins/tree/master/script/tool#readme). Examples:
 
 ```sh
-cd example
-flutter build apk
-cd android
-./gradlew test
+# Unit and integration (UI) tests, multiple platforms
+dart run ./script/tool/bin/flutter_plugin_tools.dart native-test --android --ios --plugins=<some_plugin_name>
+# iOS, integration tests only
+dart run ./script/tool/bin/flutter_plugin_tools.dart native-test --ios --no-unit --plugins=<some_plugin_name>
+# Android, unit tests only
+dart run ./script/tool/bin/flutter_plugin_tools.dart native-test --android --no-integration --plugins=<some_plugin_name>
 ```
 
-### XCTest and XCUITest
+It's also possible to run them from native IDEs:
 
-These can be [run from Xcode](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/05-running_tests.html)
+#### JUnit
+
+Run from Android Studio once the example app is opened as an Android project
+
+#### XCTest and XCUITest
+
+[Run from Xcode](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/05-running_tests.html)
 once the example app is opened as an Xcode project.
-
-From a terminal (while at the repository root), use the [plugin tools `xctest` command](https://github.com/flutter/plugins/tree/master/script/tool#readme):
-```sh
-dart run ./script/tool/lib/src/main.dart xctest --plugins=<some_plugin_name>
-```
 
 ### Web Tests
 
@@ -95,7 +97,7 @@ chromedriver --port=4444
 4. Run tests:
     * **All:** from the root `plugins` directory, run:
     ```sh
-    dart ./script/tool/lib/src/main.dart drive-examples --plugins=<plugin_name>/<plugin_name_web> --web
+    dart ./script/tool/bin/flutter_plugin_tools.dart drive-examples --plugins=<plugin_name>/<plugin_name_web> --web
     ``` 
     * **One:** `cd` into the `example` directory of the package, then run:
     ```sh
