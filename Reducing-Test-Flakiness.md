@@ -1,7 +1,13 @@
 Flakiness issue has caused a large portion of the [Flutter tree](https://flutter-dashboard.appspot.com/#/build) redness, and below workflow will be enforced to reduce flaky issues. The framework post-submit DeviceLab tests will be focused on in the beginning, and the logic will be extended to other host only tests in the future.
 
-From [Flutter tree dashboard](https://flutter-dashboard.appspot.com/#/build), a flake is identified as a box with an exclamation icon. There are two types that will result in same flaky box [[/images/task_flake_box.png|task_flake_box]]
-* 
+From [Flutter tree dashboard](https://flutter-dashboard.appspot.com/#/build), a flake is identified as a box with an exclamation icon. There are two types that will result in same flaky box.
+* Multiple reruns on the same commit and same task (earlier run fails, but with the last run succeeds). For this case, check logs by clicking differnt build runs.
+
+[[/images/task_flake_multiple_builds.png|width=300px]]
+
+* A single run on the same commit and same task, but multiple reruns from test runner. For this case, check logs by clicking `stdout` of the test step: it shows data about failed or succeeded runs in the end. See https://github.com/flutter/flutter/wiki/Understanding-a-LUCI-build-failure for how to locate the test step and `stdout`.
+
+[[/images/task_flake_test_runner.png|width=300px]]
 
 # Preventing flaky tests
 ## Adding a new DeviceLab test
