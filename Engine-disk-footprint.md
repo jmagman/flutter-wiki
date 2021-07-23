@@ -4,7 +4,7 @@ For each commit to [flutter/engine](https://github.com/flutter/engine) the Chrom
 
 Alternatively, a link to a treemap can be constructed as follows:
 
-`https://storage.googleapis.com/flutter_infra/flutter/<REVISION>/<VARIANT>/sizes/index.html` where:
+`https://storage.googleapis.com/flutter_infra_release/flutter/<REVISION>/<VARIANT>/sizes/index.html` where:
 * `<REVISION>` is the git hash from [flutter/engine](https://github.com/flutter/engine) for which you want the treemap, and
 * `<VARIANT>` can be any android release build, e.g. `android-arm-release` or `android-arm64-release`.
 
