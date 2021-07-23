@@ -1,5 +1,36 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-07-23
+
+### Notable issues
+
+* [web] Incorrect Text rendering in Instagram webview [#86776](https://github.com/flutter/flutter/issues/86776)
+
+### Issue counts
+
+New Flutter issues triaged 170, closed 66 (39%)
+
+In total closed 147 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 36.1%  |
+| Duplicate  | 17.7%  |
+| Fixed | 10.9%  |
+| Solved | 3.4%  |
+| Timeout | 32.0%  |
+
+New Flutterfire issues triaged 32, closed 16 (50%)
+
+In total closed 16 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 56.25%  |
+| User issue | 6.25%  |
+| Duplicate | 12.50%  |
+| Solution provided | 25.00%  |
+
 ## 2021-07-16
 
 ### Notable issues
