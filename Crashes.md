@@ -12,14 +12,14 @@ The easiest way to symbolicate stack traces for Android and iOS is using [@flutt
 
 3. With the full engine revision (e.g. cea5ed2b9be42a981eac762af3664e4a17d0a53f), you can now get the proper symbol files:
 
-   To view the available artifacts for a build, visit this URL in a browser (replacing the engine hash with your hash): `https://console.cloud.google.com/storage/browser/flutter_infra/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f`
+   To view the available artifacts for a build, visit this URL in a browser (replacing the engine hash with your hash): `https://console.cloud.google.com/storage/browser/flutter_infra_release/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f`
 
-   To download the symbols for android-arm, download this URL _using your browser_ (replacing the hash again, and noting that this URL is on a different host, "storage", compared to the one above, which uses "console"): `https://storage.cloud.google.com/flutter_infra/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f/android-arm/symbols.zip`.
+   To download the symbols for android-arm, download this URL _using your browser_ (replacing the hash again, and noting that this URL is on a different host, "storage", compared to the one above, which uses "console"): `https://storage.cloud.google.com/flutter_infra_release/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f/android-arm/symbols.zip`.
 
    Please be aware that the type of the symbol must match your Apps release type. In above example, this refers to a android-arm **debug** build. If you work with a **release** or **profile** build, the URLs would look like this:
 
-   * https://storage.cloud.google.com/flutter_infra/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f/android-arm-release/symbols.zip
-   * https://storage.cloud.google.com/flutter_infra/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f/android-arm-profile/symbols.zip
+   * https://storage.cloud.google.com/flutter_infra_release/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f/android-arm-release/symbols.zip
+   * https://storage.cloud.google.com/flutter_infra_release/flutter/cea5ed2b9be42a981eac762af3664e4a17d0a53f/android-arm-profile/symbols.zip
 
    You have to use your browser because it does authentication.
 
@@ -88,7 +88,7 @@ adb logcat | ~/dev/engine/src/third_party/android_tools/ndk/prebuilt/linux-x86_6
 
 ### iOS
 
-The dSYM file for `Flutter.framework` (which is the Flutter Engine) for ios-release builds can be downloaded from Google Cloud Storage. Follow the steps from the Android section in this guide, but in the last step use a download url following this schema: `https://storage.cloud.google.com/flutter_infra/flutter/38a646e14cc25f5a56a989c6a5787bf74e0ea386/ios-release/Flutter.dSYM.zip` (replace the engine hash with your hash).
+The dSYM file for `Flutter.framework` (which is the Flutter Engine) for ios-release builds can be downloaded from Google Cloud Storage. Follow the steps from the Android section in this guide, but in the last step use a download url following this schema: `https://storage.cloud.google.com/flutter_infra_release/flutter/38a646e14cc25f5a56a989c6a5787bf74e0ea386/ios-release/Flutter.dSYM.zip` (replace the engine hash with your hash).
 
 #### Symbolicating local builds
 
