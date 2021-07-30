@@ -1,5 +1,59 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-07-30
+
+### Notable issues
+
+* [web] Severe memory leak on the latest dev and master [#87100](https://github.com/flutter/flutter/issues/87100)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 157, closed 58 (37%)
+
+In total closed 149 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 29.53%  |
+| Duplicate  | 22.15%  |
+| Fixed | 16.11%  |
+| Solved | 8.72%  |
+| Timeout | 23.49%  |
+
+#### Flutter/website
+
+New Flutter website issues triaged 28, closed 6 (21.43%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 17.86%  |
+| Duplicate | 3.57%  |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 10, closed 2 (20%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 20%  |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 19, closed 10 (53%)
+
+In total closed 13 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 38.46%  |
+| User issue | 7.69%  |
+| Duplicate | 23.08%  |
+| Solution provided | 15.38%  |
+| Fixed | 7.69%  |
+| No response | 7.69%  |
+
 ## 2021-07-23
 
 ### Notable issues
