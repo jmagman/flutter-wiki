@@ -121,12 +121,39 @@ flutter pub run build_runner build
 
 ## Adding tests
 
-A PR changing a plugin [should add tests](https://github.com/flutter/flutter/wiki/Tree-hygiene#tests). Which type(s) of tests you should add will depend on what exactly you are changing. If you're not sure, please ask in your PR or in `#hackers-ecosystem` [on Discord](https://github.com/flutter/flutter/wiki/Chat). 
+A PR changing a plugin [should add tests](https://github.com/flutter/flutter/wiki/Tree-hygiene#tests). Which type(s) of tests you should add will depend on what exactly you are changing. See below for some high-level guidance, but if you're not sure please ask in your PR or in `#hackers-ecosystem` [on Discord](https://github.com/flutter/flutter/wiki/Chat). 
 Hopefully the scaffolding to run the necessary kinds of tests are already in place for that plugin, in which case you just add tests to the existing files in the locations referenced above. If not, see below for more information about adding test scaffolding.
 
 ### FAQ: Do I need to add tests even if the part of the code I'm changing isn't already tested?
 
 **Yes.** Much of the plugin code predates the current strict policy about testing, and as a result the coverage is not as complete as it should be. The goal of having a strict policy going forward is to ensure that the situation improves.
+
+### What types of tests to add
+
+The type(s) of tests to add depends on the details of the PR, and there is not always one right answer. Some high level principles to keep in mind:
+- Your tests should cover all of the new code you've added whenever possible. For instance, if your change has an error path you should test both the normal path and the error path.
+- Unit tests are more reliable, faster to run, and more precise at isolating bugs than integration tests, so it is generally good to have unit testing of any non-trivial logic.
+- New functionality should generally include integration tests that validate that the feature works end to end. (In some cases asserting that the native code has done the right thing is impractical in a full integration test, however.)
+
+Some specific guidelines about different test types:
+- **Dart unit tests**: If you are changing Dart code, you should almost always have Dart unit tests as well. They are fast to run, and generally easy to write and maintain. Even if your Dart changes are just wiring a new parameter through an app-facing package to the platform interface, or a platform interface implementation to a method channel, Dart unit tests can easily validate that they are being passed through correctly at each step.
+  - Unless your change has no native code changes, remember that Dart unit tests **are not sufficient by themselves**. No native code is run as part of Dart unit tests.
+- **Dart integration tests**: These are the only fully end-to-end tests for plugins, so should be written when possible. This is the only kind of test that can actually test the entire flow as it will be run by plugin clients. Some comment cases where they won't work, however:
+  - The test requires interacting with native UI (e.g., pushing a button in a modal dialog before the test can complete).
+  - The test requires inspecting native UI (e.g., changing the properties of a view inside a platform view provided by the native code—although in some cases it may be viable to write a special platform interface just for testing, that can query those properties from Dart via calls to native code).
+  - The test requires specific hardware state.
+- **Native unit tests**: Native unit tests are the only way to unit-test native code; if your native code is non-trivial, then it should probably have native unit tests. In particular:
+  - It is often much easier to get complete coverage of edge cases in native unit tests than via full integration tests.
+  - If you need to mock out system components (such as hardware state), you'll need native unit tests.
+- **Native integration tests**: These are usually the most complex to maintain (being both per-platform, and more likely to be flaky than unit tests), so use with caution. However, they are the only way to get end-to-end testing when interacting with native UI.
+
+Some patterns to consider given all of the above:
+- If Dart integration tests are viable, use that to ensure end-to-end behavior of the overall feature, and add Dart and/or native unit testing to cover specific implementation details.
+- If the test requires interacting with native UI (e.g., image or file selection):
+  - use native integration tests to validate the overall flow, plus unit testing of specific details, or
+  - use native unit tests that are set up to test the native portion end to end (i.e., calling into the method channel entry point with a synthesized call, and checking the method call response) with the UI APIs stubbed out, plus Dart unit tests that everything is plumbed through from the Dart API surface to the method call, or
+  - use the first to validate basic functionality, and the second for edge cases that can't be easily tested that way.
+- If the tests require mocking device state (e.g., camera), use native unit tests that are set up to test the native portion end to end (i.e., calling into the method channel entry point with a synthesized call, and checking the method call response) with the UI APIs stubbed out, plus Dart unit tests that everything is plumbed through from the Dart API surface to the method call.
 
 ### Adding test scaffolding
 
