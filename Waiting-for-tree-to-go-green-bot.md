@@ -6,7 +6,7 @@ _Note: links to source files are permalinks to master as of this writing; be sur
 
 A cron job ([source](https://github.com/flutter/cocoon/blob/681a725decbca3dbf40046c6bebd65d4e07eaf8d/app_dart/cron.yaml#L22-24) | [dashboard, googlers only](http://shortn/_QgBbGGtZUQ)) makes the GET request every 5 minutes.
 
-The core logic is that pull requests [can be merged if]((https://github.com/flutter/cocoon/blob/681a725decbca3dbf40046c6bebd65d4e07eaf8d/app_dart/lib/src/request_handlers/check_for_waiting_pull_requests.dart#L232):
+The core logic is that pull requests [can be merged if](https://github.com/flutter/cocoon/blob/681a725decbca3dbf40046c6bebd65d4e07eaf8d/app_dart/lib/src/request_handlers/check_for_waiting_pull_requests.dart#L232):
 
 - CI has passed
 - at least one approved review has been added (does not need to contain the phrase `LGTM`, but _must_ be an actual approval review via the GitHub UI)
