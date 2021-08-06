@@ -1,5 +1,66 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-08-06
+
+### Notable issues
+
+* DartVM: dart::Object::InitNullAndBool Crash [#87796](https://github.com/flutter/flutter/issues/87796)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 195, closed 73 (37%)
+
+In total closed 138 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 41.30%  |
+| Duplicate  | 23.18%  |
+| Fixed | 13.76%  |
+| Solved | 0.72%  |
+| Timeout | 21.01%  |
+
+We're continuing to rework the [p: webview issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+webview%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22++-label%3A%22severe%3A+new+feature%22+-label%3A%22proposal%22+-label%3A%22passed+first+triage%22).
+
+p: webview issues triaged 18, closed 4 (22.2%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 16.66%  |
+| Fixed | 5.55%  |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8, closed 3 (37.5%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 25%  |
+| Fixed | 12.5%  |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 18, closed 6 (33.33%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 11.11%  |
+| Duplicate | 22.22%  |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 21, closed 4 (19%)
+
+In total closed 5 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 40%  |
+| Duplicate | 20%  |
+| Solution provided | 40%  |
+
 ## 2021-07-30
 
 ### Notable issues
