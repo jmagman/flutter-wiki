@@ -245,7 +245,7 @@ The Fuchsia tree consumes the `flutter_runner` and associated Dart SDK as a set 
 
 To retrieve the version of flutter engine in your fuchsia source tree, in your `$FUCHSIA_DIR` run:
 
-`cat integration/fuchsia/jiri.lock | grep -A 1 "\"package\": \"flutter/fuchsia\""`
+`cat integration/jiri.lock | grep -A 1 "\"package\": \"flutter/fuchsia\""`
 
 Then use that git hash in step 1 under "build the engine".
 
