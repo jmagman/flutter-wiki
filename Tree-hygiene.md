@@ -491,3 +491,21 @@ Using this standard form ensures that we can write a script to detect all deprec
 When deprecating features, be aware that you will not by default be informed when the Flutter code itself uses the deprecated feature (there is a `deprecated_member_use_from_same_package: ignore` line in the root `analysis_options.yaml` file). To find places where the old feature is used, rename its declaration and see where the compiler complains. (You can't just comment out the "ignore" in the `analysis_options.yaml` file because it's hiding hundreds of other warnings...)
 
 Deprecations are removed in a consistent "first-in-first-out" fashion. The lifetime for a Flutter deprecation is 1 year after reaching the stable channel, or after 4 stable releases, whichever is longer. Deprecations are still subject to the policy described on the [breaking changes page](https://flutter.dev/docs/release/breaking-changes) of the website. Where possible, prepare the dart fix tools and write appropriate migrations guides.
+
+## Skipped Tests
+
+Tests can be skipped using the `skip` parameter of `test()`, `group()` and `testWidgets()`. However, they  should be kept to a minimum and only done for the following two reasons.
+
+The first is If there is a test that is flaky, we can mark is as temporarily skipped to keep the tree green while a fix for it is developed. For these types of skips you need to file a tracking issue so we can ensure there is follow up to remove the skip. This tracking issue should be tagged with the `skip-test` label. Then in a comment on the same line as the parameter, include a link to this issue:
+
+```dart
+  skip: true, // https://github.com/flutter/flutter/issues/XXXXX
+```
+
+The other reason to use the skip parameter is to mark a test that by design doesn't make sense to test under a specific condition. An example would be a test that only tests a feature available on a specific platform or environment. For these cases, include a comment on the same line as the skip parameter with the text `[intended]` and a short description of why the skip is needed:
+
+```dart
+  skip: isBrowser, // [intended] There are no default transitions to test on the web.
+```
+
+If the analyzer script sees a skip without a comment containing either an issue link or an `[intended]` tag, it will report and error and fail the check.
