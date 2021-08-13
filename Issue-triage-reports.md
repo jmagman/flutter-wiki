@@ -1,5 +1,60 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-08-13
+
+### Notable issues
+
+* [camera] Camera viewer is over exposed as a result images taken w/ flash mode come out washed out on Samsung devices with Android 11 [#88070](https://github.com/flutter/flutter/issues/88070)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 184, closed 64 (35%)
+
+In total closed 99 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 49.49%  |
+| Duplicate  | 25.25%  |
+| Fixed | 22.22%  |
+| Solved | 3.03%  |
+
+We're continuing to rework the [p: webview issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+webview%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22++-label%3A%22severe%3A+new+feature%22+-label%3A%22proposal%22+-label%3A%22passed+first+triage%22).
+
+p: webview issues triaged 46, closed 9 (19.56%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 19.56%  |
+
+#### Flutter/website
+
+New Flutter website issues triaged 11, closed 1 (9.09%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 9.09%  |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 11, closed 0 (0.0%)
+
+#### Flutterfire
+
+New Flutterfire issues triaged 25, closed 11 (44%)
+
+In total closed 15 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 20.00%  |
+| Duplicate | 13.33%  |
+| Solution provided | 46.67%  |
+| User issue | 13.33%  |
+| No response | 6.67%  |
+
 ## 2021-08-06
 
 ### Notable issues
