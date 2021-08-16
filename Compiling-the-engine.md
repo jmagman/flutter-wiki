@@ -199,7 +199,9 @@ require adding a `dependency_override` section in you app's `pubspec.yaml` as de
 
 You can only build selected binaries on Windows (mainly `gen_snapshot` and the desktop embedding).
 
-1. Make sure you have Visual Studio installed (non-Googlers only).
+On Windows, ensure that the engine checkout is not deeply nested. This avoid the issue of the build scripts working with excessively long paths.
+
+1. Make sure you have Visual Studio installed (non-Googlers only). [Debugging Tools for Windows 10](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools#small-classic-windbg-preview-logo-debugging-tools-for-windows-10-windbg) must be installed.
 
 2. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
 
