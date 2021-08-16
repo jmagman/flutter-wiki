@@ -24,6 +24,26 @@ Any change that needs to be published in order to take effect—almost any PR ex
 
 The next release will change `NEXT` to the new version.
 
+## Platform Support
+
+The goal is to have any plugin feature work on every platform on which that feature makes sense; having a lot of features that are only partially implemented across platforms is often confusing and frustrating for developers trying to use those plugins. However, a single developer will not always have the expertise to implement a feature across all supported platforms.
+
+Given that, we welcome PRs that only implement a feature for a subset of platforms, including just one. To set expectations for how such PRs will be handled:
+- They will not be fully reviewed until there's an understanding of what support would look like across other platforms, for several reasons:
+  - API for features that will be permanently platform-specific may structured in ways that make that limitation more clear, so knowing if other platforms can support it will affect the review process.
+  - We want to avoid over-fitting the plugin APIs to a single platform's API. It is often the case that several platforms can implement a feature, but the behavior is different enough across platforms that we need to design the API in a way that covers those variations in a cohesive way. This means that knowing at a high level what the implementation on other platform also affects the review process.
+  - Features that are missing implementations on some platforms need to be clearly documented as such in the API, and those comments should clearly express whether those platform are temporarily missing implementations, or are not expected to ever have implementations due to platform limitations.
+  
+  The PR author isn't necessarily responsible for answering these questions. These cases will be noted in comments during PR triage; if the PR author, or others in the community, can contribute that information, that will certainly help. If not, that investigation will be part of the review process (in which case the review will likely take longer).
+- In some cases, a reviewer may wait on approving a PR for landing until there is a plan in place for landing implementations for other platforms. This is not a hard rule, and will be up to reviewer judgement. This could take a number of forms:
+  - Waiting for other PRs from the community that implement the feature for other platforms, and then moving forward with all of them at once.
+  - Finding resources within the Flutter team for implementing other platforms before moving forward.
+  - Landing the platform interface change and the platform implementations that are done, but waiting on one of the options above before adding the API to the app-facing package's API (allowing developers the option of drilling down to the platform implementation to use the feature on some platforms before it's ready everywhere).
+
+  "Other platforms" might not always include all other platforms. E.g., a feature might be something that's much more likely to be useful on mobile than desktop, or the reverse, and so we might only wait for implementations of that subset. Again, this will be up to reviewer judgement.
+
+In the case where a PR is put on hold for the reasons above, it should be clearly noted in the PR and on the associated issue. We encourage anyone interested in contributing more platform implementation PRs to comment in the bug in such cases.
+
 ## Changing federated plugins
 
 Many of the plugins in flutter/plugins are [federated](https://flutter.dev/docs/development/packages-and-plugins/developing-packages#federated-plugins). Because a logical plugin consists of multiple packages, and our CI tests using published package dependencies—in order to ensure that every PR can be published without breaking the ecosystem—changes that span multiple packages will need to be done in multiple PRs. This is common when adding new features.
