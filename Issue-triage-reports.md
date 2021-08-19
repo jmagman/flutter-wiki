@@ -1,5 +1,69 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-08-19
+
+### Notable issues
+
+* `Null check operator used on a null _rawKeyboard.lookUpLayout(physicalKey)!` [#88236](https://github.com/flutter/flutter/issues/88236)
+* [Web][Url_launcher]: Several links on a page throws rendering error [#88449](https://github.com/flutter/flutter/issues/88449)
+* App gets stuck at blank screen - `Could not launch engine with configuration` [#88407](https://github.com/flutter/flutter/issues/88407)
+* SystemChrome.setSystemUIOverlayStyle doesn't change colors [#88431](https://github.com/flutter/flutter/issues/88431)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 151, closed 71 (47%)
+
+In total closed 153 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 35.95%  |
+| Duplicate  | 22.22%  |
+| Fixed | 15.03%  |
+| Solved | 2.61%  |
+| Timeout | 24.18%  |
+
+Finished checking the [p: webview issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22p%3A+webview%22+sort%3Acreated-asc+-label%3A%22found+in+release%3A+2.0%22+-label%3A%22found+in+release%3A+2.1%22+-label%3A%22found+in+release%3A+2.2%22+-label%3A%22found+in+release%3A+2.3%22+-label%3A%22waiting+for+customer+response%22++-label%3A%22severe%3A+new+feature%22+-label%3A%22proposal%22+-label%3A%22passed+first+triage%22).
+
+p: webview issues triaged 16, closed 3 (18.75%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 18.75%  |
+
+#### Flutter/website
+
+New Flutter website issues triaged 19, closed 10 (52.63%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 10.52% |
+| Fixed | 10.52% |
+| Dupkucate | 31.57% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 12, closed 4 (33.33%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 16.66%  |
+| Duplicate | 16.66% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 12, closed 4 (33.33%)
+
+In total closed 7 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 42.9%  |
+| Solution provided | 28.6%  |
+| Fixed | 28.6%  |
+
 ## 2021-08-13
 
 ### Notable issues
