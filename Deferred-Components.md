@@ -106,17 +106,23 @@ Since mistakenly importing a deferred file as non-deferred can cause the file to
 
 # Fully deferring Flutter in add2app
 
-When using add-to-app, it can be possible to convert the entire Flutter module into an android dynamic feature module to install at runtime. Since the structures of add-to-app scenarios are highly variable, we do not provide direct tooling to automate/validate full Flutter deferring. Instead, we provide this guide for implementing the necessary components to get this functionality working. The architecture described here is one of many ways this can work, and is up to you to determine how best to integrate this into your apps.
+When using add-to-app, it's possible to convert the entire Flutter module into an Android dynamic feature module to install at runtime.
 
-Integrating full flutter deferring is experimental and will require a lot of custom implementations and setup that is not fully tested due to variability in different apps. Therefore, this is considered a very advanced feature and Flutter may not be able to provide guarantees or technical support for specific use cases.
+Since the structures of add-to-app scenarios are highly variable, Flutter doesn't provide direct tooling to automate/validate full Flutter deferring. Instead, this guide provides details for implementing the components required for full Flutter deferring. The architecture described here is one of the many ways this can work, and is up to you to determine how best to integrate this into your apps.
 
-Full Flutter deferral requires an implementation of `SplitInstallManager` in the base app module, as well as adding the dependencies on `com.google.android.play:core` in `build.gradle` dependencies as an implementation. The dynamic feature module containing Flutter must depend on the base module and the base module can no longer include any references to Flutter code. The `:flutter` dependency in `build.gradle` should be removed. The process described below is for the direct dependency way of add-to-app for the `fullscreen` sample app (https://github.com/flutter/samples/tree/master/add_to_app/fullscreen). The aar method is not described here (yet).
+Integrating full Flutter deferring is experimental. It requires custom implementations, and setup that is not fully tested due to variability in different apps. Therefore, this feature is considered a very advanced feature, and Flutter may not be able to provide guarantees or technical support for specific use cases.
+
+Full Flutter deferral requires implementing `SplitInstallManager` in the base app module, as well as adding the dependency on `com.google.android.play:core` in `build.gradle` as an implementation. The dynamic feature module containing Flutter must depend on the base module. 
+
+The base module can no longer include any references to Flutter code. Therefore, the `:flutter` dependency in `build.gradle` should be removed. 
+
+The process described below uses the [fullscreen add-to-app example](https://github.com/flutter/samples/tree/master/add_to_app/fullscreen). 
 
 ## SplitInstallManager base module "bootstrapper"
 
 The base module must use `SplitInstallManager` to install the Flutter dynamic feature. For example, here is a bare-bones implementation called `SplitUtility` that downloads a dynamic feature module named `flutter` when `installFlutterModule` is called:
 
-```
+```java
 import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -129,10 +135,9 @@ import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListene
 import com.google.android.play.core.splitinstall.model.SplitInstallErrorCode;
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus;
 
-
 class SplitUtility {
   private @NonNull SplitInstallManager splitInstallManager;
-  private FeatureInstallStateUpdatedListener listener;
+  private @NonNull FeatureInstallStateUpdatedListener listener;
 
   private class FeatureInstallStateUpdatedListener implements SplitInstallStateUpdatedListener {
     @SuppressLint("DefaultLocale")
@@ -190,13 +195,15 @@ class SplitUtility {
 }
 ```
 
-The base module should install the flutter module when appropriate. `PlayStoreDeferredComponentsManager` actually provides much of the same functionality, but it lives inside the Flutter android embedding, and thus cannot be referenced from the base module.
+The base module should install the Flutter module when appropriate. `PlayStoreDeferredComponentsManager` actually provides much of the same functionality, but it lives inside the Flutter Android embedding, and thus cannot be referenced from the base module.
 
 ## Project configuration
 
-`build.gradle` of the base module as well as the flutter module should be modified to convert it into a dynamic feature module. The default flutter android module used is located in the `.android/Flutter` directory. It is recommended you change the path of the android module as the `.android` directory may be cleared or regenerated by cleaning tasks. You can set a different module or a clone of the default one as the module root directory with `project(":flutter").projectDir = new File(“<relative>.<path>.<to>.<module>”)` in your main android project’s `settings.gradle`.
+`build.gradle` of the base module as well as the flutter module should be modified to convert it into a dynamic feature module. The default Flutter android module used is located in the `.android/Flutter` directory. 
 
-The following configuration changes are the base changes needed to convert a fullscreen flutter add-to-app implementation into a dynamic feature module.
+It's recommended that you change the path of the Android module as the `.android` directory may be cleared or regenerated by cleaning tasks. You can set a different module or a clone of the default one as the module root directory with `project(":flutter").projectDir = new File(“<relative>.<path>.<to>.<module>”)` in your main android project’s `settings.gradle`.
+
+The following configuration changes are the base changes needed to convert a fullscreen Flutter add-to-app implementation into a dynamic feature module.
 
 Base module `build.gradle`:
 
@@ -208,7 +215,8 @@ Flutter module `build.gradle`:
 
 * Replace `apply plugin: 'com.android.library'` with `apply plugin: 'com.android.dynamic-feature'` in the Flutter module `build.gradle`
 * Add a dependencies section to the Flutter module `build.gradle`:
-```
+
+```gradle
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(":app")
@@ -220,7 +228,8 @@ Flutter module `AndroidManifest.xml`:
 
 * Add `xmlns:dist="http://schemas.android.com/apk/distribution"` to the `manifest` section
 * Add the dynamic feature module section:
-```
+
+```xml
 <dist:module
   dist:instant="false"
   dist:title="@string/title_fluttermodule">
@@ -231,43 +240,51 @@ Flutter module `AndroidManifest.xml`:
 </dist:module>
 ```
 
-Any references to the Flutter java API will need to be done within your newly setup dynamic feature module. You are no longer able to directly launch a `FlutterActivity` from your main activity and must now wrap it in a new class inside your dynamic feature module. It is recommended to create a new activity in your dynamic flutter module that implements all of the capability your base Application and Activity was doing. After installing the flutter android split, the new dynamic flutter activity can then be launched.
+Any references to the Flutter Java API will need to be done within your newly dynamic feature module. You are no longer able to directly launch a `FlutterActivity` from your main activity, and must now wrap it in a new class inside your dynamic feature module. 
+
+It is recommended to create a new Android Activity in your dynamic Flutter module that implements all of the behavior from your base application and base Activity. After installing the Flutter Android split, the new dynamic Flutter Activity can then be launched.
 
 Depending on your specific apps, additional configuration may be needed to build and run your apps.
 
 ## Regular deferred components integration
 
-We have not yet tested integration with a pure Flutter app using deferred components. Flutter's tooling does not yet directly support building add-to-app and deferred components together, but it is technically possible to run `gen_snapshot` in split aot mode and then package the different .so files into additional dynamic feature modules yourself. See the Custom Implementation for additional details.
+We have not yet tested integration with a pure Flutter app using deferred components.
+
+Flutter's tooling doesn't yet support building add-to-app and deferred components together. However, it is technically possible to run `gen_snapshot` in split AOT mode, and then package the different `.so` files into additional dynamic feature modules. See the Custom Implementation below for additional details.
 
 ***
 
 # Custom Implementations
 
-It is possible to write a custom implementation that bypasses the Android Play store. This is only recommended for advanced developers and is primarily aimed at apps with very unique needs such as extremely large asset components, specific download behavior, or distribution in a region that does not have access to the Play store (eg, China).
+It's possible to write a custom implementation that bypasses the Android Play store. This is only recommended for advanced developers, and is primarily aimed at apps with very unique needs such as extremely large asset components, specific download behavior, or distribution in a region that does not have access to the Play Store (e.g. China).
 
 ### Overview
 
-The Flutter embedder allows custom implementations that handle customer-unique download and unpacking of deferred components while still allowing access to the core Dart callbacks that register a loading unit with the Dart runtime. This process is far more involved than the default play store version.
+The Flutter Embedder allows custom implementations that handle customer-unique download and unpacking of deferred components while still allowing access to the core Dart callbacks that register a loading unit with the Dart runtime. This process is far more involved than the default play store version.
 
-To implement a custom deferred components system, the following major pieces will be required:
+To implement a custom deferred components system, the following major pieces are required:
 
 * Android embedder implementation of `DeferredComponentManager` that handles communication between the app and the server as well as extracting the `.so` file and assets from the downloaded component.
 * Tooling to package the components in a way that is compatible with your `DeferredComponentManager` and to interpret `gen_snapshot` output of loading units.
-* A server to host the downloadable components. Without the Play store acting as a distributor for Android dynamic feature modules, this must be custom.
+* A server to host the downloadable components. Without the Play Store acting as a distributor for Android dynamic feature modules, this must be custom.
 
 The following sections provide a high level guide of what needs to be done in a custom implementation.
 
-### DeferredComponentManager - Android embedder
+### DeferredComponentManager - Android Embedder
 
-The embedder is responsible for downloading and installing the packaged component files. This can be done by implementing the abstract class DeferredComponentManager in the Android embedder.
+The Embedder is responsible for downloading and installing the packaged component files. This can be done by implementing the abstract class `DeferredComponentManager` in the Android Embedder.
 
-The entry point into this class is `installDeferredComponent` which provides both a loading unit id and the component name to help determine what to install. `loadLibrary()` calls will pass only a loading unit id while `DeferredComponent.installDeferredComponent()` calls from the framework services package will pass only a component name to load an assets-only component.
+The entry point into this class is `installDeferredComponent` which provides both a loading unit id and the component name to help determine what to install.
+
+`loadLibrary()` calls will pass only a loading unit id while `DeferredComponent.installDeferredComponent()` calls from the framework services package will pass only a component name to load an assets-only component.
 
 In order to resolve a specific component from the loading unit id, it is typically necessary to store a mapping of loading unit ids to the component name. In the default implementation, we accomplish this by storing a string meta-data in the base app’s `AndroidManifest.xml`, but this can be accomplished in any way desired.
 
-You may find detailed explanations of each method in `DeferredComponentManager`  in the engine source file at `shell/platform/android/io/flutter/embedding/engine/deferredcomponents/DeferredComponentManager.java`. The default Play store implementation is found at `shell/platform/android/io/flutter/embedding/engine/deferredcomponents/PlayStoreDeferredComponentManager.java` and can be used as a rough guide on what needs to be implemented.
+You may find detailed explanations of each method in `DeferredComponentManager`  in the engine source file at `shell/platform/android/io/flutter/embedding/engine/deferredcomponents/DeferredComponentManager.java`. 
 
-To load Dart libraries, call `FlutterJNI.loadDartDeferredLibrary` with the loading unit id and a list of paths that potentially contain the `.so` file in your `loadDartLibrary` implementation. The engine will try to dlopen each of the paths provided until one is successfully opened.
+The default Play Store implementation is found at `shell/platform/android/io/flutter/embedding/engine/deferredcomponents/PlayStoreDeferredComponentManager.java` and can be used as a rough guide on what needs to be implemented.
+
+To load Dart libraries, call `FlutterJNI.loadDartDeferredLibrary` with the loading unit id, and a list of paths that potentially contain the `.so` file in your `loadDartLibrary` implementation. The engine will call `dlopen` on each of the paths provided until one is successfully opened.
 
 To load new assets, create an Android `AssetManager` that has access to the newly downloaded assets. Pass this `AssetManager` to `FlutterJNI.updateJavaAssetManager`.
 
@@ -275,10 +292,14 @@ The `FlutterJNI` instance is passed in via `setJNI`.
 
 ### Tooling
 
-Flutter’s tooling comes with the capability to instruct `gen_snapshot` to build split AOT and pack the `.so` files and assets into an Android dynamic feature module. Custom implementations are typically unable to make use of this tooling. Therefore, you may have to write custom tooling to package the `.so` files and assets yourself to work alongside the custom `DeferredComponentManager` implementation.
+Flutter’s tooling comes with the capability to instruct `gen_snapshot` to build split AOT, and pack the `.so` files and assets into an Android dynamic feature module.
 
-To make `gen_snapshot` generate loading units and the .so shared libraries, pass the `--loading_unit_manifest=<manifestPath>` option to `gen_snapshot`. This will create a .json file at your manifestPath that contains the loading units and corresponding `.so` libs generated. The `.so` file and assets can then be packed in whatever format you wish to distribute them on your file server. It is also your responsibility to unpack this format in your `DeferredComponentManager` implementation.
+Custom implementations are typically unable to make use of this tooling. Therefore, you may have to write custom tooling to package the `.so` files and assets, so they work alongside the custom `DeferredComponentManager` implementation.
+
+To make `gen_snapshot` generate loading units, and the `.so` shared libraries, pass the `--loading_unit_manifest=<manifestPath>` option to `gen_snapshot`. 
+
+This will create a .json file at your `manifestPath` that contains the loading units and corresponding `.so` libs generated. The `.so` file and assets can then be packed in whatever format you wish to distribute on your file server. It is also your responsibility to unpack this format in your `DeferredComponentManager` implementation.
 
 ### File server
 
-Since custom implementations typically do not use the Play store, a custom system for hosting and serving files to end users should be implemented. This part is highly variable in how it can be accomplished, and the only requirement is that it functions in tandem with the `DeferredComponentManager` implementation to deliver the files needed to load Dart shared libraries and assets.
+Since custom implementations typically do not use the Play store, a custom system for hosting and serving files to end users should be implemented. This part is highly variable in how it can be accomplished, and the only requirement is that it functions in tandem with the `DeferredComponentManager` implementation, so it delivers the files needed to load Dart shared libraries, and assets.
