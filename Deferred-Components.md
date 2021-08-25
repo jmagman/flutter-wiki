@@ -104,7 +104,7 @@ Since mistakenly importing a deferred file as non-deferred can cause the file to
 
 ***
 
-# Fully deferring Flutter in add2app
+# Fully deferring Flutter in add-to-app
 
 When using add-to-app, it's possible to convert the entire Flutter module into an Android dynamic feature module to install at runtime.
 
