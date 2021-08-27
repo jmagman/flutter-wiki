@@ -370,7 +370,7 @@ guide.
 There is one exception: it's better to _not_ document something in our API
 docs than to document it poorly. This is because if you don't document it,
 it still appears on our list of things to document. Feel free to remove
-documentation that violates our the rules below (especially the next one),
+documentation that violates our rules below (especially the next one),
 so as to make it reappear on the list.
 
 
@@ -397,12 +397,14 @@ final double radius;
 
 // GOOD:
 
-/// The color with which to fill the circle. Changing the background
-/// color will cause the avatar to animate to the new color.
+/// The color with which to fill the circle.
+///
+/// Changing the background color will cause the avatar to animate to the new color.
 final Color backgroundColor;
 
-/// The size of the avatar. Changing the radius will cause the
-/// avatar to animate to the new size.
+/// The size of the avatar.
+///
+/// Changing the radius will cause the avatar to animate to the new size.
 final double radius;
 ```
 
