@@ -1,5 +1,66 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-08-27
+
+### Notable issues
+
+* [desktop] `'!_debugDuringDeviceUpdate': is not true` exception thrown [#84241](https://github.com/flutter/flutter/issues/84241)
+* Glitch when switching between text fields with autofillHints and autocorrect [#89022](https://github.com/flutter/flutter/issues/89022)
+* ☔ Update all interactive samples/snippets for lint issues [#6155](https://github.com/flutter/website/issues/6155)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 251, closed 80 (32%)
+
+In total closed 179 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 32.40%  |
+| Duplicate  | 20.11%  |
+| Fixed | 13.41%  |
+| Solved | 3.91%  |
+| Timeout | 30.17%  |
+
+We're continuing to rework the `p: camera` filter.
+
+#### Flutter/website
+
+New Flutter website issues triaged 20, closed 9 (45%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 33.3% |
+| Fixed | 22.2% |
+| Duplicate | 44.4% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 23, closed 3 (13.04%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 66.7%  |
+| Duplicate | 33.33% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 31, closed 12 (39%)
+
+In total closed 20 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 15%  |
+| Fixed | 10%  |
+| Invalid | 40%  |
+| No response | 15%  |
+| Solution provided | 10%  |
+| User issue | 5%  |
+| Won't fix | 5%  |
+
 ## 2021-08-19
 
 ### Notable issues
@@ -41,7 +102,7 @@ New Flutter website issues triaged 19, closed 10 (52.63%)
 | -- | -- |
 | Invalid | 10.52% |
 | Fixed | 10.52% |
-| Dupkucate | 31.57% |
+| Duplicate | 31.57% |
 
 #### Googleads-mobile-flutter
 
