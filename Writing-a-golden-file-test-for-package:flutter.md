@@ -2,7 +2,7 @@ _(This page is referenced by comments in the Flutter codebase.)_
 
 **If you want to learn how to write a golden test for your package, see [the `matchesGoldenFile` API docs](https://api.flutter.dev/flutter/flutter_test/matchesGoldenFile.html).** This wiki page describes the special process specifically for the Flutter team itself.
 
-Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter) for baseline and version management of golden files. This allows for golden file testing on Linux, Windows, MacOS and Web across two CI environments (Cirrus and LUCI). If you have questions about [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter), cc **@Piinks** on your pull request.
+Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter) for baseline and version management of golden files. This allows for golden file testing on Linux, Windows, MacOS and Web, which accounts for the occassional subtle rendering differences on between these platforms. If you have questions about [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter), cc **@Piinks** on your pull request.
 
 ## Index
 - [Creating a New Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#creating-a-new-golden-file-test)
@@ -11,6 +11,7 @@ Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.
 - [Flutter Gold Login](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#flutter-gold-login
 )
 - [`flutter-gold` Check](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#flutter-gold-check)
+- [`reduced-test-set` tag](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#reduced-test-set-tag)
 
 
 ## Creating a New Golden File Test
@@ -69,6 +70,16 @@ The `flutter-gold` check is applied to pull requests in flutter/flutter that exe
 As golden file tests are run across multiple test shards, this check waits for all other tests to complete before checking to see if Gold received new images. While awaiting test completion, and in the event there are image changes, the `flutter-gold` check will hold a pending state. This is primarily due to how the auto-roller used by flutter/engine works (context: https://github.com/flutter/flutter/issues/48744).
 
 If there are no image changes, the `flutter-gold` check will go green. If image changes were detected, a comment on your pull request will notify and provide a direct link to the images. Upon triaging, or approving, the images, the `flutter-gold` check will go green within five minutes.
+
+## `reduced test set` tag
+
+On some CI platforms in pre-submit, hermetic tests suites are not executed in order to conserve resources and expedite testing of other changes. To ensure that a golden file image is available for every platform, test files with golden tests are tagged with `reduced-test-set`. This marks them for execution in these conservative test environments. Currently, framework tests on Mac and Windows platforms execute these reduced test sets. The analyzer will alert you if the tag is omitted from the test file. The tag should be formatted as such at the top of the file:
+
+```dart
+@Tags(<String>['reduced-test-set'])
+```
+
+For more context, see [flutter.dev/go/reduce-ci-tests](https://flutter.dev/go/reduce-ci-tests).
 
 ## Additional Resources
 - [Gold APIs used by the Flutter Framework](https://docs.google.com/document/d/1H3CDqT7zBUt4Je2HPQpleYA-drwj2oy0mdPlSdf2d4A/edit?usp=sharing)
