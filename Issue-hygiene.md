@@ -313,22 +313,14 @@ are automatically locked by a [bot](https://github.com/apps/lock). This is
 done to encourage developers to file new bugs, instead of piling comments
 on old ones.
 
-Under normal circumstances, issues should not regularly be locked. The most
-common reasons for manually locking an issue are:
-
-1. The issue is well understood by the engineers working on it,
-   is believed to be appropriately prioritized, has has a clear 
-   path to being fixed, and is otherwise attracting
-   a lot of off-topic or distracting comments like "me too" or
-   "when will this be fixed" or "I have a similar issue that might
-   or might not be the same as this one".
-2. The issue has been closed as fixed, and is attracting a lot of
-   off-topic comments that should either be filed as independent issues
-   or posted on a site like StackOverflow.com as a question.
-
-In these states, the issue is generally considered to be well
-understood, no longer in need of reproduction test cases, and
-either actively being worked on or already fixed on master.
+Under normal circumstances, open issues should not regularly be locked. The most
+common reason for manually locking an open issue is that issue is well
+understood by the engineers working on it,
+is believed to be appropriately prioritized, has has a clear 
+path to being fixed, and is otherwise attracting
+a lot of off-topic or distracting comments like "me too" or
+"when will this be fixed" or "I have a similar issue that might
+or might not be the same as this one".
 
 If you are concerned that such an issue is not receiving its due
 attention, see Escalating an Issue, described above. If you are
