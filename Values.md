@@ -41,9 +41,7 @@ We may sometimes gate features behind flags until we are confident of their qual
 
 ## Support
 
-When we think about whether we claim to "support" something, e.g. whether Flutter supports Windows 7, we use the following frame of reference.
-
-There is currently no documentation that describes where different platforms fall on these axes, though we may think about providing such documentation in the future.
+When we think about whether we claim to "support" something, e.g. whether Flutter supports Windows 7, we use the following frame of reference. We document [which platforms we consider to fall into each category](https://flutter.dev/docs/development/tools/sdk/release-notes/supported-platforms) on flutter.dev.
 
 ### Areas of support
 
@@ -54,15 +52,17 @@ We distinguish several categories along which one can describe a level of suppor
 * Supporting for _hosting_ development (we support a platform for hosting development if it is one on which you can compile a Flutter application; we support an IDE for hosting development if it has a Flutter plugin).
 * Supporting for Flutter development (we support a platform for Flutter development if one can contribute to Flutter itself from that platform).
 
+The list of supported platforms on flutter.dev is describing the platforms supported for deployment.
+
 ### Levels of support
 
 For each area, we consider the level to which we provide support:
 
 1. We will literally help you with your code if things don't work. This is very rare. (See also "[top-tier customers](https://github.com/flutter/flutter/wiki/Issue-hygiene#customers)".)
-2. We will make a best effort to ensure that well written code works (e.g. we have testing on that platform). This is a common level for target platforms that have reached a label of "stable" (e.g. Android, iOS) on devices that are widely available (e.g. 64bit ARM).
-3. We will not go out of our way to prevent code from working, but if it works it's because of luck and our best intentions rather than a coordinated effort (e.g. we do no testing on that platform). This is a common level of support for less commonly-used devices. For example, we do minimal testing of 32bit iOS devices.
+2. We will make a best effort to ensure that well written code works (e.g. we have testing on that platform). This is a common level for target platforms that have reached a label of "stable" (e.g. Android, iOS) on devices that are widely available (e.g. 64bit ARM). This corresponds to the "Supported Google-tested platforms" category on the list of supported platforms.
+3. We will not go out of our way to prevent code from working, but if it works it's because of luck and our best intentions rather than a coordinated effort (e.g. we do no testing on that platform). This is a common level of support for less commonly-used devices. For example, we do minimal testing of 32bit iOS devices. This corresponds to the "Best effort platforms tested by the community" category on the list of supported platforms.
 4. We will pay no attention to whether code works, but we will accept patches. This is a common level of support for the many esoteric embedded platforms that we have no way to even manually test. For example, if you have your own SoC and are running Flutter, we want you to succeed but we don't have any way to ensure it keeps working. If you are willing to provide reliable CI support for your platform, we are more than happy to work with you to move that platform to level 2.
-5. We won't accept patches. This is the appropriate response for features and platforms that are wildly outside our roadmap. For example, maintaining a Rust port of the framework is not something the Flutter project would accept patches for.
+5. We won't accept patches. This is the appropriate response for features and platforms that are wildly outside our roadmap. For example, maintaining a Rust port of the framework is not something the Flutter project would accept patches for. This corresponds to the "Unsupported platforms" category on the list of supported platforms.
 
 
 ***
