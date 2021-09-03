@@ -5,27 +5,13 @@
 The process of triaging bugs is to first go through these bug lists and make sure they have all been processed as described below:
 
 <!--ALL-LABELS-->
-1. [recently filed bugs with none of the classification labels](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+-label%3Aframework+-label%3Aengine+-label%3Atool+-label%3Aplugin+-label%3Apackage+-label%3A%22will+need+additional+triage%22+-label%3Aplatform-web+-label%3A%22a%3A+desktop%22+-label%3A%22team%3A+infra%22+-label%3A%22a%3A+existing-apps%22+-label%3A%22waiting+for+customer+response%22+updated%3E%3D2019-09-10+sort%3Aupdated-desc).
+1. Process the [bugs with none of the classification labels](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+-label%3A%22in+triage%22+-label%3Aframework+-label%3Aengine+-label%3Atool+-label%3Aplugin+-label%3Apackage+-label%3A%22will+need+additional+triage%22+-label%3Aplatform-web+-label%3A%22a%3A+desktop%22+-label%3A%22team%3A+infra%22+-label%3A%22waiting+for+customer+response%22+sort%3Aupdated-desc).
 
-<!--ALL-LABELS-->
-2. [older bugs with none of the classification labels](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+-label%3A%22in+triage%22+-label%3A%22team%22+-label%3Aframework+-label%3Aengine+-label%3Atool+-label%3Aplugin+-label%3Apackage+-label%3A%22will+need+additional+triage%22+-label%3Aplatform-web+-label%3A%22a%3A+desktop%22+-label%3A%22team%3A+infra%22+-label%3A%22a%3A+existing-apps%22+-label%3A%22waiting+for+customer+response%22+-label%3Aplatform-android+-label%3Aplatform-ios+-label%3A%22dependency%3A+dart%22+-label%3A%22customer%3A+fuchsia%22+-label%3A%22d%3A+devtools%22+-label%3A%22f%3A+cupertino%22+label%3A%22d%3A+codelabs%22+sort%3Acreated-desc+).
+2. Process the backlog of [bugs with no priority](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+-label%3A%22P0%22+-label%3A%22P1%22+-label%3A%22P2%22+-label%3A%22P3%22+-label%3A%22P4%22+-label%3A%22P5%22+-label%3A%22P6%22).
 
-3. [bugs with no priority](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+-label%3A%22P0%22+-label%3A%22P1%22+-label%3A%22P2%22+-label%3A%22P3%22+-label%3A%22P4%22+-label%3A%22P5%22+-label%3A%22P6%22).
+3. Finally, one should look at [the least recently updated bugs of any kind](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-asc) and see if they are still relevant, applying new labels, updating the subject line if necessary, providing an update if necessary, etc.
 
-Provide an initial priority for the issue. In general, the priorities you should consider are:
-  * `P4` for bona fide bugs in current functionality (including regressions)
-  * `P5` for feature requests.
-  * `P6` for feature requests we're unlikely to work on in the immediate future, according to our [Roadmap](https://github.com/flutter/flutter/wiki/Roadmap).
-
-If it looks like it's critical (something that stops further builds or is a major regression in core functionality affecting all users) consider the `P0` label. If you assign the `P0` label to a bug, you _must_ reach out to a prospective owner to pass the baton for investigation. Try the `hackers` channel on the Discord if you don't know someone who can help, or reach out to @kf6gpe, @pcsosinski, or @Hixie. The `P0` bug is reserved for things that "stop the presses", as they also block further rolls to customers.
-
-Like `P0`, we reserve `P1` and `P2` labels for things that should surface in our weekly triage meeting. In general, `P1` issues are bugs blocking top-tier customers from shipping immediately or breaks in core functionality affecting all users, and `P2` issues are bugs that block top-tier customers from shipping soon, or breaks in core functionality affecting most users.
-
-`P3` issues are issues that have been triaged up from `P4` by team triage.
-
-Finally, one should look at [the least recently updated bugs of any kind](https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-asc) and see if they are still relevant, applying new labels, updating the subject line if necessary, providing an update if necessary, etc.
-
-## General
+### General
 
 First, look at the bug report, and try to understand what the described problem is. Edit the original comment to remove boilerplate that the bug reporter didn't remove. Edit the original comment to add backticks (\`\`\`) around blocks of stack traces, code, the output of shell scripts like `flutter doctor`, etc. Ensure that the title is a meaningful summary of the issue. These changes make the bug much easier to manage.
 
@@ -60,25 +46,12 @@ Some labels are used to track the flow of issues from the time they're filed unt
   * `passed secondary triage`: The issue has been examined by at least one of the triage teams and has been given an appropriate team label for further action.
   * `will need additional triage`: Assign this if you don't know how to route it to a team.
 
-If any of the labels prefixed with "a:" apply to the issue, add those labels. If the bug is specific to a particular platform, consider adding one of the "platform-*" labels. If it's specific to running on a desktop platform, include "a: desktop" as well. If it's an issue involving integrating Flutter as a library into an existing mobile application, add `a: existing-apps`.
-
-Add any of the applicable "severe: *" labels; typically only one will apply but sometimes `severe: regression` will apply in conjunction with one of the others.
-
-If it's a very serious bug that should block releases, consider adding the `P0` label as well. This label is reserved for build breaks, regressions in metrics, issues causing data loss for end users, etc. that would effectively block us from shipping tip of tree to users.
-
-If it seems to affect a lot of people but doesn't quite rise to the level of a release blocker, add the `customer: crowd` label (which means it affects many people) and then either the `P1` label (if it's blocking people) or the `P2` label (if it's not blocking people but is nonetheless serious). This will flag the bug for consideration during weekly triage (see the second section of this document). For more details on the "crowd" designation, see [[Issue Hygiene]].
-
-If it's an issue that is repeatedly frustrating developers when using non-experimental Flutter features (e.g. performing mobile app builds, dealing with text input, using supported IDEs), and is widespread, add `a: annoyance`. If unsure, consult with DevRel (filiph@).
-
-If it's something that looks trivial to fix, add the `easy fix` label.
-
-Finally, label the issue based on what area of the project the bug relates to:
+Label the issue based on what area of the project the bug relates to:
 
 <!--ALL-LABELS-->
-- If it's a documentation bug, add one of the labels with the "d:" prefix.
-- If it's a bug with the underlying engine, add `engine` and optionally one of the bugs with the "e:" prefix. Consider one of the bugs with the "dependency" prefix if the bug is related to one of those areas.
-- If it's a bug with the Flutter framework, add `framework` and optionally one of the bugs with the "f:" prefix.
-   - If it's specific to Material widgets or the Gallery, include the `f: material` label.
+- If it's a bug with the underlying engine, add `engine`  and optionally one of the bugs with the "e:" prefix.
+- If it's a bug with the Flutter framework, add `framework` and optionally one of the bugs with the "f:" prefix, especially:
+   - If it's specific to Material widgets, include the `f: material` label.
    - If it's specific to iOS widgets, include the `f: cupertino` label.
 - If it's a bug with plugins, add `plugin` and optionally one of the labels with the "p:" prefix.
 - If it's a bug with packages, add `package` and optionally one of the labels with the "p:" prefix.
@@ -86,11 +59,33 @@ Finally, label the issue based on what area of the project the bug relates to:
 - If it's specific to writing desktop Windows, macOS, Linux, or Web apps with Flutter, add the `a: desktop` label.
 - If it's related to a specific platform, add one of the "platform" labels. In particular, issues involving the Web backend should have the `platform-web` label.
 - If it's related to our testing infrastructure (LUCI, Cocoon, devicelab, Cirrus, etc), add the `team: infra` label.
-- If it's related to the developer tools -- that is, if it has or is going to receive `t: devtools`, or Android Studio, move it to the `flutter/devtools` repository for further triage, unless it looks like the first step is a change to the core parts of Flutter (engine or framework, in which case it should receive the `devtools` label as well as the pertinent labels for where the work should occur).
+
+Bugs relating to the developer tools or Android Studio should be moved to the `flutter/devtools` repo, unless it looks like the first step is a change to the core parts of Flutter (in which case it should receive the `devtools` label as well as the pertinent labels for where the work should occur).
 
 Bugs relating to the website should be moved to the `flutter/website` repo.
 
 Bugs relating to the IDEs should be moved to the `flutter/flutter-intellij` repo.
+
+#### Priority labels
+
+Provide an initial priority for the issue. In general, the priorities you should consider are:
+  * `P4` for bona fide bugs in current functionality (including regressions)
+  * `P5` for feature requests.
+  * `P6` for feature requests we're unlikely to work on in the immediate future, according to our [Roadmap](https://github.com/flutter/flutter/wiki/Roadmap).
+
+If it looks like it's critical (something that stops further builds or is a major regression in core functionality affecting all users) consider the `P0` label. If you assign the `P0` label to a bug, you _must_ reach out to a prospective owner to pass the baton for investigation. Try the `#hackers` channel on the Discord if you don't know someone who can help, or reach out to @Hixie. The `P0` bug is reserved for things that "stop the presses", as they also block further rolls to customers.
+
+Like `P0`, we reserve `P1` and `P2` labels for things that should surface in our weekly critical triage meeting. In general, `P1` issues are bugs blocking top-tier customers from shipping immediately or breaks in core functionality affecting all users, and `P2` issues are bugs that block top-tier customers from shipping soon, or breaks in core functionality affecting most users.
+
+`P3` issues are issues that have been triaged up from `P4` by team triage.
+
+#### Additional labels
+
+Once the main labels above are added, consider what additional labels could be added, in particular:
+
+Add any of the applicable "severe: *" labels; typically only one will apply but sometimes `severe: regression` will apply in conjunction with one of the others.
+
+Add any of the applicable "a: *" labels. There are many, it's worth browsing the list to get an idea of which ones might apply.
 
 ### Issues requiring domain expertise
 
@@ -174,12 +169,13 @@ Teams can use a variety of tools to prioritize bugs.
 
 * Teams should use the priority labels `P0`...`P6`.
 * Another tool is the [Projects](https://github.com/flutter/flutter/projects) page on GitHub. Feel free to create new projects as desired, and use it as you see fit.
-* In some circumstances, we can create new milestones that parallel the dated milestones. Contact @Hixie before going down this route.
+* If you like using milestones, we can create new milestones. Contact @Hixie if that's interesting to you.
 
 ## Engine
 
 ### Issue Triage
-> :warning: This triage happens on Mondays. The contents here are mirrored from [go/flutter-engine-triage-playbook](http://go/flutter-engine-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
+
+> :warning: This triage happens on Mondays. The contents here are mirrored from the Google-internal document [go/flutter-engine-triage-playbook](http://go/flutter-engine-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
 
 #### Agenda
 
@@ -210,7 +206,7 @@ Teams can use a variety of tools to prioritize bugs.
 *   If the triage process cannot be completed within the allotted time, the process has failed. Perform items that could not be completed offline. Seek help.
 
 ### Pull Request Triage
-> :warning: This triage happens on Thursdays. The contents here are mirrored from [go/flutter-engine-pr-triage-playbook](http://go/flutter-engine-pr-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
+> :warning: This triage happens on Thursdays. The contents here are mirrored from the Google-internal [go/flutter-engine-pr-triage-playbook](http://go/flutter-engine-pr-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
 
 #### Objective
 
@@ -322,8 +318,6 @@ If you come across a bug that is unrelated to the tool, remove the `tool` label 
 If you come across a bug that is unrelated to the Web backend, remove the `platform-web` label and leave a comment explaining why. That will send it back to triage.
 
 ## Android
-
-_The milestone field is no longer widely used. Consider removing the milestone-based links below._
 
 * [Android P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+label%3A%22P0%22)
 * [Android P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-android%22+label%3A%22P1%22)
