@@ -1,5 +1,72 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-09-03
+
+### Notable issues
+
+* [camera][regression] App fatally crashes when quickly switching cameras only on Android [#89431](https://github.com/flutter/flutter/issues/89431)
+* java.lang.SecurityException: Permission Denial crash at launch [#88767](https://github.com/flutter/flutter/issues/88767)
+* [iOS][iPad simulator]: Trying to toggle software keyboard throws unhandled exception on latest master and beta [#89378](https://github.com/flutter/flutter/issues/89378)
+* [Web] [Video_Player] Rendering regression [#88688](https://github.com/flutter/flutter/issues/88688)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 176, closed 55 (31%)
+
+In total closed 150 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 36.0%  |
+| Duplicate  | 20.0%  |
+| Fixed | 25.3%  |
+| Solved | 4.0%  |
+| Timeout | 14.7%  |
+
+We've finished the rework on the `p: camera` filter for Android & `p: flutter_markdown` filter.
+
+#### Flutter/website
+
+New Flutter website issues triaged 3, closed 1 (33.33%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 100% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 45, closed 11 (24.44%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 53.3%  |
+| Duplicate | 33.3% |
+| Fixed | 13.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 1 (100%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 100% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 24, closed 9 (37.5%)
+
+In total closed 11 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 18.18%  |
+| Invalid | 27.27%  |
+| No response | 18.18%  |
+| Solution provided | 27.27%  |
+| User issue | 9.09%  |
+
 ## 2021-08-27
 
 ### Notable issues
