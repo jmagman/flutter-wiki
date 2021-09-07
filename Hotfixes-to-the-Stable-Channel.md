@@ -46,7 +46,7 @@ This is a hotfix release that addresses the following issues:
 Initial stable release.
 
 ## Flutter 2.0 Changes
-### [2.0.6](https://github.com/flutter/flutter/pull/81508) (April 16, 2021)
+### [2.0.6](https://github.com/flutter/flutter/pull/81508) (April 29, 2021)
 This is a hotfix release that addresses a single issue:
  - https://github.com/flutter/flutter/issues/81326 - macOS binaries not codesigned
 
