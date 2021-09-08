@@ -99,7 +99,6 @@ Flutter Wiki
 ## Experimental features
 - [Android Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
-- [[CanvasKit web support]]
 - [[Desktop shells]]
 - [Deferred Components](https://github.com/flutter/flutter/wiki/Deferred-Components)
 - [JIT release builds](https://github.com/flutter/flutter/wiki/JIT-Release-Modes)
