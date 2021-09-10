@@ -1,5 +1,70 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-09-10
+
+### Notable issues
+
+* ThemeData.primaryColor is broken in 2.5.0 [#89839](https://github.com/flutter/flutter/issues/89839)
+* Draggable Scrollable sheet throws error logs in 2.5.0 [#89681](https://github.com/flutter/flutter/issues/89681)
+* A regression in appbar in 2.5.0 [#89808](https://github.com/flutter/flutter/issues/89808)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 218, closed 85 (39%).
+
+In total closed 160 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 38%  |
+| Duplicate  | 28%  |
+| Fixed | 15%  |
+| Solved | 6%  |
+| Timeout | 13%  |
+
+#### Flutter/website
+
+New Flutter website issues triaged 6, closed 2 (33%). 
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 33% |
+| Duplicate | 67% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 1 (20%).
+
+In total closed 7 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 72%  |
+| Duplicate | 14% |
+| Fixed | 14% |
+
+#### dart-lang/site-www
+
+No new Dart site issues were triaged this week.
+
+#### Flutterfire
+
+New Flutterfire issues triaged 22, closed 12 (55%).
+
+In total closed 14 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 43%  |
+| Invalid | 21%  |
+| Fixed | 7%  |
+| Solution provided | 7%  |
+| User issue | 22%  |
+
 ## 2021-09-03
 
 ### Notable issues
