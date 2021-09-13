@@ -1,6 +1,10 @@
 Flutter includes support for developing on macOS devices with [Apple Silicon (M1) hardware](https://www.apple.com/mac/m1/). This wiki page documents ongoing work relating to the Flutter toolchain providing native support for this processor architecture.
 
-We recommend using Flutter 2.5 or later on Apple Silicon machines. 
+We recommend using Flutter 2.5 or later on Apple Silicon machines. You must also have Rosetta available, which you can install manually by running:
+
+```sh
+$ sudo softwareupdate --install-rosetta --agree-to-license
+```
 
 ## Using macOS on Apple Silicon to develop Flutter apps (host)
 
