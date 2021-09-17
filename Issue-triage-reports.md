@@ -1,5 +1,68 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-09-17
+
+### Notable issues
+
+* [Web] [HTML][Safari] svg image not rendering per color [#90105](https://github.com/flutter/flutter/issues/90105)
+* Flutter 2.5 floatingActionButton centerDocked notch problem [#90024](https://github.com/flutter/flutter/issues/90024)
+* Opening Drawer with ListView throws: The provided ScrollController is currently attached to more than one ScrollPosition. [#89992](https://github.com/flutter/flutter/issues/89992)
+* [Android] Backspace stops working when entering text mix of uppercase/lowercase in a TextField with obscureText: true [#89742](https://github.com/flutter/flutter/issues/89742)
+* Dots appear under FAB with elevation without a background color [#90254](https://github.com/flutter/flutter/issues/90254)
+* [web] browser back button throws `Error: Assertion failed: org-dartlang-sdk:///flutter_web_sdk/lib/_engine/engine/navigation/history.dart:311:14` [#90031](https://github.com/flutter/flutter/issues/90031)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 244, closed 75 (30.74%)
+
+In total closed 182 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 30.22%  |
+| Duplicate  | 20.33%  |
+| Fixed | 12.64%  |
+| Solved | 9.89%  |
+| Timeout | 26.92%  |
+
+#### Flutter/website
+
+New Flutter website issues triaged 12, closed 3 (25%)
+
+In total closed 3 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 66.7% |
+| Duplicate | 33.3% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 3 (60%)
+
+In total closed 9 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 44.4%  |
+| Duplicate | 33.3% |
+| Fixed | 22.2% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 14, closed 7 (50%)
+
+In total closed 8 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 25.00%  |
+| Invalid | 37.5%  |
+| User issue | 25.0%  |
+| Won't fix | 12.5%  |
+
 ## 2021-09-10
 
 ### Notable issues
