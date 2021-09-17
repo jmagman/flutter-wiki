@@ -13,6 +13,14 @@ $ flutter upgrade
 
 ## Flutter 2.5 Changes
 
+### 2.5.1 (September 17, 2021)
+This is a hotfix release that addresses the following issues:
+ * [#88767](https://github.com/flutter/flutter/issues/88767) java.lang.SecurityException: Permission denial crash at launch
+ * [#88236](https://github.com/flutter/flutter/issues/88236) null check exception during keyboard keypress
+ * [#88221](https://github.com/flutter/flutter/issues/88221) Material routes delayed on push and pop
+ * [#84113](https://github.com/flutter/flutter/issues/84113) HTTP exceptions talking to VM Service
+ * [#83632](https://github.com/flutter/flutter/issues/83632) Scroll view velocity too high
+
 ### 2.5.0 (September 8, 2021)
 
 Initial stable release. 
