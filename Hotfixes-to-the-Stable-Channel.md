@@ -13,7 +13,7 @@ $ flutter upgrade
 
 ## Flutter 2.5 Changes
 
-### 2.5.1 (September 17, 2021)
+### [2.5.1](https://github.com/flutter/flutter/pull/90281) (September 17, 2021)
 This is a hotfix release that addresses the following issues:
  * [#88767](https://github.com/flutter/flutter/issues/88767) java.lang.SecurityException: Permission denial crash at launch
  * [#88236](https://github.com/flutter/flutter/issues/88236) null check exception during keyboard keypress
