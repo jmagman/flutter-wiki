@@ -13,9 +13,9 @@ The Flutter [Conductor] tool is used to produce Dev releases.
   - Apply this tag locally by checking out the branch and issuing `git tag $TAG_NAME`.
   - Push it to upstream with `git push upstream $TAG_NAME` (ensure that `upstream` is the official Framework repository)
 - Follow the process from the [Conductor] README, with the following inputs:
-  - `--candidate-branch=` the branch you selected in step 1
+  - `--candidate-branch=$CANDIDATE_BRANCH`, where `CANDIDATE_BRANCH` is the branch you selected in step 1
   - `--release-channel=dev`
   - `--framework-mirror=` and `--engine-mirror=` to your personal GitHub mirrors--these will be used to push your local changes and to open PRs from
-  - `--increment=` should be `n` if you already tagged the branch point in step 2, otherwise `m`.
+  - `--increment=$LEVEL`, where `LEVEL` is `n` if you already tagged the branch point in step 2, else `m`.
 
 [Conductor]: https://github.com/flutter/flutter/blob/master/dev/conductor/README.md
