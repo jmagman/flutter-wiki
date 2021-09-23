@@ -275,10 +275,10 @@ git -C $ENGINE_DIR/flutter pull upstream master
 git -C $ENGINE_DIR/flutter checkout <hash>
 ```
 
-If there are local changes to the Flutter engine that you want to test, you will then need to rebase them on top of this revision.
+If there are local changes to the Flutter engine that you want to test, you will then need to cherrypick them on top of this revision.
 
 ```sh
-git -C $ENGINE_DIR/flutter rebase <branch_with_local_changes>
+git -C $ENGINE_DIR/flutter cherry-pick <commit>
 ```
 
 3. Update your dependencies:
