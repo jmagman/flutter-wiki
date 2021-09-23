@@ -74,6 +74,24 @@ We are investigating ways to streamline this, but currently the process for a mu
 
 1. Once there are no dependency overrides, ask the reviewer to land the main PR.
 
+### Breaking changes to plugin platform interfaces
+
+Breaking changes to platform interfaces (any package ending in `_platform_interface`) are strongly discouraged:
+- They require each platform implementation to adopt the new version, and the app-facing package can't pick up any of those changes until all implementations have been updated. This could cause situations where bug fixes for one platform are held up on another platform adopting a feature change.
+- They require a series of changes to CI to selectively disable testing the latest versions of all packages, then later re-enable them.
+- They temporarily lock out unendorsed implementations, until their developers can update.
+
+Because platform interfaces are not expected to be called by clients of the plugins, we favor backward compatibility over having a clean API at that layer.
+
+In order to avoid accidental breaking changes that are missed in review, CI will by default fail for any breaking change to the platform interface. If you believe you need to make a breaking change, and you have discussed it with the reviewer and they agree, you must add the following to the PR description:
+```
+## Breaking change justification
+
+<Insert good reason for breaking change here.>
+```
+
+The format of the header line must match exactly in order for CI to pass.
+
 ### Changing platform interface method parameters
 
 Because platform implementations are subclasses of the platform interface and override its methods, almost *any* change to the parameters of a method is a breaking change. In particular, adding an optional parameter to a platform interface method *is* a breaking change even though it doesn't break callers of the the method.
