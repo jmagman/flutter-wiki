@@ -91,6 +91,7 @@ Flutter Wiki
 - [[Autorollers]]
 - [Flutter's Build Infrastructure](https://github.com/flutter/flutter/blob/master/dev/bots/README.md)
 - [[Flutter Installation Bundles]]
+- [[GitHub Action Workflows]]
 
 ## Release Information
 - [Release notes](https://flutter.dev/docs/development/tools/sdk/release-notes)
