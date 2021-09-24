@@ -99,7 +99,5 @@ You’ll need the user’s email account somewhere else, first and last name, an
 
 To add a fcontrib.org participant:
 1. Open an icognito window and log in using _your_ admin fcontrib credentials at https://admin.google.com/. (q.v. valentine)
-2. Navigate to https://admin.google.com/fcontrib.org/AdminHome.
-3. You’ll be prompted for your fcontrib.org login and password. Log in.
-4. Under “Users” in the upper left, click “Add a User” and follow the prompts.
-5. For a password, choose “Generate Password” and email the password to the new account holder using their non-fcontrib account -- they’ll be able to log in with that and then choose a new password.
+2. Under “Users” in the upper left of the main content area, click “Add a User” and follow the prompts.
+3. For a password, choose “Generate Password” and email the password to the new account holder using their non-fcontrib account -- they’ll be able to log in with that and then choose a new password.
