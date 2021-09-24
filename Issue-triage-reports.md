@@ -1,5 +1,63 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-09-24
+
+### Notable issues
+
+* [Windows] Ctrl + Backspace does not work properly in text fields [#90427](https://github.com/flutter/flutter/issues/90427).
+* [in_app_purchase][android] `introductoryPriceMicros` is empty. [#90244](https://github.com/flutter/flutter/issues/90244).
+* CircularNotchedRectangle in BottomAppBar in BottomSheet not working as expected [#90276](https://github.com/flutter/flutter/issues/90276).
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 206, closed 79 (38.35%)
+
+In total closed 190 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 35.79%  |
+| Duplicate  | 21.05% |
+| Fixed | 16.84% |
+| Solved | 6.84% |
+| Timeout | 19.47% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 5, closed 2 (40%)
+
+In total closed 2 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 100% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 2, closed 1 (50%)
+
+In total closed 6 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 16.7%  |
+| Fixed | 33.3%  |
+| Invalid | 50.0%  |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 16, closed 5 (31.25%)
+
+In total closed 6 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 16.7%  |
+| Solution provided | 33.3%  |
+| User issue | 50.0%  |
+
 ## 2021-09-17
 
 ### Notable issues
