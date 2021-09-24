@@ -95,8 +95,10 @@ If you are a team member who wants to share design docs (see [[Chat]]) but you d
 
 ## Process
 
+You’ll need the user’s email account somewhere else, first and last name, and desired fcontrib.org account login before you begin.
+
 To add a fcontrib.org participant:
-1. You’ll need the user’s email account somewhere else, first and last name, and desired fcontrib.org account login before you begin.
+1. Open an icognito window and log in using _your_ admin fcontrib credentials at https://admin.google.com/. (q.v. valentine)
 2. Navigate to https://admin.google.com/fcontrib.org/AdminHome.
 3. You’ll be prompted for your fcontrib.org login and password. Log in.
 4. Under “Users” in the upper left, click “Add a User” and follow the prompts.
