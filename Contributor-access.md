@@ -91,7 +91,7 @@ This repository is also [mirrored on GitHub.](https://github.com/google/skia-bui
 
 # fcontrib.org accounts
 
-If you are a team member who wants to share design docs (see [Chat]) but you don't want to use your own personal account, you can ask a Flutter admin for an fcontrib.org account. Ping @Hixie or another admin in the #server-support channel on Discord.
+If you are a team member who wants to share design docs (see [[Chat]]) but you don't want to use your own personal account, you can ask a Flutter admin for an fcontrib.org account. Ping @Hixie or another admin in the #server-support channel on Discord.
 
 ## Process
 
