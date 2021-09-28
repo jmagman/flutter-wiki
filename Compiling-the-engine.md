@@ -259,7 +259,7 @@ To retrieve the version of Flutter engine in your Fuchsia source tree, run:
 cat $FUCHSIA_DIR/integration/jiri.lock | grep -A 1 "\"package\": \"flutter/fuchsia\""
 ```
 
-Then use that git hash in step 2 under "Build the engine".
+Then checkout that git hash in step 2 under "Build the engine".
 
 ### Build the engine
 
@@ -275,10 +275,11 @@ git -C $ENGINE_DIR/flutter pull upstream master
 git -C $ENGINE_DIR/flutter checkout <hash>
 ```
 
-If there are local changes to the Flutter engine that you want to test, you will then need to cherrypick them on top of this revision.
+If there are local changes to the Flutter engine that you want to test, make sure to base them on top of this revision.
 
 ```sh
-git -C $ENGINE_DIR/flutter cherry-pick <commit>
+git -C $ENGINE_DIR/flutter checkout -b <desired branch name>
+<....make your changes here and commit them...>
 ```
 
 3. Update your dependencies:
