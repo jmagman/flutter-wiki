@@ -146,6 +146,10 @@ GitHub UI. If nobody reviews your PR within two weeks, you can ask for
 a review via our [[Chat]] channels (start by asking in #hackers,
 saying what your patch does and providing a link).
 
+If you are not yourself someone with commit access, then a second person
+with commit access must also review and approve your PR. This ensures that
+two people with commit access (trusted contributors) agree on every commit.
+
 Code review serves many critical purposes. There's the obvious
 purpose: catching errors. Even the most experienced engineers
 frequently make errors that are caught by code review. But there are
@@ -258,29 +262,6 @@ of your pull request. Please squash commits (GitHub does this for you by default
 
 When you squash commits, by default, GitHub will concatenate all your commit messages to form a unified commit message.  This often yields an overly verbose commit message with many unhelpful entries (e.g. "fix typo").  Please double-check (and hand-edit if necessary) your commit message before merging such that the message contains a helpful description of the overall change.
 
-## Landing a patch in a hurry (for emergencies)
-
-If you really need to check something in in a hurry, for example
-because everything is broken and you can fix it, then pick someone on
-the team who you want to have review the code, and then mark the PR as
-"TBR" with their name. ("TBR" means "To Be Reviewed".) This is only to
-be used in emergencies. (Nobody being around to review your 50,000
-line patch at midnight on December 31st is not an emergency!) If
-someone marks a patch as TBR and gives your name as the reviewer, you
-should review the patch as soon as possible. If a reviewer finds
-problems with a patch marked TBR, the issues should be fixed as soon
-as possible.
-
-In general, if you are reverting the very last commit, you can land
-the commit without waiting for the bots to complete, since by definition
-you are bringing the tree back to a known configuration.
-
-If you're either adding new code or reverting a commit that isn't the last
-commit, then you are still bringing the tree to a new state, so please
-still wait for all the pre-commit tests to go green even if you are unable
-to find someone to review the patch before you land. (But then, if you
-aren't able to find anyone to review your patch, is it really an emergency?)
-
 
 ## Regressions in functionality
 
@@ -289,10 +270,11 @@ check-in (even if it isn't yours). When master is broken, it slows down
 everyone else on the project, so we want to get the tree green again as soon
 as possible.
 
-If you revert is a straight revert, then you do not need to wait for precommit
-tests before landing it. Just create the revert and land it, then tell the person
-whose patch you reverted, that you reverted their patch (also leave a comment
-on the PR that you reverted).
+If your revert is a straight revert of the latest commit, then you do not need to wait for precommit
+tests before landing it (since by definition
+you are bringing the tree back to a known configuration). Just create the revert and land it, then tell the person
+whose patch you reverted that you reverted their patch, and leave a comment
+on the PR that you reverted.
 
 If things are broken, the priority of everyone on the team should be
 helping the team fix the problem. Someone (you, if nobody else has yet
