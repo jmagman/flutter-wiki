@@ -141,7 +141,7 @@ organization's) name and contact info to the [AUTHORS](https://github.com/flutte
 
 Every PR must be code-reviewed before check-in, including things like
 rolling a dependency. Getting a review means that a regular Flutter
-contributor (someone with commit access) has "approved" the PR in the
+contributor (someone with commit access; see [[contributor access]] for details) has "approved" the PR in the
 GitHub UI. If nobody reviews your PR within two weeks, you can ask for
 a review via our [[Chat]] channels (start by asking in #hackers,
 saying what your patch does and providing a link).
