@@ -1,5 +1,3 @@
-# Fuchsia workflow for Engine
-
 This page describes common workflows for working with the Flutter Engine on [Fuchsia](http://fuchsia.dev).
 
 ## Prerequisites
