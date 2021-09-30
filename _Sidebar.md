@@ -75,6 +75,10 @@ Flutter Wiki
 
 - [Upgrading Android API](https://github.com/flutter/flutter/wiki/Upgrading-Engine's-Android-API-version)
 
+### Fuchsia
+
+- [Fuchsia workflow for Engine](https://github.com/flutter/flutter/wiki/Fuchsia-workflow-for-Engine)
+
 ## Plugins and packages repos
 
 - [[Setting up the Plugins development environment]]
