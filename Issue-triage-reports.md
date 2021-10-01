@@ -1,5 +1,67 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-10-01
+
+### Notable issues
+
+* [web] Chrome crashes when starting Flutter Web app in debug mode with breakpoints set [#90844](https://github.com/flutter/flutter/issues/90844).
+* [web][devtools] App get stuck `Compiling lib\main.dart for the Web...` and devtools doesn't work in profile mode [#90596](https://github.com/flutter/flutter/issues/90596).
+* [web] Navigating out of the app and returning crash the debug session [#90822](https://github.com/flutter/flutter/issues/90822).
+* [web] App won't start, throws `GET /main_module.bootstrap.js AbsoluteImportUriError` [#90782](https://github.com/flutter/flutter/issues/90782).
+* Translucent FloatingActionButton get's a persistent highlight when clicked/touched [#90753](https://github.com/flutter/flutter/issues/90753).
+* [web] setSemanticsEnabled(true) makes TextField with obscureText:true print out obscured text [#90794](https://github.com/flutter/flutter/issues/90794).
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 223, closed 77 (34.53%)
+
+In total closed 176 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 31.3%  |
+| Duplicate  | 20.5% |
+| Fixed | 17.0% |
+| Solved | 11.4% |
+| Timeout | 19.9% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 6, closed 2 (33.33%)
+
+In total closed 6 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 33.3% |
+| Duplicate | 33.3% |
+| Fixed | 33.3% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 6, closed 1 (16.67%)
+
+In total closed 5 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 60%  |
+| Invalid | 40%  |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 27, closed 10 (37.04%)
+
+In total closed 10 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 30%  |
+| User issue | 10%  |
+| Duplicate | 60.0%  |
+
 ## 2021-09-24
 
 ### Notable issues
