@@ -13,6 +13,12 @@ $ flutter upgrade
 
 ## Flutter 2.5 Changes
 
+### [2.5.2](https://github.com/flutter/flutter/pull/90281) (September 30, 2021)
+This is a hotfix release that addresses the following issues:
+ * https://github.com/dart-lang/sdk/issues/47285 Fix a regression to the performance of code completions
+ * https://github.com/dart-lang/sdk/issues/47316 Dynamic tables in ELF files have invalid relocated addresses
+ * https://github.com/flutter/flutter/issues/89912 Building iOS app generates unnecessary Flutter.build folder
+
 ### [2.5.1](https://github.com/flutter/flutter/pull/90281) (September 17, 2021)
 This is a hotfix release that addresses the following issues:
  * [#88767](https://github.com/flutter/flutter/issues/88767) java.lang.SecurityException: Permission denial crash at launch
