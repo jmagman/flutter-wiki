@@ -13,7 +13,7 @@ $ flutter upgrade
 
 ## Flutter 2.5 Changes
 
-### [2.5.2](https://github.com/flutter/flutter/pull/90281) (September 30, 2021)
+### 2.5.2 (September 30, 2021)
 This is a hotfix release that addresses the following issues:
  * https://github.com/dart-lang/sdk/issues/47285 Fix a regression to the performance of code completions
  * https://github.com/dart-lang/sdk/issues/47316 Dynamic tables in ELF files have invalid relocated addresses
