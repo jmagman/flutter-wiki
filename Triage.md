@@ -28,6 +28,8 @@ If the bug is **clear enough** for us to act on it, continue with the following 
 
 If you recognize that this bug is a duplicate of an existing bug, add a reference to that bug in a comment, then close the bug. Skip the remaining steps. As you triage more and more bugs you will become more and more familiar with the existing bugs and so you will get better and better at marking duplicates in this way.
 
+When closing the duplicate bug, the github issue tracker does not copy the list of people being notified on the closed bug into the original bug. This can matter, especially when asking on the original bug for things like reproduction steps. Consider cc'ing the author of the duplicate issue into the original issue, especially if we're still trying to determine reproduction steps for the issue.
+
 ### Requests for help (documentation issues)
 
 If the bug report is a question, then it probably belongs in Stack Overflow or on our #help channel or some other forum for getting help. However, if it appears that the reporter did try to read our documentation to find the answer, and failed, or, if you look in our documentation and find it is inadequate here, then please consider it a documentation bug (and update the summary accordingly). 
@@ -43,6 +45,7 @@ Some labels are used to track the flow of issues from the time they're filed unt
   * `in triage`: You are presently looking at an issue and trying to determine what other labels you should give it.
   * `assigned for triage`: The issue is assigned to a domain expert for further triage.
   * `has reproducible steps`: The issue has a reproducible case or test, Flutter doctor output, and usable stack traces if appropriate. It is actionable in the sense that it can be routed to a domain team for action.
+  * `needs repro info`: We need more reproduction steps in order to be able to act on this issue.
   * `passed first triage`: The issue has been reviewed by first-level triage and identified as valid but there are no reproducible steps (e.g. production crashes, proposals, and feature requests). 
   * `passed secondary triage`: The issue has been examined by at least one of the triage teams and has been given an appropriate team label for further action.
   * `will need additional triage`: Assign this if you don't know how to route it to a team.
