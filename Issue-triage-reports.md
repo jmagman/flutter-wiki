@@ -1,5 +1,63 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-10-08
+
+### Notable issues
+
+* Accessibility Screen Reader: Control Focus API [#91290](https://github.com/flutter/flutter/issues/91290).
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 173, closed 69 (39.88%)
+
+In total closed 137 issues during the week 
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 32.8%  |
+| Duplicate  | 22.2% |
+| Fixed | 10.9% |
+| Solved | 13.1% |
+| Timeout | 13.9% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8, closed 1 (12.50%)
+
+In total closed 4 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 50% |
+| Duplicate | 0% |
+| Fixed | 50% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 3, closed 0 (0%)
+
+In total closed 2 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 50%  |
+| Invalid | 50%  |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 23, closed 13 (56.52%)
+
+In total closed 13 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 46.15%  |
+| User issue | 0%  |
+| Duplicate | 38.46%  |
+
+
 ## 2021-10-01
 
 ### Notable issues
