@@ -144,6 +144,7 @@ During our weekly critical triage meeting, we check the following lists:
 * [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP1+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last few days) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on a P0 or other P1 but cannot work on it immediately, find a new owner.
 * [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP2+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last couple of weeks) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on another P0-P2 but cannot work on this one immediately, find a new owner.
 * [Bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3A%22will+need+additional+triage%22+sort%3Aupdated-asc) flagged for additional triage: figure out what should be done with the bug, then remove the `will need additional triage` label.
+* [The oldest PRs](https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3Aflutter+sort%3Aupdated-asc): we should go through a page of PRs and make sure stale ones are closed appropriately, and still-relevant ones have activity.
 
 ### Long-term triage
 
