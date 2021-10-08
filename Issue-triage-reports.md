@@ -17,21 +17,20 @@ In total closed 137 issues during the week
 | Reason for closing  |  |
 | -- | -- |
 | Invalid | 32.8%  |
-| Duplicate  | 22.2% |
+| Duplicate  | 29.2% |
 | Fixed | 10.9% |
 | Solved | 13.1% |
 | Timeout | 13.9% |
 
 #### Flutter/website
 
-New Flutter website issues triaged 8, closed 1 (12.50%)
+New Flutter website issues triaged 8, closed 1 (12.5%)
 
 In total closed 4 issues during the week
 
 | Reason for closing  |  |
 | -- | -- |
 | Invalid | 50% |
-| Duplicate | 0% |
 | Fixed | 50% |
 
 #### Googleads-mobile-flutter
@@ -42,8 +41,8 @@ In total closed 2 issues during the week
 
 | Reason for closing  |  |
 | -- | -- |
-| Fixed | 50%  |
-| Invalid | 50%  |
+| Invalid | 50% |
+| Fixed | 50% |
 
 #### Flutterfire
 
@@ -54,9 +53,9 @@ In total closed 13 issues during the week
 | Reason for closing  |  |
 | -- | -- |
 | Invalid | 46.15%  |
-| User issue | 0%  |
 | Duplicate | 38.46%  |
-
+| Solution provided | 7.69%  |
+| Won't fix | 7.69%  |
 
 ## 2021-10-01
 
