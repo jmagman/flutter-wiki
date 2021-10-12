@@ -337,7 +337,7 @@ cp $ENGINE_DIR/out/fuchsia_debug_x64/flutter_jit_runner-0.far $FUCHSIA_DIR/prebu
 For `--release` builds (you must build Flutter with `--runtime-mode=release`):
 
 ```sh
-cp $ENGINE_DIR/out/fuchsia_debug_x64/flutter_aot_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_runner.far
+cp $ENGINE_DIR/out/fuchsia_release_x64/flutter_aot_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_runner-0.far
 ```
 
 If you are changing the native hooks in `dart:ui`, `dart:zircon`, or `dart:fuchsia` you'll also want to update the `flutter_runner_patched_sdk` that is used in your fuchsia checkout (note the use of AOT/release in the destination, that is intentional).  Run:
