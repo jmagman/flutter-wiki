@@ -13,6 +13,12 @@ $ flutter upgrade
 
 ## Flutter 2.5 Changes
 
+### 2.5.3 (October 15, 2021)
+This is a hotfix release that addresses the following issues:
+ * https://github.com/dart-lang/sdk/issues/47321 Fix a potential out-of-memory condition with analysis server plugins
+ * https://github.com/dart-lang/sdk/issues/47432 Fix certificate loading on Windows when there are expired certificates
+ * https://github.com/flutter/flutter/issues/83792 Fix HTTPS issue related to: "HttpClient throws Invalid argument(s): Invalid internet address"
+
 ### 2.5.2 (September 30, 2021)
 This is a hotfix release that addresses the following issues:
  * https://github.com/dart-lang/sdk/issues/47285 Fix a regression to the performance of code completions
