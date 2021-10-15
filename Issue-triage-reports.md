@@ -1,5 +1,61 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-10-15
+
+### Notable issues
+
+* FittedBox component is causing parent constraints to lose in Flutter 2.5.1 [#91670](https://github.com/flutter/flutter/issues/91670)
+* [Linux] Build failure with uppercased flavor configuration [#91582](https://github.com/flutter/flutter/issues/91582)
+* [animations] Pressing Android back button and the widget simultaneously causes the widget to disappear [#91598](https://github.com/flutter/flutter/issues/91598)
+* [Camera] Build failure with compileSdkVersion 31 [#91412](https://github.com/flutter/flutter/issues/91412)
+* [web][canvaskit] Images Disappear after leaving Fullscreen [#91881](https://github.com/flutter/flutter/issues/91881)
+* `HEIC` images are not rendered in release mode, throws `Exception: Invalid Image Data` [#91421](https://github.com/flutter/flutter/issues/91421)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 198, closed 56 (28.28%).
+
+In total closed 141 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 34.04%  |
+| Duplicate  | 15.60% |
+| Fixed | 9.22% |
+| Solved | 14.18% |
+| Timeout | 26.95% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 4, closed 1 (25%).
+
+In total closed 1 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 100% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 0 (0%)
+
+#### Flutterfire
+
+New Flutterfire issues triaged 10, closed 1 (10%).
+
+In total closed 5 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Solution provided | 80%  |
+| User issue | 20%  |
+
 ## 2021-10-08
 
 ### Notable issues
