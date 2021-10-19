@@ -101,7 +101,8 @@ Flutter Wiki
 - [Release notes](https://flutter.dev/docs/development/tools/sdk/release-notes)
 - [Hotfixes to the stable channel](https://github.com/flutter/flutter/wiki/Hotfixes-to-the-Stable-Channel)
 
-## Experimental features
+## Old documentation
+<!-- don't add things here; if you have a new feature, it should be documented on the web site not the wiki -->
 - [Android Fast Start](https://github.com/flutter/flutter/wiki/Fast-Start)
 - [Apple Silicon support](https://github.com/flutter/flutter/wiki/Developing-with-Flutter-on-Apple-Silicon)
 - [[Desktop shells]]
