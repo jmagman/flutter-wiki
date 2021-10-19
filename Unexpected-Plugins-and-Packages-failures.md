@@ -42,6 +42,22 @@ LUCI tasks are run on Flutter-infrastructure-managed VMs, using an [out-of-repo 
 - File an [infrastructure ticket](https://github.com/flutter/flutter/wiki/Infra-Ticket-Queue).
 - Check the recipe file for recent changes.
 
+### Firebase Test Lab (Also known as: "FTL")
+
+Integration tests on Android are run in real devices through the Firebase Test Lab infrastructure by the `firebase-test-lab` plugin tool. [Source](https://github.com/flutter/plugins/blob/master/script/tool/lib/src/firebase_test_lab_command.dart). From time to time, the Firebase Test Lab will change what devices are available for testing, and our tests will start timing out.
+
+#### Distinguishing features
+- `firebase_test_lab` task starts timing out. The output is normally just: `Timed out!` ([Example](https://github.com/flutter/plugins/runs/3930255308).) 
+  - These timeouts will start as "flake" tests, and get progressively worse, until no amount of "retries" helps them pass (as devices are phased out / less available).
+
+#### Distinguishing features
+- `firebase_test_lab` timing out is almost always related to this. Either because of devices becoming unavailable, or by a temporary lack of resource availability.
+
+#### Investigation & resolution tips
+- Check the [Deprecation List](https://firebase.google.com/docs/test-lab/android/available-testing-devices#deprecated_devices) in the Firebase documentation, and see if it affects any of the devices used by the [script](https://github.com/flutter/plugins/blob/aae841aa5a7062f05e0aba4f9304dd605dbbc2b2/.cirrus.yml#L217).
+- Pick another device that is more available and update the script. See a [sample PR](https://github.com/flutter/plugins/pull/4436).
+  - It is likely that `flutter/engine` and `flutter/flutter` have had the same problem. Use the same devices picked by them.
+
 ## Flutter
 
 Repository tests are run against the latest version of the `master` and/or `stable` channels, so can be unexpectedly broken by updates there ([#30446](https://github.com/flutter/flutter/issues/30446)). Potential failure sources include:
