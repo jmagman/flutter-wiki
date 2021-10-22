@@ -1,5 +1,67 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-10-22
+
+### Notable issues
+
+* TextField in CupertinoTabScaffold is not focusable after back swipe, iOS (only on master channel). [#92053](https://github.com/flutter/flutter/issues/92053)
+* MaterialBanner causes RenderFlex overflow when navigating from a screen with an appbar to one without. [#92157](https://github.com/flutter/flutter/issues/92157)
+* framework throws Rect argument contained a NaN value exception. There have been similar exceptions related to different classes in the past. [#92262](https://github.com/flutter/flutter/issues/92262)
+* ResizeImage method makes image blurry and decreases image quality. [#92010](https://github.com/flutter/flutter/issues/92010)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 175, closed 52 (29.71%).
+
+In total closed 148 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 15.5% |
+| Fixed | 16.2% |
+| Invalid | 26.4%  |
+| Solved | 10.8% |
+| Timeout | 31.1% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 4, closed 0 (0%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 50% |
+| Fixed | 50% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 6, closed 1 (16.67%)
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 100% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 21, closed 7 (33.33%).
+
+In total closed 8 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 12.5%  |
+| Fixed | 25.0%  |
+| Invalid | 50%  |
+| Solution provided | 12.5%  |
+
 ## 2021-10-15
 
 ### Notable issues
