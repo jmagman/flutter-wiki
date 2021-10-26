@@ -117,3 +117,24 @@ The `build_info` from `ffx inspect show` will tell you what Git revision is bein
         flutter_engine_git_revision = fdb7421adbbb4bd814107fdb986b85195dd34a66  
         fuchsia_sdk_version = 6.20210910.1.1
 ```
+
+## Collecting memory usage
+
+You can run the following commands to get a Dart heap snapshot from a Flutter app running on Fuchsia. Note that this will tell you about memory usage from the Dart VM but not from the Flutter runner itself.
+
+1. Run a profile build of the runner by passing `--runtime-mode=profile` when [compiling for Fuchsia](https://github.com/flutter/flutter/wiki/Compiling-the-engine#compiling-for-fuchsia).
+
+```sh
+$ENGINE_DIR/flutter/tools/gn --fuchsia --no-lto --runtime-mode=profile
+```
+
+2. Run a Flutter component using your runner.
+3. Connect to your component's Dart VM.
+
+```sh
+cd $FUCHSIA_DIR
+fx dart-tunnel
+```
+
+4. Connect to the website that the tool tells you.
+5. Collect a heap snapshot.
