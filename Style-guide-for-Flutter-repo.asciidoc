@@ -54,8 +54,9 @@ the Flutter framework code will be read millions of times more than it is writte
 The Dart guide, on the other hand, is designed to provide a more balanced approach
 that assumes that the writing of the code will be a bigger proportion of the
 interactions with the code, and that the reader is more experienced with Dart.
-(Since the `dartfmt` tool uses the Dart guide, we do not use `dartfmt` for the
-Flutter repository. However, we do recommend its use in general.)
+(The `dart format` tool uses the Dart guide, so we do not use it in the
+flutter/flutter and flutter/engine repositories. However, we do recommend its
+use in general.)
 
 ### A word on designing APIs
 
