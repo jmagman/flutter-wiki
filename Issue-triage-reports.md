@@ -1,5 +1,70 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-10-29
+
+### Notable issues
+
+* Layout broken in Chrome on iOS when navigation to flutter website through external hyperlink. [#92655](https://github.com/flutter/flutter/issues/92655)
+* [Android] Severe jank with custom paint. [#92366](https://github.com/flutter/flutter/issues/92366), regression identified as per [this comment](https://github.com/flutter/flutter/issues/92366#issuecomment-954771995)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 198, closed 62 (31.31%).
+
+In total closed 115 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 26.96% |
+| Fixed | 13.04% |
+| Invalid | 36.52%  |
+| Solved | 6.96% |
+| Timeout | 16.52% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 12, closed 2 (16.67%).
+
+In total closed 7 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 14.3% |
+| Fixed | 57.1% |
+| invalid| 28.6% | 
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 3, closed 0 (0%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 66.7% |
+| Invalid | 33.3% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 23, closed 5 (21.74%).
+
+In total closed 9 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 22.2%  |
+| Invalid | 22.2%  |
+| Solution provided | 11.1%  |
+| User | 33.3%  |
+| wontfix | 11.1% |
+
+
 ## 2021-10-22
 
 ### Notable issues
