@@ -71,6 +71,10 @@ If you want to write a design doc for people to review, we recommend using Googl
 We have a template you can use, at [flutter.dev/go/template](https://flutter.dev/go/template). It describes the process for minting a `flutter.dev/go/foo` shortlink for your design doc.
 We recommend you use that template so that people can immediately recognize that this is a Flutter design document and that it is shared publicly.
 
+Don't forget to share your document so that everyone has comment access. When creating the shortlink, remember to test the URL you are publishing in an incognito window!
+
+Googlers: Design docs must be created by non-corp accounts! See [Contributor Access](https://github.com/flutter/flutter/wiki/Contributor-access#fcontriborg-accounts) for details on getting `fcontrib.org` accounts if you don't want to use your personal GMail account.
+
 When you implement a design, document it in the source code in detail. The API documentation is the usual place where we document our designs. It's perfectly reasonable for API docs to be multiple pages long with subheadings (e.g. see the docs for [RenderBox](https://master-api.flutter.dev/flutter/rendering/RenderBox-class.html)!). Do not assume that anyone will ever read your design doc after the discussion has finished. Similarly, do not assume that anyone will look at closed GitHub issues or PR discussions.
 
 For future archeologists, a list of design documents can be found at <https://flutter.dev/docs/resources/design-docs>.
