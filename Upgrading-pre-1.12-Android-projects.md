@@ -103,7 +103,7 @@ If you opt to migrate your standard `flutter create`d project, follow the follow
 
 **2.** Open `android/app/src/main/AndroidManifest.xml`.
 
-**3.** Remove the reference to `FlutterApplication` from the application tag.
+**3.** Replace the reference to `FlutterApplication` in the application tag with `${applicationName}`.
 
 Previous configuration:
 ```xml
@@ -117,6 +117,7 @@ Previous configuration:
 New configuration:
 ```xml
 <application
+  android:name="${applicationName}"
   >
   <!-- code omitted -->
 </application>
