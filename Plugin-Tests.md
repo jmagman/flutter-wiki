@@ -19,11 +19,13 @@ Because of the complexities of having native code, plugins have many more types 
   - Android: **JUnit** - These should live in `android/src/test/`
   - iOS: **XCTest** - These should live in `example/ios/RunnerTests/` (**Note**: These are in the example directory, not the main package directory, because they are run via the example app's project)
   - macOS: **XCTest** - These should live in `example/macos/RunnerTests/` (**Note**: These are in the example directory, not the main package directory, because they are run via the example app's project)
-  - Windows, Linux: **TBD**. Currently there are no native unit tests for these platform, but they will be added in the future (see [#82445](https://github.com/flutter/flutter/issues/82445)).
+  - Linux: **Google Test** - These should live in `linux/test/`, and be named `*_test.cc`.
+  - Windows: **Google Test** - These should live in `windows/test/`, and be named `*_test.cpp`.
 - **Native UI tests**. Some plugins show native UI that the test must interact with (e.g., `image_picker`). For these normal integration tests won't work, as there is not way to drive the native UI from Dart. They are written as:
   - Android: **Espresso**, via the [`espresso` plugin](https://pub.dev/packages/espresso) - These should live in `example/android/app/src/androidTest/`
   - iOS: **XCUITest** - These should live in `example/ios/RunnerUITests/`
-  - Windows, macOS, and Linux: **TBD**, see [#70233 (Windows)](https://github.com/flutter/flutter/issues/70233), [#70234 (macOS)](https://github.com/flutter/flutter/issues/70234), and [#70235 (Linux)](https://github.com/flutter/flutter/issues/70235)
+  - macOS: **XCUITest** - These should live in `example/macos/RunnerUITests/`
+  - Windows and Linux: **TBD**, see [#70233 (Windows)](https://github.com/flutter/flutter/issues/70233) and [#70235 (Linux)](https://github.com/flutter/flutter/issues/70235)
 
 ## Running Tests
 
@@ -80,6 +82,10 @@ Run from Android Studio once the example app is opened as an Android project
 
 [Run from Xcode](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/05-running_tests.html)
 once the example app is opened as an Xcode project.
+
+#### Google Test
+
+For Windows plugins, Visual Studio should auto-detect the tests and allow running them as usual.
 
 ### Web Tests
 
