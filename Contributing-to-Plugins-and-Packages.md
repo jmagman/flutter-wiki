@@ -2,27 +2,29 @@ This page covers additional information that is specific to contributing to flut
 
 ## Version and CHANGELOG updates
 
-Any change that needs to be published in order to take effect—almost any PR except a change that is only to tests—should update the version in `pubspec.yaml` and describe the change in `CHANGELOG.md`. This is because the packages in flutter/plugins and flutter/packages use a continuous release model rather than a set release cadence. This has several advantages:
-- Improvements get to the community faster.
-- Regressions are easier to pinpoint.
-- The release process can be automated.
+Any change that needs to be published in order to take effect must update the version in `pubspec.yaml`. There are very few exceptions:
+- PRs that only affect tests.
+- PRs that only affect unpublished parts of example apps.
+- PRs that only affect local development (e.g., changes to ignored lints).
 
-### FAQ
+This is because the packages in flutter/plugins and flutter/packages use a continuous release model rather than a set release cadence. This model gets improvements to the community faster, makes regressions easier to pinpoint, and simplifies the release process.
 
-**Do I need to update the version if I'm just changing the README?** Yes. Most people read the README on pub.dev, not GitHub, so a README change is not very useful until it's published.
-
-**What do I do if I there are conflicts to those changes before or during review?** This is common. You can leave the conflicts until you're at the end of the review process to avoid needing to resolve frequently. Including the version changes at the beginning despite the likelihood of conflicts makes it much harder to forget that step, and also means that a reviewer can easily fix it from the GitHub UI just before landing.
-
-**What if I want to list a change in the change log, but don't want to update the version?** This should be rare, but can be done by making a special `NEXT` entry at the top of CHANGELOG.md:
+All version changes must have an accompanying CHANGELOG update. Even version-exempt changes should generally update CHANGELOG by adding a special `NEXT` entry at the top of CHANGELOG.md:
 ```
 ## NEXT
 
 * Description of the change
 
-## [...]
+## X.Y.Z
 ```
 
 The next release will change `NEXT` to the new version.
+
+### FAQ
+
+**Do I need to update the version if I'm just changing the README?** Yes. Most people read the README on pub.dev, not GitHub, so a README change is not very useful unless it is published.
+
+**What do I do if I there are conflicts to those changes before or during review?** This is common. You can leave the conflicts until you're at the end of the review process to avoid needing to resolve frequently. Including the version changes at the beginning despite the likelihood of conflicts makes it much harder to forget that step, and also means that a reviewer can easily fix it from the GitHub UI just before landing.
 
 ## Platform Support
 
