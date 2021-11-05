@@ -1,5 +1,68 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-11-05
+
+### Notable issues
+
+* [iOS Simulator] Cannot input text into TextField using hardware keyboard [#92796](https://github.com/flutter/flutter/issues/92796)
+* [Add to App] Physical keyboard doesn't work on iOS simulator [#92997](https://github.com/flutter/flutter/issues/92997)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 159, closed 38 (23.9%).
+
+In total closed 120 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 17.50% |
+| Fixed | 8.33% |
+| Invalid | 19.17%  |
+| Solved | 15.00% |
+| Timeout | 40.00% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 6, closed 1 (16.67%).
+
+In total closed 1 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid| 100.0% | 
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 4, closed 2 (50%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 66.7% |
+| Invalid | 33.3% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 22, closed 7 (31.82%).
+
+In total closed 12 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 16.67%  |
+| Invalid | 41.67%  |
+| no-response | 8.33%  |
+| user | 25.00% |
+| wontfix | 8.33% |
+
+
 ## 2021-10-29
 
 ### Notable issues
