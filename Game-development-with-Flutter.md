@@ -19,6 +19,7 @@ A loose catalog of resources for casual game development with Flutter.
 - [Pop, Pop, Win!](https://dart-lang.github.io/sample-pop_pop_win/) (Mine Sweeper w/ balloons and darts) – OG Dart+Web game w/ StageXL (not Flutter)
 - [Flutter Slide Puzzle](https://flutter.github.io/samples/web/slide_puzzle/) - Created for original Flutter web launch
 - [Community-submitted games](https://flutterawesome.com/tag/games/)
+- [Flutter Backgammon](https://github.com/csells/fibscli)
 
 ## Tutorials
 - [Building a snake game with Flutter](https://www.raywenderlich.com/19430602-how-to-create-a-2d-snake-game-in-flutter)
