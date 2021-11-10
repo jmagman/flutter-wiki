@@ -35,7 +35,7 @@ Run the following steps to set up your environment:
 3. If you haven't configured your machine with an SSH key that's known to github then
    follow the directions here: https://help.github.com/articles/generating-ssh-keys/.
 
-4. `git clone git@github.com:<your_name_here>/flutter.git`
+4. `git clone git@github.com:<github_username>/flutter.git`
 
 5. `cd flutter`
 
