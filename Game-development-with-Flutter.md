@@ -7,6 +7,7 @@ A loose catalog of resources for casual game development with Flutter.
 - [SpriteWidget](https://github.com/spritewidget/spritewidget)
 - [Flutter Processing](https://github.com/matthew-carroll/flutter_processing)
 - [Rive (animation designer)](https://rive.app/)
+- [StageXl (Dart+Web, but not Flutter)](http://www.stagexl.org/)
 
 ## Games built with Flutter / developer experiences
 - [4 Pics 1 Word](https://play.google.com/store/apps/details?id=de.lotum.whatsinthefoto.us)
