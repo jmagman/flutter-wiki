@@ -16,6 +16,7 @@ A loose catalog of resources for casual game development with Flutter.
 - [Porting an iOS game to Flutter](https://twitter.com/drcoderz/status/1458449373424062474)
 - [Space Empire](https://github.com/SatyamX64/space_empires)
 - [Tap Hero](https://github.com/mkiisoft/taphero)
+- [Pop, Pop, Win!](https://dart-lang.github.io/sample-pop_pop_win/) – OG Dart+Web game w/ StageXL (not Flutter)
 - [Community-submitted games](https://flutterawesome.com/tag/games/)
 
 ## Tutorials
