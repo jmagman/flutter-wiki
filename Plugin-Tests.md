@@ -188,7 +188,7 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
         * `CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER` is currently incompatible with Flutter.
         * `IPHONEOS_DEPLOYMENT_TARGET` and `TARGETED_DEVICE_FAMILY` may cause issues running tests.
         * The compiler settings (`CLANG_*`, `GCC_*`, and `MTL_*`) shouldn't be needed.
-1. Edit `example/ios/Podfile` (`example/macos/Podfile` for macOS) to add the following to the `target 'Runner' do` block:
+1. For XCTests, edit `example/ios/Podfile` (`example/macos/Podfile` for macOS) to add the following to the `target 'Runner' do` block:
 
     ```ruby
     target 'RunnerTests' do
@@ -196,5 +196,5 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
       pod 'OCMock', '3.5'
     end
     ```
-    (substituting `RunnerUITests` for `RunnerTests` for UI tests). The `OCMock` line is only necessary if your tests use OCMock.
+    The `OCMock` line is only necessary if your tests use OCMock.
 1. A RunnerTests/RunnerUITests folder should be created and you can start hacking in the added `.m`/`.swift` file.
