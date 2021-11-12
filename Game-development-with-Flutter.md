@@ -15,6 +15,7 @@ A loose catalog of resources for casual game development with Flutter.
 - [Flame Game Jam entries](https://itch.io/jam/1st-flame-game-jam/entries)
 - [Porting an iOS game to Flutter](https://twitter.com/drcoderz/status/1458449373424062474)
 - [Space Empire](https://github.com/SatyamX64/space_empires)
+- [Sunnyplace](https://play.google.com/store/apps/details?id=br.com.sunnyplace)
 - [Tap Hero](https://github.com/mkiisoft/taphero)
 - [Pop, Pop, Win!](https://dart-lang.github.io/sample-pop_pop_win/) (Mine Sweeper w/ balloons and darts) – OG Dart+Web game w/ StageXL (not Flutter)
 - [Flutter Slide Puzzle](https://flutter.github.io/samples/web/slide_puzzle/) - Created for original Flutter web launch
