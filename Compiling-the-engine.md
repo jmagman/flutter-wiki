@@ -40,7 +40,7 @@ Depending on the platform you are making changes for, you may be interested in a
     RBE) for remote building. This is due to Flutter Engine building with the same versions
     of Clang that Fuchsia uses.
 
-    The following idempotent script can be used to fetche and run a Goma client which is
+    The following idempotent script can be used to fetch and run a Goma client which is
     preconfigured to use the correct RBE for building Flutter Engine:
     ```bash
     #!/bin/bash
@@ -49,7 +49,7 @@ Depending on the platform you are making changes for, you may be interested in a
     export GOMA_DIR="$HOME/flutter_goma"
 
     # Download client. Assumes cipd from depot_tools is on path.
-    echo 'fuchsia/third_party/goma/client/${platform}  release' | cipd ensure -ensure-file - -root "$GOMA_DIR"
+    echo 'fuchsia/third_party/goma/client/${platform}  integration' | cipd ensure -ensure-file - -root "$GOMA_DIR"
 
     # Authenticate
     "$GOMA_DIR/goma_auth" login --browser
