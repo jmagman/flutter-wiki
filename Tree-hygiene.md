@@ -105,7 +105,7 @@ There are very few exceptions:
 
 A bot will comment on your PR if you need an exemption. Do not land a PR that has had such a message from the bot unless it has an explicit exemption from Hixie! The message tells you how to ask for an exemption.
 
-The following kinds of PRs are *not* automatically exempt and require an explicit comment from Hixie even though the answer may be obvious: refactors with no semantic change (e.g. null safety migration), configuration changes in the aforementioned repos, PRs that only affect analysis (fixing lints, turning on lints), PRs that only modify test infrastructure, PRs that manually roll a dependency.
+The following kinds of PRs are *not* automatically exempt and require an explicit comment from Hixie even though the answer may be obvious: refactors with no semantic change (e.g. null safety migration), configuration changes in the aforementioned repos, PRs that only affect analysis (fixing lints, turning on lints), PRs that only modify test infrastructure, PRs that manually roll a dependency, PRs that are fixing an existing test.
 
 Consider using the code coverage tools to check that all your new code is covered by tests (see [[Test coverage for package:flutter]]).
 
