@@ -5,7 +5,7 @@ _(This page is referenced by comments in the Flutter codebase.)_
 Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter) for baseline and version management of golden files. This allows for golden file testing on Linux, Windows, MacOS and Web, which accounts for the occassional subtle rendering differences on between these platforms. If you have questions about [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter), cc **@Piinks** on your pull request.
 
 ## Index
-- Build Breakage
+- [Build Breakage](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#build-breakage)
 - [Creating a New Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#creating-a-new-golden-file-test)
 - [Updating a Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#updating-a-golden-file-test
 )
