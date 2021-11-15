@@ -5,6 +5,7 @@ _(This page is referenced by comments in the Flutter codebase.)_
 Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter) for baseline and version management of golden files. This allows for golden file testing on Linux, Windows, MacOS and Web, which accounts for the occassional subtle rendering differences on between these platforms. If you have questions about [Flutter Gold](https://flutter-gold.skia.org/?query=source_type%3Dflutter), cc **@Piinks** on your pull request.
 
 ## Index
+- Build Breakage
 - [Creating a New Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#creating-a-new-golden-file-test)
 - [Updating a Golden File Test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package%3Aflutter#updating-a-golden-file-test
 )
@@ -13,6 +14,24 @@ Golden file tests for `package:flutter` use [Flutter Gold](https://flutter-gold.
 - [`flutter-gold` Check](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#flutter-gold-check)
 - [`reduced-test-set` tag](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter#reduced-test-set-tag)
 
+## Build Breakage
+
+If the Flutter build is broken due to a golden file test failure, this typically means an image change has landed without being triaged. Golden file images should be triaged in pre-submit before a change lands (as described in the steps below). If this process is not followed, a test with an unapproved golden file image will fail in post-submit testing. This will present in the following error message:
+
+```
+  Skia Gold received an unapproved image in post-submit
+  testing. Golden file images in flutter/flutter are triaged
+  in pre-submit during code review for the given PR.
+
+  Visit https://flutter-gold.skia.org/ to view and approve
+  the image(s), or revert the associated change. For more
+  information, visit the wiki:
+  https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter
+```
+
+To resolve, visit the [Flutter Gold dashboard](https://flutter-gold.skia.org/) to view the batch of images in question. If they are intended changes, approve them by clicking the checkmark, and re-run the failing test to resolve. If the image changes are not intended, revert the associated change. 
+
+Notice, Gold may wrongly attribute blame for image changes on the dashboard. Post-submit testing for flutter/flutter is not executed in the order that commits land. Commits are tested by order of the most recent change. If older commits have not completed testing yet, Gold may assign blame incorrectly until all image results have been processed for pending commits.
 
 ## Creating a New Golden File Test
 
