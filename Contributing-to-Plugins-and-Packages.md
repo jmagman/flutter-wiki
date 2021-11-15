@@ -9,7 +9,7 @@ Any change that needs to be published in order to take effect must update the ve
 
 This is because the packages in flutter/plugins and flutter/packages use a continuous release model rather than a set release cadence. This model gets improvements to the community faster, makes regressions easier to pinpoint, and simplifies the release process.
 
-All version changes must have an accompanying CHANGELOG update. Even version-exempt changes should generally update CHANGELOG by adding a special `NEXT` entry at the top of CHANGELOG.md:
+All version changes must have an accompanying CHANGELOG update. Even version-exempt changes should generally update CHANGELOG by adding a special `NEXT` entry at the top of `CHANGELOG.md`:
 ```
 ## NEXT
 
@@ -25,6 +25,32 @@ The next release will change `NEXT` to the new version.
 **Do I need to update the version if I'm just changing the README?** Yes. Most people read the README on pub.dev, not GitHub, so a README change is not very useful unless it is published.
 
 **What do I do if I there are conflicts to those changes before or during review?** This is common. You can leave the conflicts until you're at the end of the review process to avoid needing to resolve frequently. Including the version changes at the beginning despite the likelihood of conflicts makes it much harder to forget that step, and also means that a reviewer can easily fix it from the GitHub UI just before landing.
+
+### CHANGELOG style
+
+For consistency, all CHANGELOG entries should follow a common style:
+- Use `##` for the version line. A version line should have a blank line before and after it.
+- Use `*` for individual items.
+  - Exception: When editing an existing CHANGELOG that uses `-`, use that instead for local consistency.
+- Entries should use present tense indicative for verbs. For example, "Adds cool new feature",
+  not "Add" or "Added".
+- Entries should end with a `.`.
+- Breaking changes should be introduced with `**BREAKING CHANGE**:`, or `**BREAKING CHANGES**:`
+  if there is a sub-list of changes.
+
+Example:
+```
+## 2.0.0
+
+* Adds the ability to fetch data from the future.
+* **BREAKING CHANGES**:
+  * Removes the deprecated `neverCallThis` method.
+  * URLs parameters are now `Uri`s rather than `String`s.
+
+## 1.0.3
+
+* Fixes a crash when the device teleports during a network operation.
+```
 
 ## Platform Support
 
