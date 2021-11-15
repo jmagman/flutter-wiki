@@ -28,7 +28,7 @@ Potential failures include:
 
 LUCI tasks are run on Flutter-infrastructure-managed VMs, using an [out-of-repo recipe](https://flutter.googlesource.com/recipes/+/master/recipes/plugins/plugins.py). Since LUCI images are changed by infrastructure team rollouts, and recipes are out-of-repo, almost any LUCI change is out of band. Potential failure sources include:
 - Images changes.
-- Recipe changes.
+- Recipe changes (very uncommon now that the recipe is generic).
 
 #### Distinguishing features
 - Only the Windows desktop tests are broken.
