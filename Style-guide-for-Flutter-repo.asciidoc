@@ -294,6 +294,15 @@ Then, get feedback from the relevant people, e.g. send it to `flutter-dev` or
 post it on the https://github.com/flutter/flutter/wiki/Chat#existing-channels[relevant chat channel].
 
 
+### Start designing APIs from the closest point to the developer
+
+When we create a new feature that requires a change to the entire stack, it's tempting to design the lowest-level API first, since that's the closest to the "interesting" code (the "business end" of the feature, where we actually do the work). However, that then forces the higher level APIs to be designed against the lower-level API, which may or may not be a good fit, and eventually the top-level API, which developers will primarily be using, may be forced to be a tortured and twisted mess (either in implementation or in terms of the exposed API). It may even be that the final API doesn't fit how people think about the problem or solve their actual issues, but instead merely exposes the lowest-level feature almost verbatim.
+
+Instead, always design the top-level API first. Consider what the most ergonomic API would be at the level that most developers will be interacting with it. Then, once that API is cleanly designed and usability-tested, build the lower levels so that the higher level can be layered atop.
+
+Concretely, this means designing the API at the `material` or `widgets` layer first, then the API in the `rendering`, `scheduler`, or `services` layer, then the relevant binding, then the `dart:ui` API or the message channel protocol, then the internal engine API or the plugin API. (The details may vary from case to case.)
+
+
 ### Only log actionable messages to the console
 
 If the logs contain messages that the user can safely ignore, then they will do so, and eventually their logs
