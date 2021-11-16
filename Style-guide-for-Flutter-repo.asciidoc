@@ -5,9 +5,10 @@
 tl;dr
 -----
 
-Optimize for readability. Write detailed documentation. Test everything.
+Optimize for readability. Write detailed documentation.
+Make error messages useful.
+Never use timeouts or timers.
 Avoid `is`, `print`, `part of`, `extension` and `_`.
-No timeouts or timers.
 
 Introduction
 ------------
@@ -314,6 +315,13 @@ Never log "informational" messages by default. It is possible that it may be use
 This also applies to our unopt builds. It's annoying for other people on the team to have to wade through messages that aren't directly relevant to their work. Rely on feature flags, not verbosity levels, when deciding
 to output messages. The one exception to this is reporting useful milestones; for example, the `flutter` tool in
 verbose mode (`-v`) reports meaningful steps that it is executing because those are almost always useful.
+
+
+### Error messages should be useful
+
+Every time you find the need to report an error (e.g. throwing an exception in the framework, handling some bad state in the engine, reporting a syntax error in the Dart compiler, etc), consider how you can make this the most useful and helpful error message ever.
+
+Put yourself in the shoes of whoever sees that error message. Why did they see it? What can we do to help them? They are at a crossroads, having seen your error message: they can either get frustrated and hate Flutter, or they can feel thankful that the error helped them resolve an actual issue. **Every error message is an opportunity to make someone love our product.**
 
 
 Policies
