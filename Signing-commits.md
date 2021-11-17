@@ -27,7 +27,7 @@ error: gpg failed to sign the data
 fatal: failed to write commit object
 ```
 
-It may indicate that your GPG name, comment, and email do not match those of `git`. To fix this issue, add `user.signingkey` to your git configuration referring to the GPG key by its hash rather than by name. To find out the GPG key hash run:
+This error may indicate that your GPG name, comment, and email do not match those of `git`. To fix this issue, add `user.signingkey` to your git configuration referring to the GPG key by its hash rather than by name. To find out the GPG key hash run:
 
 ```
 gpg --list-secret-keys --keyid-format=long
