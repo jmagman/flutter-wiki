@@ -16,6 +16,8 @@ We grant access optimistically based on a reasonably small volume of evidence of
 
 ### Responsibilities
 
+#### Code of conduct
+
 If you have commit access or "team" access on the Discord server, you are responsible for enforcing our [code of conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md).
 
 Our code of conduct is much, much stricter than most. We do not wait until someone has been actively rude or insulting. Being disrespectful in any way is grounds for action. For example, passive-aggressive whining and general unconstructive negativity are all violations of the code of conduct. If someone is in a bad mood, we would rather they avoided contributing to Flutter on that day.
@@ -24,6 +26,11 @@ When you see something that might be described as unwelcoming or is in some othe
 
 If they react negatively, or if they continue to make the environment unpleasant, they should be removed from the environment. On Discord, this would be kicking them from the channel. Repeat offenders should be banned. On GitHub, they can be blocked from our organisation (you may need to ask @Hixie or another admin of our GitHub org to do this). Please let the #server-support [[chat]] channel know when you do anything like this, so that we can keep an eye on how common it is.
 
+#### Maintaining documentation
+
+Part of being a contributor is making sure our documentation is up to date, including our internal (team-facing) documentation such as this wiki. If you spot something wrong, please fix it! As a contributor, you have access to the wiki.
+
+For the wiki specifically, since there's no code review, it's good to mention on Discord that you've made a change when you make one.
 
 ### Privileges
 
