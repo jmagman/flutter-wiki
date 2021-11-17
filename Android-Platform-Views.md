@@ -1,7 +1,7 @@
 # Background
 
 Flutter UIs function conceptually similar to a WebView on Android. The
-Flutter Framework takes a widget tree described the by app developer and
+Flutter Framework takes a widget tree described by the app developer and
 translates that into an internal widget hierarchy, and then from that decides
 what pixels to actually render. Web developers can think of this as analogous
 to how a browser takes HTML/CSS, creates a Document Object Model ("DOM"), and
