@@ -114,6 +114,7 @@ If you want your code to remain in the codebase, you should make sure to test it
 Don't submit code with the promise to "write tests later".  Just take the
 time to write the tests properly and completely in the first place.
 
+
 ### Avoid duplicating state
 
 There should be no objects that represent live state that reflect
@@ -272,6 +273,15 @@ and it is just as fast to do that work directly in Dart, so there is no benefit
 to exposing it. That way, we avoid the costs (bigger API surfaces are more
 expensive to maintain, document, and test, and put a compatibility burden on
 the underlying API).
+
+
+### Avoid heuristics and magic
+
+Predictable APIs that the developer feels gives them control are generally preferred
+over APIs that mostly do the right thing but don't give the developer any way to adjust
+the results.
+
+Predictability is reassuring.
 
 
 ### Solve real problems by literally solving a real problem
