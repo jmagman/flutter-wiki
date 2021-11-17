@@ -65,7 +65,7 @@ The general process for submitting code to a Flutter repository is as follows:
    directory). If any tests break, especially the `customer_testing` tests, please
    see the breaking change policy section below for details on how to proceed.
 
-   The `flutter-build` test isn't checking your PR, it's letting you know
+   The `luci-flutter` test isn't checking your PR, it's letting you know
    whether the tree itself is passing the tests right now (including post-
    commit tests). If it is red, help out the team in fixing the tree before
    continuing. It is everyone's job to keep the tree green.
