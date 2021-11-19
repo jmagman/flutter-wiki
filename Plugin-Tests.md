@@ -198,3 +198,36 @@ See below for instructions on bringing up test scaffolding in a plugin (*does no
     ```
     The `OCMock` line is only necessary if your tests use OCMock.
 1. A RunnerTests/RunnerUITests folder should be created and you can start hacking in the added `.m`/`.swift` file.
+
+#### Enabling Android UI tests
+
+1. Duplicate the `DartIntegrationTests.java` file from another plugin to `example/android/app/src/androidTest/java/io/flutter/plugins/DartIntegrationTest.java
+1. Create a file under `example/android/app/src/androidTest/java/` with a sub-path corresponding to the example app's package identifier from `example/android/app/src/main/AndroidManifest.xml`. The file should be called `FlutterActivityTest.java` (or if the example uses a custom MainActivity as its `android:name` in `AndroidManifest.xml`, `MainActivityTest.java`).
+    * For example, if `AndroidManifest.xml` uses `io.flutter.plugins.fooexample` as the package identifier, and `io.flutter.embedding.android.FlutterActivity` as its `android:name`, the file should be `example/android/app/src/androidTest/java/io/flutter/plugins/fooexample/FlutterActivityTest.java`.
+
+    The file should look like:
+    ```
+    package io.flutter.plugins.fooexample;
+
+    import androidx.test.rule.ActivityTestRule;
+    import dev.flutter.plugins.integration_test.FlutterTestRunner;
+    import io.flutter.embedding.android.FlutterActivity;
+    import io.flutter.plugins.DartIntegrationTest;
+    import org.junit.Rule;
+    import org.junit.runner.RunWith;
+
+    @DartIntegrationTest
+    @RunWith(FlutterTestRunner.class)
+    public class FlutterActivityTest {
+      @Rule
+      public ActivityTestRule<FlutterActivity> rule = new ActivityTestRule<>(FlutterActivity.class);
+    }
+    ```
+
+    Note:
+      * Update the `package` to match the actual package.
+      * If using a custom `MainActivity`, replace the `FlutterActivity` references with `MainActivity`.
+1. Ensure that `example/android/app/build.gradle`'s `defaultConfig` section contains:
+    ```
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    ```
