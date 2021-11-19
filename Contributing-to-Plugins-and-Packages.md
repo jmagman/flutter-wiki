@@ -2,33 +2,32 @@ This page covers additional information that is specific to contributing to flut
 
 ## Version and CHANGELOG updates
 
+### Version
+
 Any change that needs to be published in order to take effect must update the version in `pubspec.yaml`. There are very few exceptions:
 - PRs that only affect tests.
 - PRs that only affect unpublished parts of example apps.
 - PRs that only affect local development (e.g., changes to ignored lints).
+- Breaking change batching (see below).
 
 This is because the packages in flutter/plugins and flutter/packages use a continuous release model rather than a set release cadence. This model gets improvements to the community faster, makes regressions easier to pinpoint, and simplifies the release process.
+
+### CHANGELOG
 
 All version changes must have an accompanying CHANGELOG update. Even version-exempt changes should generally update CHANGELOG by adding a special `NEXT` entry at the top of `CHANGELOG.md`:
 ```
 ## NEXT
 
-* Description of the change
+* Description of the change.
 
 ## X.Y.Z
 ```
 
 The next release will change `NEXT` to the new version.
 
-### FAQ
+This policy exists both to make it easier for maintainers to see a record of all changes to a package, and because some changes (e.g., updates to examples) that do not need to be published may still be of interest to clients of a package.
 
-**Do I need to update the version if I'm just changing the README?** Yes. Most people read the README on pub.dev, not GitHub, so a README change is not very useful unless it is published.
-
-**Do I need to update the version if I'm just changing comments?** If the comment is intended for clients of the package (a `///` comment on anything exported by the package), then yes, since what developers using the package will see in their IDE will come from the published version. If the comment is only useful for someone working on the package (such as an implementation comment within a method, or a comment in a non-exported file), then no.
-
-**What do I do if I there are conflicts to those changes before or during review?** This is common. You can leave the conflicts until you're at the end of the review process to avoid needing to resolve frequently. Including the version changes at the beginning despite the likelihood of conflicts makes it much harder to forget that step, and also means that a reviewer can easily fix it from the GitHub UI just before landing.
-
-### CHANGELOG style
+#### CHANGELOG style
 
 For consistency, all CHANGELOG entries should follow a common style:
 - Use `##` for the version line. A version line should have a blank line before and after it.
@@ -53,6 +52,23 @@ Example:
 
 * Fixes a crash when the device teleports during a network operation.
 ```
+
+### FAQ
+
+**Do I need to update the version if I'm just changing the README?** Yes. Most people read the README on pub.dev, not GitHub, so a README change is not very useful unless it is published.
+
+**Do I need to update the version if I'm just changing comments?** If the comment is intended for clients of the package (a `///` comment on anything exported by the package), then yes, since what developers using the package will see in their IDE will come from the published version. If the comment is only useful for someone working on the package (such as an implementation comment within a method, or a comment in a non-exported file), then no.
+
+**What do I do if I there are conflicts to those changes before or during review?** This is common. You can leave the conflicts until you're at the end of the review process to avoid needing to resolve frequently. Including the version changes at the beginning despite the likelihood of conflicts makes it much harder to forget that step, and also means that a reviewer can easily fix it from the GitHub UI just before landing.
+
+### Breaking changes
+
+Because we prefer to minimize breaking changes to packages after 1.0, breaking changes do not always follow the normal one-version-change-per-PR approach. Instead, when making a breaking change consider whether there are other breaking changes that should be made at the same time, and discuss with other regular contributors. If there are multiple changes to make, they can be batched as follows:
+1. File an issue tracking all of the breaking changes to include.
+1. Prepare PRs for all of the changes, without version changes. Ensure that they have all been reviewed, but do not land them yet. (They should fail CI due to the lack of version change, preventing accidental landing.)
+1. Land a PR that temporarily adds `publish_to: none` to the package, with a comment referencing the issue from step 1.
+1. Land all of the breaking change PRs. This step should be done in a relatively short window of time (thus the advance preparation above) to avoid having the plugin be unpublishable for longer than necessary. The PRs will pass CI once rebased, since the version check is disabled for unpublishable packages.
+1. Once all breaking changes have landed, land a final PR to update the version and remove `publish_to: none`.
 
 ## Platform Support
 
