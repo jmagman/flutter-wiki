@@ -15,7 +15,7 @@ All plugins are located in the `packages/` directory. In theory, each plugin sho
 
 This layout reflects the goal of having all plugins in flutter/plugins being fully federated. (While this is not strictly necessary, as all packages are being maintained by the Flutter team, using a fully federated structure ensures that we are testing the federated model and finding issues and areas for improvement specific to federation.)
 
-In practice (as of November 2021) most plugins are not yet fully federated, and some are not federated at all, since the process of converting them from their pre-federated forms is ongoing. If you are looking for fully federated plugins as examples, consider `path_provider`, `shared_preferences`, or `url_launcher`.
+In practice (as of November 2021) most plugins are not yet fully federated, and some are not federated at all, since the process of converting them from their pre-federated forms is ongoing. If you are looking for fully federated plugins as examples, consider `in_app_purchase`, `path_provider`, `shared_preferences`, or `url_launcher`.
 
 The two most common alternate structures are:
 
