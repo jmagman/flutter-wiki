@@ -11,10 +11,13 @@ All plugins are located in the `packages/` directory. In theory, each plugin sho
   - `some_plugin/` - The app-facing package
   - `some_plugin_platform_interface/` - The platform interface
   - `some_plugin_android/`, `some_plugin_ios/`, `some_plugin_web/`, `some_plugin_windows/`, `some_plugin_macos/`, and/or `some_plugin_linux/` - The individual platform implementations, as applicable
+    - In some special cases, implementation packages have different names; examples include `webview_flutter_wkwebview` and `in_app_purchase_storekit`. These would normally be named `_ios`, but have more generic names because they are expected to include macOS implemntations in the future. Sharing a package allows sharing the code, as the OS APIs are largely the same across the two platforms.
 
 This layout reflects the goal of having all plugins in flutter/plugins being fully federated. (While this is not strictly necessary, as all packages are being maintained by the Flutter team, using a fully federated structure ensures that we are testing the federated model and finding issues and areas for improvement specific to federation.)
 
-In practice (as of May 2021) most plugins are not yet fully federated, and some are not federated at all, since the process of converting them from their pre-federated forms is ongoing. The two most common alternate structures are:
+In practice (as of November 2021) most plugins are not yet fully federated, and some are not federated at all, since the process of converting them from their pre-federated forms is ongoing. If you are looking for fully federated plugins as examples, consider `path_provider`, `shared_preferences`, or `url_launcher`.
+
+The two most common alternate structures are:
 
 ### Semi-federated
 - `some_plugin/`
