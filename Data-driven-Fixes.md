@@ -196,19 +196,6 @@ The `if` key is required. The value of the `if` key is a [condition](#condition)
 
 The `changes` key is required. The value of the `changes` key is a list of  [change](#change) objects.
 
-### change
-
-A _change_ describes a single change that was made to the element. It's represented as a map. The number and names of the keys depends on the kind of change being described, but all changes have a `kind` key.
-
-The `kind` key is required. The value of the `kind` key is a string indicating the kind of change. The valid kinds are:
-- [addParameter](#addParameter)
-- [addTypeParameter](#addTypeParameter)
-- [removeParameter](#removeParameter)
-- [rename](#rename)
-- [renameParameter](#renameParameter)
-
-Individual kinds of changes are described in the section below, titled by the kind.
-
 ### condition
 
 A _condition_ is a Boolean-valued expression. It's represented by a string that uses a subset of Dart’s expression syntax to express the condition. The currently supported syntax is:
@@ -225,6 +212,19 @@ A _condition_ is a Boolean-valued expression. It's represented by a string that 
 ```
 
 where `<variableName>` is the name of a variable from a [variable map](#variable-map) and `<stringLiteral>` is a single-line string literal with single quote delimiters.
+
+### change
+
+A _change_ describes a single change that was made to the element. It's represented as a map. The number and names of the keys depends on the kind of change being described, but all changes have a `kind` key.
+
+The `kind` key is required. The value of the `kind` key is a string indicating the kind of change. The valid kinds are:
+- [addParameter](#addParameter)
+- [addTypeParameter](#addTypeParameter)
+- [removeParameter](#removeParameter)
+- [rename](#rename)
+- [renameParameter](#renameParameter)
+
+Individual kinds of changes are described in the section below, titled by the kind.
 
 #### addParameter
 
@@ -303,6 +303,16 @@ kind: 'rename'
 newName: 'B'
 ```
 
+This change is only intended to support simple renames, such as renaming a class or a method. It therefore assumes that the new element is like the old element in several ways:
+
+- it’s in the same library (that is, the URI’s by which it’s imported don’t change),
+
+- it’s the same kind of element (for example, you can’t rename a class and change it to be a mixin using this change), and
+
+- if the element being renamed is a member (such as a method), then the renamed element is a member of the same container.
+
+If the change that was made doesn’t fit within those constraints, then using a rename to capture it might not work in all situations. You should consider using a [replacedBy](#replacedBy) change instead.
+
 #### renameParameter
 
 A _renameParameter_ change indicates that a named parameter in a function or method was renamed. As such, the element in the transform must be a method or function. It has three keys: `kind`, `oldName`, and `newName`.
@@ -318,6 +328,42 @@ kind: 'renameParameter'
 oldName: 'a'
 newName: 'b'
 ```
+
+#### replacedBy
+
+A _replacedBy_ change indicates that the specified element was replaced by another element. It has two keys: `kind` and `newElement`.
+
+The `newElement` key is required. The value of the `newElement` key is an [element](#element) representing the element that replaces the specified element.
+
+For example, to replace a top level variable `v` with a static field `C.f` you would write:
+
+```yaml
+kind: 'replacedBy'
+newElement:
+  uris: ['lib.dart']
+  field: 'f'
+  inClass: 'C'
+```
+
+This change currently has two limitations that you should be aware of.
+
+First, it doesn’t allow the list of URIs for the new element to be different from the list for the old element. That means that it currently might not correctly update the imports to make the new element visible in scope.
+
+Second, it doesn’t support replacing every kind of element, nor can the replacement element be every possible kind. What it does support is the following cases:
+
+- Replacing one constructor with a different constructor, even when the constructors are in different classes. It doesn’t correctly handle the case of replacing a `const` constructor with a non-`const` constructor.
+
+- Replacing a function (either a top-level function or a static method) with a different function.
+
+- Replacing a getter (either a top-level getter, a top-level variable, a static getter, or a static field) with a different getter.
+
+- Replacing a setter (either a top-level setter, a top-level non-`final` variable, a static setter, or a non-`final` static field) with a different setter.
+
+As with constructors, if a static member is being replaced by another static member, the members can be in different containers (classes, mixins, or extensions).
+
+There isn’t currently any way for the tool to detect whether a method, getter, or setter is static, so it’s possible to specify an instance member. As a result, specifying an instance member (as either the replaced or replacing element) might produce invalid changes for your users.
+
+Similarly, there isn’t currently any way for the tool to detect whether a top-level variable or a static field is `final` (which includes `const`). As a result, specifying a final element (as either the replaced or replacing element) might produce invalid changes for your users.
 
 ### code template
 
