@@ -1,5 +1,70 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-12-03
+
+### Notable issues
+
+- [Web] Text doesn't render with Image on screen unless an activity (such as hover) is detected on page [#94318](https://github.com/flutter/flutter/issues/94318), regression identified as per [this comment](https://github.com/flutter/flutter/issues/94318#issuecomment-981810404)
+- TextInputAction.next doesn't work in lists with IconButton [#94414](https://github.com/flutter/flutter/issues/94414)
+- [Android] App shows black screen after being in the background [#93276](https://github.com/flutter/flutter/issues/93276), appears to affect a certain group of devices.
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 181, closed 57 (31.49%).
+
+In total closed 132 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 17.42% |
+| Fixed | 13.64% |
+| Invalid | 43.18%  |
+| Solved | 8.33% |
+| Timeout | 17.42% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 3 closed 1 (33.3%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid| 50% | 
+| duplicate | 50% |
+
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 2, closed 0 (0%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| fixed | 100% |
+
+
+#### Flutterfire
+
+New Flutterfire issues triaged 23, closed 4 (17.39%).
+
+In total closed 17 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 11.8%  |
+| Invalid | 17.6%  |
+| no-response | 35.3% |
+| solution-provided | 11.8% |
+| user | 23.5% |
+
 ## 2021-11-26
 
 ### Notable issues
