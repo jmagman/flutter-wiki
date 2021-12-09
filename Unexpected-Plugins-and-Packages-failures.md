@@ -103,3 +103,13 @@ On platforms where the plugin system includes a dependency management system, th
 - Check whether the entire server is failing, or only fetching a specific package is failing.
 - Server-level outages are usually short-lived and just have to be waited out; i.e., they are persistent for a matter of hours before the server issue is resolved.
 - Package issues may require repository changes. E.g., for Maven, switching to another server that has the package, or to another version of the package that is still available.
+
+## `pub`
+
+The `publish` command periodically enables new checks. Rarely, such a check will be enabled after presubmits for a PR have run, but before it's submitted.
+
+#### Distinguishing features
+- Either the `publish` validation step or the `release` step will fail with a clear error message from the `publish` command.
+
+#### Investigation & resolution tips
+- These are usually straightforward to resolve by fixing the newly-flagged issue.
