@@ -1,6 +1,6 @@
 This page lists incidents for which we have written retrospectives and postmortems.
 
-## Postmorterms
+## Postmortems
 
 When adding a new incident, start from the [[postmortem template]].
 
