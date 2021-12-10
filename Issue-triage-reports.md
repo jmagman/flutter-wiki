@@ -14,17 +14,17 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 #### Flutter
 
-New Flutter issues triaged 192, closed 56 (29.17%).
+New Flutter issues triaged 192, closed 57 (29.69%).
 
-In total closed 147 issues during the week.
+In total closed 148 issues during the week.
 
 | Reason for closing  |  |
 | -- | -- |
-| Duplicate  | 18.37% |
-| Fixed | 12.93% |
-| Invalid | 32.65%  |
-| Solved | 8.84% |
-| Timeout | 27.21% |
+| Duplicate  | 18.24% |
+| Fixed | 12.84% |
+| Invalid | 32.43%  |
+| Solved | 9.46% |
+| Timeout | 27.03% |
 
 #### Flutter/website
 
