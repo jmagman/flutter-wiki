@@ -1,5 +1,77 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-12-10
+
+### Notable issues
+
+- [pointer_interceptor][canvaskit] Using pointer_interceptor with Canvaskit throws `The following TypeErrorImpl was thrown during a scheduler callback: Unexpected null value.` [#94945](https://github.com/flutter/flutter/issues/94945)
+- Trying to input Korean adds extra text. [#94845](https://github.com/flutter/flutter/issues/94845)
+- Old issue starting to gain some traction: Australian MaterialLocalizations has incorrect mm/dd/yyyy dateHelpText. [#70341](https://github.com/flutter/flutter/issues/70341)
+- Delete key does not work when shift is pressed (android and Desktop). [#94880](https://github.com/flutter/flutter/issues/94880)
+- [test] Some lines are skipped by coverage test after upgrading to 2.8.0 . [#95008](https://github.com/flutter/flutter/issues/95008)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 192, closed 56 (29.17%).
+
+In total closed 147 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 18.37% |
+| Fixed | 12.93% |
+| Invalid | 32.65%  |
+| Solved | 8.84% |
+| Timeout | 27.21% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8 closed 2 (25%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid| 33.3% | 
+| duplicate | 33.3% |
+| fixed | 33.3% |
+
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 12, closed 2 (16.67%).
+
+In total closed 5 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 20% |
+| fixed | 20% |
+| invalid | 40% | 
+| wont fix - infeasible | 20% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 20, closed 2 (10%).
+
+In total closed 11 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 9.09%  |
+| fixed | 36.36%  |
+| invalid | 9.09% |
+| no-response | 9.09% |
+| solution-provided | 9.09% |
+| user | 27.27% |
+
+
 ## 2021-12-03
 
 ### Notable issues
