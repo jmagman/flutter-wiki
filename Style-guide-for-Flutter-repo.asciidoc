@@ -958,6 +958,19 @@ Mechanisms that exist for test purposes do not belong in the core libraries, the
 Immutable classes (those with `const` constructors) should not have hidden state. For example, they should not use private statics or Expandos. If they are stateful, then they should not be `const`.
 
 
+### Avoid `sync*`/`async*`
+
+Using generator functions (`sync*`/`async*`) can be a powerful improvement when callers will
+actually lazily evaluate the iterable and each iteration is expensive _or_ there are a very
+large number of iterations.
+
+It should not be used in place of building and returning a `List`, particularly for trivial methods
+that only yield a small number of members or when callers will evaluate the whole collection
+anyway. It should also be avoided in very large functions.
+
+It incurs runtime overhead in maintaining and using an iterator, and space overhead for the compiler 
+to actually desugar the generator into something that uses an iterator class.
+
 Naming
 ------
 
