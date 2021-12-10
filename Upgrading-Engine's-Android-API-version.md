@@ -6,17 +6,15 @@ build/config/android/config.gni: Edit default_android_sdk_version and  default_a
 
 ## CIPD:
 
-Upload new Android platforms, build-tools, and platform-tools to CIPD (https://chrome-infra-packages.appspot.com/p/flutter/android/sdk). To do so, you will need to download the new versions of the android sdk, platform-tools, and build-tools using Android Studio’s SDK manager. It is recommended to remove older versions of the sdk or tools to avoid accidentally uploading multiple versions of the same package.
+Flutter now includes a script to download, package, and upload the Android SDK to CIPD. These CIPD packages are then used as dependencies by the Flutter engine and recipes so that there is a stable archived version of the Android SDK to depend on. The script is located in the Flutter engine repo under `tools/android-sdk/create_cipd_packages.sh`. Edit `tools/android-sdk/packages.txt` to refer to the updated versions you want. The format for each line in packages.txt is `<package_name>:<subdirectory_to_upload>`. The script must be run on a Linux or Mac host. Run:
 
-Flutter now contains a script to upload the packages. Run the script at `engine/tools/create_sdk_cipd_package.sh` for each of the platforms, platform-tools, and build-tools packages.
+    `$ ./tools/android-sdk/create_cipd_packages.sh <new_version_tag> <path_to_your_local_android_sdk>`
 
-This can also be done via manual CIPD commands. Run the following commands to zip and upload each package to CIPD:
+This script will download and re-upload the entire SDK, so it may take a long time to complete. `cmdline-tools` should be installed in your local sdk as the script uses `sdkmanager`. Once the CIPD packages are finished uploading, you 
 
-* `$ cipd create -in <your-android-dir>/Android/sdk/platforms -name flutter/android/sdk/platforms -tag version:<new-version-tag>`
+It is no longer recommended to upload CIPD android sdk packages manually, but if it must be done, run the following commands to zip and upload each package to CIPD:
 
-* `$ cipd create -in <your-android-dir>/Android/sdk/platform-tools -name flutter/android/sdk/platform-tools -tag version:<new-version-tag>`
-
-* `$ cipd create -in <your-android-dir>/Android/sdk/build-tools -name flutter/android/sdk/build-tools -tag version:<new-version-tag>`
+    `$ cipd create -in <your-android-dir>/Android/sdk/<some_package> -name flutter/android/sdk/<some_package> -tag version:<new-version-tag>`
 
 Typically, `<your-android-dir>` is in your home directory under `~/Library/Android`. The `<new-version-tag>` is what you will use to specify the new package you uploaded in the Flutter engine DEPS file.
 
