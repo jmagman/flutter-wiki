@@ -7,7 +7,7 @@ Flutter has the following channels, in increasing order of stability:
 The current tip-of-tree, absolute latest cutting edge build. Usually functional, though sometimes we accidentally break things.
 
 ### dev
-Please note - Dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.
+Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.
 The latest fully-tested build. Usually functional, but see [[Bad Builds]] for a list of known "bad" dev builds. We continually try to roll `master` to `dev`. Doing so involves running many more tests than those that we run during `master` development, which is why this is not actually the same to `master`.
 
 dev releases will be tagged with the following schema:
@@ -68,7 +68,10 @@ We recommend using the `stable` branch.
 
 That said, the `beta` branch should be fine. There is no extra level of testing that we do for `stable` than for `beta`, other than the extended stabilization period on the `beta` branch. So if there is something you want to use that is available on `beta` but not `stable`, feel free to consider using `beta`.
 
-Using `dev` is a little less safe; if you use a `dev` build then we recommend watching the [[Bad Builds]] page to see if known ship-blocking bugs get reported for that branch.  It is reasonable, however, to pick a `dev` build, test heavily with that build, and then keep using that build. That's what we're actually doing when picking a `dev` build to put on the `beta` branch: the only additional testing that we actually do to `beta` builds over `dev` builds is checking for basic things like "do our codelabs still work with this build"; beyond that, we just monitor bug reports. Most of our testing is done as pre-commit tests and tests run as part of releasing a `dev` build, so by the time we release a `dev` build, we have relatively high confidence that there isn't a serious problem.
+We do not recommend using dev since it has been retired. If you are on dev, we recommend using or migrating to `master`. Google internally is on `master` branch Most of our testing is done as pre-commit tests that also include tests run as part of Google infrastructure, So we have relatively high confidence that there isn't a serious problem.
+
+[**Deprecated**]
+_Using `dev` is a little less safe; if you use a `dev` build then we recommend watching the [[Bad Builds]] page to see if known ship-blocking bugs get reported for that branch.  It is reasonable, however, to pick a `dev` build, test heavily with that build, and then keep using that build. That's what we're actually doing when picking a `dev` build to put on the `beta` branch: the only additional testing that we actually do to `beta` builds over `dev` builds is checking for basic things like "do our codelabs still work with this build"; beyond that, we just monitor bug reports. Most of our testing is done as pre-commit tests and tests run as part of releasing a `dev` build, so by the time we release a `dev` build, we have relatively high confidence that there isn't a serious problem._
 
 ## Will a particular bug fix be provided in a hotfix release?
 
