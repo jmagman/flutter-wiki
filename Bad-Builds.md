@@ -1,3 +1,5 @@
+**Note - Dev branch is deprecated. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181)**
+
 This is a list of all the [dev branch commits](https://github.com/flutter/flutter/releases) that are considered "bad" and should not be released to a more stable channel. See [[Bad Build Identification]] for details on how to identify builds that should be listed here.
 
 **If you add a build to this list and master has not yet been fixed, please file a TODAY bug and link to it from here as well.**
