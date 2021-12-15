@@ -69,7 +69,7 @@ We recommend using the `stable` branch.
 
 That said, the `beta` branch should be fine. There is no extra level of testing that we do for `stable` than for `beta`, other than the extended stabilization period on the `beta` branch. So if there is something you want to use that is available on `beta` but not `stable`, feel free to consider using `beta`.
 
-We do not recommend using dev since it has been retired. If you are on dev, we recommend using or migrating to `master`. Google internally is on `master` branch Most of our testing is done as pre-commit tests that also include tests run as part of Google infrastructure, So we have relatively high confidence that there isn't a serious problem.
+We do not recommend using dev since it has been retired. 
 
 [**Deprecated**]
 _Using `dev` is a little less safe; if you use a `dev` build then we recommend watching the [[Bad Builds]] page to see if known ship-blocking bugs get reported for that branch.  It is reasonable, however, to pick a `dev` build, test heavily with that build, and then keep using that build. That's what we're actually doing when picking a `dev` build to put on the `beta` branch: the only additional testing that we actually do to `beta` builds over `dev` builds is checking for basic things like "do our codelabs still work with this build"; beyond that, we just monitor bug reports. Most of our testing is done as pre-commit tests and tests run as part of releasing a `dev` build, so by the time we release a `dev` build, we have relatively high confidence that there isn't a serious problem._
