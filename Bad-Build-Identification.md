@@ -1,3 +1,5 @@
+**Content on this page might not be relevant. Dev branch is deprecated. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
+
 #### What makes for a bad build?
 
 Bad builds are [tagged dev releases](https://github.com/flutter/flutter/releases) that are affected by issues serious enough to keep us from releasing the build to a more stable channel (e.g. beta).
