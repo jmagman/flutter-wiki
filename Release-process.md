@@ -1,6 +1,8 @@
 <!-- go/flutter-release-2020 -->
 
-## Dev Channel
+## Dev Channel - Deprecated
+
+**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
 
 The Flutter [Conductor] tool is used to produce Dev releases.
 
