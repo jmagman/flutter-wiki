@@ -7,7 +7,8 @@ Flutter has the following channels, in increasing order of stability:
 The current tip-of-tree, absolute latest cutting edge build. Usually functional, though sometimes we accidentally break things.
 
 ### dev
-Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.
+**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
+
 The latest fully-tested build. Usually functional, but see [[Bad Builds]] for a list of known "bad" dev builds. We continually try to roll `master` to `dev`. Doing so involves running many more tests than those that we run during `master` development, which is why this is not actually the same to `master`.
 
 dev releases will be tagged with the following schema:
