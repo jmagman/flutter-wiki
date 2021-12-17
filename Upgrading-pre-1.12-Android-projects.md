@@ -238,7 +238,7 @@ public class MainActivity extends FlutterActivity {
 }
 ```
 
-Some apps may have required pre-warming a Flutter experience. It is now recommended that all add-to-app use-cases pre-warm Flutter experiences to achieve optimal visual performance when initially rendering a Flutter UI. Please refer to the [Flutter guide for pre-warming a FlutterEngine]() (TODO: mattcarroll) to update your code for pre-warming Flutter.
+Some apps may have required pre-warming a Flutter experience. It is now recommended that all add-to-app use-cases pre-warm Flutter experiences to achieve optimal visual performance when initially rendering a Flutter UI. Please refer to the [Use a cached FlutterEngine](https://docs.flutter.dev/development/add-to-app/android/add-flutter-screen#step-3-optional-use-a-cached-flutterengine) to update your code for pre-warming Flutter.
 
 Your `FlutterActivity` subclass is now up to date with the new, stable Android embedding.
 
