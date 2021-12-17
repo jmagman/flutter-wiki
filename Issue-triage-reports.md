@@ -1,5 +1,72 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-12-17
+
+### Notable issues
+
+- [animation] PageTransitionSwitcher doesn’t animate smoothly if `reverse` is true on Flutter 2.8.0. [#95270](https://github.com/flutter/flutter/issues/95270)
+- [Web] [CanvasKit] Platform Views (including Video_player fullscreen) blanking other widgets on exit - regression [#95259](https://github.com/flutter/flutter/issues/95259)
+- [Android] PageView animateTo and nextPage do not work when PageView.index is 0 [#95461](https://github.com/flutter/flutter/issues/95461)
+- Textfield dismisses keyboard after text submission even if focus is still in the text field [#95154](https://github.com/flutter/flutter/issues/95154)
+- Regression: AutofillGroup not working on iOS for credentials [#95362](https://github.com/flutter/flutter/issues/95362)
+- Regression: Setting addRepaintBoundaries to true or false shows blinking horizontal line while scrolling [#95199](https://github.com/flutter/flutter/issues/95199)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 216, closed 71 (32.87%).
+
+In total closed 150 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 32.667% |
+| Fixed | 27.333% |
+| Invalid | 28.000%  |
+| Solved | 11.333% |
+| Timeout | 0.667% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 7 closed 0 (0%).
+
+In total closed 1 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| fixed | 100% |
+
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 6, closed 1 (16.67%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid | 100% | 
+
+#### Flutterfire
+
+New Flutterfire issues triaged 35, closed 9 (25.71%).
+
+In total closed 27 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 7.41%  |
+| fixed | 40.74%  |
+| invalid | 22.22% |
+| no-response | 11.11% |
+| user | 18.52% |
+
+
 ## 2021-12-10
 
 ### Notable issues
