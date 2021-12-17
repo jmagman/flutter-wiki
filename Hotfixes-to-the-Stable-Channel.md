@@ -11,6 +11,12 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 
+## Flutter 2.8 Changes
+
+### 2.8.0 (December 8, 2021)
+
+Initial stable release.
+
 ## Flutter 2.5 Changes
 
 ### 2.5.3 (October 15, 2021)
