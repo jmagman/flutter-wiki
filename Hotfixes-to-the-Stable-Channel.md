@@ -16,7 +16,8 @@ $ flutter upgrade
 ### [2.8.1](https://github.com/flutter/flutter/releases/tag/2.8.1) (December 18, 2021)
 
 This is a hotfix release that addresses the following issues:
- * https://github.com/flutter/flutter/issues/94914 Flutter apps using `google_sign_in` and `google_maps` plugins don't build on M1 (arm) Mac iOS simulators
+ * https://github.com/flutter/flutter/issues/94914 - Flutter apps using `google_sign_in` and `google_maps` plugins don't build on M1 (arm) Mac iOS simulators
+ * https://github.com/flutter/flutter/issues/90783 - In rare circumstances, engine may crash during app termination on iOS and macOS
 
 ### 2.8.0 (December 8, 2021)
 
@@ -26,23 +27,23 @@ Initial stable release.
 
 ### 2.5.3 (October 15, 2021)
 This is a hotfix release that addresses the following issues:
- * https://github.com/dart-lang/sdk/issues/47321 Fix a potential out-of-memory condition with analysis server plugins
- * https://github.com/dart-lang/sdk/issues/47432 Fix certificate loading on Windows when there are expired certificates
- * https://github.com/flutter/flutter/issues/83792 Fix HTTPS issue related to: "HttpClient throws Invalid argument(s): Invalid internet address"
+ * https://github.com/dart-lang/sdk/issues/47321 - Fix a potential out-of-memory condition with analysis server plugins
+ * https://github.com/dart-lang/sdk/issues/47432 - Fix certificate loading on Windows when there are expired certificates
+ * https://github.com/flutter/flutter/issues/83792 - Fix HTTPS issue related to: "HttpClient throws Invalid argument(s): Invalid internet address"
 
 ### 2.5.2 (September 30, 2021)
 This is a hotfix release that addresses the following issues:
- * https://github.com/dart-lang/sdk/issues/47285 Fix a regression to the performance of code completions
- * https://github.com/dart-lang/sdk/issues/47316 Dynamic tables in ELF files have invalid relocated addresses
- * https://github.com/flutter/flutter/issues/89912 Building iOS app generates unnecessary Flutter.build folder
+ * https://github.com/dart-lang/sdk/issues/47285 - Fix a regression to the performance of code completions
+ * https://github.com/dart-lang/sdk/issues/47316 - Dynamic tables in ELF files have invalid relocated addresses
+ * https://github.com/flutter/flutter/issues/89912 - Building iOS app generates unnecessary Flutter.build folder
 
 ### [2.5.1](https://github.com/flutter/flutter/pull/90281) (September 17, 2021)
 This is a hotfix release that addresses the following issues:
- * [#88767](https://github.com/flutter/flutter/issues/88767) java.lang.SecurityException: Permission denial crash at launch
- * [#88236](https://github.com/flutter/flutter/issues/88236) null check exception during keyboard keypress
- * [#88221](https://github.com/flutter/flutter/issues/88221) Material routes delayed on push and pop
- * [#84113](https://github.com/flutter/flutter/issues/84113) HTTP exceptions talking to VM Service
- * [#83632](https://github.com/flutter/flutter/issues/83632) Scroll view velocity too high
+ * https://github.com/flutter/flutter/issues/88767 - java.lang.SecurityException: Permission denial crash at launch
+ * https://github.com/flutter/flutter/issues/88236 - null check exception during keyboard keypress
+ * https://github.com/flutter/flutter/issues/88221 - Material routes delayed on push and pop
+ * https://github.com/flutter/flutter/issues/84113 - HTTP exceptions talking to VM Service
+ * https://github.com/flutter/flutter/issues/83632 - Scroll view velocity too high
 
 ### 2.5.0 (September 8, 2021)
 
@@ -52,23 +53,23 @@ Initial stable release.
 
 ### [2.2.3](https://github.com/flutter/flutter/pull/85719) (July 2, 2021)
 This is a hotfix release that addresses the following issues:
-  * [#84212](https://github.com/flutter/flutter/issues/84212) Upgrading to 2.2.1 cause main.dart to crash
-  * [#83213](https://github.com/flutter/flutter/issues/83213) TextFormField not responding to inputs on Android when typing on Microsoft SwiftKey
-  * [#82838](https://github.com/flutter/flutter/issues/82838) Flutter Web failing to compile with "Undetermined Nullability"
-  * [#82874](https://github.com/flutter/flutter/issues/82874) PopupMenuButton is broken after upgrade to Flutter 2.2.
+  * https://github.com/flutter/flutter/issues/84212 - Upgrading to 2.2.1 cause main.dart to crash
+  * https://github.com/flutter/flutter/issues/83213 - TextFormField not responding to inputs on Android when typing on Microsoft SwiftKey
+  * https://github.com/flutter/flutter/issues/82838 - Flutter Web failing to compile with "Undetermined Nullability"
+  * https://github.com/flutter/flutter/issues/82874 - PopupMenuButton is broken after upgrade to Flutter 2.2.
 
 ### [2.2.2](https://github.com/flutter/flutter/pull/84364) (June 11, 2021)
 This is a hotfix release that addresses the following issues:
 
-  *  [#46249](https://github.com/dart-lang/sdk/issues/46249) [CP][stable channel] Ensure start/stop file watching requests are run on the dart thread.
-  *  [#46210](https://github.com/dart-lang/sdk/issues/46210) [CP][stable channel] Fix an analyze crash when analyzing against package:meta v1.4.0
-  *  [#46173](https://github.com/dart-lang/sdk/issues/46173) [CP][stable channel] Merge a3767f7db86a85fcd6201e9357ad47b884002b66 to stable channel (2.13)
-  *  [#46300](https://github.com/dart-lang/sdk/issues/46300) [CP][stable channel] Fix OOM VM test (transferable\_throws\_oom\_test crashing after upgrade from Ubuntu 16 -> 18)
-  *  [#46298](https://github.com/dart-lang/sdk/issues/46298) [CP][stable channel] Ensure start/stop file watching requests are run on the dart thread (Additional Change)
-  *  [#83799](https://github.com/flutter/flutter/issues/83799) Tool may crash if pub is missing from the artifact cache
-  *  [#83102](https://github.com/flutter/flutter/issues/83102) Generated l10n file is missing ‘intl’ import with Flutter 2.2.0
-  *  [#83094](https://github.com/flutter/flutter/issues/83094) Flutter AOT precompiler crash
-  *  [#82874](https://github.com/flutter/flutter/issues/82874) PopupMenuButton is broken after upgrade to Flutter 2.2.
+  *  https://github.com/dart-lang/sdk/issues/46249 - Ensure start/stop file watching requests are run on the dart thread.
+  *  https://github.com/dart-lang/sdk/issues/46210 - Fix an analyze crash when analyzing against package:meta v1.4.0
+  *  https://github.com/dart-lang/sdk/issues/46173 - Merge a3767f7db86a85fcd6201e9357ad47b884002b66 to stable channel (2.13)
+  *  https://github.com/dart-lang/sdk/issues/46300 - Fix OOM VM test (`transferable_throws_oom_test` crashing after upgrade from Ubuntu 16)
+  *  https://github.com/dart-lang/sdk/issues/46298 - Ensure start/stop file watching requests are run on the Dart thread
+  *  https://github.com/flutter/flutter/issues/83799 - Tool may crash if pub is missing from the artifact cache
+  *  https://github.com/flutter/flutter/issues/83102 - Generated l10n file is missing ‘intl’ import with Flutter 2.2.0
+  *  https://github.com/flutter/flutter/issues/83094 - Flutter AOT precompiler crash
+  *  https://github.com/flutter/flutter/issues/82874 - PopupMenuButton is broken after upgrade to Flutter 2.2.
 
 ### [2.2.1](https://github.com/flutter/flutter/pull/83372) (May 27, 2021)
 This is a hotfix release that addresses the following issues:
