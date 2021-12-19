@@ -14,8 +14,10 @@ $ flutter upgrade
 ## Flutter 2.8 Changes
 ### [2.8.1](https://github.com/flutter/flutter/releases/tag/2.8.1) (December 18, 2021)
 This is a hotfix release that addresses the following issues:
- * [flutter/94914](https://github.com/flutter/flutter/issues/94914) - Flutter apps using `google_sign_in` and `google_maps` plugins don't build on M1 (arm) Mac iOS simulators
+ * [flutter/94914](https://github.com/flutter/flutter/issues/94914) - Apps using `google_sign_in` or `google_maps` don't build in iOS Simulator on ARM macOS
  * [flutter/90783](https://github.com/flutter/flutter/issues/90783) - In rare circumstances, engine may crash during app termination on iOS and macOS
+ * [dart/47914](https://github.com/dart-lang/sdk/issues/47914) - AOT compilation fails with error "Invalid argument(s): Missing canonical name for Reference"
+ * [dart/47815](https://github.com/dart-lang/sdk/issues/47815) - Running `dart pub publish` with a custom pub package server that has a URL containing a path will not work.
 
 ### 2.8.0 (December 8, 2021)
 Initial stable release.
