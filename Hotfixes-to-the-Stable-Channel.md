@@ -13,6 +13,11 @@ $ flutter upgrade
 
 ## Flutter 2.8 Changes
 
+### [2.8.1](https://github.com/flutter/flutter/releases/tag/2.8.1) (December 18, 2021)
+
+This is a hotfix release that addresses the following issues:
+ * https://github.com/flutter/flutter/issues/94914 Flutter apps using `google_sign_in` and `google_maps` plugins don't build on M1 (arm) Mac iOS simulators
+
 ### 2.8.0 (December 8, 2021)
 
 Initial stable release.
