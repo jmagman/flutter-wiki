@@ -12,7 +12,7 @@ $ flutter upgrade
 ```
 
 ## Flutter 2.8 Changes
-### [2.8.1](https://github.com/flutter/flutter/releases/tag/2.8.1) (December 18, 2021)
+### [2.8.1](https://github.com/flutter/flutter/releases/tag/2.8.1) (December 16, 2021)
 This hotfix release addresses the following issues:
  * [flutter/94914](https://github.com/flutter/flutter/issues/94914) - Apps using `google_sign_in` or `google_maps` don't build in iOS Simulator on ARM macOS
  * [flutter/90783](https://github.com/flutter/flutter/issues/90783) - In rare circumstances, engine may crash during app termination on iOS and macOS
