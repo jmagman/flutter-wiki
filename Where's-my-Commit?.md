@@ -29,6 +29,7 @@ To find the published Flutter versions that contain any given commit in `flutter
    The list of versions here is comprehensive (it lists every individual version that contains the commit).
 
    If there are no versions listed there, it means that this commit has not yet been published to the dev channel and exists only on master.
+**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
 
    If there are too many version tags to display cleanly, GitHub hides them behind an ellipsis.  For example:
 
