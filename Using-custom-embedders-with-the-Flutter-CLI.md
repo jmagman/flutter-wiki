@@ -2,7 +2,7 @@
 
 The experimental "custom device" feature of the Flutter CLI allows you to make custom or 3rd-party embedders such as [flutter-pi](https://github.com/ardera/flutter-pi) or the [sony embedder](https://github.com/sony/flutter-embedded-linux) work with the Flutter CLI and use features such as hot-reload, hot-restart, debugging and DevTools. Profile/release mode and plugins are not supported right now, but that's being worked on.
 
-Currently, `custom-devices` support is only available in the master or dev channel. 
+Currently, `custom-devices` support is only available in the master channel. 
 
 ### Enabling custom-devices for your Flutter SDK
 
