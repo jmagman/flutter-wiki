@@ -59,7 +59,7 @@ cd $RECIPES_REPO
    - `BRANCHES['stable']['version']`, the version element of the recipe filename, e.g. `v1_17_0`
    - `BRANCHES['beta']['testing-ref']`, a regex to the branch name of the current beta candidate
    - `BRANCHES['beta']'version']`
-   - `BRANCHES['dev']['testing-ref']`, a regex to the branch names of dev releases after incrementing y
+ 
 9. Execute the main.star file to generate the rest of the config files (and validate your changes for mistakes): `$ ./main.star`
 10. Commit your changes, push to github and get it reviewed. This PR should be landed after any LUCI recipe changes.
 11. After your PR has landed, wait for it to be mirrored to [the chromium tree](https://chromium.googlesource.com/external/github.com/flutter/infra/). LUCI post-submit builds should now work for your candidate branch.
