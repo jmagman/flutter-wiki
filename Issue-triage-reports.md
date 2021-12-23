@@ -1,5 +1,72 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-12-23
+
+### Notable issues
+
+- [web] TextField doesn't accept input after it is submitted even though it retains focus. [#95553](https://github.com/flutter/flutter/issues/95553)
+- [Camera][iOS]: App flash bursts while taking picture even though `FlashMode` is set to OFF. [#95679](https://github.com/flutter/flutter/issues/95679)
+- [Windows] WINUWP app fails to build with Exception: Unable to generate build files. [#95597](https://github.com/flutter/flutter/issues/95597)
+- [Add to App] shared_preferences Package doesn't work in the multiple_flutters_android in release mode. [#95662](https://github.com/flutter/flutter/issues/95662)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 141, closed 67 (47.52%).
+
+In total closed 97 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 34.0% |
+| Fixed | 11.3% |
+| Invalid | 42.3%  |
+| Solved | 12.4% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 7 closed 3 (42.86%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 33.3% |
+| invalid | 66.7% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 4 (80%).
+
+In total closed 5 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid | 100% | 
+
+#### Flutterfire
+
+New Flutterfire issues triaged 18, closed 7 (38.89%).
+
+In total closed 15 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 20.00%  |
+| fixed | 6.67%  |
+| invalid | 26.67% |
+| no-response | 20.00% |
+| solution-provided | 13.33% |
+| user | 13.33% |
+
+
+
+
 ## 2021-12-17
 
 ### Notable issues
