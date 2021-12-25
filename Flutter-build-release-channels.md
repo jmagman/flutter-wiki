@@ -1,6 +1,8 @@
 ## Flutter's channels
 
-Flutter has the following channels, in increasing order of stability:
+Flutter has the following channels, in increasing order of stability.
+
+_This page used to give examples of version numbers for each channel. Our current policy for versioning isn't well established. We intend to redefine our policies on this front in 2022._
 
 ### master
 
@@ -8,29 +10,13 @@ The current tip-of-tree, absolute latest cutting edge build. Usually functional,
 
 ### beta
 
-We will branch from master for a new beta release at the beginning of the month, usually the first Monday.  This will include a branch for Dart, the Engine and the Framework.  This branch will then be "stabilized" for the next couple of weeks, meaning we will accept [cherrypick](https://github.com/flutter/flutter/wiki/Flutter-Cherrypick-Process) requests for high impact issues.  As we near the end of the month and the next beta branch, we will likely reduce the number of cherrypicks we are willing to do.  Once a quarter, the beta branch will live on to become the next stable branch, as detailed below.
+We will branch from master for a new beta release at the beginning of the month, usually the first Monday. This will include a branch for Dart, the Engine and the Framework. This branch will then be "stabilized" for the next couple of weeks, meaning we will accept [cherrypick](https://github.com/flutter/flutter/wiki/Flutter-Cherrypick-Process) requests for high impact issues. As we near the end of the month and the next beta branch, we will likely reduce the number of cherrypicks we are willing to do. Once a quarter, the beta branch will live on to become the next stable branch, as detailed below.
 
-Versioning example:
-
-Let's say we branch for beta at the 15th dev release point for 1.18
-```
-1.18.0-15.0.pre <- initial beta RC.
-1.18.0-15.1.pre <- subsequent build on the (now) beta branch with some cherrypicks.
-1.18.0-15.2.pre <- second subsequent build.
-```
 ### stable
 
 Roughly once a quarter, a branch that has been stabilized on beta will become our next stable branch and we will create a stable release from that branch.  We recommend that you use this channel for all production app releases.  
 In case of high severity, high impact or security issues, we may do a hotfix release for the stable channel.  This will follow the same [cherrypick](https://github.com/flutter/flutter/wiki/Flutter-Cherrypick-Process) process.
 
-Versioning example:
-
-the first stable release will always be X.Y.0.  following on the example above:
-```
-1.18.0-15.4.pre <- last beta build on branch
-1.18.0 <- stable release, same bits as 1.18.0-15.4.pre
-1.18.1 <- potential hotfix of 1.18.0
-```
 ## How to change channels
 
 You can see which channel you're on with the following command:
