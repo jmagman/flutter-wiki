@@ -10,10 +10,7 @@ $ sudo softwareupdate --install-rosetta --agree-to-license
 
 You can use Apple Silicon-based Mac devices as a developer workstation (host) for building Flutter apps. While some tools still use Rosetta, Apple Silicon-based Macs are fully supported as a host.
 
-Depending on your tolerance for risk, [you may want to experiment with the `beta` channel]. 
-**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
-
-**(https://flutter.dev/docs/development/tools/sdk/upgrading#switching-flutter-channels) as we build more native Apple Silicon support into the tooling.**
+As we build more Apple Silicon support into the tooling, and depending on your tolerance for risk, [you may want to experiment with the `beta` channel](https://flutter.dev/docs/development/tools/sdk/upgrading#switching-flutter-channels). (This was previously also available on the dev channel, but [it has been retired](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181#34c4).)
 
 [Issue 60118](https://github.com/flutter/flutter/issues/60118) tracks the full set of work to support this feature. 
 
