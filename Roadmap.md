@@ -54,9 +54,9 @@ While in 2020 we primarily focused on fixing bugs, in 2021 we plan to also add s
 
 ## Release Channels and Cadence
 
-Flutter will continue to offer three “channels” from which developers can receive updates: master, beta and stable, with increasing levels of stability and confidence of quality but longer lead times for changes to propagate. Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.
+Flutter offers three “channels” from which developers can receive updates: master, beta and stable, with increasing levels of stability and confidence of quality but longer lead times for changes to propagate. We plan to release one beta build each month, typically near the start of the month, and about four stable releases throughout the year. We recommend that you use the stable channel for apps released to end-users. For more details on our release process, see the [Flutter build release channels](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels) wiki page.
 
-Dev channel is retired and is not updated. We plan to release one beta build each month, typically near the start of the month, and about four stable releases throughout the year. We recommend that you use the stable channel for apps released to end-users. For more details on our release process, see the [Flutter build release channels](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels) wiki page.
+We used to also have a _dev_ channel which represented a level of stability between master and beta. At the end of 2021, we retired this channel; it is no longer updated.
 
 # 2020
 
