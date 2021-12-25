@@ -29,8 +29,6 @@ Flutter Wiki
   - [[Understanding a LUCI build failure]]
 - [[Release process]]
   - [[Flutter build release channels]]
-  - [[Bad Builds]]
-  - [[Bad Build Identification]]
   - [[Where's my Commit?]]
   - [[Flutter Cherrypick Process]]
   - [[Recipe Branching for Releases]]
@@ -114,3 +112,4 @@ Flutter Wiki
 - [Running Flutter Driver tests with Web](https://github.com/flutter/flutter/wiki/Running-Flutter-Driver-tests-with-Web)
 - [Data-driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes)
 - [Flutter CLI custom embedder support](https://github.com/flutter/flutter/wiki/Using-custom-embedders-with-the-Flutter-CLI)
+- [[Bad Builds]]
