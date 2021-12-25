@@ -6,32 +6,15 @@ Flutter has the following channels, in increasing order of stability:
 
 The current tip-of-tree, absolute latest cutting edge build. Usually functional, though sometimes we accidentally break things.
 
-### dev
-**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
-
-The latest fully-tested build. Usually functional, but see [[Bad Builds]] for a list of known "bad" dev builds. We continually try to roll `master` to `dev`. Doing so involves running many more tests than those that we run during `master` development, which is why this is not actually the same to `master`.
-
-dev releases will be tagged with the following schema:
-
-[x].[y].0-[n].[m].pre
-
-If master is currently at x=1, y=18, n will increment by one for each subsequent beta release.  m will increment for each subsequent build at this branch point. 
-
-Versioning example:
-```
-1.18.0-1.0.pre <- first dev build after master moves to 1.18
-1.18.0-2.0.pre <- next dev build from a more recent point on master
-1.18.0-2.1.pre <- point release from the same point of master as the above build
-```
 ### beta
 
 We will branch from master for a new beta release at the beginning of the month, usually the first Monday.  This will include a branch for Dart, the Engine and the Framework.  This branch will then be "stabilized" for the next couple of weeks, meaning we will accept [cherrypick](https://github.com/flutter/flutter/wiki/Flutter-Cherrypick-Process) requests for high impact issues.  As we near the end of the month and the next beta branch, we will likely reduce the number of cherrypicks we are willing to do.  Once a quarter, the beta branch will live on to become the next stable branch, as detailed below.
 
 Versioning example:
 
-following from the dev example above, let's say we branch for beta at the 15th dev release point for 1.18
+Let's say we branch for beta at the 15th dev release point for 1.18
 ```
-1.18.0-15.0.pre <- initial beta RC, same release as went to dev.
+1.18.0-15.0.pre <- initial beta RC.
 1.18.0-15.1.pre <- subsequent build on the (now) beta branch with some cherrypicks.
 1.18.0-15.2.pre <- second subsequent build.
 ```
@@ -57,7 +40,6 @@ $ flutter channel
 Flutter channels:
 * stable
   beta
-  dev (retired)
   master
 ```
 
@@ -69,16 +51,13 @@ We recommend using the `stable` branch.
 
 That said, the `beta` branch should be fine. There is no extra level of testing that we do for `stable` than for `beta`, other than the extended stabilization period on the `beta` branch. So if there is something you want to use that is available on `beta` but not `stable`, feel free to consider using `beta`.
 
-We do not recommend using dev since it has been retired. 
-
-[**Deprecated**]
-_Using `dev` is a little less safe; if you use a `dev` build then we recommend watching the [[Bad Builds]] page to see if known ship-blocking bugs get reported for that branch.  It is reasonable, however, to pick a `dev` build, test heavily with that build, and then keep using that build. That's what we're actually doing when picking a `dev` build to put on the `beta` branch: the only additional testing that we actually do to `beta` builds over `dev` builds is checking for basic things like "do our codelabs still work with this build"; beyond that, we just monitor bug reports. Most of our testing is done as pre-commit tests and tests run as part of releasing a `dev` build, so by the time we release a `dev` build, we have relatively high confidence that there isn't a serious problem._
+There used to be a `dev` branch as well (and you may still see it in our tooling). We no longer update this branch and our tooling will be updated in due course to no longer list it (if it hasn't already).
 
 ## Will a particular bug fix be provided in a hotfix release?
 
 Depending on the severity of the issue, it is possible.  Refer to the [cherrypick process](https://github.com/flutter/flutter/wiki/Flutter-Cherrypick-Process) for details.
 
-If you really need a particular patch and it's a fix to the flutter/flutter repository, you should feel free to create a Flutter branch yourself on your development machine and cherry-pick the fix you want onto that branch. Flutter is distributed as a `git` repository and all of `git`'s tools are available to you. If you need a particular patch that's from the flutter/engine repository or one of our dependencies (e.g. Dart or Skia), you could build your own engine but it's probably easier to just wait until the next release. On average, the next `dev` release is about a day away and the next `beta` release is about two weeks away.
+If you really need a particular patch and it's a fix to the flutter/flutter repository, you should feel free to create a Flutter branch yourself on your development machine and cherry-pick the fix you want onto that branch. Flutter is distributed as a `git` repository and all of `git`'s tools are available to you. If you need a particular patch that's from the flutter/engine repository or one of our dependencies (e.g. Dart or Skia), you could build your own engine but it's probably easier to just wait until the next release. On average, the next `beta` release is about two weeks away.
 
 ## See also
 
