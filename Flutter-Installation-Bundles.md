@@ -1,6 +1,4 @@
-Flutter has installation bundles which you can download and install for [beta channel](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels).
-
-**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
+Flutter has installation bundles which you can download and install for the [`beta` channel](https://github.com/flutter/flutter/wiki/Flutter-build-release-channels). (They were previously also available for the `dev` channel, but [the dev channel has been retired](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181#34c4).)
 
 The installation bundles were designed to allow you to have a completely populated environment without having to first download the Git repository, then compile the flutter tool, etc.
 
