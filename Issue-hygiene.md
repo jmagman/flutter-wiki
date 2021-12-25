@@ -266,9 +266,11 @@ venues if you want to complain without being constructive.
 
 ### Issues are not always the best venue for discussions
 
-Discussions within an issue should remain on-topic. Sometimes, certain parts of a discussion may be best suited to happen over chat, in Discourse, and/or in collaborative editing tool, like Google docs. This is because GitHub hides comments, doesn't have threading, notifications get lost in the swamp of other GitHub e-mails, etc.
+Discussions within an issue should remain focused on the topic, specifically about what the filed issue is and how to solve it. Broader discussions are best suited to happen on Discord or in design docs using Google Docs (see [[Chat]]). This is because GitHub hides comments, doesn't have threading, notifications get lost in the swamp of other GitHub e-mails, etc.
 
-If you move to another tool for part of the discussion, remember to add a summary of the discussion and document any decisions that took place. This allows people following the issue to keep updated and continue to participate. 
+If you move to another tool for part of the discussion, remember to add a summary of the discussion and document any decisions that took place. This allows people following the issue to keep updated and continue to participate.
+
+Issues are never an appropriate venue for asking for help with your code. Issues are also not a good venue for discussing project direction.
 
 ### Comments providing workarounds
 
