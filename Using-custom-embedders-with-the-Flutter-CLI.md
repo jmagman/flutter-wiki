@@ -1,9 +1,8 @@
-## Making the Flutter CLI work with custom/3rd-party embedders
+## Making the Flutter CLI work with custom or third-party embedders
 
-The experimental "custom device" feature of the Flutter CLI allows you to make custom or 3rd-party embedders such as [flutter-pi](https://github.com/ardera/flutter-pi) or the [sony embedder](https://github.com/sony/flutter-embedded-linux) work with the Flutter CLI and use features such as hot-reload, hot-restart, debugging and DevTools. Profile/release mode and plugins are not supported right now, but that's being worked on.
+The experimental "custom device" feature of the Flutter CLI allows you to make custom or third-party embedders such as [flutter-pi](https://github.com/ardera/flutter-pi) or the [sony embedder](https://github.com/sony/flutter-embedded-linux) work with the Flutter CLI and use features such as hot-reload, hot-restart, debugging and DevTools. Profile/release mode and plugins are not supported right now.
 
 Currently, `custom-devices` support is only available in the master channel. 
-**Please note - dev channel has been retired. Refer to this [blog](https://medium.com/flutter/whats-new-in-flutter-2-8-d085b763d181) for more information.**
 
 ### Enabling custom-devices for your Flutter SDK
 
@@ -62,6 +61,6 @@ If your device is a little more complicated to setup, for example if your device
 
 ### That's it
 
-After that, the device is configured and if you run `flutter devices`, it should show your custom device there. (If it is reachable)
+After that, the device is configured and if you run `flutter devices`, it should show your custom device there (if it is reachable).
 
 You should be able to run apps on your device using `flutter run -d devicename` or using your IDE. 
