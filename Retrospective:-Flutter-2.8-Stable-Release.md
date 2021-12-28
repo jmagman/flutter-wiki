@@ -79,12 +79,11 @@ Xcode/Mac/iOS were force updated in between the beta to stable time window
 | Status | Action Item | Owner |
 |--------|-------------|-------|
 | In Progress | Create a single source of truth release playbook unifying the Flutter and Dart release processes | Kevin |
-| In Progress | Rethink timing of releases and communication plan | Nuritzi / Kevin |
-| In Progress | Identify release calendars and make sure they are easily accessible to everyone who needs to see them | Nuritzi / Kevin |
+| In Progress | Rethink timing of releases | Kevin |
+| In Progress | Identify release calendars and make sure they are easily accessible to everyone who needs to see them | Kevin |
 | In Progress | Conduct retrospectives after every release | Kevin |
-| In Progress | Create a release rotation | Godofredo |
-| In Progress | Change beta releases to specific days instead of release weeks | TPM |
+| In Progress | Create a release rotation for beta releases | Godofredo |
 | In Progress | Create meeting for Dart / Flutter EngProd teams and TPM team on release weeks | Kevin |
-| In Progress | Clean up and consolidate documentation | TPM |
-| In Progress | Successfully produce at least 2 betas before our Feb stable to verify that we will be without issues for the Feb stable | Devon / Nuritzi |
+| In Progress | Clean up and consolidate release documentation | TPM |
+| In Progress | Successfully produce at least 2 betas before our Feb stable to verify that we will be without issues for the Feb stable | Devon / Kevin |
 | In Progress | Consider the milestone flow on github | Ian / Kevin |
