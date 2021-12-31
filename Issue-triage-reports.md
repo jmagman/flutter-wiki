@@ -1,5 +1,73 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2021-12-31
+
+### Notable issues
+
+- [iOS] Flutter 2.8, fine frame drop detected in native listView on iOS [#95838](https://github.com/flutter/flutter/issues/95838)
+- [Webview_flutter][Regression]: Navigating from webview using SurfaceAndroidView composition shows a flash on screen [#95545](https://github.com/flutter/flutter/issues/95545)
+- [Android]: AutofillHints are not showing up (ex: for [AutofillHints.email]) [#95522](https://github.com/flutter/flutter/issues/95522)
+- [MacOS Desktop] Process Class Freezes app after multiple calls [#95805](https://github.com/flutter/flutter/issues/95805)
+- [Google Maps - Web] TypeError: Cannot read properties of null (reading 'Ye') while resizing browser window [#95771](https://github.com/flutter/flutter/issues/95771)
+- [Add to App] shared_preferences Package doesn't work in the multiple_flutters_android in release mode.[#95662](https://github.com/flutter/flutter/issues/95662)
+- [Windows] WINUWP app fails to build with Exception: Unable to generate build files [#95597](https://github.com/flutter/flutter/issues/95597)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 153, closed 56 (36.6%).
+
+In total closed 87 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 32.18% |
+| Fixed | 8.05% |
+| Invalid | 43.68%  |
+| Solved | 16.09% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 6 closed 0 (0%).
+
+In total closed 1 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| fixed | 100% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 1, closed 1 (100%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid | 100% | 
+
+#### Flutterfire
+
+New Flutterfire issues triaged 37, closed 14 (37.84%).
+
+In total closed 28 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 17.86%  |
+| fixed | 10.71%  |
+| invalid | 25.00% |
+| no-response | 7.14% |
+| solution-provided | 17.86% |
+| user | 10.71% |
+| wontfix | 10.71% |
+
+
 ## 2021-12-23
 
 ### Notable issues
@@ -63,8 +131,6 @@ In total closed 15 issues during the week.
 | no-response | 20.00% |
 | solution-provided | 13.33% |
 | user | 13.33% |
-
-
 
 
 ## 2021-12-17
