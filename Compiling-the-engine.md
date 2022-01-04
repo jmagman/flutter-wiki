@@ -309,6 +309,7 @@ ninja -C $ENGINE_DIR/out/fuchsia_debug_x64
 ``` 
 
   * If you used `--unoptimized`, use `ninja -C out/fuchsia_debug_x64_unopt` instead.
+  * If you used `--runtime-mode=release`, use `ninja -C out/fuchsia_release_x64` instead.
   * For Googlers, consider also using the `--goma` flag with `gn`, then building with `autoninja` to parallelize the build with Goma.
 
 ### Deploy to Fuchsia
