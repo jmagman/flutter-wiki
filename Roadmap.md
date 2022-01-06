@@ -4,6 +4,9 @@ _Our plans will evolve over time based on customer feedback and new market oppor
 
 _If you are a contributor or team of contributors with long-term plans for [contributing to Flutter](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md), and would like your planned efforts reflected in the roadmap, please reach out to Hixie (ian@hixie.ch)._
 
+# 2022
+
+_Coming soon! It's written, I'm just getting it reviewed before I post it. —Hixie_
 
 # 2021
 
