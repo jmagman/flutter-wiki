@@ -1,5 +1,67 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-01-07
+
+### Notable issues
+
+- [TextField]`backgroundColor` covers/hides cursor and text selection [#96112](https://github.com/flutter/flutter/issues/96112)
+- image_picker on iOS: With `Select Photos` access, selecting a different GIF than the one selected earlier won’t animate [#96263](https://github.com/flutter/flutter/issues/96263)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 152, closed 48 (31.58%).
+
+In total closed 95 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 34.7% |
+| Fixed | 15.8% |
+| Invalid | 32.6% |
+| Solved | 16.8% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 7, closed 4 (57.14%).
+
+In total closed 7 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 28.6% |
+| Fixed | 42.9% |
+| Invalid | 28.6% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 2, closed 1 (50%).
+
+In total closed 1 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid | 100% | 
+
+#### Flutterfire
+
+New Flutterfire issues triaged 28, closed 5 (17.86%).
+
+In total closed 24 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| fixed | 41.7% |
+| invalid | 12.5%|
+| no-response | 12.5% |
+| solution-provided | 16.7% |
+| user | 16.7% |
+
 ## 2021-12-31
 
 ### Notable issues
