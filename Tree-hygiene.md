@@ -143,9 +143,7 @@ organization's) name and contact info to the [AUTHORS](https://github.com/flutte
 Every PR must be code-reviewed before check-in, including things like
 rolling a dependency. Getting a review means that a regular Flutter
 contributor (someone with commit access; see [[contributor access]] for details) has "approved" the PR in the
-GitHub UI. If nobody reviews your PR within two weeks, you can ask for
-a review via our [[Chat]] channels (start by asking in #hackers,
-saying what your patch does and providing a link).
+GitHub UI. We call this "getting an LGTM" ("looks good to me").
 
 If you are not yourself someone with commit access, then a second person
 with commit access must also review and approve your PR. This ensures that
@@ -184,6 +182,10 @@ comments on other people's PRs (although approvals in the GitHub UI
 should be reserved for those with contributor access). The more
 reviews the better.
 
+If nobody reviews your PR within two weeks, you can ask for
+a review via our [[Chat]] channels. Start by asking in #hackers,
+saying what your patch does and providing a link.
+
 ### Who
 
 Code should be reviewed by the owner (tech lead) of the area(s) of the codebase that you are changing,
@@ -199,8 +201,7 @@ than just "LGTM". If you feel your code needs a real review, please
 find someone to actually review it. ("RSLGTM" means "Rubber Stamp
 Looks Good To Me".)
 
-If you can't figure out who should review your code and GitHub's suggestions aren't useful to you, or you're
-not getting a timely response (usually about a week should be enough to get a review) then reach out on our
+If you can't figure out who should review your code and GitHub's suggestions aren't useful to you then reach out on our
 [[Chat]] channels. The `#hackers-new` channel is a good place to ask for help if you're a new contributor.
 
 ### How
