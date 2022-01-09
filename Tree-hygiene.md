@@ -73,7 +73,8 @@ The general process for submitting code to a Flutter repository is as follows:
    **If the trees or dashboards are showing any regressions, only fixes
    that improve the situation are allowed to go in.**
 
-9. Once everything is green and you have an LGTM, add the "waiting for tree to go green" label.
+9. Once everything is green and you have an LGTM from the owners of the code you are affecting (or someone to whom they
+   have delegated), and an LGTM from any other contributor who left comments, add the "waiting for tree to go green" label.
    A bot will land the patch when it feels like it.
 
 10. Watch the post-commit tests on the [dashboard](https://dashboard.flutter.dev/#/build) to make sure everything passes. If anything
@@ -150,6 +151,8 @@ If you are not yourself someone with commit access, then a second person
 with commit access must also review and approve your PR. This ensures that
 two people with commit access (trusted contributors) agree on every commit.
 
+### Why
+
 Code review serves many critical purposes. There's the obvious
 purpose: catching errors. Even the most experienced engineers
 frequently make errors that are caught by code review. But there are
@@ -172,12 +175,22 @@ We recommend you consider
 [these suggestions](https://testing.googleblog.com/2017/06/code-health-too-many-comments-on-your.html)
 for addressing code review comments on your PR.
 
+### When
+
 If you're working on a big patch, don't hesitate to get reviews early,
 before you're ready to check code in. Also, don't hesitate to ask for
 multiple people to review your code, and don't hesitate to provide unsolicited
 comments on other people's PRs (although approvals in the GitHub UI
 should be reserved for those with contributor access). The more
 reviews the better.
+
+### Who
+
+Code should be reviewed by the owner (tech lead) of the area(s) of the codebase that you are changing,
+or someone to whom they have delegated that authority. (If you're not sure who that is, for the area
+of code you're dealing with, ask on Discord. See [[Chat]] for details.)
+
+If anyone else leaves comments, please also wait for their approval (LGTM) before landing code.
 
 A reviewer may in some circumstances consider the code satisfactory
 without having fully reviewed or understood it. If a reviewer has not
@@ -186,8 +199,11 @@ than just "LGTM". If you feel your code needs a real review, please
 find someone to actually review it. ("RSLGTM" means "Rubber Stamp
 Looks Good To Me".)
 
+If you can't figure out who should review your code and GitHub's suggestions aren't useful to you, or you're
+not getting a timely response (usually about a week should be enough to get a review) then reach out on our
+[[Chat]] channels. The `#hackers-new` channel is a good place to ask for help if you're a new contributor.
 
-## How to review code
+### How
 
 Code review status is managed via GitHub's approval system. PRs should
 not be merged unless one or more contributors with commit access (at
