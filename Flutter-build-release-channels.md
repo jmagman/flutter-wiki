@@ -33,9 +33,11 @@ To switch channels, run `flutter channel [<channel-name>]`, and then run `flutte
 
 ## Which channel should I use?
 
-We recommend using the `stable` branch.
+We recommend using the `stable` branch. This version of Flutter is the one documented by our API documentation. The team's own Flutter plugins are always tested against the latest `stable` branch.
 
-That said, the `beta` branch should be fine. There is no extra level of testing that we do for `stable` than for `beta`, other than the extended stabilization period on the `beta` branch. So if there is something you want to use that is available on `beta` but not `stable`, feel free to consider using `beta`.
+If you want to be using the latest and greatest, the `beta` branch is the right choice. That's the most recent version of Flutter that we have heavily tested. On average it takes about two weeks for a fix to end up in the beta branch after they land in our repository. The beta branch has passed all our public testing as well as having been verified against contributed private test suites (currently only Google is contributing such testing, but if you are interested, please reach out to Hixie on [[Chat]]).
+
+If you want to be developing Flutter, then the `master` branch is the right choice. However, this branch may be broken since we do not run the entirety of our testing before allowing patches to land on this branch.
 
 There used to be a `dev` branch as well (and you may still see it in our tooling). We no longer update this branch and our tooling will be updated in due course to no longer list it (if it hasn't already).
 
