@@ -468,7 +468,7 @@ The syntax for deprecations must match the following pattern:
 ```dart
 @Deprecated(
   'Call prepareFrame followed by owner.requestVisualUpdate() instead. '
-  'This feature was deprecated after v1.23.0-7.0.pre.'
+  'This feature was deprecated after v2.9.0-0.1.pre.'
 )
 ```
 
@@ -477,11 +477,11 @@ In other words:
 ```dart
 @Deprecated(
   '[description of how to migrate] '
-  'This feature was deprecated after [dev version at time of deprecation].'
+  'This feature was deprecated after [beta version at time of deprecation].'
 )
 ```
 
-To determine the latest dev version, see <https://flutter.dev/docs/development/tools/sdk/releases>.
+To determine the latest beta version, see <https://flutter.dev/docs/development/tools/sdk/releases>.
 
 When adding a deprecation notice to the framework, a flutter fix should be included with your change. This helps users migrate to the new API as easily as possible. To learn more about authoring fixes, see [Data driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes). If a fix cannot be written for the new API, please file an issue in https://github.com/dart-lang/sdk and link to it in your change.
 
