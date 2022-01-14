@@ -1,5 +1,70 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-01-14
+
+### Notable issues
+
+- Programmatically selecting text in unfocused textfield is not working [#96339](https://github.com/flutter/flutter/issues/96339)
+- [Android] Removing Deprecated Manifest Splash results in blank screen and prevents the app from starting [#93668](https://github.com/flutter/flutter/issues/93668)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 181, closed 56 (30.94%).
+
+In total closed 109 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 26.67% |
+| Fixed | 23.9% |
+| Invalid | 31.2% |
+| Solved | 18.3% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 13, closed 2 (15.38%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 66.67% |
+| Invalid | 33.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 6, closed 3 (50%).
+
+In total closed 5 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 80% |
+| solved | 20% | 
+
+#### Flutterfire
+
+New Flutterfire issues triaged 21, closed 2 (9.52%).
+
+In total closed 18 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 11.1% |
+| fixed | 27.8% |
+| invalid | 11.1%|
+| no-response | 11.1% |
+| solution-provided | 11.1% |
+| user | 27.8% |
+
+
+
 ## 2022-01-07
 
 ### Notable issues
