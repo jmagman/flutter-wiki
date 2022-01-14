@@ -207,7 +207,6 @@ By extension, "unlicking the cookie" means indicating to the
 rest of the team that you are not actually going to work on the bug
 after all, e.g. by unassigning the bug from yourself.
 
-
 ## File bugs for everything
 
 File bugs for anything that you come across that needs doing. When you
@@ -279,8 +278,6 @@ but please keep such comments to a minimum so as to avoid disrupting the enginee
 fix the issue. Rather than discussing workarounds, provide a pointer to another forum
 (e.g. Stack Overflow) where workarounds and temporary solutions are more appropriate. Thanks.
 
-
-
 ## When will my bug be fixed?
 
 To determine when a bug will be fixed, look at the priority and milestone.
@@ -294,6 +291,8 @@ If the priority is labeled as a `P0` to `P3`, we are likely to address in the ne
 If the issue is labeled as a `P4`, we are not planning to work on it anytime soon, but we agree it's something we should work on in the coming years.
 
 If the issue is labeled `P5` or `P6`, we are not currently expecting to ever work on it (especially `P6`).
+
+_See also [[Popular issues]]._
 
 ### Escalating an issue that has the wrong priority
 
