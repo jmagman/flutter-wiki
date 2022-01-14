@@ -19,6 +19,7 @@ If you intend to contribute to Flutter, welcome! You are encouraged to start wit
 * [Plugin compatibility policy](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo#plugin-compatibility)
 * [Reviewing code](https://github.com/flutter/flutter/wiki/Tree-hygiene#how-to-review-code)
 * [RFC process](https://github.com/flutter/flutter/wiki/Issue-hygiene#how-to-propose-a-specific-change)
+* [Status of popular issues](https://github.com/flutter/flutter/wiki/Popular-issues)
 * [Submitting code, process for](https://github.com/flutter/flutter/wiki/Tree-hygiene#overview)
 * [Support levels, definitions of](https://github.com/flutter/flutter/wiki/Values#support)
 * [Symbolicating stack traces](https://github.com/flutter/flutter/wiki/Crashes)
