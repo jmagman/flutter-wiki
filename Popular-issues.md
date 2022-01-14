@@ -51,3 +51,7 @@ As usual, contributions are welcome. Reach out to Hixie directly (either by e-ma
 This feature is one that is recognized as important. There are some prerequisites, like improving Flutter's deep linking and accessibility features, which we have to deal with first. There are also other issues, like those around performance, plugins, and embedding, that are currently higher on the list for people who are currently contributing to Flutter's web support.
 
 Fixing this issue is non-trivial, as Flutter's architecture is one that is fundamentally different than what the web usually expects. If you are interested in contributing, the best place to begin would be to discuss potential approaches on our #hackers-web [[Chat]] channel, followed by writing up a design doc (the process for which is also on the [[Chat]] page).
+
+## [Enable "hot reload" (not just "hot restart") for Flutter Web](https://github.com/flutter/flutter/issues/53041)
+
+Hot reload on web is tentatively on our 2022 [[roadmap]] but it's a very difficult problem so no promises.
