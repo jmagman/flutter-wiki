@@ -67,10 +67,8 @@ For each area, we consider the level to which we provide support:
 
 ***
 
-See also: 
+_See also:_
 
-- [Code of Conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md)
-
-- [Contributor Guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md)
-
-- [Flutter culture and how to preserve it](https://medium.com/flutter/flutter-culture-and-how-to-preserve-it-436b4ed1031d)
+* [Code of Conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md)
+* [Contributor Guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md)
+* [Flutter culture and how to preserve it](https://medium.com/flutter/flutter-culture-and-how-to-preserve-it-436b4ed1031d)
