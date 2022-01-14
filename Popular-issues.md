@@ -39,3 +39,15 @@ If anyone would be interested in implementing an official homebrew installation 
 The current status is described in some detail [in this comment](https://github.com/flutter/flutter/issues/15072#issuecomment-898202823). In brief, this is something we periodically investigate, but currently it seems that the underlying Xcode features are insufficiently reliable to really bring this to production.
 
 This is another area where concrete contributions would be most welcome. If you would like to help, experiment with the work described in the issue so far and reach out in the #hackers-ios channel of our Discord (see [[Chat]]) with your results.
+
+## [Design a new vector file format](https://github.com/flutter/flutter/issues/1831) (#1831)
+
+A [design document](https://flutter.dev/go/vector-graphics) containing both a detailed study of the problem and a strawman proposal have been published (comments welcome). The primary goal of the strawman proposal is to see if it is possible to create a format that is implemented entirely on the GPU (the thought being that creating yet another CPU-bound format doesn't really bring the industry forward). The next step is to experiment with implementing the proposal. Unfortunately all our shader experts are currently busy on higher-priority problems (like improving rendering performance and reducing jank), so this work has stalled.
+
+As usual, contributions are welcome. Reach out to Hixie directly (either by e-mail, ian@hixie.ch, or on our [[Chat]] channels) if you are interested in helping out.
+
+## [Improve the indexability (SEO) of Flutter apps on the web](https://github.com/flutter/flutter/issues/46789) (#46789)
+
+This feature is one that is recognized as important. There are some prerequisites, like improving Flutter's deep linking and accessibility features, which we have to deal with first. There are also other issues, like those around performance, plugins, and embedding, that are currently higher on the list for people who are currently contributing to Flutter's web support.
+
+Fixing this issue is non-trivial, as Flutter's architecture is one that is fundamentally different than what the web usually expects. If you are interested in contributing, the best place to begin would be to discuss potential approaches on our #hackers-web [[Chat]] channel, followed by writing up a design doc (the process for which is also on the [[Chat]] page).
