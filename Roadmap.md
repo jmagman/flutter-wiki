@@ -51,4 +51,4 @@ In 2022 we will increase our investment in supply chain security, with the inten
 
 ***
 
-<sub>Note: We maintain an [archive of roadmaps from previous years](https://github.com/flutter/flutter/wiki/%5BArchive%5D-Old-Roadmaps) in a separate page.<sub>
+_Note: We maintain an [archive of roadmaps from previous years](https://github.com/flutter/flutter/wiki/%5BArchive%5D-Old-Roadmaps) in a separate page._
