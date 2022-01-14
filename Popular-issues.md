@@ -24,3 +24,10 @@ There are three main areas that people are referring to here:
 
   * There is currently no out-of-the-box open source hosting solution for patching applications, so we would either have to rely on people configuring their Web servers accordingly, or we would have to create integrations for proprietary third-party services, or we would have to create our own bespoke solution. Hosting patches is a space we are not eager to enter. Having people configure their own server leaves them open to making mistakes with potentially serious implications as explained in the previous point about security. Depending on third-party services puts Flutter in an awkward position of having to pick winners and exposes us to the risk of those projects themselves making policy changes that would affect this feature.
 
+## [Let flutter be installable via homebrew #14050](https://github.com/flutter/flutter/issues/14050)
+
+<!-- https://github.com/flutter/flutter/issues/14050#issuecomment-1012647917 -->
+
+Currently, we see this as a lower priority than our other release-related work (such as working towards [SLSA compliance](https://slsa.dev)). There are a number of other mechanisms for obtaining Flutter today, so this does not immediately unblock anyone, it is "merely" a convenience. That said, we recognize that homebrew is a pretty idiomatic way of getting software for developers on macOS, and so the request is quite valid.
+
+If anyone would be interested in implementing an official homebrew installation path, the best thing to do would be to reach out on the #hackers-releases channel of our Discord (see the contributing docs for details). Implementing it would require integrating into our release pipeline, so familiarity with that would be extremely helpful. It would also require carefully negotiating how Flutter's primary distribution mechanism (shipping the `git` repo directly) should interact with Homebrew's mechanisms, so familiarity with both of those would also be needed.
