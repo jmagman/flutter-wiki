@@ -4,7 +4,7 @@ Some popular issues are, for whatever reason, topics on which we cannot find a g
 
 In the interests of transparency, this wiki page discusses the status of these popular issues. It is only updated occasionally and so may not be entirely up to date; for the most up to date information, please see the latest comments on the relevant issue. (Please avoid asking for an update on issues, otherwise they become full of people asking for updates and nobody can find the actual updates.)
 
-## [Code Push / Hot Update / out of band updates #14330](https://github.com/flutter/flutter/issues/14330)
+## [Code Push / Hot Update / out of band updates](https://github.com/flutter/flutter/issues/14330) (#14330)
 
 <!-- https://github.com/flutter/flutter/issues/14330#issuecomment-442274897 (terminology) -->
 <!-- https://github.com/flutter/flutter/issues/14330#issuecomment-485565194 (2019 update) -->
@@ -24,10 +24,18 @@ There are three main areas that people are referring to here:
 
   * There is currently no out-of-the-box open source hosting solution for patching applications, so we would either have to rely on people configuring their Web servers accordingly, or we would have to create integrations for proprietary third-party services, or we would have to create our own bespoke solution. Hosting patches is a space we are not eager to enter. Having people configure their own server leaves them open to making mistakes with potentially serious implications as explained in the previous point about security. Depending on third-party services puts Flutter in an awkward position of having to pick winners and exposes us to the risk of those projects themselves making policy changes that would affect this feature.
 
-## [Let flutter be installable via homebrew #14050](https://github.com/flutter/flutter/issues/14050)
+## [Let flutter be installable via homebrew](https://github.com/flutter/flutter/issues/14050) (#14050)
 
 <!-- https://github.com/flutter/flutter/issues/14050#issuecomment-1012647917 -->
 
 Currently, we see this as a lower priority than our other release-related work (such as working towards [SLSA compliance](https://slsa.dev)). There are a number of other mechanisms for obtaining Flutter today, so this does not immediately unblock anyone, it is "merely" a convenience. That said, we recognize that homebrew is a pretty idiomatic way of getting software for developers on macOS, and so the request is quite valid.
 
-If anyone would be interested in implementing an official homebrew installation path, the best thing to do would be to reach out on the #hackers-releases channel of our Discord (see the contributing docs for details). Implementing it would require integrating into our release pipeline, so familiarity with that would be extremely helpful. It would also require carefully negotiating how Flutter's primary distribution mechanism (shipping the `git` repo directly) should interact with Homebrew's mechanisms, so familiarity with both of those would also be needed.
+If anyone would be interested in implementing an official homebrew installation path, the best thing to do would be to reach out on the #hackers-releases channel of our Discord (see [[Chat]]). Implementing it would require integrating into our release pipeline, so familiarity with that would be extremely helpful. It would also require carefully negotiating how Flutter's primary distribution mechanism (shipping the `git` repo directly) should interact with Homebrew's mechanisms, so familiarity with both of those would also be needed.
+
+## [flutter run should support wireless debugging of iOS devices](https://github.com/flutter/flutter/issues/15072) (#15072)
+
+<!-- https://github.com/flutter/flutter/issues/15072#issuecomment-898202823 -->
+
+The current status is described in some detail [in this comment](https://github.com/flutter/flutter/issues/15072#issuecomment-898202823). In brief, this is something we periodically investigate, but currently it seems that the underlying Xcode features are insufficiently reliable to really bring this to production.
+
+This is another area where concrete contributions would be most welcome. If you would like to help, experiment with the work described in the issue so far and reach out in the #hackers-ios channel of our Discord (see [[Chat]]) with your results.
