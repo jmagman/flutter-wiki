@@ -52,6 +52,14 @@ This feature is one that is recognized as important. There are some prerequisite
 
 Fixing this issue is non-trivial, as Flutter's architecture is one that is fundamentally different than what the web usually expects. If you are interested in contributing, the best place to begin would be to discuss potential approaches on our #hackers-web [[Chat]] channel, followed by writing up a design doc (the process for which is also on the [[Chat]] page).
 
-## [Enable "hot reload" (not just "hot restart") for Flutter Web](https://github.com/flutter/flutter/issues/53041)
+## [Enable "hot reload" (not just "hot restart") for Flutter Web](https://github.com/flutter/flutter/issues/53041) (#53041)
 
 Hot reload on web is tentatively on our 2022 [[roadmap]] but it's a very difficult problem so no promises.
+
+## [Apple CarPlay / Android Auto support?](https://github.com/flutter/flutter/issues/26801) (#26801)
+
+For Apple CarPlay, there is a package called [flutter_carplay](https://pub.dev/packages/flutter_carplay) by Oğuzhan Atalay that gives a Flutter API for controlling the CarPlay API. It's not clear that anything beyond that really makes sense for CarPlay, because Apple's API is template based and so Flutter (with its rendering engine, widgets framework, platform neutrality, etc) doesn't really provide any direct value.
+
+For Android Auto, our understanding is that the situation is similar: there are some templates that you can fill in using Android APIs. To our knowledge nobody has yet created a plugin to expose those APIs to Dart code, but we are not aware of any reason why that would not be possible. (For extra bonus points, one could imagine a package that tries to intelligently fill both CarPlay and Android Auto templates from the same source data, but that may be hard if the templates are too different from each other.)
+
+Currently, it does not seem that we can provide substantially more value here than anyone else could in writing plugins like Oğuzhan's, so we do not intend to work on this. We would encourage people to work with Oğuzhan and/or create new plugins for these features. Should the situation change (e.g. if CarPlay or Android Auto supported a way for us to directly send pixels to the car dashboard, allowing the power of Flutter's widgets to be useful here), we would reconsider this feature.
