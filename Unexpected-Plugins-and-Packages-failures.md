@@ -49,9 +49,7 @@ Integration tests on Android are run in real devices through the Firebase Test L
 #### Distinguishing features
 - `firebase_test_lab` task starts timing out. The output is normally just: `Timed out!` ([Example](https://github.com/flutter/plugins/runs/3930255308).) 
   - These timeouts will start as "flake" tests, and get progressively worse, until no amount of "retries" helps them pass (as devices are phased out / less available).
-
-#### Distinguishing features
-- `firebase_test_lab` timing out is almost always related to this. Either because of devices becoming unavailable, or by a temporary lack of resource availability.
+  - `firebase_test_lab` timing out is almost always related to this. Either because of devices becoming unavailable, or by a temporary lack of resource availability.
 
 #### Investigation & resolution tips
 - Check the [Deprecation List](https://firebase.google.com/docs/test-lab/android/available-testing-devices#deprecated_devices) in the Firebase documentation, and see if it affects any of the devices used by the [script](https://github.com/flutter/plugins/blob/aae841aa5a7062f05e0aba4f9304dd605dbbc2b2/.cirrus.yml#L217).
@@ -60,11 +58,15 @@ Integration tests on Android are run in real devices through the Firebase Test L
 
 ## Flutter
 
-Repository tests are run against the latest version of the `master` and/or `stable` channels, so can be unexpectedly broken by updates there ([#30446](https://github.com/flutter/flutter/issues/30446)). Potential failure sources include:
+The plugins and packages repository are moving toward a pin+roller system for Flutter, but the transition is still in process. Tests that haven't been migrated yet are run against the latest version of the `master` and/or `stable` channels, so can be unexpectedly broken by updates there ([#30446](https://github.com/flutter/flutter/issues/30446)). Potential failure sources include:
 - Breaking changes to framework features used by plugins.
 - Engine changes.
 - Changes to the `flutter` tool.
 - Dart tool changes, such as new analyzer behaviors or formatter changes.
+
+_The current status of the migration is:_
+- _flutter/plugins: Pinned, auto-rolled version of `master`, latest version of `stable`._
+- _flutter/packages: Latest version of `stable` and `master`_
 
 #### Distinguishing features
 - Will almost always affect only one of `master` or `stable` (usually `master`).
