@@ -90,7 +90,7 @@ _See also: [[What should I work on?]]_
 
 Every change in the flutter/engine, flutter/flutter, flutter/plugins, and flutter/packages repos must be tested, except for PRs that:
 
-* only remove code (no modified or added lines).
+* only remove code (no modified or added lines). (But if you're removing code to fix some logic, consider adding a test anyway.)
 * only affect comments (including documentation).
 * only affect code inside the `.github` directory.
 * only affect `.md` files.
