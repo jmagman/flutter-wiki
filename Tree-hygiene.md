@@ -90,7 +90,7 @@ _See also: [[What should I work on?]]_
 
 Every change in the flutter/engine, flutter/flutter, flutter/plugins, and flutter/packages repos must be tested, except for PRs that:
 
-* only remove code (no modified or added lines). (But if you're removing code to fix some logic, consider adding a test anyway.)
+* only remove code (no modified or added lines) to remove a feature or remove dead code. (Removing code to fix a bug still needs a test.)
 * only affect comments (including documentation).
 * only affect code inside the `.github` directory.
 * only affect `.md` files.
@@ -100,6 +100,8 @@ Every change in the flutter/engine, flutter/flutter, flutter/plugins, and flutte
 **A bot will comment on your PR if you need an explicit exemption.** Do not land a PR that has had such a message from the bot unless it has an explicit exemption from Hixie! The message tells you how to ask for an exemption (please don't just cc Hixie on the PR, he won't see it).
 
 In particular, the following kinds of PRs are *not* automatically exempt and require an explicit comment from Hixie even though the answer may be obvious: refactors with no semantic change (e.g. null safety migrations), configuration changes in the aforementioned repos, PRs that only affect analysis (fixing lints, turning on lints), PRs that only modify test infrastructure, PRs that manually roll a dependency, PRs that are fixing an existing test.
+
+If a reviewer says a PR should have a test, then it needs a test regardless of the exemptions above.
 
 PRs adding data-driven fixes require tests that fall under the test_fixes directory, but are not recognized by the bot as being tested.
 
