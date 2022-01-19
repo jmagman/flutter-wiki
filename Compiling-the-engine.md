@@ -56,6 +56,9 @@ Depending on the platform you are making changes for, you may be interested in a
 
     # Start Goma
     GOMA_LOCAL_OUTPUT_CACHE_DIR="$GOMA_DIR/.goma_cache" "$GOMA_DIR/goma_ctl.py" ensure_start
+
+    # On macOS, have the build access xcode through symlinks in the build root. Required for goma builds to work.
+    if [ "$(uname)" == "Darwin" ]; then export FLUTTER_GOMA_CREATE_XCODE_SYMLINKS=1; fi
     ```
   - Goma will fail remotely if it tries to access files that reside outside of the build
     root. When building configurations for macOS or iOS (i.e. configurations that
