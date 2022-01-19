@@ -74,7 +74,7 @@ If nothing happens (whether clarity from Microsoft, or someone volunteering to w
 
 ## [Server-side rendering for Flutter web](https://github.com/flutter/flutter/issues/47600) (#47600)
 
-Fundamentally, rendering Flutter web apps to HTML is incompatible with Flutter's current architecture, and therefore this is not something we are likely to ever attempt. It's also not something we think is particularly useful. We see Flutter as the first of a new breed of frameworks that target WebGL and Wasm and leave HTML behind. For more detailed thought, see [the status update on the issue](https://github.com/flutter/flutter/issues/47600#issuecomment-1016920547).
+Fundamentally, rendering Flutter web apps to HTML is incompatible with Flutter's current architecture, and therefore this is not something we are likely to ever attempt. It's also not something we think is particularly useful. We see Flutter as the first of a new breed of frameworks that target WebGL and Wasm and leave HTML behind. For more detailed thoughts, see [the status update on the issue](https://github.com/flutter/flutter/issues/47600#issuecomment-1016920547).
 
 We believe indexability (SEO) can be addressed without server-side rendering; see the issue above for a discussion of that topic.
 
