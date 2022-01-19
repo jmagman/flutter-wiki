@@ -71,3 +71,17 @@ Currently, it does not seem that we can provide substantially more value here th
 There was some work done to support UWP, but the main person who was working on this is no longer in a position to contribute to it. At this point we're mostly waiting for clarity from Microsoft about the future of UWP apps before committing a lot of time and effort into something that might be end-of-lifed any day now. That said, if you are interested in picking up this torch, we would not object to further work being done in this area; the best way to get started would be to join #hackers-desktop and volunteer (see our contributing docs for a link to our Discord). There are some people who have contributed patches here and there.
 
 If nothing happens (whether clarity from Microsoft, or someone volunteering to work on this, or some other event that compels us to work on the UWP port), the existing code will probably eventually be removed in the interests of focusing our repositories on the code we're actively working on.
+
+## [Server-side rendering for Flutter web](https://github.com/flutter/flutter/issues/47600) (#47600)
+
+Fundamentally, rendering Flutter web apps to HTML is incompatible with Flutter's current architecture, and therefore this is not something we are likely to ever attempt. It's also not something we think is particularly useful. We see Flutter as the first of a new breed of frameworks that target WebGL and Wasm and leave HTML behind. For more detailed thought, see [the status update on the issue](https://github.com/flutter/flutter/issues/47600#issuecomment-1016920547).
+
+We believe indexability (SEO) can be addressed without server-side rendering; see the issue above for a discussion of that topic.
+
+## [Automatic/scalable shader warm-up](https://github.com/flutter/flutter/issues/32170) (#32170)
+
+Shader warm-up is available on every platform. To automate the generation of shader warm-up files currently requires first manually writing automated tests, and then running these in CI.
+
+Our medium-term efforts are around removing the need for shader warm-up entirely, and therefore we are not currently planning on working on further automating the creation of shader warm-up files (no point working on something that we want to make irrelevant).
+
+If we manage to remove the need for shader warm-up entirely, we will close issue #32170. If not, we will reconsider whether additional efforts to automate shader warm-up file generation are warranted.
