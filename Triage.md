@@ -46,8 +46,6 @@ Some labels are used to track the flow of issues from the time they're filed unt
   * `assigned for triage`: The issue is assigned to a domain expert for further triage.
   * `has reproducible steps`: The issue has a reproducible case or test, Flutter doctor output, and usable stack traces if appropriate. It is actionable in the sense that it can be routed to a domain team for action.
   * `needs repro info`: We need more reproduction steps in order to be able to act on this issue.
-  * `passed first triage`: The issue has been reviewed by first-level triage and identified as valid and actionable (e.g., has reproducible steps for a bug, or clearly describes a feature request), and has been given an appropriate team label for further action. 
-  * `passed secondary triage`: The issue has been triaged by the relevant team.
   * `will need additional triage`: Assign this if you don't know how to route it to a team.
 
 Label the issue based on what area of the project the bug relates to:
@@ -176,6 +174,7 @@ Teams can use a variety of tools to prioritize bugs.
 * Teams should use the priority labels `P0`...`P6`.
 * Another tool is the [Projects](https://github.com/flutter/flutter/projects) page on GitHub. Feel free to create new projects as desired, and use it as you see fit.
 * If you like using milestones, we can create new milestones. Contact @Hixie if that's interesting to you.
+* The `passed secondary triage` label can be used to inidicate that the issue has been triaged by the relevant team.
 
 ## Engine
 
