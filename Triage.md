@@ -174,7 +174,7 @@ Teams can use a variety of tools to prioritize bugs.
 * Teams should use the priority labels `P0`...`P6`.
 * Another tool is the [Projects](https://github.com/flutter/flutter/projects) page on GitHub. Feel free to create new projects as desired, and use it as you see fit.
 * If you like using milestones, we can create new milestones. Contact @Hixie if that's interesting to you.
-* The `passed secondary triage` label can be used to inidicate that the issue has been triaged by the relevant team.
+* The `passed secondary triage` label can be used to indicate that the issue has been triaged by the relevant team.
 
 ## Engine
 
