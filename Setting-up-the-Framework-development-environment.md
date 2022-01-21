@@ -62,3 +62,4 @@ Next steps:
  * [[The flutter tool]], to learn about how the `flutter` command line tool works.
  * [[Style guide for Flutter repo]], to learn how to write code for Flutter.
  * [[Tree hygiene]], to learn about how to submit patches.
+ * [[Signing commits]], to configure your environment to securely sign your commits.
