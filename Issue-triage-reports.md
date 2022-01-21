@@ -1,5 +1,68 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-01-21
+
+### Notable issues
+
+- Invalid TextField scroll offset change on paste from toolbar [#96658](https://github.com/flutter/flutter/issues/96658)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 161, closed 58 (36.02%).
+
+In total closed 102 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 31.4% |
+| Fixed | 26.5% |
+| Invalid | 29.4% |
+| Solved | 12.7% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8, closed 4 (50%).
+
+In total closed 5 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 80% |
+| Invalid | 20% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 4, closed 2 (50%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 50% |
+| solved | 50% | 
+
+#### Flutterfire
+
+New Flutterfire issues triaged 31, closed 15 (48.39%).
+
+In total closed 22 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 22.73% |
+| fixed | 4.55% |
+| invalid | 50.00%|
+| no-response | 18.18% |
+| user | 4.55% |
+
+
 ## 2022-01-14
 
 ### Notable issues
