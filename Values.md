@@ -27,9 +27,11 @@ Caring about the developer means creating a joyful and productive development ex
 
 We respect our users, whoever they are.
 
+
 ## 📖 Openness
 
 Flutter is an open source project, in the full senses of the word: we are open to ideas, we are open to contributions, our code and our roadmap are open, our priorities are open. Transparency leads to a higher quality product. While the most active part of our team is currently primarily formed of employees from Google, we are growing and welcome anyone to join the team; at this point, the majority of people with commit access are not part of Google's Flutter team. Flutter's stewardship is managed by a team at Google.
+
 
 ## 💫 Maintaining quality
 
@@ -38,6 +40,12 @@ A mediocre product cannot be the best way to develop user interfaces, so we must
 This manifests in various ways. One is that we are feature-driven, not date-driven: we do not plan work based on deadlines. We may sometimes host events where we announce new features, but these events will announce features that have become available, rather than the features becoming available in order to be announced. This means sometimes a feature we intended to announce will slip and not be announced, but we prefer this to announcing a rushed feature.
 
 We may sometimes gate features behind flags until we are confident of their quality.
+
+
+## 🤣‬ Have fun doing it
+
+Last, but definitely not least, we want to make sure that our work environment is pleasant for everyone involved. Your health and the health of your family and friends is more important than Flutter. Our community [is welcoming](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md). We don't know everything; all of us can make mistakes.
+
 
 # Support
 
