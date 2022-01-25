@@ -14,7 +14,7 @@ This is a very low level API and is not suitable for beginners.
     * Replace `FLUTTER_ENGINE` with the SHA of the Flutter engine you wish to use.
   * You can also obtain that SHA from the [`engine.version`](https://github.com/flutter/flutter/blob/master/bin/internal/engine.version) file in your Flutter framework checkout. This allows you to exactly match the engine version with the Flutter framework version.
 * The Flutter engine API has no platform specific dependencies, has a stable ABI and is available in its entirety in a [single C header file available here](https://github.com/flutter/engine/blob/080fbcb1759e5916f0d6cdcdfd945c053320e6b3/shell/platform/embedder/embedder.h).
-* To use as a guide, you may use [this example embedder that uses GLFW](https://gist.github.com/chinmaygarde/8abf44921f7d87f6da7bf026267c4792) for window management and rendering.
+* To use as a guide, you may use [this example embedder that uses GLFW](https://github.com/flutter/engine/blob/main/examples/glfw/FlutterEmbedderGLFW.cc) for window management and rendering.
 
 While we do not object to teams creating custom builds of the Flutter engine for their purposes, we do not support this configuration. Not supporting it means that we do not commit to any timelines for fixing bugs that may come up in such a configuration, even for customers for which we would usually be willing to make commitments (see the [[Issue Hygiene]] page). It also means that we encourage teams to view such configurations as short-term solutions only and encourage teams to transition away from such configurations at the earliest possible opportunity.
 
