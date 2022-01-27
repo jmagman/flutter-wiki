@@ -92,7 +92,7 @@ These steps build the engine used by `flutter run` for Android devices.
 
 Run the following steps, from the `src` directory created in [Setting up the Engine development environment](https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment):
 
-1. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
+1. `git pull upstream main` in `src/flutter` to update the Flutter Engine repo.
 
 2. `gclient sync` to update dependencies.
 
@@ -141,7 +141,7 @@ set -ex
 
 cd ~/dev/engine/src/flutter
 git fetch upstream
-git rebase upstream/master
+git rebase upstream/main
 gclient sync
 cd ..
 
@@ -161,7 +161,7 @@ These steps build the engine used by `flutter run` for iOS devices.
 
 Run the following steps, from the `src` directory created in the steps above:
 
-1. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
+1. `git pull upstream main` in `src/flutter` to update the Flutter Engine repo.
 
 2. `gclient sync` to update dependencies.
 
@@ -188,7 +188,7 @@ See also [instructions for debugging the engine in a Flutter app in Xcode](https
 
 These steps build the desktop embedding, and the engine used by `flutter test` on a host workstation.
 
-1. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
+1. `git pull upstream main` in `src/flutter` to update the Flutter Engine repo.
 
 2. `gclient sync` to update your dependencies.
 
@@ -214,7 +214,7 @@ On Windows, ensure that the engine checkout is not deeply nested. This avoid the
 
 1. Make sure you have Visual Studio installed (non-Googlers only). [Debugging Tools for Windows 10](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools#small-classic-windbg-preview-logo-debugging-tools-for-windows-10-windbg) must be installed.
 
-2. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
+2. `git pull upstream main` in `src/flutter` to update the Flutter Engine repo.
 
 3. Ensure long path support is enabled on your machine. Launch PowerShell as an administrator and run:
 ```
@@ -269,7 +269,7 @@ Then checkout that git hash in step 2 under "Build the engine".
 1. Update the Flutter Engine repo:
 
 ```sh
-git -C $ENGINE_DIR/flutter pull upstream master
+git -C $ENGINE_DIR/flutter pull upstream main
 ```
 
 2. If you want to checkout a specific git revision:
@@ -378,7 +378,7 @@ You can also copy test debug symbols by using the `copy_debug_symbols.py` script
 
 ## Compiling for the Web
 
-For building the engine for the Web we use the [felt](https://github.com/flutter/engine/blob/master/lib/web_ui/dev/README.md) tool.
+For building the engine for the Web we use the [felt](https://github.com/flutter/engine/blob/main/lib/web_ui/dev/README.md) tool.
 
 To test Flutter with a local build of the Web engine, add `--local-engine=host_debug_unopt` to your `flutter` command, e.g.:
 
@@ -397,7 +397,7 @@ Compiling the web engine might take a few extra steps on Windows. Use cmd.exe an
 2. Make sure, depot_tools, ninja and python are installed and added to the path. Also set the following environment variable for depot tools:
    * `DEPOT_TOOLS_WIN_TOOLCHAIN = 0`
    * Tip: if you get a python error try to use Python 2 instead of 3
-3. `git pull upstream master` in `src/flutter` to update the Flutter Engine repo.
+3. `git pull upstream main` in `src/flutter` to update the Flutter Engine repo.
 4. `gclient sync` to update your dependencies. 
    * Tip: If you get a git authentication errors on this step try Git Bash instead
 5. `python .\flutter\tools\gn --unoptimized --full-dart-sdk` to prepare your build files.
@@ -410,7 +410,7 @@ flutter run --local-engine=host_debug_unopt -d chrome
 flutter test --local-engine=host_debug_unopt test/path/to/your_test.dart
 ```
 
-For testing the engine again use [felt](https://github.com/flutter/engine/blob/master/lib/web_ui/dev/README.md) tool 
+For testing the engine again use [felt](https://github.com/flutter/engine/blob/main/lib/web_ui/dev/README.md) tool 
 this time with felt_windows.bat.
 
 ```
