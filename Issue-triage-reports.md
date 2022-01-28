@@ -1,5 +1,70 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-01-28
+
+### Notable issues
+
+- [Android] App becomes unresponsive after switching back from background [#97346](https://github.com/flutter/flutter/issues/97346)
+- [video_player][IOS] VideoPlayerController.network is blocking the UI while loading [#97356](https://github.com/flutter/flutter/issues/97356)
+- [Android Studio BumbleBee 2021.1.1]: flutter doctor shows `CocoaPods not installed. Skipping pod install` [#97251](https://github.com/flutter/flutter/issues/97251)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 194, closed 64 (32.99%).
+
+In total closed 110 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 34.5% |
+| Fixed | 20.0% |
+| Invalid | 33.6% |
+| Solved | 11.8% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 11, closed 1 (9.09%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 50% |
+| Fixed | 50% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 4, closed 1 (25%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 100% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 25, closed 10 (40%).
+
+In total closed 28 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 14.29% |
+| fixed | 25.00% |
+| invalid | 14.29%|
+| no-response | 14.29% |
+| solution-provided | 10.71% | 
+| user | 17.86% |
+| wontfix | 3.57% |
+
 ## 2022-01-21
 
 ### Notable issues
