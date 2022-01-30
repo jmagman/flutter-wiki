@@ -8,10 +8,12 @@ The data is used by two tools:
 - The analysis server uses it to provide quick fixes (also known as code actions) in the IDE.
 - The `dart fix` command uses it to apply bulk edits to the code in a file or directory.
 
-The purpose of this document is to describe how to write the data used by these tools. It contains three sections:
+The purpose of this document is to describe how to write and test the data used by these tools. It contains four sections:
 - [Overview](#overview) provides an overview of how this feature is intended to be used and what kind of data can be expressed.
 - [Examples](#examples) provides examples of how to express some common kinds of changes.
 - [Reference](#reference) provides a complete definition of the data and how that data is used to update client code.
+- [Testing](#testing) provides a guide for how this data can be tested.
+
 
 ## Overview
 
@@ -29,6 +31,7 @@ The description of an [element](#element) and the [change](#change)s to that ele
 
 The changes are applied when an analysis of the client code produces diagnostics. For example, if a method is renamed then invocations of the old method will produce a diagnostic indicating that the method isn’t defined. This also works if the old method is still declared and marked as being deprecated because a diagnostic is also produced in that case. Because of that, we encourage you to add data for an API when the API is first deprecated. If the API doesn’t go through a deprecation period, then the changes should be added to the data when the changes are made.
 
+
 ## Examples
 
 This section provides examples of how to express some common kinds of changes.
@@ -41,7 +44,7 @@ As a result of always including both the old and new APIs in the examples, the e
 
 One of the most common API changes is to rename an element. In this section we'll show how to specify that a method has been renamed. Let's assume that your package defines a class `C` in the file `lib/c.dart` with a renamed method similar to the following:
 
-```
+```dart
 class C {
   @deprecated
   int oldName(String s) => newName(s);
@@ -52,7 +55,7 @@ class C {
 
 In the data file we need to specify which method was renamed, what it's old name was, and what it's new name is. We do that by writing a data file like the following:
 
-```
+```yaml
 version: 1
 transforms:
   - title: 'Rename to newName'
@@ -63,10 +66,11 @@ transforms:
       inClass: 'C'
     changes:
       - kind: 'rename'
-        newName: 'newName''
+        newName: 'newName'
 ```
 
 This tells the tools that any references to the method `C.oldName` should be updated to refer to the method `C.newName`. That includes both invocations of the method as well as references where the method is being torn off. It also tells the tool that any methods that used to override the old method need to be renamed so that they now override the new method.
+
 
 ## Reference
 
@@ -462,3 +466,40 @@ A _uri_ is a string containing a URI. The URI can be one of the following:
 - an abbreviated URI.
 
 An abbreviated URI is the portion of the URI following the name of the package containing the data file. For example, if a package named `sample` contains a library named `sample.dart` in the root of the `lib` directory, then within the data file for the package `sample` the URI for that library can be written as either `package:sample/sample.dart` or `sample.dart`.
+
+### test folder
+
+A _test folder_ contains dart files and their curresponding golden master `.expect` files that are used to test the data in the [data file](#data-file). These files are located in a folder (conventionally named `test_fixes`) in the package directory. See the [Testing](#testing) section for more documentation.
+
+You might find it useful to include a `README.md` file that has a link to this documentation for easy reference.
+
+
+## Testing
+
+This section provides a guide for testing data driven fixes.
+
+All the test files are contained in the [test folder](#test-folder). Every dart file has a golden counterpart file, which is named as `<dart-file-name>.dart.expect`.
+
+Every test has two parts:
+1. All possible usages of the public API that is changed by the data driven fix. This is contained in the dart file.
+2. All the usages in the dart file with the expected change applied. This is contained in the golden file.
+
+Extending on the example shown in [Rename a method](#rename-a-method), the change can be tested as below:
+```dart
+// test_fixes/C.dart
+import 'package:<package-name>/C.dart';
+
+C.oldName('Fix me'); // usage before the change.
+```
+
+```dart
+// test_fixes/C.dart.expect
+import 'package:<package-name>/C.dart';
+
+C.newName('Fix me'); // expected usage after the change.
+```
+
+To run these tests locally, execute the below command in the [test folder](#test-folder).
+```bash
+dart fix --compare-to-golden
+```
