@@ -182,33 +182,40 @@ Teams can use a variety of tools to prioritize bugs.
 
 > :warning: This triage happens on Mondays. The contents here are mirrored from the Google-internal document [go/flutter-engine-triage-playbook](http://go/flutter-engine-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
 
-#### Agenda
-
-*   All issues in severity classes [P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP0++-label%3A%22a%3A+desktop%22+), [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP1+-label%3A%22a%3A+desktop%22+) and [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP2+-label%3A%22a%3A+desktop%22+) need weekly review.
-*   Fix priorities of **_regressions_** found in the last three releases (currently [1.23](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+1.23%22+-label%3A%22a%3A+desktop%22+), [1.24](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+1.24%22+-label%3A%22a%3A+desktop%22+), [1.25](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+1.25%22+-label%3A%22a%3A+desktop%22+), [2.0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+2.0%22+-label%3A%22a%3A+desktop%22+), [2.1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+2.1%22+-label%3A%22a%3A+desktop%22+) and review each week).
-*   Assign priorities to unprioritized issues that have been [tagged as regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+regression%22++-label%3A%22a%3A+desktop%22+).
-*   Assign priorities to unprioritized issues that have been [tagged as flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22team%3A+flakes%22+-label%3A%22a%3A+desktop%22+).
-*   Assign priorities to unprioritized issues that have been [tagged as fatal crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+fatal+crash%22+-label%3A%22a%3A+desktop%22+) and [crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+crash%22+-label%3A%22a%3A+desktop%22+).
-*   Assign priorities to unprioritized issues that have been [tagged as performance issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+performance%22+-label%3A%22a%3A+desktop%22+).
-*   Catch [unprioritized issues not caught by other dragnets](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3A%22in+triage%22+-label%3A%22waiting+for+customer+response%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+-label%3Aplatform-web+sort%3Acreated-asc+-label%3A%22a%3A+desktop%22+) to assign priorities.
-*   Shed a tear for all the other issues.
-*   Pitch your favorite issues.
-
-#### Issue Quality Checklist
-
-*   Correct labels.
-*   If you had to remove the engine label, stop and move on to the next issue.
-*   If you had to remove a label that makes the bug no longer qualify for triage, stop and move onto the next issue.
-    *   For example, if you were looking for unprioritized regressions but the issue is not a regression, remove the label and move on.
-*   Hide low quality comments.
-*   If an assignee is not necessary or cannot be found, find someone on the team that can be CC-ed if you think it’s necessary. CC folks sparingly. If you CC folks too much they will understandably stop responding. Don’t CC the same person more than a few times per triage run.
+### Agenda
 
 
-#### Tips
 
-*   Restrict time spent on each issue. You don’t have to to fix the issue!
-    *   30 seconds for P0, P1, P2 and 10~15 seconds for the others seems to work.
-*   If the triage process cannot be completed within the allotted time, the process has failed. Perform items that could not be completed offline. Seek help.
+* All issues in severity classes [P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP0++-label%3A%22a%3A+desktop%22+), [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP1+-label%3A%22a%3A+desktop%22+) and [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3AP2+-label%3A%22a%3A+desktop%22+) need weekly review.
+* Fix priorities of **_regressions_** found in the releases still in the CP window (currently [2.8](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+2.8%22+-label%3A%22a%3A+desktop%22+) and [2.9](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+label%3A%22severe%3A+regression%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22found+in+release%3A+2.9%22+-label%3A%22a%3A+desktop%22+) and review each week).
+* Assign priorities to unprioritized issues that have been [tagged as regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+regression%22++-label%3A%22a%3A+desktop%22+).
+* Assign priorities to unprioritized issues that have been [tagged as flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22team%3A+flakes%22+-label%3A%22a%3A+desktop%22+).
+* Assign priorities to unprioritized issues that have been [tagged as fatal crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+fatal+crash%22+-label%3A%22a%3A+desktop%22+) and [crashes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+crash%22+-label%3A%22a%3A+desktop%22+).
+* Assign priorities to unprioritized issues that have been [tagged as performance issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3Aplatform-web+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+label%3A%22severe%3A+performance%22+-label%3A%22a%3A+desktop%22+).
+* Catch [unprioritized issues not caught by other dragnets](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aengine+-label%3A%22in+triage%22+-label%3A%22waiting+for+customer+response%22+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+-label%3Aplatform-web+sort%3Acreated-asc+-label%3A%22a%3A+desktop%22+) to assign priorities.
+* Shed a tear for all the other issues.
+* Pitch your favorite issues.
+
+
+### Issue Quality Checklist
+
+
+
+* Correct labels.
+* If you had to remove the engine label, stop and move on to the next issue.
+* If you had to remove a label that makes the bug no longer qualify for triage, stop and move onto the next issue.
+    * For example, if you were looking for unprioritized regressions but the issue is not a regression, remove the label and move on.
+* Hide low quality comments.
+* If an assignee is not necessary or cannot be found, find someone on the team that can be CC-ed if you think it’s necessary. CC folks sparingly. If you CC folks too much they will understandably stop responding. Don’t CC the same person more than a few times per triage run.
+
+
+### Tips
+
+
+
+* Restrict time spent on each issue. You don’t have to fix the issue!
+    * 30 seconds for P0, P1, P2 and 10~15 seconds for the others seems to work.
+* If the triage process cannot be completed within the allotted time, the process has failed. Perform items that could not be completed offline. Seek help.
 
 ### Pull Request Triage
 > :warning: This triage happens on Thursdays. The contents here are mirrored from the Google-internal [go/flutter-engine-pr-triage-playbook](http://go/flutter-engine-pr-triage-playbook) and may be stale. Do **NOT** make changes to the instructions here as they will be overwritten. :warning:
