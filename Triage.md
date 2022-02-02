@@ -137,7 +137,6 @@ We should (but currently do not) regularly check that the following PRs are not 
 
 During our weekly critical triage meeting, we check the following lists:
 
-* Apple's https://developer.apple.com/news/ page, for updates that might affect us.
 * [P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP0+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned, and progress should be happening actively. If no progress is happening and owner cannot work on it immediately (e.g. they're on vacation, they're busy with their day job, family reasons, etc), find a new owner.
 * [P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP1+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last few days) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on a P0 or other P1 but cannot work on it immediately, find a new owner.
 * [P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+label%3AP2+sort%3Aupdated-asc+-label%3A"team%3A+infra"): all bugs should be assigned. There should be a recent (last couple of weeks) update on the issue. Blockers to addressing the issue should be identified. If no progress is happening and owner is not working on another P0-P2 but cannot work on this one immediately, find a new owner.
@@ -337,6 +336,7 @@ If you come across a bug that is unrelated to the Web backend, remove the `platf
 
 ## iOS
 
+* Apple's https://developer.apple.com/news/ page, for updates that might affect us.
 * [iOS P0](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22P0%22+label%3A%22platform-ios%22)
 * [iOS P1](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-ios%22+label%3A%22P1%22)
 * [iOS P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22platform-ios%22+label%3A%22P2%22+-label%3A%22a%3A+platform-views%22+)
