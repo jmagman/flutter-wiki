@@ -33,7 +33,7 @@ For consistency, all CHANGELOG entries should follow a common style:
 - Use `##` for the version line. A version line should have a blank line before and after it.
 - Use `*` for individual items.
   - Exception: When editing an existing CHANGELOG that uses `-`, use that instead for local consistency.
-- Entries should use present tense indicative for verbs. For example, "Adds cool new feature.",
+- Entries should use present tense indicative for verbs, with "this version" as an implied subject. For example, "Adds cool new feature.",
   not "Add" or "Added".
 - Entries should end with a `.`.
 - Breaking changes should be introduced with `**BREAKING CHANGE**:`, or `**BREAKING CHANGES**:`
