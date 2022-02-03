@@ -274,7 +274,9 @@ If you come across a bug that is unrelated to material design, remove the `f: ma
 * [Cupertino P2](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A"f%3A+cupertino"+label%3A%22P2%22+-label%3A%22a%3A+platform-views%22+)
 
 ## Core Framework 
-(excluding Material Design, Cupertino, and Web-specific issues)
+(excluding Material Design, Cupertino, Desktop, and Web-specific issues)
+
+If you come across a bug that is unrelated to the framework, remove the `framework` label and leave a comment explaining why. That will send it back to triage.
 
 * [Framework PRs](https://github.com/flutter/flutter/pulls?q=is%3Aopen+is%3Apr+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+sort%3Aupdated-asc+)
 * [P0 bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Aupdated-asc+label%3A%22P0%22)
@@ -283,11 +285,11 @@ If you come across a bug that is unrelated to material design, remove the `f: ma
 * [Flakes](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Aupdated-asc+label%3A%22team%3A+flakes%22)
 * [Regressions](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Aupdated-asc+label%3A%22severe%3A+regression%22)
 * [Crash bugs](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Aupdated-asc+label%3A%22severe%3A+crash%22)
-* [Incoming issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Acreated-desc+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+)
+* [Incoming issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Acreated-desc+-label%3AP0+-label%3AP1+-label%3AP2+-label%3AP3+-label%3AP4+-label%3AP5+-label%3AP6+-label%3A%22a%3A+desktop%22+) - assign priorities (look at two pages, stop earlier if time runs out)
+
+If time allows:
 * [Popular issues](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Areactions-%2B1-desc+-label%3A%22severe%3A+new+feature%22) (look at the top 10ish)
 * [Popular feature requests](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3Aframework+-label%3A%22f%3A+material+design%22+-label%3A%22f%3A+cupertino%22+-label%3Aplatform-web+sort%3Areactions-%2B1-desc+label%3A%22severe%3A+new+feature%22) (look at the top 10ish)
-
-If you come across a bug that is unrelated to the framework, remove the `framework` label and leave a comment explaining why. That will send it back to triage.
 
 ## Tool
 
