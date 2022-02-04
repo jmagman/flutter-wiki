@@ -1,5 +1,71 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-02-04
+
+### Notable issues
+
+- [image_picker] Android application crashes with google_mobile_ads [#97267](https://github.com/flutter/flutter/issues/97267)
+- [stable 2.10] New material icons are not properly rendered [#97767](https://github.com/flutter/flutter/issues/97767)
+- [camera] Android 12 - camera plugin fails to take a photo, loads indefinitely [#92973](https://github.com/flutter/flutter/issues/92973)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 162, closed 70 (43.21%).
+
+In total closed 104 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 40.4% |
+| Fixed | 13.5% |
+| Invalid | 35.6% |
+| Solved | 10.6% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 9, closed 2 (22.22%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 50% |
+| Invalid | 50% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 4, closed 2 (50%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 50% |
+| invalid | 50% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 22, closed 8 (36.36%).
+
+In total closed 16 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 12.5% |
+| fixed | 12.5% |
+| invalid | 25.0%|
+| no-response | 18.8% |
+| solution-provided | 18.8% | 
+| user | 12.5% |
+
+
 ## 2022-01-28
 
 ### Notable issues
