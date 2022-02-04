@@ -269,7 +269,8 @@ Then checkout that git hash in step 2 under "Build the engine".
 1. Update the Flutter Engine repo:
 
 ```sh
-git -C $ENGINE_DIR/flutter pull upstream main
+git -C $ENGINE_DIR/flutter checkout main
+git -C $ENGINE_DIR/flutter pull -p upstream
 ```
 
 2. If you want to checkout a specific git revision:
@@ -301,7 +302,7 @@ $ENGINE_DIR/flutter/tools/gn --fuchsia --no-lto
   * `--unoptimized` disables C++ compiler optimizations. On macOS, binaries are emitted unstripped; on Linux, unstripped binaries are emitted 
   * NOTE: `--unoptimized` is broken on Fuchsia at the moment, see: https://github.com/flutter/flutter/issues/74872 to an `exe.unstripped` subdirectory of the build.
   * Add `--fuchsia-cpu=x64` or `--fuchsia-cpu=arm64` to target a particular architecture.  The default is x64.
-  * Add `--runtime-mode=debug` or `--runtime-mode=release` to switch between JIT and AOT builds.  These correspond to a vanilla Fuchsia build and a `--release` Fuchsia build respectively.  The default is debug/JIT builds.
+  * Add `--runtime-mode=debug` or `--runtime-mode=profile` to switch between JIT and AOT builds.  These correspond to a vanilla Fuchsia build and a `--release` Fuchsia build respectively.  The default is debug/JIT builds.
   * For Googlers, add the `--goma` argument when using goma, and add the `--xcode-symlinks` argument when using goma on macOS.
   * Remove `--no-lto` if you care about performance or binary size; unfortunately it results in a *much* slower build.
 
@@ -311,8 +312,8 @@ $ENGINE_DIR/flutter/tools/gn --fuchsia --no-lto
 ninja -C $ENGINE_DIR/out/fuchsia_debug_x64
 ``` 
 
-  * If you used `--unoptimized`, use `ninja -C out/fuchsia_debug_x64_unopt` instead.
-  * If you used `--runtime-mode=release`, use `ninja -C out/fuchsia_release_x64` instead.
+  * If you used `--unoptimized`, use `ninja -C out/fuchsia_debug_unopt_x64` instead.
+  * If you used `--runtime-mode=profile`, use `ninja -C out/fuchsia_profile_x64` instead.
   * For Googlers, consider also using the `--goma` flag with `gn`, then building with `autoninja` to parallelize the build with Goma.
 
 ### Deploy to Fuchsia
@@ -338,10 +339,10 @@ First copy the `flutter_runner` binary itself to your Fuchsia checkout. For stan
 cp $ENGINE_DIR/out/fuchsia_debug_x64/flutter_jit_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/debug/jit/flutter_jit_runner-0.far
 ```
 
-For `--release` builds (you must build Flutter with `--runtime-mode=release`):
+For `--release` Fuchsia builds (you must build Flutter with `--runtime-mode=profile`):
 
 ```sh
-cp $ENGINE_DIR/out/fuchsia_release_x64/flutter_aot_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_aot_runner-0.far
+cp $ENGINE_DIR/out/fuchsia_profile_x64/flutter_aot_runner-0.far $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/profile/aot/flutter_aot_runner-0.far
 ```
 
 If you are changing the native hooks in `dart:ui`, `dart:zircon`, or `dart:fuchsia` you'll also want to update the `flutter_runner_patched_sdk` that is used in your fuchsia checkout (note the use of AOT/release in the destination, that is intentional).  Run:
