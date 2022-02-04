@@ -26,14 +26,14 @@ In total closed 104 issues during the week.
 
 #### Flutter/website
 
-New Flutter website issues triaged 9, closed 2 (22.22%).
+New Flutter website issues triaged 10, closed 3 (30%).
 
 In total closed 2 issues during the week.
 
 | Reason for closing  |  |
 | -- | -- |
-| Duplicate  | 50% |
-| Invalid | 50% |
+| Duplicate  | 33.3% |
+| Invalid | 66.7% |
 
 #### dart-lang/site-www
 
