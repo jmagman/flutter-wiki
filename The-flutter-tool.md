@@ -87,8 +87,8 @@ You can also set the environment variable `$FLUTTER_ENGINE` instead of specifyin
 The `--local-engine` should specify the build of the engine to use, e.g. a profile build for Android, a debug build for Android, or whatever. It must match the other arguments provided to the tool, e.g. don't use the `android_debug_unopt` build when you specify `--release`, since the Debug build expects to compile and run Dart code in a JIT environment, while `--release` implies a Release build which uses AOT compilation.
 
 Additionally if you've modified the Dart sources in your engine,
-you will need to add a `dependency_overrides` section to point to your
-modified `package:sky_engine` and `package:sky_services` to the
+you will need to add a `dependency_overrides` section pointing to your
+modified `package:sky_engine` to the
 `pubspec.yaml` for the flutter app you're using the custom engine
 with. A typical example would be:
 
@@ -96,8 +96,6 @@ with. A typical example would be:
 dependency_overrides:
   sky_engine:
     path: /path/to/flutter/engine/out/host_debug/gen/dart-pkg/sky_engine
-  sky_services:
-    path: /path/to/flutter/engine/out/host_debug/gen/dart-pkg/sky_services
 ```
 
 Replace `host_debug` with the actual build that you want to use (similar to `--local-engine`, but typically
