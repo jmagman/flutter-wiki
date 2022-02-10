@@ -10,7 +10,17 @@ To ensure that you have the latest stable version with the hotfixes listed below
 $ flutter channel stable
 $ flutter upgrade
 ```
-
+## Flutter 2.10 Changes
+### [2.10.1](https://github.com/flutter/flutter/releases/tag/2.10.1) (February 9, 2022)
+This hotfix release addresses the following issues:
+ * [flutter/94043](https://github.com/flutter/flutter/issues/94043) - Autofill does not work in `TextField`.
+ * [flutter/96411](https://github.com/flutter/flutter/issues/96411) - Safari: Unable to enter text into `TextField`.
+ * [flutter/96661](https://github.com/flutter/flutter/issues/96661) - Platform views throw fatal exception: Methods marked with @UiThread must be executed on the main thread.
+ * [flutter/97103](https://github.com/flutter/flutter/issues/97103) - Images become corrupted when using CanvasKit.
+ * [flutter/97679](https://github.com/flutter/flutter/issues/97679) - Don't remove overlay views when the rasterizer is being torn down.
+ * [dart/48301](https://github.com/dart-lang/sdk/issues/48301) - Avoid speculative conversion in ffi Pointer.asTypedList.
+### [2.10.0](https://github.com/flutter/flutter/releases/tag/2.10.0) (February 3, 2022)
+Initial stable release.
 ## Flutter 2.8 Changes
 ### [2.8.1](https://github.com/flutter/flutter/releases/tag/2.8.1) (December 16, 2021)
 This hotfix release addresses the following issues:
