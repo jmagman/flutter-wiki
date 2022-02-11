@@ -1,5 +1,71 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-02-11
+
+### Notable issues
+
+- [stable 2.10] Snackbar with a BackdropFilter blurs entire screen [#98205](https://github.com/flutter/flutter/issues/98205)
+- TabController does not consistently update TabBarViews when same controller is used [#98087](https://github.com/flutter/flutter/issues/98087)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 232, closed 84 (36.21%).
+
+In total closed 136 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 30.9% |
+| Fixed | 19.9% |
+| Invalid | 31.6% |
+| Solved | 17.6% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 9, closed 4 (44.44%).
+
+In total closed 4 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 25% |
+| Fixed | 25% |
+| Invalid | 50% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 3, closed 1 (33.33%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 50% |
+| invalid | 50% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 25, closed 10 (40%).
+
+In total closed 26 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 19.23% |
+| fixed | 7.69% |
+| invalid | 15.38%|
+| no-response | 34.62% |
+| solution-provided | 11.54% | 
+| user | 11.54% |
+
+
 ## 2022-02-04
 
 ### Notable issues
