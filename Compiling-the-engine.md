@@ -65,6 +65,8 @@ Depending on the platform you are making changes for, you may be interested in a
     require an Xcode-vended SDK or toolchain) locally, you can have the build create and
     use symlinks by adding the `--xcode-symlinks` argument to the `flutter/tools/gn`
     wrapper script or `export FLUTTER_GOMA_CREATE_XCODE_SYMLINKS=1` to your bash/zsh/whatever rc.
+  - If you run into errors regarding too many open file handles, follow the directions in the
+    _How to install goma_ sections of [go/ma](http://go/ma).
   - If you run into `compiler binary hash mismatch` errors and local fallback builds while
     trying to build using Goma, then Goma is most likely using an RBE that doesn't host the
     compiler binaries that Flutter Engine supports building with. Try setting the following
