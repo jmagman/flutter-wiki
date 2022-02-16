@@ -1043,7 +1043,7 @@ For examples, prefer `toolbar`, `scrollbar`, but `appBar` ('app bar' in document
 
 Similarly, prefer `offstage` rather than `offStage`.
 
-Avoid using class names with `iOS` when possible. The capitalization of `iOS` is supposed to be exactly that, but that doesn't work well with camelCase and even less with UpperCamelCase; use alternatives like "Cupertino" or "UIKit" instead when possible. If you really really must use "iOS" in an identifier, capitalize it to `IOS`. Whether or not the exception as written applies to "iOS" is debatable, but `IOS` is consistent with Dart APIs, and the alternatives (`IOs`, `Ios`) are even more jarring. (Previous versions of this guide incorrectly indicated that `Ios` was the correct capitalization when necessary; this form should not be used in new code.)
+Avoid using class names with `iOS` when possible. The capitalization of `iOS` is supposed to be exactly that, but that doesn't work well with camelCase and even less with UpperCamelCase; use alternatives like "Cupertino" or "UIKit" instead when possible. If you really really must use "iOS" in an identifier, capitalize it to `IOS`. Whether or not https://dart.dev/guides/language/effective-dart/style#do-capitalize-acronyms-and-abbreviations-longer-than-two-letters-like-words[the two-letter exception] applies to "iOS" is debatable, but `IOS` is consistent with Dart APIs, and the alternatives (`IOs`, `Ios`) are even more jarring. (Previous versions of this guide incorrectly indicated that `Ios` was the correct capitalization when necessary; this form should not be used in new code.)
 
 
 ### Avoid double negatives in APIs
