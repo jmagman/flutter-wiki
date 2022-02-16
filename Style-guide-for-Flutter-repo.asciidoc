@@ -1035,13 +1035,15 @@ Prefer compound words over "cute" spellings to avoid conflicts with reserved wor
 
 ### Capitalize identifiers consistent with their spelling
 
+In general, we use https://dart.dev/guides/language/effective-dart/style#identifiers[Dart's recommendations]'s for naming identifiers. Please consider the following additional guidelines:
+
 If a word is correctly spelled (according to our sources of truth as described in the previous section) as a single word, then it should not have any inner capitalization or spaces.
 
 For examples, prefer `toolbar`, `scrollbar`, but `appBar` ('app bar' in documentation), `tabBar` ('tab bar' in documentation).
 
 Similarly, prefer `offstage` rather than `offStage`.
 
-Avoid using class names with `iOS` when possible, since that would capitalize as `IOS` (due to the https://dart.dev/guides/language/effective-dart/style#do-capitalize-acronyms-and-abbreviations-longer-than-two-letters-like-words[two-letter abbreviation exception] to normal Dart naming rules), which is jarring; use alternatives like "Cupertino" or "UIKit" instead when possible. (Previous versions of this guide incorrectly indicated that `Ios` was the correct capitalization when necessary; this form should not be used in new code.)
+Avoid using class names with `iOS` when possible. The capitalization of `iOS` is supposed to be exactly that, but that doesn't work well with camelCase and even less with UpperCamelCase; use alternatives like "Cupertino" or "UIKit" instead when possible. If you really really must use "iOS" in an identifier, capitalize it to `IOS`. Yes, this is arguably not really what the Dart rules suggest, but the alternatives (`IOs`, `Ios`) are even more jarring. (Previous versions of this guide incorrectly indicated that `Ios` was the correct capitalization when necessary; this form should not be used in new code.)
 
 
 ### Avoid double negatives in APIs
