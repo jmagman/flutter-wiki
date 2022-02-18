@@ -1,5 +1,62 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-02-18
+
+### Notable issues
+
+- [ios][regression] Visual glitch when scrolling a list in a Scaffold that has a Material and Container as bottomNavigationBar  [#98739](https://github.com/flutter/flutter/issues/98739)
+- Failing EditableText vertical caret movement tests [#98592](https://github.com/flutter/flutter/issues/98592)
+- [android][platform_views] Views are not properly updated on Android Q [#98722](https://github.com/flutter/flutter/issues/98722)
+- [windows] Crash: Can't locate continuation PC for deoptid 6 within package:flutter/src/widgets/framework.dart_StatefulElement_get__state@31042623 [#98682](https://github.com/flutter/flutter/issues/98682)
+- Issue with background isolate when obfuscating Android APK / AppBundle [#98475](https://github.com/flutter/flutter/issues/98475)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 223, closed 90 (40.36%).
+
+In total closed 146 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 33.6% |
+| Fixed | 15.1% |
+| Invalid | 37.7% |
+| Solved | 13.7% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 5, closed 0 (0%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed  | 100% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 0 (0%).
+
+#### Flutterfire
+
+New Flutterfire issues triaged 31, closed 8 (25.81%).
+
+In total closed 14 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 21.43% |
+| fixed | 7.14% |
+| invalid | 35.71%|
+| no-response | 14.29% |
+| solution-provided | 21.43% | 
+
 ## 2022-02-11
 
 ### Notable issues
