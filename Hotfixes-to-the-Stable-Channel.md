@@ -11,6 +11,12 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 ## Flutter 2.10 Changes
+### [2.10.2](https://github.com/flutter/flutter/releases/tag/2.10.2) (February 18, 2022)
+ * [flutter/95211](https://github.com/flutter/flutter/issues/95211) - Transform animation with BackdropFilter is causing a crash.
+ * [flutter/98155](https://github.com/flutter/flutter/issues/98155) - App crashes after upgrading to 2.10.x using webview + video_player plugin.
+ * [flutter/98361](https://github.com/flutter/flutter/issues/98361) - Error in DL bounds calculations causes incorrect SVG rendering.
+ * [flutter/97767](https://github.com/flutter/flutter/issues/97767) - New material icons are not properly rendered.
+ * [flutter/95711](https://github.com/flutter/flutter/issues/95711) - Linux builds default to building GLFW.
 ### [2.10.1](https://github.com/flutter/flutter/releases/tag/2.10.1) (February 9, 2022)
 This hotfix release addresses the following issues:
  * [flutter/94043](https://github.com/flutter/flutter/issues/94043) - Autofill does not work in `TextField`.
