@@ -31,6 +31,12 @@ Performance bugs should have timeline traces.
 
 Crashes should have crash logs with a Flutter version so that the [flutter-symbolizer-bot](https://github.com/flutter-symbolizer-bot) can do its work (see also [[Crashes]]).
 
+#### Unactionable bugs with unusual symptoms
+
+As discussed above, if a filed issue is unactionable due to vagueness or a lack of steps to reproduce, it should be closed, because we're never going to get to it if we don't know what the problem is given that we have many, _many_ other bugs that we _can_ make progress on today.
+
+In the specific case of a bug with unclear steps to reproduce but very specific symptoms, we like to leave the issue open so that other people having the same problem can congregate together and maybe together we can figure out the underlying cause. This only applies to issues that have very specific symptoms like a specific and unusual crash signature, a specific and unusual error message, or other unusual and recognizable symptoms, and where some effort was made on the part of the bug reporter to determine the cause (even if that effort was ultimately futile).
+
 ### Duplicates
 
 If you recognize that this bug is a duplicate of an existing bug, add a reference to that bug in a comment, then close the bug. Skip the remaining steps. As you triage more and more bugs you will become more and more familiar with the existing bugs and so you will get better and better at marking duplicates in this way.
