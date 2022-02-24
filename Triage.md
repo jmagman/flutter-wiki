@@ -23,6 +23,13 @@ If the issue describes something that you know for a fact has been **fixed** sin
 
 If the bug is **clear enough** for us to act on it, continue with the following steps. To reach this step, the bug should be actionable, with clear steps to reproduce the problem. We have enough bugs filed that we will not run out of work any time soon; therefore, it is reasonable to be quite aggressive in establishing if a bug is sufficiently clear.
 
+#### Artifacts
+
+Ideally every issue would have a sample app that demonstrated the problem.
+
+Performance bugs should have timeline traces.
+
+Crashes should have crash logs with a Flutter version so that the [flutter-symbolizer-bot](https://github.com/flutter-symbolizer-bot) can do its work (see also [[Crashes]]).
 
 ### Duplicates
 
