@@ -1,5 +1,68 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-02-25
+
+### Notable issues
+
+- Using SystemChrome.setEnabledSystemUIMode in profile/release mode leads to blank screen (This only reproduces on `stable`) [#98973](https://github.com/flutter/flutter/issues/98973)
+- [Android] App crashes when rotating screen with drawer open (Profile & Release) (This only reproduces on `stable`) [#98955](https://github.com/flutter/flutter/issues/98955)
+- Ternary expression behaviour differs in debug mode from profile mode or release mode. A fix is in flight per [this comment](https://github.com/flutter/flutter/issues/98967#issuecomment-1050155558) [#98967](https://github.com/flutter/flutter/issues/98967)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 162, closed 70 (43.21%).
+
+In total closed 110 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 28.2% |
+| Fixed | 16.4% |
+| Invalid | 42.7% |
+| Solved | 12.7% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 9, closed 2 (22.22%).
+
+In total closed 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Invalid  | 100% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 1, closed 0 (0%).
+
+In total close 2 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| fixed | 50% |
+| solved | 50% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 21, closed 7 (33.33%).
+
+In total closed 10 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 20% |
+| fixed | 10% |
+| invalid | 40%|
+| no-response | 10% |
+| solution-provided | 20% | 
+
 ## 2022-02-18
 
 ### Notable issues
