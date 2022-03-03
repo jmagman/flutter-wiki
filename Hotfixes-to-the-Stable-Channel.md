@@ -11,6 +11,10 @@ $ flutter channel stable
 $ flutter upgrade
 ```
 ## Flutter 2.10 Changes
+### [2.10.3](https://github.com/flutter/flutter/releases/tag/2.10.3) (March 02, 2022)
+ * [flutter/98973](https://github.com/flutter/flutter/issues/98973) - Deadlock in application startup in profile/release mode.
+ * [flutter/98739](https://github.com/flutter/flutter/issues/98739) - ios: Visual glitch when scrolling a list in a Scaffold that has a Material and Container as bottomNavigationBar.
+ * [flutter/97086](https://github.com/flutter/flutter/issues/97086) - Windows: Fail to launch app in debug mode.
 ### [2.10.2](https://github.com/flutter/flutter/releases/tag/2.10.2) (February 18, 2022)
  * [flutter/95211](https://github.com/flutter/flutter/issues/95211) - Transform animation with BackdropFilter is causing a crash.
  * [flutter/98155](https://github.com/flutter/flutter/issues/98155) - App crashes after upgrading to 2.10.x using webview + video_player plugin.
