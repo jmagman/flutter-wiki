@@ -1,5 +1,68 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-03-04
+
+### Notable issues
+
+- Flutter App freezes after animating for a few seconds [#99288](https://github.com/flutter/flutter/issues/99288)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 199, closed 68 (34.17%).
+
+In total closed 127 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 23.6% |
+| Fixed | 22.8% |
+| Invalid | 40.2% |
+| Solved | 13.4% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8, closed 4 (50%).
+
+In total closed 7 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 28.6% |
+| Fixed | 42.9% |
+| Invalid | 28.6% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 1 (100%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 1 (20%).
+
+In total close 1 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 100% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 26, closed 8 (30.77%).
+
+In total closed 24 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 4.17% |
+| fixed | 25.00% |
+| invalid | 20.83%|
+| no-response | 33.33% |
+| solution-provided | 16.67% | 
+
+
 ## 2022-02-25
 
 ### Notable issues
