@@ -334,4 +334,4 @@ Assuming your `flutter` and `engine` working directories are siblings, you can r
 
 ## Web engine
 
-Web tests are run via the `felt` command. More details can be found in [lib/web_ui/README.md](https://github.com/flutter/engine/blob/master/lib/web_ui/README.md).
+Web tests are run via the `felt` command. More details can be found in [lib/web_ui/README.md](https://github.com/flutter/engine/blob/master/lib/web_ui/README.md#hacking-on-the-web-engine).
