@@ -160,3 +160,30 @@ At some later point the deprecated method can be cleaned up by:
 3. Updating all the implementations to use the new major version, removing the override of the deprecated methods.
 
 This cleanup step is low priority though; deprecated methods in a platform interface should be largely harmless, as it's an API with very few direct customers. It's actually preferable to wait quite some time before doing this, as it gives any unendorsed third-party implementations that may exist more time to adapt to the change without disruption.
+
+## Supported Flutter versions
+
+flutter/plugins and flutter/packages has a general policy of supporting the latest `stable` version of Flutter, as well as the current `master`. In practice, many packages often support older versions as well, as minimum version requirements are generally only updated when there is a specific need, such as using a new Flutter feature.
+- One exception is new packages which require features that aren't yet available on `stable`. In this rare case, discuss with `#hackers-ecosystem` as it requires adding conditional logic to the CI scripts.
+
+Most CI only runs against those two version. There are only minimal tests of versions older that current `stable` (currently analysis only, for the previous two stable versions of Flutter).
+
+### When to update the required version
+
+- If you know your change requires a feature of Flutter that was added recently, you should update the minimum version accordingly. In particular, if your change was originally written against `master` and had to wait until a change reached `stable`, that means you need to update the minimum version. (Adding a constraint update as soon as the PR fails on `stable` tests is a good way to make sure you don't forget.)
+    - If your change requires a newer version of Flutter than is available on `stable`, and it can't wait until that feature reaches `stable`, ask in `#hackers-ecosystem` to see if there's a good solution.
+- If your change fails a `legacy-*` CI test, update the minimum version accordingly.
+
+The ecosystem team may also mass-update minimum versions from time to time, to reduce the potential of breaking untested versions (see below). In general, this should use a minimum version somewhat older than the current `stable`, but in some special cases may use the current stable version instead.
+
+### Handling breakage in old versions
+
+Sometimes a change to a package accidentally breaks older version of Flutter; because the full CI test suite does not run anything older than the current stable, such breakage will not necessarily be caught by CI, and will only be discovered via issue reports. When that happens there are several options:
+- If the breakage is found quickly enough that retraction is still possible:
+    - Retract the latest release.
+    - Release a new version that is identical except for updating the minimum Flutter version.
+  This minimizes disruption to developers using old versions of Flutter, with no effect on people using current versions.
+- Otherwise, there are several options; discuss with `#hackers-ecosystem` to decide which makes sense for the specific case:
+    1. Release a new update that restores compatibility with the old version. This should generally only be done if it's trivial to do so.
+    1. Release a revert, then release a new version that reverts the revert but with a constraint update. Consider this option if the number of people affected is likely to be large (e.g., a popular plugin is broken for the previous stable version of Flutter shortly after a stable release). This has essentially the same outcome as retraction, but can be done at any time.
+    1. Document the need to pin an old version of the package in the issue, and close it (along with making a `## NEXT` PR for the package that updates its minimum version, to document the correct reality). This will require all affected users to find the issue to learn how to fix it, so should generally only be done if the number of people affected is likely to be small (e.g., when it only affects versions of Flutter that are several stable releases behind).
