@@ -10,22 +10,19 @@ As we get into the stable release period, the unified group will still need to c
 
 # Process Flow
 
-Assuming X.Y has been released in beta or stable, labels are created as “**cp: X.Y**” by the TPM team.
-
 1. Issue/bug is filed 
-    1. “cp: X.Y” can be added here by filer or community
+    1. “cp: review” can be added here by filer or community
 1. Issue enters triage process
     1. Top level triage	
        1. Applies appropriate team label
-       1. Can apply “cp: X.Y” label if it appears to have appropriate severity or impact.
+       1. Can apply “cp: review” label if it appears to have appropriate severity or impact.
     1. Engineering triage
-       1. Milestone applied
-       1. Can apply “cp: X.Y” label if it appears to have appropriate severity or impact.
+       1. Can apply “cp: review” label if it appears to have appropriate severity or impact.
        1. If Cherrypick request label is on the issue, agree on severity/impact and prioritization with the Cherrypick review
   1. **Issue is fixed and checked into master.**
      1. Pre and post-submit tests executed as normal for verification.
      1. Cherrypick reviewers may influence prioritization depending on the severity of the issue during the bug fixing process.
-1. Fixed issue with “cp: X.Y” is reviewed by the individual Cherrypick reviewer(s).
+1. Fixed issue with “cp: review” is reviewed by the individual Cherrypick reviewer(s).
    1. TPgM/PM/Eng involved to make a decision based on factors that are different for beta and stable and the age of the branch.
       1. **Impact criteria:** 
          1. Early beta stabilization (first 2 weeks of beta): High impact P1/P0 affecting multiple customers / would be a P0 in stable / regressions / security issues
