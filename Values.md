@@ -79,4 +79,5 @@ _See also:_
 
 * [Code of Conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md)
 * [Contributor Guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md)
+* [Flutter's Culture of Inclusivity](https://flutter.dev/culture)
 * [Flutter culture and how to preserve it](https://medium.com/flutter/flutter-culture-and-how-to-preserve-it-436b4ed1031d)
