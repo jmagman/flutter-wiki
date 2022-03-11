@@ -1,5 +1,74 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-03-11
+
+### Notable issues
+
+- Displaying a Material icon from a Text widget with MaterialIcons fontFamily is not working in hotfix 2.10.3 [#99808](https://github.com/flutter/flutter/issues/99808)
+- TextField hint and input text go outside of given constraints. [#99914](https://github.com/flutter/flutter/issues/99914)
+- [Windows][Desktop]: debug build of template app not working using VS2019. Throwing Error `waiting for a debug connection: The log reader stopped unexpectedly, or never started` [#99915](https://github.com/flutter/flutter/issues/99915)
+- [Web][iOS]: Text field selection with obscuredText: true has grey selection [#99918](https://github.com/flutter/flutter/issues/99918)
+- [Web]: A multiline TextFormField doesn't trigger onFieldSubmitted [#99900](https://github.com/flutter/flutter/issues/99900)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 190, closed 52 (27.37%).
+
+In total closed 101 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 26.7% |
+| Fixed | 20.8% |
+| Invalid | 29.7% |
+| Solved | 22.8% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 10, closed 2 (20%).
+
+In total closed 4 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 50% |
+| Fixed | 50% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 1, closed 1 (100%).
+
+In total close 4 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 50% |
+| fixed | 50% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 24, closed 7 (29.17%).
+
+In total closed 25 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 8% |
+| fixed | 20% |
+| invalid | 36%|
+| no-response | 16% |
+| solution-provided | 16% | 
+| user | 4% |
+
+
+
 ## 2022-03-04
 
 ### Notable issues
