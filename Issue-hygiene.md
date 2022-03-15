@@ -48,6 +48,8 @@ The [`P5`](https://github.com/flutter/flutter/labels/P5) label indicates issues 
 
 The [`P6`](https://github.com/flutter/flutter/labels/P6) label indicates valid issues that are unlikely to ever be worked on. We use "thumbs-up" on these issues to promote them to `P5` or higher based on demand.
 
+During normal work weeks (e.g. not around the new year), issues marked P0-P2 get audited weekly during the "critical triage" meeting to ensure we do not forget about them. Issues marked P0 should get updates multiple times a day, and issues marked P1 should get updates multiple times a week, to keep the rest of the team (and anyone affected by the issues) appraised of progress. Updates might be less frequent when a fix is blocked on some other issue and thus progress cannot be made, but even then, updates on P0 and P1 issues should not be less frequent than weekly.
+
 _See also: [[Triage]], which describes how we go through bugs and make sure they are sorted accordingly._
 
 
@@ -114,69 +116,8 @@ We ignore other emoji reactions.
 
 ## Milestones
 
-We use [several milestones](https://github.com/flutter/flutter/milestones).
+We do not use GitHub milestones to track work.
 
-### Release milestones
-
-Milestones map to beta releases, which we generally branch once a month, in the week that has the first Monday of the month.
-
-Milestones will be called ‘MM beta release (X.Y),’ where MM is the month that the work will be done (the month previous to the beta branch point / release.)  X.Y will reflect the major/minor version of the corresponding beta release.  Flutter & Dart will have coinciding milestones with the same name (but different X.Y) 
-
-Once a quarter (or so), this Beta milestone will map to a stable release.
-
-See the [[Flutter build release channels]] page for more details about our release schedule.
-
-#### What issues go on a release milestone?
-
-**During development time (pre branch cut):**
-
-1. Features that we’re planning* to ship in that release.
-    - As we near branch cut, eng / leads / product will make decisions of readiness for feature to launch or if it will miss (and may need to be backed out or flagged off)
-
-2. Issues that need to be fixed on the next beta (or possibly stable) release
-    - 'beta blockers' or 'stable blockers'
-    - regressions
-    - bugs on new feature work
-
-3. Issues that we’re targeting* to get fixed in the next beta release.
-These are things that are not features the eng teams would like to get out in a given release.  These can be prioritized with product support as well.
-    - backlog pruning / upvoted issues
-    - partner launches / blocking issues
-    - initiative(s) grouping issues to improve a certain area of the product
-
-**During stabilization time (post branch cut):**
-
-No more feature development work, any unfinished features should have been disabled / backed out as mentioned above.
-
-1. Issues that need to be fixed on the next beta (or possibly stable) release
-    - 'beta blockers' or 'stable blockers'
-    - regressions
-    - bugs on new feature work
-      - if there are significant bugs for a new feature, it should be disabled / backed out rather than fixed on branch.  
-
-***Does having a feature / issue on a new release milestone mean it has to or is expected to ship on that release?  Do I have to put a milestone on my issues or features?**
-
-No.  
-
-However, if you’d like to put your features / issues on a release milestone, the program management team will offer a service to ensure you’re aware of dates related to the releases and what the means to the work related to those issues.  An example of this is discussing feature readiness as we near a branch cut, and whether you feel the feature is ready or if it needs more time (and then move to an appropriate milestone and ensure any work that has landed that needs to be flagged or backed out is tracked.)
-
-Quality and doneness of a feature indicates when it is ready to ship, and it should not be rushed to meet release dates
-
-
-In some cases, a month may have a feature-specific milestone in addition to the general month 
-milestone. This is for tracking burndowns in [ZenHub](https://www.zenhub.com/); some subteams
-are using burndown charts against specific completion milestones and need their own milestone
-for tracking.
-
-### Other milestones
-
-The ["Unassigned customer work"](https://github.com/flutter/flutter/milestone/31) milestone indicates issues that we are intending to fix
-soon but for which we don't yet have an owner. The ["Declined customer request"](https://github.com/flutter/flutter/milestone/32) milestone
-indicates an issue that we do not intend to address on the timescale requested (typically
-this means not for 6+ months).
-
-If you are a customer and your bug is placed in the "Declined customer request"
-milestone, please escalate with your team contact.
 
 ## Assigning Issues
 
