@@ -6,6 +6,8 @@ _If you are a contributor or team of contributors with long-term plans for [cont
 
 # 2022
 
+_You may also be interested in [Google's discussion of its strategy for Flutter in 2022](https://medium.com/flutter/flutter-in-2022-strategy-and-roadmap-8c5eaf7c4275)._
+
 ## Areas of Focus
 
 ### Developer experience
