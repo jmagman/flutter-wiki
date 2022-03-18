@@ -4,13 +4,17 @@ When new Android versions become available, the following steps should be taken 
 
 build/config/android/config.gni: Edit default_android_sdk_version and  default_android_sdk_build_tools_version
 
-## CIPD:
+## SDK and other dependencies:
 
-Flutter now includes a script to download, package, and upload the Android SDK to CIPD. These CIPD packages are then used as dependencies by the Flutter engine and recipes so that there is a stable archived version of the Android SDK to depend on. The script is located in the Flutter engine repo under `tools/android-sdk/create_cipd_packages.sh`. Edit `tools/android-sdk/packages.txt` to refer to the updated versions you want. The format for each line in packages.txt is `<package_name>:<subdirectory_to_upload>`. The script must be run on a Linux or Mac host. Run:
+Flutter now includes a script to download, package, and upload the Android SDK to CIPD. These CIPD packages are then used as dependencies by the Flutter engine and recipes so that there is a stable archived version of the Android SDK to depend on. The script is located in the Flutter engine repo under `tools/android-sdk/create_cipd_packages.sh`.
+
+Edit `tools/android-sdk/packages.txt` to refer to the updated versions you want. The format for each line in packages.txt is `<package_name>:<subdirectory_to_upload>`. Typically, each <package_name> should be updated to the latest available version which can be found with the `sdkmanager --list --include_obsolete`. `sdkmanager` can be found in your `commandline-tools` package of the android sdk.
+
+The script must be run on a Linux or Mac host. Run:
 
     `$ ./tools/android-sdk/create_cipd_packages.sh <new_version_tag> <path_to_your_local_android_sdk>`
 
-This script will download and re-upload the entire SDK, so it may take a long time to complete. `cmdline-tools` should be installed in your local sdk as the script uses `sdkmanager`. Once the CIPD packages are finished uploading, you 
+This script will download and re-upload the entire SDK, so it may take a long time to complete. `cmdline-tools` should be installed in your local sdk as the script uses `sdkmanager`. Once the CIPD packages are finished uploading, you can update the sdk version tag used in `.ci.yaml`, `DEPS`, and elsewhere.
 
 It is no longer recommended to upload CIPD android sdk packages manually, but if it must be done, run the following commands to zip and upload each package to CIPD:
 
