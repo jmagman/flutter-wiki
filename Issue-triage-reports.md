@@ -1,5 +1,70 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-03-18
+
+### Notable issues
+
+- [macOS][m1] App crashes in release mode upon app launch [#100348](https://github.com/flutter/flutter/issues/100348)
+- [Windows]: Null Safety Migration tool 404 error [#100134](https://github.com/flutter/flutter/issues/100134)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 224, closed 79 (35.27%).
+
+In total closed 114 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 21.1% |
+| Fixed | 14.9% |
+| Invalid | 47.4% |
+| Solved | 16.7% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 12, closed 1 (8.33%).
+
+In total closed 9 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 11.1% |
+| Fixed | 88.9% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 4, closed 2 (50%).
+
+In total closed 1 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid | 100% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 29, closed 9 (31.03%).
+
+In total closed 25 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 8% |
+| fixed | 16% |
+| invalid | 24%|
+| no-response | 40% |
+| solution-provided | 8% | 
+| user | 4% |
+
+
+
 ## 2022-03-11
 
 ### Notable issues
