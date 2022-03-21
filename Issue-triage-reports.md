@@ -12,7 +12,7 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 #### Flutter
 
-New Flutter issues triaged 224, closed 79 (35.27%).
+New Flutter issues triaged 205, closed 73 (35.61%).
 
 In total closed 114 issues during the week.
 
@@ -40,7 +40,7 @@ New Dart site issues triaged 0, closed 0 (0%).
 
 #### Googleads-mobile-flutter
 
-New Google Ads Flutter issues triaged 4, closed 2 (50%).
+New Google Ads Flutter issues triaged 3, closed 1 (33.33%).
 
 In total closed 1 issue during the week.
 
@@ -50,7 +50,7 @@ In total closed 1 issue during the week.
 
 #### Flutterfire
 
-New Flutterfire issues triaged 29, closed 9 (31.03%).
+New Flutterfire issues triaged 25, closed 8 (32%).
 
 In total closed 25 issues during the week.
 
