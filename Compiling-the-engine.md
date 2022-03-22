@@ -381,7 +381,7 @@ You can also copy test debug symbols by using the `copy_debug_symbols.py` script
 
 ## Compiling for the Web
 
-For building the engine for the Web we use the [felt](https://github.com/flutter/engine/blob/main/lib/web_ui/dev/README.md) tool.
+For building the engine for the Web we use the [felt](https://github.com/flutter/engine/blob/main/lib/web_ui/README.md) tool.
 
 To test Flutter with a local build of the Web engine, add `--local-engine=host_debug_unopt` to your `flutter` command, e.g.:
 
