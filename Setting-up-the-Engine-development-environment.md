@@ -54,6 +54,7 @@ Run the following steps to set up your environment:
      },
    ]
    ```
+   * Note: You can use `gclient config` command, or your favorite text editor to create the `.gclient` file. 
 1. `gclient sync` in that directory. This will fetch all the source code
    that Flutter depends on. Avoid interrupting this script, as doing so
    can leave your
