@@ -39,7 +39,7 @@ Using the native toolchain in Xcode, these artifacts are compiled into a framewo
 
 The Flutter engine, itself in a Framework called `Flutter.framework` will dynamically open the resolved application framework and look for four specific symbols in that library. These symbols are called `kDartVmSnapshotData`, `kDartVmSnapshotInstructions`, `kDartIsolateSnapshotData` and `kDartIsolateSnapshotInstructions`. These refer to the four snapshots mentioned above.
 
-Once snapshot resolution if finalized, the Flutter engine initializes the VM and launched the isolates.
+Once snapshot resolution is finalized, the Flutter engine initializes the VM and launched the isolates.
 
 This configuration was chosen because the Flutter engine is not able to mark pages as executable at runtime. Packaging the instruction in a binary makes sure all instructions are present in a separate dynamic library. This arrangement helps in isolate of code for a specific Flutter view’s root isolate.
 
