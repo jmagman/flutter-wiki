@@ -1,5 +1,71 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-03-25
+
+### Notable issues
+
+- [Regression]: Scrolling through the list shows spike in performance on latest beta and master. [#100523](https://github.com/flutter/flutter/issues/100523)
+- Flutter Module might not compile if they depend on a plugin which uses old kotlin version [#100613](https://github.com/flutter/flutter/issues/100613)
+
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 179, closed 69 (38.55%).
+
+In total closed 122 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 24.6% |
+| Fixed | 21.3% |
+| Invalid | 40.2% |
+| Solved | 13.9% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8, closed 2 (25%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 66.7% |
+| Fixed | 33.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 3, closed 2 (66.67%).
+
+In total closed 3 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| fixed | 33.3% |
+| invalid | 33.3% |
+| solved | 33.3% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 16, closed 3 (18.75%).
+
+In total closed 18 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 22.2% |
+| fixed | 11.1% |
+| invalid | 16.7%|
+| no-response | 27.8% |
+| solution-provided | 11.1% | 
+| user | 11.1% |
+
+
 ## 2022-03-18
 
 ### Notable issues
