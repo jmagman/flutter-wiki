@@ -12,6 +12,7 @@ $ flutter upgrade
 ```
 ## Flutter 2.10 Changes
 ### [2.10.4](https://github.com/flutter/flutter/releases/tag/2.10.4) (March 28, 2022)
+ * [flutter/93871](https://github.com/flutter/flutter/issues/93871) - Custom embedders fail to build when using default sysroot (GCC 11).
  * [dart/48559](https://github.com/dart-lang/sdk/issues/48559) - Flutter web apps crash when using package:freezed.
 ### [2.10.3](https://github.com/flutter/flutter/releases/tag/2.10.3) (March 02, 2022)
  * [flutter/98973](https://github.com/flutter/flutter/issues/98973) - Deadlock in application startup in profile/release mode.
