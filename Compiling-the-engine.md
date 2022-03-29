@@ -224,10 +224,10 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name
 ```
 
 4. If you are not a Google employee, you must set the following environment variables to point the depot tools at Visual Studio:
-```
+```shell
 DEPOT_TOOLS_WIN_TOOLCHAIN=0
-GYP_MSVS_OVERRIDE_PATH="C:\Program Files (x86)/Microsoft Visual Studio/2019/Community" (or your location for Visual Studio)
-WINDOWSSDKDIR="C:\Program Files (x86)\Windows Kits\10" (or your location for Windows Kits)
+GYP_MSVS_OVERRIDE_PATH="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community" # (or your location for Visual Studio)
+WINDOWSSDKDIR="C:\Program Files (x86)\Windows Kits\10" # (or your location for Windows Kits)
 ```
 Also, be sure that Python27 is before any other python in your Path.
 
