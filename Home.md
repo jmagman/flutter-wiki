@@ -14,6 +14,7 @@ If you intend to contribute to Flutter, welcome! You are encouraged to start wit
 * [Deprecation](https://github.com/flutter/flutter/wiki/Tree-hygiene#deprecation)
 * [Design documents](https://github.com/flutter/flutter/wiki/Chat#design-documents)
 * [Engineering Philosophy](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo#philosophy)
+* [Flaky tests](https://github.com/flutter/flutter/wiki/Issue-hygiene#flaky-tests)
 * [Issue prioritization](https://github.com/flutter/flutter/wiki/Issue-hygiene#priorities)
 * [Milestones](https://github.com/flutter/flutter/wiki/Issue-hygiene#milestones)
 * [Plugin compatibility policy](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo#plugin-compatibility)
