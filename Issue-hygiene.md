@@ -6,18 +6,13 @@
 - Use thumbs-up on the issue description to help the team prioritise.
 - P0-P2 bugs are critical and get examined for progress every week. P3 is the highest priority a bug can normally have.
 
-## Introduction
-
-This page describes how Flutter uses GitHub issues to track work on the project.
-
 ## Overview
 
 We use three issue trackers: the [main one on flutter/flutter](https://github.com/flutter/flutter/issues), one for [the flutter.dev Website, on flutter/website](https://github.com/flutter/website/issues), and one for [the IntelliJ and Android Studio plugins, on flutter/flutter-intellij](https://github.com/flutter/flutter-intellij/issues).
 
 This page mostly talks about how we handle things for the flutter/flutter issue tracker.
 
-
-## Issue philosophy
+### Issue philosophy
 
 We assume that Flutter, like all non-trivial software, has an infinite number of bugs. The issue tracker contains the list of bugs that we are very lucky to have had reported by our generous community.
 
@@ -187,7 +182,21 @@ Every issue should have a clear description of the steps to reproduce the proble
 
 If an issue is lacking this information, request it from the commenter and close the issue if information is not forthcoming.
 
-## Do not add "me too" or "same" comments to bugs
+## Comments
+
+### Consider posting issues in English
+
+If you are able to read and write English clearly, consider posting your issue
+in English, even if it is about a language specific issue (like the way text
+renders in some non-English language).
+
+It is fine to post issues in languages other than English, but consider that
+many readers will rely on automatic translation services to read your issue.
+Please avoid using screenshots in languages other than English, as services like
+Google Translate will not translate the text in images, and the pool of people
+able to assist you will be reduced.
+
+### Do not add "me too" or "same" comments to bugs
 
 The Flutter team prioritizes issues in part based on the number of +1 (thumbs
 up) reactions on the top level comment of the bug.  Adding comments like "me
@@ -218,6 +227,29 @@ Providing workarounds for issues can be helpful for developers using Flutter and
 but please keep such comments to a minimum so as to avoid disrupting the engineers trying to
 fix the issue. Rather than discussing workarounds, provide a pointer to another forum
 (e.g. Stack Overflow) where workarounds and temporary solutions are more appropriate. Thanks.
+
+### Avoid posting screenshots of text
+
+If you want to show code, quote someone, or show a string of text that does
+not render properly with Flutter, please avoid sharing it via an image or
+screenshot. Text in images cannot be copied, and cannot be automatically
+translated via services like Google Translate. This makes it harder for team
+members who do not speak that language to participate in the issue.
+
+It is perfectly fine to share a screenshot of text rendering invalidly, but
+also include the actual string or character(s) that lead to it so that they
+can be copied and pasted into a test case.
+
+### Provide reduced test cases
+
+To debug a problem, we will need to be able to reproduce it. The best way
+to help us do that is to provide code, licensed according to [the BSD license
+used by Flutter](https://github.com/flutter/flutter/blob/master/LICENSE), that
+has been reduced as far as possible (such that removing anything further stops
+showing the bug). Attach such a file or files to the issue itself.
+
+For legal reasons, we cannot debug problems that require looking at proprietary
+code or, generally, code that is not publicly available.
 
 ## When will my bug be fixed?
 
@@ -277,37 +309,8 @@ Please avoid intentionally filing duplicates.
 Very rarely, an issue gets locked because discussion has become 
 unproductive and has repeatedly violated the [Code of Conduct](https://github.com/flutter/flutter/blob/master/CODE_OF_CONDUCT.md).
 
-## Provide reduced test cases
+## Flaky tests
 
-To debug a problem, we will need to be able to reproduce it. The best way
-to help us do that is to provide code, licensed according to [the BSD license
-used by Flutter](https://github.com/flutter/flutter/blob/master/LICENSE), that
-has been reduced as far as possible (such that removing anything further stops
-showing the bug). Attach such a file or files to the issue itself.
+When a test flakes, a P1 bug is automatically filed with the label [`team: flakes`](https://github.com/flutter/flutter/issues?q=is%3Aopen+is%3Aissue+label%3A%22team%3A+flakes%22+sort%3Aupdated-asc). This issue should be investigated with all due haste, and a priority level should then be assigned to the issue. At any particular time, the most flaky tests should remain P1. However, flakes that are hard to pin down may be downgraded in priority (e.g. to P3 or P4). Please do not ignore the issue entirely, however, and make sure to close bugs once they are resolved, even if it's by magic.
 
-For legal reasons, we cannot debug problems that require looking at proprietary
-code or, generally, code that is not publicly available.
-
-## Avoid posting screenshots of text
-
-If you want to show code, quote someone, or show a string of text that does
-not render properly with Flutter, please avoid sharing it via an image or
-screenshot. Text in images cannot be copied, and cannot be automatically
-translated via services like Google Translate. This makes it harder for team
-members who do not speak that language to participate in the issue.
-
-It is perfectly fine to share a screenshot of text rendering invalidly, but
-also include the actual string or character(s) that lead to it so that they
-can be copied and pasted into a test case.
-
-## Consider posting issues in English
-
-If you are able to read and write English clearly, consider posting your issue
-in English, even if it is about a language specific issue (like the way text
-renders in some non-English language).
-
-It is fine to post issues in languages other than English, but consider that
-many readers will rely on automatic translation services to read your issue.
-Please avoid using screenshots in languages other than English, as services like
-Google Translate will not translate the text in images, and the pool of people
-able to assist you will be reduced.
+_See also: [[Reducing test flakiness]]_
