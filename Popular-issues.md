@@ -66,11 +66,9 @@ Currently, it does not seem that we can provide substantially more value here th
 
 ## [Add support for UWP](https://github.com/flutter/flutter/issues/14967) (#14967)
 
-[UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide) is one of the ways of building Windows applications ("Universal Windows Platform"). Unfortunately there are multiple ways to build Windows apps these days and it's not entirely clear which ones Microsoft want to recommend going into the future.
+[UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide) is one of the ways of building Windows applications ("Universal Windows Platform"). Unfortunately there are multiple ways to build Windows apps these days and it's not entirely clear which ones Microsoft want to recommend going into the future. It seems, however, that UWP support has been abandoned by Microsoft.
 
-There was some work done to support UWP, but the main person who was working on this is no longer in a position to contribute to it. At this point we're mostly waiting for clarity from Microsoft about the future of UWP apps before committing a lot of time and effort into something that might be end-of-lifed any day now. That said, if you are interested in picking up this torch, we would not object to further work being done in this area; the best way to get started would be to join #hackers-desktop and volunteer (see our contributing docs for a link to our Discord). There are some people who have contributed patches here and there.
-
-If nothing happens (whether clarity from Microsoft, or someone volunteering to work on this, or some other event that compels us to work on the UWP port), the existing code will probably eventually be removed in the interests of focusing our repositories on the code we're actively working on.
+We plan to delete our incomplete UWP support and do not plan to support UWP in the foreseeable future. If you are interested in owning the UWP support in the flutter org repos, please ping @Hixie and @cbracken in #hackers-desktop in [[Chat]]. Owning the UWP support would require a couple of people with contributor access so that code reviews can happen, as well as cycles to maintain the code and corresponding test infrastructure.
 
 ## [Server-side rendering for Flutter web](https://github.com/flutter/flutter/issues/47600) (#47600)
 
