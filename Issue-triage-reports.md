@@ -1,4 +1,59 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
+## 2022-03-25
+
+### Notable issues
+
+- Opacity clips SingleChildScrollView content [#101110](https://github.com/flutter/flutter/issues/101110)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 193, closed 71 (36.79%).
+
+In total closed 118 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 27.12% |
+| Fixed | 21.19% |
+| Invalid | 43.22% |
+| Solved | 8.47% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 6, closed 2 (33.33%).
+
+In total closed 4 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 50% |
+| Fixed | 50% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 2, closed 0 (0%).
+
+#### Flutterfire
+
+New Flutterfire issues triaged 17, closed 4 (23.53%).
+
+In total closed 26 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 3.85% |
+| fixed | 26.92% |
+| invalid | 7.69%|
+| no-response | 34.62% |
+| solution-provided | 15.38% | 
+| user | 11.54% |
+
 
 ## 2022-03-25
 
