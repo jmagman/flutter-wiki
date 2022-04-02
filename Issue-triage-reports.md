@@ -1,5 +1,5 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
-## 2022-03-25
+## 2022-04-01
 
 ### Notable issues
 
