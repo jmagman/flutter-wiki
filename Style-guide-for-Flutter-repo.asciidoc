@@ -1019,6 +1019,9 @@ what the arguments are.
 Never call a method `onFoo`. If a property is called `onFoo` it must be
 a function type. (For all values of "Foo".)
 
+Prefer using `typedef`s to declare callbacks. Typedefs benefit from having
+documentation on the type itself and make it easier to read and find
+common callsites for the signature.
 
 ### Spell words in identifiers and comments correctly
 
