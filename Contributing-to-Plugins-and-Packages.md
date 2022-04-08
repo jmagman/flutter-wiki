@@ -194,7 +194,7 @@ The plugins in flutter/plugins should follow the following conventions. Note tha
 
 ### Federation
 
-All plugins should be fully federated. This is to ensure that:
+All plugins should be fully [federated](https://docs.flutter.dev/development/packages-and-plugins/developing-packages#federated-plugins). This is to ensure that:
 - Unofficial federated implementations can be created for any of our plugins. This allows for alternate implementations, as well as supporting unofficial embeddings.
   - Our development processes for federated plugins also helps ensure that we don't accidentally break any such implementations. For instance, our federated safety checks help ensure that we don't make breaking changes to the platform interface without changing the major version.
 - We are eating our own dogfood with federation. Federation adds non-trivial complexity to maintaining a plugin, and best practices for federation aren't always obvious. Using federation ourselves means that we are aware of potential issues, and encourages us to create documentation and tooling to improve the developer experience of using federation.
