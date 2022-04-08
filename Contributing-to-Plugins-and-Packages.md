@@ -187,3 +187,32 @@ Sometimes a change to a package accidentally breaks older version of Flutter; be
     1. Release a new update that restores compatibility with the old version. This should generally only be done if it's trivial to do so.
     1. Release a revert, then release a new version that reverts the revert but with a constraint update. Consider this option if the number of people affected is likely to be large (e.g., a popular plugin is broken for the previous stable version of Flutter shortly after a stable release). This has essentially the same outcome as retraction, but can be done at any time.
     1. Document the need to pin an old version of the package in the issue, and close it (along with making a `## NEXT` PR for the package that updates its minimum version, to document the correct reality). This will require all affected users to find the issue to learn how to fix it, so should generally only be done if the number of people affected is likely to be small (e.g., when it only affects versions of Flutter that are several stable releases behind).
+
+## Plugin architecture conventions
+
+The plugins in flutter/plugins should follow the following conventions. Note that existing plugins do not currently always follow those conventions because they predate them. PRs that update plugins to follow conventions are welcome.
+
+### Federation
+
+All plugins should be fully federated. This is to ensure that:
+- Unofficial federated implementations can be created for any of our plugins. This allows for alternate implementations, as well as supporting unofficial embeddings.
+  - Our development processes for federated plugins also helps ensure that we don't accidentally break any such implementations. For instance, our federated safety checks help ensure that we don't make breaking changes to the platform interface without changing the major version.
+- We are eating our own dogfood with federation. Federation adds non-trivial complexity to maintaining a plugin, and best practices for federation aren't always obvious. Using federation ourselves means that we are aware of potential issues, and encourages us to create documentation and tooling to improve the developer experience of using federation.
+
+### In-package platform channels
+
+All implementations should use in-package platform channels, for the reasons outlined in [the proposal document](https://flutter.dev/go/platform-channels-in-federated-plugins). Most plugins predate this policy and thus have a legacy "shared method channel" default implementation in the platform interface package, but it should not be used by any first-party implementations.
+
+### Platform exception handling
+
+Having consistent exceptions across platforms is an important part of providing a usable cross-platform API surface. Maintaining consistent errors directly from the native implementations is challenging since there is no easy way to share constants for error code strings across languages, nor any clear reference point for what the possible errors are without reading all of the other implementations.
+
+To ensure that the native errors are a coherent part of the interface, plugins that throw exceptions should follow these best practices:
+- The platform interface package should define a plugin-specific `Exception` class, including constants or enums for known error types (e.g., permission failures).
+- App-facing packages should `export` that definition, and should include it in relevant API documentation.
+- Implementation packages should, in general, have Dart code to catch any `PlatformExceptions` that the native implementation is likely to throw, and convert them to the appropriate interface-defined exceptions.
+  - This means that the string constants for error codes returned from native need only be consistent within that platform implementation package, since it won't be passed out of the package.
+
+This means that in general, clients of a plugin should not be expected to see raw `PlatformException`s created from error responses in native code. (This is not a strict rule; failure cases that are so obscure that clients would be unlikely to actually have specific handlers for them don't necessarily need to be converted to a common exception type.)
+
+**Note:** Existing `PlatformException`s are a de-facto part of the API, so updating plugins to follow this practice should be done as a breaking change.
