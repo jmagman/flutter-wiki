@@ -1,4 +1,61 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
+
+## 2022-04-08
+
+### Notable issues
+
+- [WEB] Rendering issue after opening keyboard on IOS [#101288](https://github.com/flutter/flutter/issues/101288)
+- Modal bottom sheets created using showModalBottomSheet get cut off by the system navigation [#101247](https://github.com/flutter/flutter/issues/101247) (This is a regression in `beta` which has been fixed on `master`)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 204, closed 86 (42.16%).
+
+In total closed 138 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 28.261% |
+| Fixed | 15.942% |
+| Invalid | 41.304% |
+| Solved | 13.768% |
+| Timeout | 0.725% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 5, closed 0 (0%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 100% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 1, closed 0 (0%).
+
+#### Flutterfire
+
+New Flutterfire issues triaged 22, closed 5 (22.73%).
+
+In total closed 29 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 6.90% |
+| fixed | 31.03% |
+| invalid | 24.14%|
+| no-response | 10.34% |
+| solution-provided | 24.14% | 
+| user | 3.45% |
+
 ## 2022-04-01
 
 ### Notable issues
