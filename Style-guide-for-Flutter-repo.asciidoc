@@ -33,6 +33,8 @@ Overview
 
 This document describes our approach to designing and programming Flutter,
 from high-level architectural principles all the way to indentation rules.
+These are our norms, written down so that we can easily convey our shared
+understanding with new team members.
 
 The primary goal of these style guidelines is to improve code readability so
 that everyone, whether reading the code for the first time or
