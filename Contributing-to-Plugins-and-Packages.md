@@ -96,25 +96,19 @@ Many of the plugins in flutter/plugins are [federated](https://flutter.dev/docs/
 
 We are investigating ways to streamline this, but currently the process for a multi-package PR is:
 
-1. Create a PR that has all the changes, and update the pubspec.yamls to have path-based dependency overrides. So if you are changing a plugin called `foo`, add the following to the `foo` sub-package and any `foo_some_platform` platform implementation packages that depend on changes to the platform interface:
+1. Create a PR that has all the changes, and update the pubspec.yamls to have path-based dependency overrides. This can be done with the [plugin repo tool](https://github.com/flutter/plugins/blob/master/script/tool/README.md)'s `make-deps-path-based` command, targeting any dependency packages changed in the PR. For instance, for an Android-specific change to `video_player` that required platform interface changes as well:
     ```
-    # FOR TESTING ONLY. DO NOT MERGE.
-    dependency_overrides:
-      foo_platform_interface:
-        path:
-          ../foo_platform_interface
+    $ dart script/tool/bin/flutter_plugin_tools.dart make-deps-path-based --target-dependencies=video_player_platform_interface,video_player_android
     ```
-
-    Also add a similar override for each `foo_some_platform` in `foo` if necessary (e.g., if your change includes integration tests in the main package that require the updated implementations).
 
 1. Upload that PR and get it reviewed and into a state where the only test failure is the one complaining that you can't publish a package that has dependency overrides.
 
-1. Create a new PR that's has only the platform interface package changes from the PR above, and ask the reviewers of the main package to review that.
+1. Create a new PR that has only the platform interface package changes from the PR above, and ask the reviewers of the main package to review that.
 
 1. Once it has been reviewed (which should be trivial given the review above), landed, and published, update the initial PR to:
     * remove the changes that are part of the other PR,
     * replace the dependency overrides on the platform interface package with a dependency on the published version, and
-    * merge in (or rebase to) on the latest version of `master`.
+    * merge in (or rebase to) the latest version of `master`.
 
 1. If there are any dependency overrides remaining, repeat the previous two steps with those packages. There should never be interdependencies between platform implementation packages, so all implementations should be able to be handled in a single new PR.
 
