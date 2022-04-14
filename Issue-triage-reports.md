@@ -1,5 +1,68 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-04-14
+
+### Notable issues
+
+No issues to report for this week
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 143, closed 58 (40.56%).
+
+In total closed 87 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 29.89% |
+| Fixed | 17.24% |
+| Invalid | 47.13% |
+| Solved | 5.75% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 3, closed 1 (33.33%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 66.7% |
+| Invalid | 33.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 2, closed 1 (50%).
+
+In total closed 3 issues during the week.
+
+
+| Reason for closing | |
+| -- | -- |
+| duplicate | 33.3% | 
+| fixed | 33.3% | 
+| solved | 33.3% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 16, closed 4 (25%).
+
+In total closed 13 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 23.08% |
+| invalid | 23.08%|
+| no-response | 38.46% |
+| solution-provided | 7.69% | 
+| user | 7.69% |
+
 ## 2022-04-08
 
 ### Notable issues
