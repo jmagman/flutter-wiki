@@ -102,6 +102,7 @@ We are investigating ways to streamline this, but currently the process for a mu
     ```
 
 1. Upload that PR and get it reviewed and into a state where the only test failure is the one complaining that you can't publish a package that has dependency overrides.
+    * The overall review is completed first to prevent situations where part of the overall change (usually a platform interface change) lands but the rest is never landed, or where the review of the changes in a higher-level part of the change (the app-facing and/or implementation packages) identifies issues in the lower-level parts.
 
 1. Create a new PR that has only the platform interface package changes from the PR above, and ask the reviewers of the main package to review that.
 
