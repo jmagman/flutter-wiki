@@ -140,7 +140,8 @@ Because platform implementations are subclasses of the platform interface and ov
 The least disruptive way to make a parameter change is:
 
 1. Add a new method to the platform interface with the new parameters, whose default implementation calls the existing method. This is not a breaking change.
-    1. Include a comment that the old method is deprecated, and will be removed in a future update. Don't actually mark it as `@Deprecated` since that will create unnecessary warnings, and consumers of a package shouldn't be directly using these methods anyways.
+    1. Strongly consider replacing some or all of the parameters with a parameter object (see [`AuthenticationOptions`](https://github.com/flutter/plugins/blob/2efdee1e7368cebdfccf88bbab6887156d2f4f7d/packages/local_auth/local_auth_platform_interface/lib/types/auth_options.dart) for [`authenticate`](https://github.com/flutter/plugins/blob/2efdee1e7368cebdfccf88bbab6887156d2f4f7d/packages/local_auth/local_auth_platform_interface/lib/local_auth_platform_interface.dart#L60) as an example), as this will allow adding other parameters in the future without breaking changes or new methods.
+    2. Include a comment that the old method is deprecated, and will be removed in a future update. Don't actually mark it as `@Deprecated` since that will create unnecessary warnings, and consumers of a package shouldn't be directly using these methods anyways.
 
 2. Update the implementations to override both methods.
 
