@@ -54,6 +54,17 @@ Run the following steps to set up your environment:
      },
    ]
    ```
+   If you plan to build the Web engine, you should add the following to your `.gclient` file:
+   ```python
+   solutions = [
+     {
+       # Same as above...
+       "custom_vars": {
+         "download_emsdk": True,
+       },
+     },
+   ]
+   ```
    * Note: You can use `gclient config` command, or your favorite text editor to create the `.gclient` file. 
 1. `gclient sync` in that directory. This will fetch all the source code
    that Flutter depends on. Avoid interrupting this script, as doing so
