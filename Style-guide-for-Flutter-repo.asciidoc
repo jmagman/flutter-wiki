@@ -370,7 +370,7 @@ widget for that rather than updating the existing buttons to have the new style.
 
 ### Code that is not copyrighted "The Flutter Authors"
 
-All code in all Flutter repositories must be contributed by developers who have signed https://cla.developers.google.com/[the Google CLA], except if it is "third party code".
+All code in all Flutter repositories must be contributed by developers who have signed https://cla.developers.google.com/[the Google CLA], and must be licensed using our normal BSD license with a copyright referencing "The Flutter Authors", except if it is "third party code".
 
 "Third party code" that is not part of a Dart package must be in a subdirectory of a `third_party` directory at the root of the relevant repository, and the subdirectory in question must contain a `LICENSE` file that details the license covering that code and a `README` describing the provenance of that code.
 
