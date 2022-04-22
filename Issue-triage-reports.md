@@ -1,5 +1,64 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-04-22
+
+### Notable issues
+
+- [Regression][iOS]: os.activity library is broken in Flutter 2.13 [#102330](https://github.com/flutter/flutter/issues/102330)
+- Can't paste into TextField when copying from Samsung Notes, MS Word, and MS Excel on Android
+[#74320](https://github.com/flutter/flutter/issues/74320)
+- [WEB] TextField actions are not triggered on Android [#89384](https://github.com/flutter/flutter/issues/89384) 
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 179, closed 61 (34.08%).
+
+In total closed 126 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 26.2% |
+| Fixed | 24.6% |
+| Invalid | 34.9% |
+| Solved | 14.3% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 7, closed 1 (14.29%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Fixed | 66.7% |
+| Invalid | 33.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 1, closed 0 (0%).
+
+
+#### Flutterfire
+
+New Flutterfire issues triaged 21, closed 8 (38.1%).
+
+In total closed 21 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 9.52% |
+| fixed  | 14.29% |
+| invalid | 19.05%|
+| no-response | 23.81% |
+| solution-provided | 19.05% | 
+| user | 14.29% |
+
 ## 2022-04-14
 
 ### Notable issues
