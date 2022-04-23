@@ -492,7 +492,7 @@ Deprecations are removed in a consistent "first-in-first-out" fashion. The lifet
 
 Tests can be skipped using the `skip` parameter of `test()`, `group()` and `testWidgets()`. However, they  should be kept to a minimum and only done for the following two reasons.
 
-The first is If there is a test that is flaky, we can mark is as temporarily skipped to keep the tree green while a fix for it is developed. For these types of skips you need to file a tracking issue so we can ensure there is follow up to remove the skip. This tracking issue should be tagged with the `skip-test` label. Then in a comment on the same line as the parameter, include a link to this issue:
+The first is if there is a test that is flaky, we can mark is as temporarily skipped to keep the tree green while a fix for it is developed. For these types of skips you need to file a tracking issue so we can ensure there is follow up to remove the skip. This tracking issue should be tagged with the `skip-test` label. Then in a comment on the same line as the parameter, include a link to this issue:
 
 ```dart
   skip: true, // https://github.com/flutter/flutter/issues/XXXXX
