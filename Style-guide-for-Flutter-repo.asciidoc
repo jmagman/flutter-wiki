@@ -67,7 +67,7 @@ Designing an API is an art. Like all forms of art, one learns by practicing. The
 
 In the absence of one's own experience, one can attempt to rely on the experience of others. The biggest problem with this is that sometimes explaining why an API isn't optimal is a very difficult and subtle task, and sometimes the reasoning doesn't sound convincing unless you already have a lot of experience designing them.
 
-Because of this, and contrary to almost any other situation in engineering, when you are receiving feedback about API design from an experience API designer, they will sometimes seem unhappy without quite being able to articulate why. When this happens, seriously consider that your API should be scrapped and a new solution found.
+Because of this, and contrary to almost any other situation in engineering, when you are receiving feedback about API design from an experienced API designer, they will sometimes seem unhappy without quite being able to articulate why. When this happens, seriously consider that your API should be scrapped and a new solution found.
 
 This requires a different and equally important skill when designing APIs: not getting attached to one's creations. One should try many wildly different APIs, and then attempt to write code that uses those APIs, to see how they work. Throw away APIs that feel frustrating, that lead to buggy code, or that other people don't like. If it isn't elegant, it's usually better to try again than to forge ahead.
 
@@ -219,8 +219,8 @@ using a dedicated API, then that is where we would create a dedicated API.
 
 ### Avoid the lowest common denominator
 
-It is common for SDKs that target multiple platforms (or metaplatforms that 
-themeselves run on multiple platforms, like the Web) to provide APIs that
+It is common for SDKs that target multiple platforms (or meta-platforms that 
+themselves run on multiple platforms, like the Web) to provide APIs that
 work on all their target platforms. Unfortunately, this usually means that
 features that are unique to one platform or another are unavailable.
 
@@ -1159,7 +1159,7 @@ If the ignore directive is permanent, e.g. because one of our lints has some una
 ### Comment all test skips
 
 On very rare occasions it may be necessary to skip a test. To do that, use the `skip` argument.
-Any time you use the `skip` argument, mfile an issue describing why it is skipped and
+Any time you use the `skip` argument, file an issue describing why it is skipped and
 include a link to that issue in the code.
 
 
@@ -1739,7 +1739,7 @@ For practical purposes we don't currently check for out-of-memory errors. Ideall
 Now that the Flutter framework is mature, we expect every new widget to implement all of the following:
 
 - full accessibility, so that on both Android and iOS the widget works with the native accessibility tools.
-- full localisation with default translations for all our default languages.
+- full localization with default translations for all our default languages.
 - full support for both right-to-left and left-to-right layouts, driven by the ambient Directionality.
 - full support for text scaling up to at least 3.0x.
 - documentation for every member; see the section above for writing prompts to write documentation.
