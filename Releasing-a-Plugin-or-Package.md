@@ -1,28 +1,30 @@
 Any PR that changes a package's version (which should be most PRs) should be published
 to pub.dev.
 
-### Automatic release
+## Automatic release
 
 The packages in flutter/plugins and flutter/packages are automatically released with a Github Action workflow named [“release”](https://github.com/flutter/plugins/blob/master/.github/workflows/release.yml). If a commit on master branch contains version updates to one ore more packages, the “release” CI will publish the new versions to pub.dev and push the release tag to GitHub. The “release” CI passes if
 1. the release process is successful, or
 2. there are no version updates in the commit, or
 3. the new versions have already been published.  
 
-If you are a Flutter team member and you want to know more about the publisher account, please see b/191674407.
+If you are a Flutter team member at Google and you need access to the publisher account, please see b/191674407.
 
 The “release” CI only runs on post-submit, and waits until all the other CI jobs have passed before starting. Like any other CI job, The “release” CI blocks future PRs if failed. 
 
 _Note: the “release” CI does not automatically publish the `flutter_plugin_tools` package._
 
-#### What if the “release” CI failed?
+### New packages
+
+When a new package is released for the first time, it will be owned by the publisher account rather than the flutter.dev verified publisher. Someone with access (see above) needs to log into pub.dev with the publisher account and transfer the package to the verified publisher using the package's Admin tab.
+
+### What if the “release” CI failed?
 
 If it is a flake (for example, network issue), a Flutter team member can simply run the CI again. For more complicated cases, a Flutter team member can also manually release the packages, then re-run the CI to pass.
 
 The most common source of failure of the `release` task is that another test failed; if that is due to flake, you will need to first re-run the failing test task, then once it's green re-run `release`.
 
-**Note:** Loading a flutter/plugins `release` run's output in the GitHub UI currently [hangs the page](https://github.com/flutter/flutter/issues/85127), so to re-run a `release` task use [the Actions UI](https://github.com/flutter/plugins/actions/workflows/release.yml) rather than the commit's task page.
-
-### Manual release [Deprecated]
+## Manual release [Deprecated]
 
 The Flutter team member most involved with the PR should be the person responsible
 for publishing. In cases where the PR is authored by a Flutter team member, the
@@ -57,7 +59,7 @@ To release a package:
   and tags the commit in the format of `<package_name>-v<package_version>` then pushes
   it to the upstream repository.
 
-#### Fully manual backup option
+### Fully manual backup option
 
 If for some reason you can't use `flutter_plugin_tools` in step 3, you can publish manually:
   1. Push the package update to [pub.dev](https://pub.dev) using `dart pub publish`.
