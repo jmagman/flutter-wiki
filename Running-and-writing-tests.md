@@ -74,14 +74,14 @@ When a device lab test fails, it is important to be able to run the test locally
 1. Navigate in your terminal to the `dev/devicelab` directory.
 1. Ensure that a physical device, simulator, or emulator is connected.
 1. Ensure that the current locale is en_US by executing the command: `export LANG=en_US.UTF-8`.
-1. Execute the command: `../../bin/cache/dart-sdk/bin/dart bin/run.dart -t [name_of_test]` where `[name_of_test]` is replaced by the name of the test you want to run as defined within `dev/devicelab/manifest.yaml`.
+1. Execute the command: `../../bin/dart bin/run.dart -t [name_of_test]` where `[name_of_test]` is replaced by the name of the test you want to run as defined within `dev/devicelab/manifest.yaml`.
 
 ### Device lab tests with a local engine
 
 Sometimes a device lab test fails due to engine changes that you've made. In these cases, you'd like to run the impacted device lab tests locally with your local version of the engine. To do this, pass the appropriate flags to `run.dart`:
 
 ```
-../../bin/cache/dart-sdk/bin/dart bin/run.dart \
+../../bin/dart bin/run.dart \
   --local-engine-src-path=[path_to_src] \
   --local-engine=[engine_build_for_your_device] \
   -t [name_of_test]
@@ -90,7 +90,7 @@ Sometimes a device lab test fails due to engine changes that you've made. In the
 If your local Flutter engine is in the same directory as your `flutter/` directory then you can omit the `--local-engine-src-path` parameter because it will be resolved automatically:
 
 ```
-../../bin/cache/dart-sdk/bin/dart bin/run.dart \
+../../bin/dart bin/run.dart \
   --local-engine=[engine_build_for_your_device] \
   -t [name_of_test]
 ```
@@ -98,7 +98,7 @@ If your local Flutter engine is in the same directory as your `flutter/` directo
 The following is an example of what running the local engine command might look like:
 
 ```
-../../bin/cache/dart-sdk/bin/dart bin/run.dart \
+../../bin/dart bin/run.dart \
   --local-engine-src-path=/Users/myname/flutter/engine/src \
   --local-engine=android_debug_unopt_x86 \
   -t external_ui_integration_test
