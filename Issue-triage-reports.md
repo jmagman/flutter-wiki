@@ -4,6 +4,62 @@ This page contains weekly issue triage reports from the Nevercode front-line tri
 
 ### Notable issues
 
+- [image_picker][M1 simulator] PlatformException(multiple_request, Cancelled by a second request, null, null) when picking the first default image from the ios simulator [#82602](https://github.com/flutter/flutter/issues/82602) This is an old issue that has been getting quite a bit of attention recently
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 177, closed 59 (33.33%).
+
+In total closed 108 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 20.370% |
+| Fixed | 19.444% |
+| Invalid | 45.370% |
+| Solved | 13.889% |
+| Timeout | 0.926% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 3, closed 1 (33.33%).
+
+In total closed 7 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 14.3% |
+| Fixed | 71.4% |
+| Invalid | 14.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 0, closed 0 (0%).
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 5, closed 1 (20%).
+
+
+#### Flutterfire
+
+New Flutterfire issues triaged 14, closed 4 (28.57%).
+
+In total closed 10 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 20% |
+| invalid | 20%|
+| no-response | 20% |
+| solution-provided | 40% | 
+
+## 2022-04-22
+
+### Notable issues
+
 - [Regression][iOS]: os.activity library is broken in Flutter 2.13 [#102330](https://github.com/flutter/flutter/issues/102330)
 - Can't paste into TextField when copying from Samsung Notes, MS Word, and MS Excel on Android
 [#74320](https://github.com/flutter/flutter/issues/74320)
