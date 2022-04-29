@@ -23,7 +23,7 @@ All version changes must have an accompanying CHANGELOG update. Even version-exe
 ## X.Y.Z
 ```
 
-The next release will change `NEXT` to the new version.
+_If you are adding a version change to a CHANGELOG that starts with `NEXT`, replace `NEXT` with the new version and add your change to the existing list. If you leave `NEXT` when adding a version change, automated tests for your PR will fail._
 
 This policy exists both to make it easier for maintainers to see a record of all changes to a package, and because some changes (e.g., updates to examples) that do not need to be published may still be of interest to clients of a package.
 
