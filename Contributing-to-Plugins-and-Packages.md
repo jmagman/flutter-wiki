@@ -212,3 +212,48 @@ To ensure that the native errors are a coherent part of the interface, plugins t
 This means that in general, clients of a plugin should not be expected to see raw `PlatformException`s created from error responses in native code. (This is not a strict rule; failure cases that are so obscure that clients would be unlikely to actually have specific handlers for them don't necessarily need to be converted to a common exception type.)
 
 **Note:** Existing `PlatformException`s are a de-facto part of the API, so updating plugins to follow this practice should be done as a breaking change.
+
+## README code
+
+All new code samples in `README.md` files must use `code-excerpt` to manage the code. With `code-excerpt`, the source of truth for the code is an actual Dart file, which is analyzed, compiled, and tested by our CI. This ensures that it stays updated as the package APIs, Flutter, Dart, and repository analyzer settings change.
+
+### Updating `code-excerpt`-managed examples
+
+If a code block has a `<?code-excerpt ...?>` tag just before it, it is already using `code-excerpt`. To update it:
+1. Find the file referenced in that tag in the `example` directory (e.g., `<?code-excerpt "main.dart (AppLifecycle)"?>` comes from `example/lib/main.dart`).
+1. Update the code in that file.
+    - If you are fixing a bug, add unit tests or widget tests for the change.
+1. Run the `update-excerpts` [repository tool command](https://github.com/flutter/plugins/blob/main/script/tool/README.md#update-readmemd-from-example-sources), which will update `README.md`.
+
+### Add or converting a code block
+
+To add a new code block, or fix a legacy code block:
+1. Ensure that the package has been configured for `code-excerpt` support, by checking for a `example/build.excerpt.yaml` file. If there isn't one, copy one from another package. Usually no changes to the file will be necessary.
+1. Add the following line to the start of the package's `README.md`:
+
+    ```
+    <?code-excerpt path-base="excerpts/packages/{example project name}"?>
+    ```
+
+    replacing `{example project name}` with the `name` from `example/pubspec.yaml`. For instance, for the `camera` plugin in flutter/plugins, [the example is named "camera_example"](https://github.com/flutter/plugins/blob/main/packages/camera/camera/example/pubspec.yaml#L1), so the tag would be:
+
+    ```
+    <?code-excerpt path-base="excerpts/packages/camera_example"?>
+    ```
+1. Find or write the code that you want to use in the example, then annotate it with `#docregion` and `#enddocregion` comments. See [the `code-excerpt` README](https://github.com/dart-lang/site-shared/blob/main/packages/code_excerpter/README.md) for examples. Ideally the code should be part of the actual example code, but if the code doesn't make sense as part of the example, you can create a new file `example/lib/` just to hold the excerpt.
+1. Add the following to `README.md`:
+
+    ~~~
+    <?code-excerpt "{example/lib/-relative filename} ({excerpt name})"?>
+    ```dart
+    ```
+    ~~~
+
+    So if you added `#docregion Foo` to `example/lib/main.dart`, you would put the following in `README.md`:
+
+    ~~~
+    <?code-excerpt "main.dart (Foo)"?>
+    ```dart
+    ```
+    ~~~
+1. Follow the steps in the "Updating" section above to automatically fill the new block with the code excerpt.
