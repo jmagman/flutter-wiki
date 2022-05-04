@@ -6,6 +6,11 @@ We recommend using Flutter 2.5 or later on Apple Silicon machines. You must also
 $ sudo softwareupdate --install-rosetta --agree-to-license
 ```
 
+If you see CocoaPods crashes related to `ffi`, try reinstalling the Ruby gem with the `--enable-libffi-alloc` flag:
+```
+sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
+```
+
 ## Using macOS on Apple Silicon to develop Flutter apps (host)
 
 You can use Apple Silicon-based Mac devices as a developer workstation (host) for building Flutter apps. While some tools still use Rosetta, Apple Silicon-based Macs are fully supported as a host.
