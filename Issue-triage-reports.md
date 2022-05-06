@@ -1,5 +1,72 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-05-06
+
+### Notable issues
+
+- [windows] Camera Plugin Fails to show preview with Error `Could not create external texture` [#102925](https://github.com/flutter/flutter/issues/102925) 
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 113, closed 42 (37.17%).
+
+In total closed 90 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 28.3% |
+| Fixed | 23.9% |
+| Invalid | 39.1% |
+| Solved | 8.7% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 5, closed 2 (40%).
+
+In total closed 3 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate | 66.7% |
+| Invalid | 33.3% |
+
+#### dart-lang/site-www
+
+New Dart site issues triaged 1, closed 1 (100%).
+
+In total closed 1 issue during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 100% |
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 2, closed 1 (50%).
+
+In total closed 2 issues during the week
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid | 50% |
+| solved | 50% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 22, closed 5 (22.73%).
+
+In total closed 11 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 27.27% |
+| fixed | 36.36% |
+| invalid | 18.18%|
+| no-response | 9.09% |
+| solution-provided | 9.09% | 
+
 ## 2022-04-22
 
 ### Notable issues
