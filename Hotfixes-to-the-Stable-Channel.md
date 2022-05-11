@@ -10,17 +10,24 @@ To ensure that you have the latest stable version with the hotfixes listed below
 $ flutter channel stable
 $ flutter upgrade
 ```
+## Flutter 3.0 Changes
+### [3.0.0](https://github.com/flutter/flutter/releases/tag/3.0.0) (May 11, 2022)
+Initial stable release.
 ## Flutter 2.10 Changes
 ### [2.10.5](https://github.com/flutter/flutter/releases/tag/2.10.5) (April 18, 2022)
+This hotfix release addresses the following issues:
  * [flutter/101224](https://github.com/flutter/flutter/issues/101224) - Flutter web debugger fails when using chrome 100 or greater. 
 ### [2.10.4](https://github.com/flutter/flutter/releases/tag/2.10.4) (March 28, 2022)
+This hotfix release addresses the following issues:
  * [flutter/93871](https://github.com/flutter/flutter/issues/93871) - Custom embedders fail to build when using default sysroot (GCC 11).
  * [dart/48559](https://github.com/dart-lang/sdk/issues/48559) - Flutter web apps crash when using package:freezed.
 ### [2.10.3](https://github.com/flutter/flutter/releases/tag/2.10.3) (March 02, 2022)
+This hotfix release addresses the following issues:
  * [flutter/98973](https://github.com/flutter/flutter/issues/98973) - Deadlock in application startup in profile/release mode.
  * [flutter/98739](https://github.com/flutter/flutter/issues/98739) - ios: Visual glitch when scrolling a list in a Scaffold that has a Material and Container as bottomNavigationBar.
  * [flutter/97086](https://github.com/flutter/flutter/issues/97086) - Windows: Fail to launch app in debug mode.
 ### [2.10.2](https://github.com/flutter/flutter/releases/tag/2.10.2) (February 18, 2022)
+This hotfix release addresses the following issues:
  * [flutter/95211](https://github.com/flutter/flutter/issues/95211) - Transform animation with BackdropFilter is causing a crash.
  * [flutter/98155](https://github.com/flutter/flutter/issues/98155) - App crashes after upgrading to 2.10.x using webview + video_player plugin.
  * [flutter/98361](https://github.com/flutter/flutter/issues/98361) - Error in DL bounds calculations causes incorrect SVG rendering.
