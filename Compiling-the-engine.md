@@ -371,12 +371,10 @@ $ENGINE_DIR/fuchsia/sdk/linux/tools/pm publish -a -r $FUCHSIA_DIR/$(cat $FUCHSIA
 ```
 
 ```sh
-fx shell run-test-component "fuchsia-pkg://fuchsia.com/flow_tests#meta/flow_tests.cmx"
+ffx test run "fuchsia-pkg://fuchsia.com/flow_tests#meta/flow_tests.cmx"
 ```
 
-Make sure to replace both instances of the test name in the "run-test-component" command above with your own.
-
-You can also copy test debug symbols by using the `copy_debug_symbols.py` script and substituting the test binary (such as `flow_unittests`) for the runner binary.
+Make sure to replace both instances of the test name in the ffx command above with your own.
 
 ## Compiling for the Web
 
