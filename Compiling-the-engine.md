@@ -332,6 +332,16 @@ cd $FUCHSIA_DIR
 fx build && fx ota
 ```
 
+#### Registering debug symbols
+
+You can register debug symbols for all engine artifacts to your Fuchsia checkout.  You need to do this once (and only once) for each subfolder under out/ you are interested in:
+
+```sh
+$ENGINE_DIR/fuchsia/sdk/linux/tools/symbol-index add $ENGINE_DIR/out/fuchsia_debug_x64/.build-id $ENGINE_DIR/out/fuchsia_debug_x64
+```
+
+**Note:** Because of [fxbug.dev/45484](https://fxbug.dev/45484), `fx log` may have issues symbolize logs on other machines. It is recommended to run `fx log` from the same machine that you build from.
+
 #### Deploying flutter_runner
 
 First copy the `flutter_runner` binary itself to your Fuchsia checkout. For standard debug builds:
@@ -351,16 +361,6 @@ If you are changing the native hooks in `dart:ui`, `dart:zircon`, or `dart:fuchs
 ```sh
 cp -ra $ENGINE_DIR/out/fuchsia_debug_x64/flutter_runner_patched_sdk/* $FUCHSIA_DIR/prebuilt/third_party/flutter/x64/release/aot/flutter_runner_patched_sdk/
 ```
-
-#### Deploying debug symbols
-
-Now register debug symbols for all engine artifacts to your Fuchsia checkout:
-
-```sh
-$ENGINE_DIR/fuchsia/sdk/linux/tools/symbol-index add $ENGINE_DIR/out/fuchsia_debug_x64/.build-id $ENGINE_DIR/out/fuchsia_debug_x64
-```
-
-**Note:** Because of [fxbug.dev/45484](https://fxbug.dev/45484), `fx log` may have issues symbolize logs on other machines. It is recommended to run `fx log` from the same machine that you build from.
 
 #### Deploying tests
 
