@@ -1,5 +1,60 @@
 This page contains weekly issue triage reports from the Nevercode front-line triage team.
 
+## 2022-05-13
+
+### Notable issues
+
+- 'WidgetsBinding' runtime warnings using 3.0.0 stable release [#103561](https://github.com/flutter/flutter/issues/103561)
+  - Other similar issues that seem to have the same root cause: [#103648](https://github.com/flutter/flutter/issues/103648), [#103614](https://github.com/flutter/flutter/issues/103614), [#103571](https://github.com/flutter/flutter/issues/103571)
+
+### Issue counts
+
+#### Flutter
+
+New Flutter issues triaged 201, closed 77 (38.31%).
+
+In total closed 110 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| Duplicate  | 38.18% |
+| Fixed | 14.55% |
+| Invalid | 39.09% |
+| Solved | 8.18% |
+
+#### Flutter/website
+
+New Flutter website issues triaged 8, closed none.
+
+#### dart-lang/site-www
+
+No new New Dart site issues triaged. No issues closed.
+
+#### Googleads-mobile-flutter
+
+New Google Ads Flutter issues triaged 1, closed 1 (100%).
+
+In total closed 1 issue during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| invalid | 100% |
+
+#### Flutterfire
+
+New Flutterfire issues triaged 31, closed 6 (19.35%).
+
+In total closed 12 issues during the week.
+
+| Reason for closing  |  |
+| -- | -- |
+| duplicate | 25.00% |
+| fixed | 25.00% |
+| invalid | 16.67%|
+| no response | 16.67% |
+| solution provided | 8.33% | 
+| user issue| 8.33% | 
+
 ## 2022-05-06
 
 ### Notable issues
