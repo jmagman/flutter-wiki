@@ -28,4 +28,4 @@ Each time you run `--merge-coverage`, the tool goes back to the original `lcov.b
 
 ## How compute test coverage slowly
 
-If you want to recompute coverage data from scratch, you can use the `--coverage` flag.  For example, `cd packages/flutter && flutter test --coverage`.  It's pretty rare that you'll need to recompute coverage from scratch.  This command is mostly used by the bots to generate the coverage report for Coveralls.
+If you want to recompute coverage data from scratch, you can use the `--coverage` flag.  For example, `cd packages/flutter && flutter test --coverage`.  When things are working (they're not right now because of https://github.com/flutter/flutter/issues/81803), it's pretty rare that you'll need to recompute coverage from scratch. This command is mostly used by the bots to generate the `lcov.base.info` file.
