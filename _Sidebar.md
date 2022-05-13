@@ -49,6 +49,7 @@ Flutter Wiki
 - [[The flutter run variants]]
 - [[Test coverage for package:flutter]]
 - [[Writing a golden-file test for package:flutter]]
+- [[Managing template image assets]]
 
 ## Engine repo
 - [[Setting up the Engine development environment]]
