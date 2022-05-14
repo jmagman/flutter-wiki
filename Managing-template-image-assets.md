@@ -31,6 +31,8 @@ Once the updated package has been published on Pub, roll your changes into the m
 6. Commit your changes, and perform a test run to be sure they're emitted successfully by the `flutter` tool.
 7. Assuming everything looks good, send a pull request.
 
+_(This page is referenced by an error message in the Flutter presubmit checks.)_
+
 [fti_pkg]: https://pub.dev/packages/flutter_template_images
 [fti_repo]: https://github.com/flutter/packages/tree/main/packages/flutter_template_images
 [pub]: https://pub.dev
